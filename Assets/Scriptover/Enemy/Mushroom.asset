@@ -14,14 +14,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enemyName: Mushroom
   enemyType: 0
-  hp: 200
+  hp: 100
   mp: 0
-  damage: 2
+  damage: 5
   defense: 0
   delay: 0
   moveSpeed: 4
   hpRegen: 10
   mpRegen: 0
   regenTime: 10
+  Exp: 2
   enemyData: "\uBA38\uC26C.. \uC911\uD5CC\uB514?"
   enemyPrefab: {fileID: 0}

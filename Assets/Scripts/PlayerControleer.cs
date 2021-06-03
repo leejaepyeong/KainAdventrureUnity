@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.EventSystems;
 
 public class PlayerControleer : MonoBehaviour
 {
@@ -10,6 +11,17 @@ public class PlayerControleer : MonoBehaviour
     private float runSpeed;
 
     float applySpeed; // 적용 속도
+
+
+    //스틱기준
+    public Transform Stick;         // stick
+
+    // ??????
+    private Vector3 StickFirstPos;  // 처음 위치 스틱
+    private Vector3 JoyVec;         // 벡터
+    private float Radius;           // 반지름
+    private bool MoveFlag;          // 움직임
+
 
     // 점프 힘
     [SerializeField]
@@ -38,13 +50,14 @@ public class PlayerControleer : MonoBehaviour
     [SerializeField]
     private float cameraRotationLimit;  // 카메라 각도 
     private float currentCameraRotationX = 0;   // 현재 보는 각도
+    Vector3 offset = new Vector3(-0.197f,2.215f,-3.116f);
 
 
     // 컴포넌트 가져오기
     private Rigidbody playerRigid;
     private CapsuleCollider capsulCollider;
     public Animator anim;
-    public Camera theCamera;
+    public Camera[] theCamera;
     public Weapon equipWeapon; 
 
     // Start is called before the first frame update
@@ -56,6 +69,17 @@ public class PlayerControleer : MonoBehaviour
 
         applySpeed = walkSpeed;
         equipWeapon = weapons[0].GetComponent<Weapon>();
+
+
+        // 3시점용
+        Radius = Stick.GetComponent<RectTransform>().sizeDelta.y * 0.5f;
+        StickFirstPos = Stick.transform.position;
+
+        // 부모 트랜스폼 값
+        float Can = Stick.transform.parent.GetComponent<RectTransform>().localScale.x;
+        Radius *= Can;  // 반지름을 부모 크기에 맞
+
+        MoveFlag = false;
     }
 
     // Update is called once per frame
@@ -64,11 +88,20 @@ public class PlayerControleer : MonoBehaviour
         GetInput();
         Move();
         Run();
-        Jump();
-        Attack();
-        EquipWeaponChange();
-        CameraRotation();
-        CharacterRotation();
+        if(GameManager.instance.is1stCam)
+        {
+            tryJump();
+            tryAttack();
+        }
+        
+        tryEquipChange();
+
+        if(GameManager.instance.is1stCam)
+        {
+            CameraRotation();
+            CharacterRotation();
+        }
+        
 
     }
 
@@ -82,36 +115,92 @@ public class PlayerControleer : MonoBehaviour
 
     void Move()
     {
-        float _moveDirX = Input.GetAxisRaw("Horizontal");   //좌우 값
-        float _moveDirZ = Input.GetAxisRaw("Vertical");     //앞뒤 값
 
-        if(_moveDirX != 0 || _moveDirZ != 0)
+        if(GameManager.instance.is1stCam) // GameManager.instance.is1stCam
         {
-            isMove = true;
 
-            Vector3 _moveHorizontal = transform.right * _moveDirX;  // 좌우 이동
-            Vector3 _moveVertical = transform.forward * _moveDirZ;  // 앞뒤 이동
+            float _moveDirX = Input.GetAxisRaw("Horizontal");   //좌우 값
+            float _moveDirZ = Input.GetAxisRaw("Vertical");     //앞뒤 값
 
-            Vector3 _velocity = (_moveHorizontal + _moveVertical).normalized * applySpeed;
-            // 크기 1의 방향 설정 * 스피드 =  속도
+            if (_moveDirX != 0 || _moveDirZ != 0)
+            {
+                isMove = true;
 
-            playerRigid.MovePosition(transform.position + _velocity * Time.deltaTime);
-            // 오브젝트 이동
+                Vector3 _moveHorizontal = transform.right * _moveDirX;  // 좌우 이동
+                Vector3 _moveVertical = transform.forward * _moveDirZ;  // 앞뒤 이동
 
+                Vector3 _velocity = (_moveHorizontal + _moveVertical).normalized * applySpeed;
+                // 크기 1의 방향 설정 * 스피드 =  속도
+
+                playerRigid.MovePosition(transform.position + _velocity * Time.deltaTime);
+                // 오브젝트 이동
+
+            }
+            else
+            {
+                isMove = false;
+            }
         }
         else
         {
-            isMove = false;
+            if (MoveFlag)
+            {
+                transform.Translate(Vector3.forward * Time.deltaTime * applySpeed);
+                isMove = true;
+            }
+            else
+            {
+                isMove = false;
+            }
         }
+
+        theCamera[1].transform.position = transform.position + offset;
 
         if (!isRun)
             anim.SetBool("Walk", isMove);
       
+    }
 
+
+    public void Drag(BaseEventData _Data)
+    {
+        if(!GameManager.instance.is1stCam)
+        {
+            MoveFlag = true;
+            PointerEventData Data = _Data as PointerEventData;
+            Vector3 Pos = Data.position;
+
+
+            JoyVec = (Pos - StickFirstPos).normalized;
+
+
+            float Dis = Vector3.Distance(Pos, StickFirstPos);
+
+
+            if (Dis < Radius)
+                Stick.position = StickFirstPos + JoyVec * Dis;
+
+            else
+                Stick.position = StickFirstPos + JoyVec * Radius;
+
+            transform.eulerAngles = new Vector3(0, Mathf.Atan2(JoyVec.x, JoyVec.y) * Mathf.Rad2Deg, 0);
+        }
+    }
+
+    // 드래그 종료 > 원위치
+    public void DragEnd()
+    {
+        if(!GameManager.instance.is1stCam)
+        {
+            Stick.position = StickFirstPos; // 처음 위ㅊ
+            JoyVec = Vector3.zero;
+            MoveFlag = false;
+        }
+       
     }
 
     //달리기
-   void Run()
+    void Run()
     {
         anim.SetBool("Run", isRun && isMove);
 
@@ -130,32 +219,58 @@ public class PlayerControleer : MonoBehaviour
 
     }
 
-    // 점프
-    void Jump()
+    void tryJump()
     {
-        if(isJump && isGround)
+        if (isJump)
+        {
+            Jump();
+        }
+    }
+
+    // 점프
+    public void Jump()
+    {
+        if(isGround)
         {
             playerRigid.velocity = transform.up * jumpForce;
             isGround = false;
             anim.SetBool("Jump", true);
         }
+     
+    }
+
+    void tryAttack()
+    {
+        if (isAttack)
+        {
+            Attack();
+        }
     }
 
     // 공격
-    void Attack()
+    public void Attack()
     {
-        
-        if(isAttack && isGround)
+        if(isGround)
         {
             equipWeapon.Use();
+        }
+        
+        
+    }
+
+    void tryEquipChange()
+    {
+        if (isChange && !isJump && !equipWeapon.isAttack)
+        {
+            EquipWeaponChange();
         }
     }
 
     // 무기 교체
-    void EquipWeaponChange()
+    public void EquipWeaponChange()
     {
-        if (isChange && !isJump && !equipWeapon.isAttack)
-        {
+            GameManager.instance.weaponImage[weaponIndex].gameObject.SetActive(false);
+
             if (equipWeapon != null)
                 equipWeapon.gameObject.SetActive(false);    // 일단 전부 비활성화
 
@@ -164,13 +279,14 @@ public class PlayerControleer : MonoBehaviour
 
             equipWeapon = weapons[weaponIndex].GetComponent<Weapon>();
             equipWeapon.gameObject.SetActive(true);
+            GameManager.instance.weaponImage[weaponIndex].gameObject.SetActive(true);
 
             //anim.SetTrigger("doSwap");
 
             isSwap = true;
 
             Invoke("SwapOut", 0.4f);
-        }
+        
     }
     void SwapOut()
     {
@@ -199,10 +315,17 @@ public class PlayerControleer : MonoBehaviour
         currentCameraRotationX = Mathf.Clamp(currentCameraRotationX, -cameraRotationLimit, cameraRotationLimit);
         // 최소  최대  카메라 회전값 설정
 
-        theCamera.transform.localEulerAngles = new Vector3(currentCameraRotationX, 0f, 0f);
+        theCamera[0].transform.localEulerAngles = new Vector3(currentCameraRotationX, 0f, 0f);
 
     }
 
+
+
+
+    void Dead()
+    {
+        anim.SetTrigger("Die");
+    }
     
 
 

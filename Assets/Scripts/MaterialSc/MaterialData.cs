@@ -23,12 +23,13 @@ public class MaterialData : ScriptableObject
     public MaterialType materialType;
     public MaterialValue materialValue;
 
-    //기본 스테이터스
+    //???? ??????????
     public int hp;
+    public int exp;
 
-    // 재료 설명
+    // ???? ????
     [TextArea] public string materialData;
 
-    // 몹 프리팹
+    // ?? ??????
     public GameObject materialPrefab;
 }

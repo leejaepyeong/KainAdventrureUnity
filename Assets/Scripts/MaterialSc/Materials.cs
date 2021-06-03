@@ -30,6 +30,7 @@ public class Materials : MonoBehaviour
         if(currentHp <= 0)
         {
             isBreak = true;
+            PlayerStatus.instance.currentExp += materialData.exp;
             Reward();
         }
 

@@ -14,13 +14,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enemyName: Skeleton
   enemyType: 1
-  hp: 20
+  hp: 200
   mp: 0
-  damage: 5
-  defense: 1
+  damage: 20
+  defense: 5
   delay: 0
   moveSpeed: 3
   hpRegen: 10
   mpRegen: 0
+  regenTime: 0
+  Exp: 6
   enemyData: "\uADFC\uBCF8\uC740 \uADFC\uBCF8!"
   enemyPrefab: {fileID: 0}

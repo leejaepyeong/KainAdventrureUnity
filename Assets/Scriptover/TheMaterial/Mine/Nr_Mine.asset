@@ -16,5 +16,6 @@ MonoBehaviour:
   materialType: 1
   materialValue: 0
   hp: 10
+  exp: 1
   materialData: "\uC778\uC0DD \uBB34\uC5C7,,,\uB108\uBB34 \uD3C9\uBC94\uD55C \uAD11\uBB3C"
   materialPrefab: {fileID: 0}
