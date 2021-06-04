@@ -9,10 +9,9 @@ public class GameManager : MonoBehaviour
 
     //상태
     public bool is1stCam = true;
-    bool isMenuOn = false;
-    bool isStatusOn = false;
+    public bool isInfoOn = false;
 
-    public Text cameraTxt;  //  카메라 시점 텍스ㅌ
+    public Text cameraTxt;  //  카메라 시점 텍스트
 
     public int stat = 0;   // 스탯 추가 갯수
 
@@ -21,13 +20,8 @@ public class GameManager : MonoBehaviour
     //필요 컴포넌트
     public PlayerControleer player;
     public GameObject controlPad;
-    public GameObject MenuPannel;
-    public GameObject Menu;
-    public GameObject StatusPannel;
     public GameObject statusCount;
     public Text statusCountTxt;
-
-
 
 
     // Start is called before the first frame update
@@ -79,39 +73,5 @@ public class GameManager : MonoBehaviour
         statusCountTxt.text = stat.ToString();
     }
 
-    public void MenuOpen()
-    {
-        isMenuOn = true;
-
-        
-        MenuPannel.SetActive(true);
-        Menu.SetActive(false);
-        
-    }
-
-    public void MenuClose()
-    {
-        isMenuOn = false;
-
-        MenuPannel.SetActive(false);
-        Menu.SetActive(true);
-    }
-
-    public void StatusOpen()
-    {
-        isMenuOn = true;
-
-
-        StatusPannel.SetActive(true);
-        Menu.SetActive(false);
-
-    }
-
-    public void StatusClose()
-    {
-        isMenuOn = false;
-
-        StatusPannel.SetActive(false);
-        Menu.SetActive(true);
-    }
+    
 }

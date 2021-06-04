@@ -18,11 +18,10 @@ MonoBehaviour:
   mp: 0
   damage: 5
   defense: 0
-  delay: 0
-  moveSpeed: 4
+  delay: 1.2
+  moveSpeed: 3
   hpRegen: 10
   mpRegen: 0
   regenTime: 10
   Exp: 2
   enemyData: "\uBA38\uC26C.. \uC911\uD5CC\uB514?"
-  enemyPrefab: {fileID: 0}

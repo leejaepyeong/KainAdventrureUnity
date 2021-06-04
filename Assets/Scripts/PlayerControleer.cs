@@ -35,6 +35,8 @@ public class PlayerControleer : MonoBehaviour
     bool isGround = true;
     bool isChange = false;
     bool isSwap;
+    public bool isDead = false;
+    bool isHit = false;
 
     //무기
 
@@ -52,13 +54,17 @@ public class PlayerControleer : MonoBehaviour
     private float currentCameraRotationX = 0;   // 현재 보는 각도
     Vector3 offset = new Vector3(-0.197f,2.215f,-3.116f);
 
+    //미니맵
+    public Transform MiniCamPos;
+
 
     // 컴포넌트 가져오기
     private Rigidbody playerRigid;
     private CapsuleCollider capsulCollider;
     public Animator anim;
     public Camera[] theCamera;
-    public Weapon equipWeapon; 
+    public Weapon equipWeapon;
+    public CrossHair crossHair;
 
     // Start is called before the first frame update
     void Start()
@@ -85,22 +91,26 @@ public class PlayerControleer : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        GetInput();
-        Move();
-        Run();
-        if(GameManager.instance.is1stCam)
+        if(!isDead)
         {
-            tryJump();
-            tryAttack();
-        }
-        
-        tryEquipChange();
+            GetInput();
+            Move();
+            Run();
+            if (GameManager.instance.is1stCam)
+            {
+                tryJump();
+                tryAttack();
+            }
 
-        if(GameManager.instance.is1stCam)
-        {
-            CameraRotation();
-            CharacterRotation();
+            tryEquipChange();
+
+            if (GameManager.instance.is1stCam)
+            {
+                CameraRotation();
+                CharacterRotation();
+            }
         }
+       
         
 
     }
@@ -115,8 +125,9 @@ public class PlayerControleer : MonoBehaviour
 
     void Move()
     {
+        MiniCamPos.position = transform.position + new Vector3(0,90,0);
 
-        if(GameManager.instance.is1stCam) // GameManager.instance.is1stCam
+        if (GameManager.instance.is1stCam) // GameManager.instance.is1stCam
         {
 
             float _moveDirX = Input.GetAxisRaw("Horizontal");   //좌우 값
@@ -157,7 +168,11 @@ public class PlayerControleer : MonoBehaviour
         theCamera[1].transform.position = transform.position + offset;
 
         if (!isRun)
+        {
             anim.SetBool("Walk", isMove);
+            crossHair.WalkingAnimation(isMove);
+        }
+            
       
     }
 
@@ -203,20 +218,16 @@ public class PlayerControleer : MonoBehaviour
     void Run()
     {
         anim.SetBool("Run", isRun && isMove);
+        crossHair.RunningAnimation(isRun && isMove);
 
         if (isRun)
         {
-           
             applySpeed = runSpeed;
         }
         else
         {
-           
             applySpeed = walkSpeed;
         }
-
-        
-
     }
 
     void tryJump()
@@ -230,11 +241,13 @@ public class PlayerControleer : MonoBehaviour
     // 점프
     public void Jump()
     {
-        if(isGround)
+        if(isGround && !GameManager.instance.isInfoOn)
         {
+            
             playerRigid.velocity = transform.up * jumpForce;
             isGround = false;
             anim.SetBool("Jump", true);
+            crossHair.JumpingAnimation(!isGround);
         }
      
     }
@@ -250,12 +263,30 @@ public class PlayerControleer : MonoBehaviour
     // 공격
     public void Attack()
     {
-        if(isGround)
+        if(isGround && !GameManager.instance.isInfoOn)
         {
+            crossHair.FireAnimation();
             equipWeapon.Use();
         }
-        
-        
+    }
+
+    public void onDamage(int _damage)
+    {
+        if(!isDead)
+        {
+            PlayerStatus.instance.currentHp -= _damage;
+            anim.SetTrigger("Damage");
+
+            if (PlayerStatus.instance.currentHp <= 0)
+                Dead();
+        }
+    }
+
+
+    void Dead()
+    {
+        isDead = true;
+        anim.SetTrigger("Die");
     }
 
     void tryEquipChange()
@@ -320,15 +351,6 @@ public class PlayerControleer : MonoBehaviour
     }
 
 
-
-
-    void Dead()
-    {
-        anim.SetTrigger("Die");
-    }
-    
-
-
     // 충돌 여부
     private void OnCollisionEnter(Collision collision)
     {
@@ -339,6 +361,13 @@ public class PlayerControleer : MonoBehaviour
         }
     }
 
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.tag == "EnemyAttack")
+        {
+            Enemy enemy = other.GetComponentInParent<Enemy>();
+            onDamage(enemy.enemyData.damage);
+        }
+    }
 
-    
 }

@@ -12,6 +12,7 @@ TagManager:
   - PlayerRange
   - Item
   - NPC
+  - EnemyAttack
   layers:
   - Default
   - TransparentFX
@@ -21,8 +22,8 @@ TagManager:
   - UI
   - Weapon
   - Player
-  - 
-  - 
+  - Enemy
+  - Mark
   - 
   - 
   - 

@@ -111,7 +111,7 @@ MonoBehaviour:
   materialData: {fileID: 11400000, guid: 43a6e894804ef4b4cba6c9091fc07639, type: 2}
   treeReward: []
   mineReward:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
+  - {fileID: 6316409508062169661, guid: 9e1e9e5d8cdd345f880fe67c60605818, type: 3}
+  - {fileID: 9019029123665555429, guid: 3b7bbe253029b441795206ec4ee98f53, type: 3}
+  - {fileID: 2784485723336160846, guid: d9f330c57f257494c8ecfa6210538f75, type: 3}
+  - {fileID: 4395162255091912894, guid: df2a21d6cb23c4da68404d0b75376bc3, type: 3}

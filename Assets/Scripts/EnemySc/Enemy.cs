@@ -1,47 +1,51 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.AI;
 
 public class Enemy : MonoBehaviour
 {
     public EnemyData enemyData;
 
-    //????
+    //기본 스탯
     protected int currentHp;
     protected int currentMp;
     protected int damage;
     protected int defense;
     protected float delay;
 
-    // ???? ????
+    // 이동속도
     protected float walkSpeed;
     protected float RunSpeed;
-    protected float apllySpeed;
+    protected float applySpeed;
 
-    // ????
+    // 회복력
     protected int hpRegen;
     protected int mpRegen;
     protected float regenTime;
 
-    protected Vector3 direction;  // ????
+    protected Vector3 direction;  // 방향
 
-    // ?????? ????
-    protected float currentTime;
+    public Transform Target;    // 타겟
+    public BoxCollider meleeArea;   // 공격 콜라이더
 
-    // ????????
-    protected bool isHit = false;
-    protected bool isDead = false;
-    protected bool isWalking = false;
-    protected bool isRunning = false;
-    protected bool isAction = false;
-    protected bool isRegen = true;
+    // 
+    protected float currentTime = 5f;
+
+    // 상태여부
+    protected bool isHit = false;   //공격당함
+    protected bool isDead = false;  // 죽음
+    protected bool isWalking = false;   // 걷기
+    protected bool isRegen = true;  // 회복가능
+    protected bool isSight = false; // 플레이어 감지
+    protected bool isAttack = false;    // 공격중
 
     [SerializeField]
     protected Rigidbody rigid;
     [SerializeField]
     protected BoxCollider boxCollider;
     protected Animator anim;
-    
+    public NavMeshAgent nav;
 
 
 
@@ -50,9 +54,15 @@ public class Enemy : MonoBehaviour
         rigid = GetComponent<Rigidbody>();
         boxCollider = GetComponent<BoxCollider>();
         anim = GetComponent<Animator>();
+        nav = GetComponent<NavMeshAgent>();
 
         currentHp = enemyData.hp;
         currentMp = enemyData.mp;
+        walkSpeed = enemyData.moveSpeed;
+        RunSpeed = walkSpeed * 1.5f;
+        applySpeed = walkSpeed;
+
+
     }
 
     // Update is called once per frame
@@ -60,14 +70,56 @@ public class Enemy : MonoBehaviour
     {
         if(!isDead)
         {
-            Move();
-            Rotation();
             HPRegen();
             MPRegen();
             RegenTime();
+            AiMoveCheck();
+            Targeteting();
         }
         
     }
+
+    protected void AiMoveCheck()
+    {
+        float distance = Vector3.Distance(transform.position,Target.transform.position);
+        nav.SetDestination(Target.position);
+        anim.SetBool("Walk", isWalking);
+
+        if (distance < 10f)
+        {
+            isSight = true;
+        }   
+        else
+        {
+            isSight = false;
+
+            nav.isStopped = true;
+            nav.updatePosition = false;
+            nav.updateRotation = false;
+            nav.velocity = Vector3.zero;
+            isWalking = false;
+        }
+
+        if (isSight)
+        {
+            nav.isStopped = false;
+            nav.updatePosition = true;
+            nav.updateRotation = true;
+
+            nav.speed = RunSpeed;
+            isWalking = true;
+        }
+        
+        if(isAttack)
+        {
+            nav.isStopped = true;
+            nav.updatePosition = false;
+            nav.updateRotation = false;
+            nav.velocity = Vector3.zero;
+        }
+       
+    }
+
     protected void RegenTime()
     {
         if(!isHit)
@@ -81,50 +133,50 @@ public class Enemy : MonoBehaviour
         }
         
     }
-    protected void ElapseTime()
+  
+
+    protected virtual void Targeteting()
     {
-        if (isAction)
+        if (!isDead)
         {
-            currentTime -= Time.deltaTime;
-            if (currentTime <= 0)
+            float targetRadius = 0f;
+            float targetRange = 0f;
+
+
+            targetRadius = 0.5f;       
+
+            RaycastHit[] rayHits = Physics.SphereCastAll(transform.position, targetRadius,
+                                  transform.forward, targetRange, LayerMask.GetMask("Player"));
+       
+
+            if (rayHits.Length > 0 && !isAttack && !Target.GetComponent<PlayerControleer>().isDead)
             {
-                ReSet();
+                StartCoroutine(Attack());
             }
         }
+
     }
 
-    protected virtual void ReSet()
+    protected virtual IEnumerator Attack()
     {
         isWalking = false;
-        isAction = true;
-        // anim.SetBool("Walking", isWalking);
-        direction.Set(0f, Random.Range(0f, 360f), 0f);
+        isAttack = true;
+        anim.SetTrigger("Attack");
+
+                yield return new WaitForSeconds(0.2f);
+                meleeArea.enabled = true;
+
+                yield return new WaitForSeconds(0.3f);
+                meleeArea.enabled = false;
+
+                yield return new WaitForSeconds(enemyData.delay - 0.5f);
+     
+        //애니메이션 딜레이 있어서
+
+        isAttack = false;
+
     }
 
-    protected virtual void Move()
-    {
-        if(isHit)
-        {
-
-        }
-        else
-        {
-            if (isWalking)
-                rigid.MovePosition(transform.position + (transform.forward * enemyData.moveSpeed * Time.deltaTime));
-        }
-    }
-
-    protected virtual void Rotation()
-    {
-        if(isHit)
-        {
-
-        }
-        else
-        {
-
-        }
-    }
 
     protected virtual void HPRegen()
     {
@@ -152,9 +204,12 @@ public class Enemy : MonoBehaviour
 
     public virtual void Hit(int _damage)
     {
+
         isRegen = false;
         regenTime = 0;
-        StopAllCoroutines();
+        StopCoroutine("HitCoroutine");
+
+        if(!isDead)
         StartCoroutine(HitCoroutine(_damage));
     }
 
@@ -163,7 +218,6 @@ public class Enemy : MonoBehaviour
         
         isHit = true;
         currentHp -= _damage;
-        Debug.Log(currentHp);
 
         if (currentHp <= 0)
         {
