@@ -93,6 +93,17 @@ public class PlayerStatus : MonoBehaviour
     }
 
 
-    
+    public void IncreaseHp(int _data)
+    {
+        currentHp += _data;
+    }
+    public void IncreaseMp(int _data)
+    {
+        currentMp += _data;
+    }
+
+
+
+
 
 }
