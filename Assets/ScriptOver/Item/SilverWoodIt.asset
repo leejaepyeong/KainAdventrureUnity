@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dc10207e942a96f4ab680ff1de796ded, type: 3}
+  m_Name: SilverWoodIt
+  m_EditorClassIdentifier: 
+  itemName: SilverWood
+  itemDesc: "\uC740\uC0C9 \uB098\uBB34\uC785\uB2C8\uB2E4\n\uC11E\uC740\uAC70 \uAC19\uC9C0\uB9CC
+    \uC548 \uC369\uC5C8\uC2B5\uB2C8\uB2E4"
+  itemType: 2
+  itemImage: {fileID: 21300000, guid: 42a113f0123fcd3418252f1194b9f014, type: 3}
+  itemPrefab: {fileID: 4517306736001208658, guid: e2d2c00276458104483d1b4e42834eb9, type: 3}
+  weaponType: 

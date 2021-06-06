@@ -11,8 +11,9 @@ GameObject:
   - component: {fileID: 4520196873051859518}
   - component: {fileID: 4525301467007076726}
   - component: {fileID: 4532398293808242074}
-  - component: {fileID: 4518719509729901788}
   - component: {fileID: 4518719509729901763}
+  - component: {fileID: -4144820523400555779}
+  - component: {fileID: 5014093307227215583}
   m_Layer: 0
   m_Name: SilverWood
   m_TagString: Item
@@ -83,7 +84,33 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!54 &4518719509729901788
+--- !u!65 &4518719509729901763
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4517306736001208658}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.8989856, y: 0.8584133, z: 3.8024452}
+  m_Center: {x: -0.00036373734, y: 0.40695646, z: -0.020940661}
+--- !u!114 &-4144820523400555779
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4517306736001208658}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d3b1217459644ed4ab4ac6a14b71106a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  item: {fileID: 11400000, guid: b58ae3bcc5c6ff242b656a077e97522d, type: 2}
+--- !u!54 &5014093307227215583
 Rigidbody:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -99,16 +126,3 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!65 &4518719509729901763
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4517306736001208658}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 0.8989856, y: 0.8584133, z: 3.8024452}
-  m_Center: {x: -0.00036373734, y: 0.40695646, z: -0.020940661}

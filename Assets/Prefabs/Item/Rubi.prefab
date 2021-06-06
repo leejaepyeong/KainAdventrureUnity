@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 9019029123663556901}
   - component: {fileID: 9019029123665555428}
   - component: {fileID: 8876664926182295688}
+  - component: {fileID: 4327474597066446901}
   m_Layer: 0
   m_Name: Rubi
   m_TagString: Item
@@ -113,3 +114,16 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &4327474597066446901
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9019029123665555429}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d3b1217459644ed4ab4ac6a14b71106a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  item: {fileID: 11400000, guid: 0b672cf2cd0cd83489dd4ded1f07ad82, type: 2}

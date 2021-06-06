@@ -22,7 +22,6 @@ public class Slot : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler, IP
     void Start()
     {
         theItemEffectDatabase = FindObjectOfType<ItemEffectDataBase>();
-
     }
 
     //이미지 투명도 조절
@@ -93,7 +92,6 @@ public class Slot : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler, IP
                 }
 
 
-
             }
         }
     }
@@ -155,6 +153,7 @@ public class Slot : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler, IP
         }
     }
 
+    
     // 마우스가 슬롯에 들어갈때 발동
     public void OnPointerEnter(PointerEventData eventData)
     {
@@ -167,4 +166,5 @@ public class Slot : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler, IP
     {
         theItemEffectDatabase.HideToolTip();
     }
+
 }

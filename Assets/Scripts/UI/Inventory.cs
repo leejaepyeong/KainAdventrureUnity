@@ -2,6 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+
+
 public class Inventory : MonoBehaviour
 {
     public static bool inventoryActivated = false;  // 인벤토리 설정 시 다른 동작(캄라 회전 공격) 정지
@@ -14,42 +16,41 @@ public class Inventory : MonoBehaviour
 
     private Slot[] slots;   // 슬롯 20개
 
+    public GameObject[] invenMenu;  // 장비 / 아이템 / 가구
+    private int menuNum = 0;    // 0 : 장비 1 : 아이템 2: 가구
+
     private void Start()
     {
-        slots = go_SlotsParent.GetComponentsInChildren<Slot>();
-
+            slots = go_SlotsParent.GetComponentsInChildren<Slot>();
     }
 
-    private void Update()
+
+    public void EquipOn()
     {
-        TryOpenInventory();
+        menuNum = 0;
+        ChangeMenu();
     }
 
-    void TryOpenInventory()
+    public void ItemOn()
     {
-        if (Input.GetKeyDown(KeyCode.I))
+        menuNum = 1;
+        ChangeMenu();
+    }
+
+    public void StructOn()
+    {
+        menuNum = 2;
+        ChangeMenu();
+    }
+
+    void ChangeMenu()
+    {
+        foreach(GameObject menu in invenMenu)
         {
-            inventoryActivated = !inventoryActivated;
-
-            if (inventoryActivated)
-            {
-                OpenInventory();
-            }
-            else
-            {
-                CloseInventory();
-            }
+            menu.SetActive(false);
         }
-    }
 
-    void OpenInventory()
-    {
-        go_InventoryBase.SetActive(true);
-    }
-
-    void CloseInventory()
-    {
-        go_InventoryBase.SetActive(false);
+        invenMenu[menuNum].SetActive(true);
     }
 
     //획득 아이템 넣어주기
@@ -79,8 +80,6 @@ public class Inventory : MonoBehaviour
                 return;
             }
         }
-
-
-
     }
+
 }

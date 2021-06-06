@@ -13,8 +13,12 @@ public class InfoManager : MonoBehaviour
     public GameObject MenuBtn;
     public GameObject StatusPannel;
     public GameObject MiniMapPannel;
+    public GameObject InvenPannel;
 
-
+    private void Update()
+    {
+        TryOpenInventory();
+    }
 
     public void MenuOpen()
     {
@@ -67,6 +71,42 @@ public class InfoManager : MonoBehaviour
         GameManager.instance.isInfoOn = false;
 
         MiniMapPannel.SetActive(false);
+        MenuBtn.SetActive(true);
+    }
+
+
+    void TryOpenInventory()
+    {
+        if (Input.GetKeyDown(KeyCode.I))
+        {
+            Inventory.inventoryActivated = !Inventory.inventoryActivated;
+
+            if (Inventory.inventoryActivated)
+            {
+                MenuBtn.SetActive(false);
+                OpenInventory();
+            }
+            else
+            {
+                CloseInventory();
+            }
+        }
+    }
+
+    public void OpenInventory()
+    {
+        Inventory.inventoryActivated = true;
+        InvenPannel.SetActive(true);
+        GameManager.instance.isInfoOn = true;
+        MenuPannel.SetActive(false);
+
+    }
+
+    public void CloseInventory()
+    {
+        Inventory.inventoryActivated = false;
+        InvenPannel.SetActive(false);
+        GameManager.instance.isInfoOn = false;
         MenuBtn.SetActive(true);
     }
 }

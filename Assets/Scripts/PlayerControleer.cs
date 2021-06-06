@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
+using UnityEngine.UI;
 
 public class PlayerControleer : MonoBehaviour
 {
@@ -65,6 +66,10 @@ public class PlayerControleer : MonoBehaviour
     public Camera[] theCamera;
     public Weapon equipWeapon;
     public CrossHair crossHair;
+    [SerializeField]
+    private Inventory theInventory; // 인벤토리
+    [SerializeField]
+    private Text actionTxt; // 아이템 텍스트
 
     // Start is called before the first frame update
     void Start()
@@ -350,6 +355,10 @@ public class PlayerControleer : MonoBehaviour
 
     }
 
+    void DisappearItem()
+    {
+        actionTxt.gameObject.SetActive(false);
+    }
 
     // 충돌 여부
     private void OnCollisionEnter(Collision collision)
@@ -358,6 +367,15 @@ public class PlayerControleer : MonoBehaviour
         {
             isGround = true;
             anim.SetBool("Jump", false);
+        }
+        else if (collision.gameObject.tag == "Item")
+        {
+            theInventory.AcquireItem(collision.transform.GetComponent<ItemPickUp>().item);
+            actionTxt.gameObject.SetActive(true);
+            actionTxt.text = collision.transform.GetComponent<ItemPickUp>().item.itemName + "획득" + "<color=yellow>" + "(E)" + "</color>";
+            Destroy(collision.gameObject);
+
+            Invoke("DisappearItem", 1f);
         }
     }
 
@@ -368,6 +386,7 @@ public class PlayerControleer : MonoBehaviour
             Enemy enemy = other.GetComponentInParent<Enemy>();
             onDamage(enemy.enemyData.damage);
         }
+        
     }
 
 }

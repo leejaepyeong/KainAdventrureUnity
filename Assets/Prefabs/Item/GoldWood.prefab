@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 6673107169060640329}
   - component: {fileID: 6685669318277114977}
   - component: {fileID: 6685669318277114976}
+  - component: {fileID: 8607415098089140589}
   m_Layer: 0
   m_Name: GoldWood
   m_TagString: Item
@@ -112,3 +113,16 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.8989856, y: 0.8584133, z: 3.8024452}
   m_Center: {x: -0.00036373734, y: 0.40695646, z: -0.020940661}
+--- !u!114 &8607415098089140589
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6687072677610052225}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d3b1217459644ed4ab4ac6a14b71106a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  item: {fileID: 11400000, guid: 58dc98f77e649fa42950f684d1ac4cfe, type: 2}

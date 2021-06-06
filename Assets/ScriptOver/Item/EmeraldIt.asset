@@ -1,0 +1,20 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dc10207e942a96f4ab680ff1de796ded, type: 3}
+  m_Name: EmeraldIt
+  m_EditorClassIdentifier: 
+  itemName: Emerald
+  itemDesc: "\uCD08\uB85D\uBE5B\uC758 \uC5D0\uBA54\uB784\n5\uC6D4\uC758 \uD0C4\uC0DD\uC11D"
+  itemType: 2
+  itemImage: {fileID: 21300000, guid: 8f6c4004b346a6a41bedc9623425dbd3, type: 3}
+  itemPrefab: {fileID: 4395162255091912894, guid: df2a21d6cb23c4da68404d0b75376bc3, type: 3}
+  weaponType: 
