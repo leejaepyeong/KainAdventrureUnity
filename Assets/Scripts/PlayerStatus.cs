@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class PlayerStatus : MonoBehaviour
 {
@@ -14,7 +15,7 @@ public class PlayerStatus : MonoBehaviour
 
     public int meleeDamage;
     public int rangeDamage;
-    public int resourceDamage;
+    public int resourceDamage;  //자원 채취 대미지
 
     public int defence;
 
@@ -27,6 +28,10 @@ public class PlayerStatus : MonoBehaviour
     public int maxExp;
     public int currentExp;
     public int level = 1;
+
+    public Image hpBar;
+    public Image mpBar;
+    public Image expBar;
 
 
     //필요 컴포넌트
@@ -41,6 +46,9 @@ public class PlayerStatus : MonoBehaviour
     private void Update()
     {
         LevelUp();
+        HpBarControl();
+        MpBarControl();
+        ExpBarControl();
     }
 
 
@@ -103,7 +111,20 @@ public class PlayerStatus : MonoBehaviour
     }
 
 
+    public void HpBarControl()
+    {
+        hpBar.fillAmount = (float)currentHp / maxHp;
+    }
 
+    public void MpBarControl()
+    {
+        mpBar.fillAmount = (float)currentMp / maxMp;
+    }
+
+    public void ExpBarControl()
+    {
+        expBar.fillAmount = (float)currentExp / maxExp;
+    }
 
 
 }
