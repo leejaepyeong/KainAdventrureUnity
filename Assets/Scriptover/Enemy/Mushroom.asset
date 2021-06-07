@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enemyName: Mushroom
   enemyType: 0
-  hp: 100
+  hp: 50
   mp: 0
   damage: 5
   defense: 0
@@ -23,5 +23,5 @@ MonoBehaviour:
   hpRegen: 10
   mpRegen: 0
   regenTime: 10
-  Exp: 2
+  Exp: 3
   enemyData: "\uBA38\uC26C.. \uC911\uD5CC\uB514?"

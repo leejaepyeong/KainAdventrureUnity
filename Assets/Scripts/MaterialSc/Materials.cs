@@ -13,6 +13,7 @@ public class Materials : MonoBehaviour
 
     public GameObject[] treeReward;
     public GameObject[] mineReward;
+    public ParticleSystem hitEffect;
 
     private int rewardCase; // 0 : Normal , 1 : Uniq, 2 : Legend
 
@@ -24,6 +25,7 @@ public class Materials : MonoBehaviour
     void Hit(int _damage)
     {
         isHit = true;
+        hitEffect.gameObject.SetActive(true);
 
         currentHp -= _damage;
 
@@ -34,12 +36,13 @@ public class Materials : MonoBehaviour
             Reward();
         }
 
-        Invoke("HitOver", 1f);
+        Invoke("HitOver", 0.9f);
 
     }
 
     void HitOver()
     {
+        hitEffect.gameObject.SetActive(false);
         isHit = false;
     }
 

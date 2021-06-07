@@ -7,21 +7,24 @@ using UnityEngine;
 public class Inventory : MonoBehaviour
 {
     public static bool inventoryActivated = false;  // 인벤토리 설정 시 다른 동작(캄라 회전 공격) 정지
-
+    
     //필요한 컴포넌트
     [SerializeField]
     private GameObject go_InventoryBase;
     [SerializeField]
     private GameObject go_SlotsParent;  // grid Setting
 
-    private Slot[] slots;   // 슬롯 20개
+    //private Slot[] slots;   // 슬롯 20개
+
 
     public GameObject[] invenMenu;  // 장비 / 아이템 / 가구
+    public SlotPresenter[] slotPresenters;
+
     private int menuNum = 0;    // 0 : 장비 1 : 아이템 2: 가구
 
     private void Start()
     {
-            slots = go_SlotsParent.GetComponentsInChildren<Slot>();
+           // slots[] = go_SlotsParent[].GetComponentsInChildren<Slot>();
     }
 
 
@@ -58,28 +61,56 @@ public class Inventory : MonoBehaviour
     {
         if (Item.ItemType.Equipment != _item.itemType)
         {
-            for (int i = 0; i < slots.Length; i++)
-            {
-                if (slots[i].item != null)
+            /*
+            foreach (Slot slot in slotPresenters[(int)_item.itemType].slots.)
                 {
-                    if (slots[i].item.itemName == _item.itemName)
+
+                
+                if (slot.item != null)
                     {
-                        slots[i].SetSlotCount(_count);
-                        return;
+                        if (slot.item.itemName == _item.itemName)
+                        {
+                            slot.SetSlotCount(_count);
+                            return;
+                        }
                     }
                 }
-            }
+            */
+                for (int j = 0; j < slotPresenters[(int)_item.itemType].slots.Count; j++)
+                {
+                    if (slotPresenters[(int)_item.itemType].slots[j].item != null)
+                    {
+                        if (slotPresenters[(int)_item.itemType].slots[j].item.itemName == _item.itemName)
+                        {
+                        slotPresenters[(int)_item.itemType].slots[j].SetSlotCount(_count);
+                            return;
+                        }
+                    }
+                }
+
+            
         }
-
-
-        for (int i = 0; i < slots.Length; i++)
+/*
+        foreach (Slot slot in slotPresenters[0].slots)
         {
-            if (slots[i].item == null)
+            if (slot.item == null)
             {
-                slots[i].AddItem(_item, _count);
+                slot.AddItem(_item, _count);
                 return;
             }
         }
-    }
+*/
+
+               
+                for (int i = 0; i < slotPresenters[(int)_item.itemType].slots.Count; i++)
+                {
+                    if (slotPresenters[(int)_item.itemType].slots[i].item == null)
+                    {
+                slotPresenters[(int)_item.itemType].slots[i].AddItem(_item, _count);
+                        return;
+                    }
+                }
+                
+            }
 
 }

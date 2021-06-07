@@ -15,7 +15,7 @@ MonoBehaviour:
   itemName: GoldWood
   itemDesc: "\uAE08\uC0C9 \uB098\uBB34\uC785\uB2C8\uB2E4\n\uAC00\uCE58\uAC00 \uAC00\uC7A5
     \uB192\uC740 \uB098\uBB34\uC785\uB2C8\uB2E4"
-  itemType: 2
-  itemImage: {fileID: 21300000, guid: eeb9b46fbd9662843ae31c90c8f601ec, type: 3}
+  itemType: 1
+  itemImage: {fileID: 21300000, guid: 3444e2a635219c0469fcd02f7953947e, type: 3}
   itemPrefab: {fileID: 6687072677610052225, guid: 2fadeb6d8031dc241bf2ab87c7081957, type: 3}
   weaponType: 

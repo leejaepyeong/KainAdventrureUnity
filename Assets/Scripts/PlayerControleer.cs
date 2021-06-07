@@ -33,6 +33,7 @@ public class PlayerControleer : MonoBehaviour
     bool isRun = false;
     bool isJump = false;
     bool isAttack = false;
+    bool isSkill = false;
     bool isGround = true;
     bool isChange = false;
     bool isSwap;
@@ -64,8 +65,9 @@ public class PlayerControleer : MonoBehaviour
     private CapsuleCollider capsulCollider;
     public Animator anim;
     public Camera[] theCamera;
-    public Weapon equipWeapon;
-    public CrossHair crossHair;
+    public Weapon equipWeapon;  //장비 종류
+    public SkillEffect skillBook; // 스킬 종류
+    public CrossHair crossHair; // 현재 초점
     [SerializeField]
     private Inventory theInventory; // 인벤토리
     [SerializeField]
@@ -105,6 +107,7 @@ public class PlayerControleer : MonoBehaviour
             {
                 tryJump();
                 tryAttack();
+                trySkill();
             }
 
             tryEquipChange();
@@ -124,6 +127,7 @@ public class PlayerControleer : MonoBehaviour
     {
         isJump = Input.GetButtonDown("Jump");
         isAttack = Input.GetButtonDown("Fire1");
+        isSkill = Input.GetButtonDown("Fire2");
         isRun = Input.GetKey(KeyCode.LeftShift);
         isChange = Input.GetKeyDown(KeyCode.E);
     }
@@ -272,6 +276,24 @@ public class PlayerControleer : MonoBehaviour
         {
             crossHair.FireAnimation();
             equipWeapon.Use();
+        }
+    }
+
+    //스킬
+    void trySkill()
+    {
+        if(isSkill)
+        {
+            Skill();
+        }
+    }
+
+    public void Skill()
+    {
+        if (isGround && !GameManager.instance.isInfoOn)
+        {
+            crossHair.FireAnimation();
+            skillBook.useSkill();
         }
     }
 

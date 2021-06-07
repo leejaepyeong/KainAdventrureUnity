@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemName: Emerald
   itemDesc: "\uCD08\uB85D\uBE5B\uC758 \uC5D0\uBA54\uB784\n5\uC6D4\uC758 \uD0C4\uC0DD\uC11D"
-  itemType: 2
-  itemImage: {fileID: 21300000, guid: 8f6c4004b346a6a41bedc9623425dbd3, type: 3}
+  itemType: 1
+  itemImage: {fileID: 21300000, guid: 3b0cb6d32db3c82448bffbe06b6d16e1, type: 3}
   itemPrefab: {fileID: 4395162255091912894, guid: df2a21d6cb23c4da68404d0b75376bc3, type: 3}
   weaponType: 

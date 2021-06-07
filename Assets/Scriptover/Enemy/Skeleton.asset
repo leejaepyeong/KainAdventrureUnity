@@ -23,6 +23,5 @@ MonoBehaviour:
   hpRegen: 10
   mpRegen: 0
   regenTime: 0
-  Exp: 6
+  Exp: 20
   enemyData: "\uADFC\uBCF8\uC740 \uADFC\uBCF8!"
-  enemyPrefab: {fileID: 0}

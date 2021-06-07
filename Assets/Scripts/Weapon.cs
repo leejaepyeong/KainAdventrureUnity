@@ -79,7 +79,7 @@ public class Weapon : MonoBehaviour
         Rigidbody bulletRigid = instantBullet.GetComponent<Rigidbody>();
         bulletRigid.velocity = bulletPos.forward * 4;
 
-        Destroy(instantBullet,3f);
+        Destroy(instantBullet,2.1f);
         yield return null;
         
     }

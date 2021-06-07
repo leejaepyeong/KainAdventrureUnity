@@ -33,6 +33,13 @@ public class PlayerStatus : MonoBehaviour
     public Image mpBar;
     public Image expBar;
 
+    public Text levelTxt;
+    public Text hPTxt;
+    public Text mPTxt;
+    public Text mAttTxt;
+    public Text rAttTxt;
+    public Text reAttTxt;
+    public Text defTxt;
 
     //필요 컴포넌트
     public PlayerControleer player;
@@ -49,15 +56,26 @@ public class PlayerStatus : MonoBehaviour
         HpBarControl();
         MpBarControl();
         ExpBarControl();
+        StatusInfo();
     }
 
-
+    void StatusInfo()
+    {
+        levelTxt.text = level.ToString();
+        hPTxt.text = currentHp.ToString() + " / " + maxHp.ToString();
+        mPTxt.text = currentMp.ToString() + " / " + maxMp.ToString();
+        mAttTxt.text = meleeDamage.ToString();
+        rAttTxt.text = rangeDamage.ToString();
+        reAttTxt.text = resourceDamage.ToString();
+        defTxt.text = defence.ToString();
+    }
     void LevelUp()
     {
         if(currentExp >= maxExp)
         {
             level++;
             GameManager.instance.stat += 3;
+            
 
             currentExp =currentExp - maxExp;
             maxExp *= 2;
