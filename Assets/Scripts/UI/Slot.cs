@@ -56,10 +56,10 @@ public class Slot : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler, IP
     }
 
     // 아이템 갯수 조정
-    public void SetSlotCount(int _count)
+    public void SetSlotCount(int _num)
     {
-        itemCount += _count;
-        text_Count.text = itemCount.ToString();
+        itemCount += _num;
+        text_Count.text = _num.ToString();
 
         if (itemCount <= 0)
             ClearSlot();
@@ -90,8 +90,6 @@ public class Slot : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler, IP
                 {
                     SetSlotCount(-1);
                 }
-
-
             }
         }
     }

@@ -7,7 +7,8 @@ using UnityEngine;
 public class Inventory : MonoBehaviour
 {
     public static bool inventoryActivated = false;  // ???????? ???? ?? ???? ????(???? ???? ????) ????
-    
+
+    public InventoryData[] inventoryData;
     //?????? ????????
     [SerializeField]
     private GameObject go_InventoryBase;
@@ -21,11 +22,6 @@ public class Inventory : MonoBehaviour
     public SlotPresenter[] slotPresenters;
 
     private int menuNum = 0;    // 0 : ???? 1 : ?????? 2: ????
-
-    private void Start()
-    {
-           // slots[] = go_SlotsParent[].GetComponentsInChildren<Slot>();
-    }
 
 
     public void EquipOn()
@@ -61,54 +57,32 @@ public class Inventory : MonoBehaviour
     {
         if (Item.ItemType.Equipment != _item.itemType)
         {
-            /*
-            foreach (Slot slot in slotPresenters[(int)_item.itemType].slots.)
-                {
-
-                
-                if (slot.item != null)
-                    {
-                        if (slot.item.itemName == _item.itemName)
-                        {
-                            slot.SetSlotCount(_count);
-                            return;
-                        }
-                    }
-                }
-            */
-                for (int j = 0; j < slotPresenters[(int)_item.itemType].slots.Count; j++)
-                {
-                    if (slotPresenters[(int)_item.itemType].slots[j].item != null)
-                    {
-                        if (slotPresenters[(int)_item.itemType].slots[j].item.itemName == _item.itemName)
-                        {
-                        slotPresenters[(int)_item.itemType].slots[j].SetSlotCount(_count);
-                            return;
-                        }
-                    }
-                }
-        }
-/*
-        foreach (Slot slot in slotPresenters[0].slots)
-        {
-            if (slot.item == null)
+            for (int i = 0; i < inventoryData[(int)_item.itemType].item.Length; i++)
             {
-                slot.AddItem(_item, _count);
-                return;
-            }
-        }
-*/
-
-               
-                for (int i = 0; i < slotPresenters[(int)_item.itemType].slots.Count; i++)
+                if(inventoryData[(int)_item.itemType].item[i] != null)
                 {
-                    if (slotPresenters[(int)_item.itemType].slots[i].item == null)
+                    if (inventoryData[(int)_item.itemType].item[i].itemName == _item.itemName)
                     {
-                slotPresenters[(int)_item.itemType].slots[i].AddItem(_item, _count);
+                        inventoryData[(int)_item.itemType].itemCount[i]++;
+                        slotPresenters[(int)_item.itemType].slots[i].SetSlotCount(1);
                         return;
                     }
                 }
-                
             }
+        }
+
+        for (int i = 0; i < inventoryData[(int)_item.itemType].item.Length; i++)
+        {
+            if (inventoryData[(int)_item.itemType].item[i] == null)
+            {
+                inventoryData[(int)_item.itemType].item[i] = _item;
+                inventoryData[(int)_item.itemType].itemCount[i]++;
+
+                slotPresenters[(int)_item.itemType].slots[i].AddItem(_item, _count);
+                return;
+            }
+        }
+
+    }
 
 }
