@@ -4,11 +4,13 @@ using UnityEngine;
 
 public class InfoManager : MonoBehaviour
 {
+    public bool isInfoOn = false;   // ??? ?????  ??? ??
+
     bool isMenuOn = false;
     bool isStatusOn = false;
     bool isMapOn = false;
 
-    //필요 컴포넌트
+    //???? ????????
     public GameObject MenuPannel;
     public GameObject MenuBtn;
     public GameObject StatusPannel;
@@ -17,11 +19,12 @@ public class InfoManager : MonoBehaviour
 
     private void Update()
     {
-        TryOpenInventory();
+        TryOpenMenu();
     }
 
     public void MenuOpen()
     {
+
         isMenuOn = true;
         MenuPannel.SetActive(true);
         MenuBtn.SetActive(false);
@@ -30,6 +33,7 @@ public class InfoManager : MonoBehaviour
 
     public void MenuClose()
     {
+
         isMenuOn = false;
 
         MenuPannel.SetActive(false);
@@ -38,50 +42,74 @@ public class InfoManager : MonoBehaviour
 
     public void StatusOpen()
     {
-        isMenuOn = true;
-        GameManager.instance.isInfoOn = true;
+        if(!isInfoOn)
+        {
+            isInfoOn = true;
 
-        StatusPannel.SetActive(true);
-        MenuPannel.SetActive(false);
+            isStatusOn = true;
+            GameManager.instance.isInfoOn = true;
+
+            StatusPannel.SetActive(true);
+            MenuPannel.SetActive(false);
+
+        }
 
     }
 
     public void StatusClose()
     {
-        isMenuOn = false;
-        GameManager.instance.isInfoOn = false;
+        if(isInfoOn && isStatusOn)
+        {
+            isInfoOn = false;
 
-        StatusPannel.SetActive(false);
-        MenuBtn.SetActive(true);
+            isStatusOn = false;
+            GameManager.instance.isInfoOn = false;
+
+            StatusPannel.SetActive(false);
+            MenuBtn.SetActive(true);
+        }
+
+        
     }
 
     public void MapOpen()
     {
-        isMapOn = true;
-        GameManager.instance.isInfoOn = true;
+        if(!isInfoOn)
+        {
+            isInfoOn = true;
 
-        MiniMapPannel.SetActive(true);
-        MenuPannel.SetActive(false);
+            isMapOn = true;
+            GameManager.instance.isInfoOn = true;
+
+            MiniMapPannel.SetActive(true);
+            MenuPannel.SetActive(false);
+        }
+       
 
     }
 
     public void MapClose()
     {
-        isMapOn = false;
-        GameManager.instance.isInfoOn = false;
+        if(isInfoOn && isMapOn)
+        {
+            isInfoOn = false;
 
-        MiniMapPannel.SetActive(false);
-        MenuBtn.SetActive(true);
+            isMapOn = false;
+            GameManager.instance.isInfoOn = false;
+
+            MiniMapPannel.SetActive(false);
+            MenuBtn.SetActive(true);
+        }
+        
     }
 
 
-    void TryOpenInventory()
+    void TryOpenMenu()
     {
         if (Input.GetKeyDown(KeyCode.I))
         {
-            Inventory.inventoryActivated = !Inventory.inventoryActivated;
 
-            if (Inventory.inventoryActivated)
+            if (!Inventory.inventoryActivated)
             {
                 MenuBtn.SetActive(false);
                 OpenInventory();
@@ -91,22 +119,61 @@ public class InfoManager : MonoBehaviour
                 CloseInventory();
             }
         }
+
+        if (Input.GetKeyDown(KeyCode.M))
+        {
+            if (!isMapOn)
+            {
+                MenuBtn.SetActive(false);
+                MapOpen();
+            }
+            else
+            {
+                MapClose();
+            }
+        }
+
+        if (Input.GetKeyDown(KeyCode.L))
+        {
+            if (!isStatusOn)
+            {
+                MenuBtn.SetActive(false);
+                StatusOpen();
+            }
+            else
+            {
+                StatusClose();
+            }
+        }
     }
 
     public void OpenInventory()
     {
-        Inventory.inventoryActivated = true;
-        InvenPannel.SetActive(true);
-        GameManager.instance.isInfoOn = true;
-        MenuPannel.SetActive(false);
+        if(!isInfoOn)
+        {
+            isInfoOn = true;
+
+            Inventory.inventoryActivated = true;
+            InvenPannel.SetActive(true);
+            GameManager.instance.isInfoOn = true;
+            MenuPannel.SetActive(false);
+        }
+        
 
     }
 
     public void CloseInventory()
     {
-        Inventory.inventoryActivated = false;
-        InvenPannel.SetActive(false);
-        GameManager.instance.isInfoOn = false;
-        MenuBtn.SetActive(true);
+        if(isInfoOn && Inventory.inventoryActivated)
+        {
+            isInfoOn = false;
+
+            Inventory.inventoryActivated = false;
+            InvenPannel.SetActive(false);
+            GameManager.instance.isInfoOn = false;
+            MenuBtn.SetActive(true);
+        }
+
+        
     }
 }

@@ -16,7 +16,7 @@ MonoBehaviour:
   skillPrefab: {fileID: 8450978759926222664, guid: dcaf2a428bde46a44a11f09f06fcddde, type: 3}
   skillImage: {fileID: 0}
   skillName: FireBall
-  mana: 20
+  mana: 2
   dataValue: 50
   delayTime: 3
   skillData: "\uB9C8\uBC95\uC758 \uADFC\uBCF8  \uD30C\uC774\uC5B4 \uBCFC!!\n\uC774\uAC78

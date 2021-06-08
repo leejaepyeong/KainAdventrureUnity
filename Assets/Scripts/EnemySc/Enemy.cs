@@ -7,38 +7,38 @@ public class Enemy : MonoBehaviour
 {
     public EnemyData enemyData;
 
-    //기본 스탯
-    protected int currentHp;
-    protected int currentMp;
-    protected int damage;
-    protected int defense;
+    //??
+    protected float currentHp;
+    protected float currentMp;
+    protected float damage;
+    protected float defense;
     protected float delay;
 
-    // 이동속도
+    // ???
     protected float walkSpeed;
     protected float RunSpeed;
     protected float applySpeed;
 
-    // 회복력
-    protected int hpRegen;
-    protected int mpRegen;
+    // ??
+    protected float hpRegen;
+    protected float mpRegen;
     protected float regenTime;
 
-    protected Vector3 direction;  // 방향
+    protected Vector3 direction;  // ??
 
-    public Transform Target;    // 타겟
-    public BoxCollider meleeArea;   // 공격 콜라이더
+    public Transform Target;    // ??
+    public BoxCollider meleeArea;   // ?? ????
 
     // 
     protected float currentTime = 5f;
 
-    // 상태여부
-    protected bool isHit = false;   //공격당함
-    protected bool isDead = false;  // 죽음
-    protected bool isWalking = false;   // 걷기
-    protected bool isRegen = true;  // 회복가능
-    protected bool isSight = false; // 플레이어 감지
-    protected bool isAttack = false;    // 공격중
+    // ??
+    protected bool isHit = false;   //????????
+    protected bool isDead = false;  // ????
+    protected bool isWalking = false;   // ????
+    protected bool isRegen = true;  // ????????
+    protected bool isSight = false; // ???????? ????
+    protected bool isAttack = false;    // ??????
 
     [SerializeField]
     protected Rigidbody rigid;
@@ -161,6 +161,9 @@ public class Enemy : MonoBehaviour
     {
         isWalking = false;
         isAttack = true;
+
+        
+
         anim.SetTrigger("Attack");
 
                 yield return new WaitForSeconds(0.2f);
@@ -171,7 +174,7 @@ public class Enemy : MonoBehaviour
 
                 yield return new WaitForSeconds(enemyData.delay - 0.5f);
      
-        //애니메이션 딜레이 있어서
+        //?????????? ?????? ??????
 
         isAttack = false;
 
@@ -202,7 +205,7 @@ public class Enemy : MonoBehaviour
             currentMp = enemyData.mp;
     }
 
-    public virtual void Hit(int _damage)
+    public virtual void Hit(float _damage)
     {
 
         isRegen = false;
@@ -213,7 +216,7 @@ public class Enemy : MonoBehaviour
         StartCoroutine(HitCoroutine(_damage));
     }
 
-    IEnumerator HitCoroutine(int _damage)
+    IEnumerator HitCoroutine(float _damage)
     {
         
         isHit = true;
@@ -235,6 +238,7 @@ public class Enemy : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
+        // ????
         if (other.tag == "PlayerAttack")
         {
 
@@ -246,7 +250,7 @@ public class Enemy : MonoBehaviour
             }
 
         }
-        else if(other.tag == "PlayerRange")
+        else if(other.tag == "PlayerRange") //??? ??
         {
 
             Bullets bullet = other.gameObject.GetComponent<Bullets>();

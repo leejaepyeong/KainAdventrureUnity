@@ -46,7 +46,8 @@ public class PlayerControleer : MonoBehaviour
     //public bool[] hasWeapons;
     private int weaponIndex = 0;
 
-
+    
+    
     //민감도
     [SerializeField]
     private float lookSensitivity;  // 카메라 감도
@@ -127,7 +128,6 @@ public class PlayerControleer : MonoBehaviour
     {
         isJump = Input.GetButtonDown("Jump");
         isAttack = Input.GetButtonDown("Fire1");
-        isSkill = Input.GetButtonDown("Fire2");
         isRun = Input.GetKey(KeyCode.LeftShift);
         isChange = Input.GetKeyDown(KeyCode.E);
     }
@@ -282,19 +282,52 @@ public class PlayerControleer : MonoBehaviour
     //스킬
     void trySkill()
     {
-        if(isSkill)
+        if(!isSkill)
         {
-            Skill();
+            if (Input.GetKeyDown(KeyCode.Alpha1))
+            {
+                Skill(0);
+            }
+            else if (Input.GetKeyDown(KeyCode.Alpha2))
+            {
+                Skill(1);
+            }
+            else if (Input.GetKeyDown(KeyCode.Alpha3))
+            {
+                Skill(2);
+            }
         }
     }
 
-    public void Skill()
+    public void SkillBtn1()
     {
+        isSkill = true;
+        Skill(0);
+    }
+
+    public void SkillBtn2()
+    {
+        isSkill = true;
+        Skill(1);
+    }
+
+    public void SkillBtn3()
+    {
+        isSkill = true;
+        Skill(2);
+    }
+
+    void Skill(int skillnum)
+    {
+        isSkill = true;
+
         if (isGround && !GameManager.instance.isInfoOn)
         {
             crossHair.FireAnimation();
-            skillBook.useSkill();
+            skillBook.useSkill(skillnum);
         }
+
+        isSkill = false;
     }
 
     public void onDamage(int _damage)

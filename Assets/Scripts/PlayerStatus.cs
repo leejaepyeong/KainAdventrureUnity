@@ -7,26 +7,27 @@ public class PlayerStatus : MonoBehaviour
 {
     public static PlayerStatus instance;
 
-    public int maxHp;
-    public int currentHp;
 
-    public int maxMp;
-    public int currentMp;
+    public float maxHp;
+    public float currentHp;
 
-    public int meleeDamage;
-    public int rangeDamage;
-    public int resourceDamage;  //자원 채취 대미지
+    public float maxMp;
+    public float currentMp;
 
-    public int defence;
+    public float meleeDamage;
+    public float rangeDamage;
+    public float resourceDamage;  //자원 채취 대미지
 
-    public int hpRegen;
-    public int mpRegen;
+    public float defence;
+
+    public float hpRegen;
+    public float mpRegen;
 
     public float hpRegenTime;
     public float mpRegenTime;
 
-    public int maxExp;
-    public int currentExp;
+    public float maxExp;
+    public float currentExp;
     public int level = 1;
 
     public Image hpBar;

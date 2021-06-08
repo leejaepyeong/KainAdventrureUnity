@@ -371,9 +371,479 @@ Transform:
   - {fileID: 7925296035090054370}
   - {fileID: 7925296033851987309}
   - {fileID: 7925296033221121412}
+  - {fileID: 8560460832391257727}
+  - {fileID: 3813174849628769452}
+  - {fileID: 4102534121610915462}
+  - {fileID: 2588190896365414757}
+  - {fileID: 7493990866959862881}
+  - {fileID: 1238992557575084767}
+  - {fileID: 7781231770413061587}
+  - {fileID: 4391781076937886297}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1001 &155166069796882779
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 5489911719142539037}
+    m_Modifications:
+    - target: {fileID: 2435421964960726046, guid: 6bffd9cecdd2b4b4084a5cde771d1432, type: 3}
+      propertyPath: m_Name
+      value: GrassBox (111)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2435421964960726046, guid: 6bffd9cecdd2b4b4084a5cde771d1432, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 2435421964960882750, guid: 6bffd9cecdd2b4b4084a5cde771d1432, type: 3}
+      propertyPath: m_RootOrder
+      value: 347
+      objectReference: {fileID: 0}
+    - target: {fileID: 2435421964960882750, guid: 6bffd9cecdd2b4b4084a5cde771d1432, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 2435421964960882750, guid: 6bffd9cecdd2b4b4084a5cde771d1432, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.25
+      objectReference: {fileID: 0}
+    - target: {fileID: 2435421964960882750, guid: 6bffd9cecdd2b4b4084a5cde771d1432, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 2435421964960882750, guid: 6bffd9cecdd2b4b4084a5cde771d1432, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2435421964960882750, guid: 6bffd9cecdd2b4b4084a5cde771d1432, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2435421964960882750, guid: 6bffd9cecdd2b4b4084a5cde771d1432, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2435421964960882750, guid: 6bffd9cecdd2b4b4084a5cde771d1432, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2435421964960882750, guid: 6bffd9cecdd2b4b4084a5cde771d1432, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2435421964960882750, guid: 6bffd9cecdd2b4b4084a5cde771d1432, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2435421964960882750, guid: 6bffd9cecdd2b4b4084a5cde771d1432, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 6bffd9cecdd2b4b4084a5cde771d1432, type: 3}
+--- !u!4 &2588190896365414757 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 2435421964960882750, guid: 6bffd9cecdd2b4b4084a5cde771d1432, type: 3}
+  m_PrefabInstance: {fileID: 155166069796882779}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &1524262921851301010
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 5489911719142539037}
+    m_Modifications:
+    - target: {fileID: 2435421964960726046, guid: 6bffd9cecdd2b4b4084a5cde771d1432, type: 3}
+      propertyPath: m_Name
+      value: GrassBox (89)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2435421964960726046, guid: 6bffd9cecdd2b4b4084a5cde771d1432, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 2435421964960882750, guid: 6bffd9cecdd2b4b4084a5cde771d1432, type: 3}
+      propertyPath: m_RootOrder
+      value: 345
+      objectReference: {fileID: 0}
+    - target: {fileID: 2435421964960882750, guid: 6bffd9cecdd2b4b4084a5cde771d1432, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 2435421964960882750, guid: 6bffd9cecdd2b4b4084a5cde771d1432, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2435421964960882750, guid: 6bffd9cecdd2b4b4084a5cde771d1432, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 2435421964960882750, guid: 6bffd9cecdd2b4b4084a5cde771d1432, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2435421964960882750, guid: 6bffd9cecdd2b4b4084a5cde771d1432, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2435421964960882750, guid: 6bffd9cecdd2b4b4084a5cde771d1432, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2435421964960882750, guid: 6bffd9cecdd2b4b4084a5cde771d1432, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2435421964960882750, guid: 6bffd9cecdd2b4b4084a5cde771d1432, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2435421964960882750, guid: 6bffd9cecdd2b4b4084a5cde771d1432, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2435421964960882750, guid: 6bffd9cecdd2b4b4084a5cde771d1432, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 6bffd9cecdd2b4b4084a5cde771d1432, type: 3}
+--- !u!4 &3813174849628769452 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 2435421964960882750, guid: 6bffd9cecdd2b4b4084a5cde771d1432, type: 3}
+  m_PrefabInstance: {fileID: 1524262921851301010}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &1811425974418722488
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 5489911719142539037}
+    m_Modifications:
+    - target: {fileID: 2435421964960726046, guid: 6bffd9cecdd2b4b4084a5cde771d1432, type: 3}
+      propertyPath: m_Name
+      value: GrassBox (110)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2435421964960726046, guid: 6bffd9cecdd2b4b4084a5cde771d1432, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 2435421964960882750, guid: 6bffd9cecdd2b4b4084a5cde771d1432, type: 3}
+      propertyPath: m_RootOrder
+      value: 346
+      objectReference: {fileID: 0}
+    - target: {fileID: 2435421964960882750, guid: 6bffd9cecdd2b4b4084a5cde771d1432, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 2435421964960882750, guid: 6bffd9cecdd2b4b4084a5cde771d1432, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.25
+      objectReference: {fileID: 0}
+    - target: {fileID: 2435421964960882750, guid: 6bffd9cecdd2b4b4084a5cde771d1432, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 2435421964960882750, guid: 6bffd9cecdd2b4b4084a5cde771d1432, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2435421964960882750, guid: 6bffd9cecdd2b4b4084a5cde771d1432, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2435421964960882750, guid: 6bffd9cecdd2b4b4084a5cde771d1432, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2435421964960882750, guid: 6bffd9cecdd2b4b4084a5cde771d1432, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2435421964960882750, guid: 6bffd9cecdd2b4b4084a5cde771d1432, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2435421964960882750, guid: 6bffd9cecdd2b4b4084a5cde771d1432, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2435421964960882750, guid: 6bffd9cecdd2b4b4084a5cde771d1432, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 6bffd9cecdd2b4b4084a5cde771d1432, type: 3}
+--- !u!4 &4102534121610915462 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 2435421964960882750, guid: 6bffd9cecdd2b4b4084a5cde771d1432, type: 3}
+  m_PrefabInstance: {fileID: 1811425974418722488}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &2107375393425533543
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 5489911719142539037}
+    m_Modifications:
+    - target: {fileID: 2435421964960726046, guid: 6bffd9cecdd2b4b4084a5cde771d1432, type: 3}
+      propertyPath: m_Name
+      value: GrassBox (143)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2435421964960726046, guid: 6bffd9cecdd2b4b4084a5cde771d1432, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 2435421964960882750, guid: 6bffd9cecdd2b4b4084a5cde771d1432, type: 3}
+      propertyPath: m_RootOrder
+      value: 351
+      objectReference: {fileID: 0}
+    - target: {fileID: 2435421964960882750, guid: 6bffd9cecdd2b4b4084a5cde771d1432, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 14
+      objectReference: {fileID: 0}
+    - target: {fileID: 2435421964960882750, guid: 6bffd9cecdd2b4b4084a5cde771d1432, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.75
+      objectReference: {fileID: 0}
+    - target: {fileID: 2435421964960882750, guid: 6bffd9cecdd2b4b4084a5cde771d1432, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 2435421964960882750, guid: 6bffd9cecdd2b4b4084a5cde771d1432, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2435421964960882750, guid: 6bffd9cecdd2b4b4084a5cde771d1432, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2435421964960882750, guid: 6bffd9cecdd2b4b4084a5cde771d1432, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2435421964960882750, guid: 6bffd9cecdd2b4b4084a5cde771d1432, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2435421964960882750, guid: 6bffd9cecdd2b4b4084a5cde771d1432, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2435421964960882750, guid: 6bffd9cecdd2b4b4084a5cde771d1432, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2435421964960882750, guid: 6bffd9cecdd2b4b4084a5cde771d1432, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 6bffd9cecdd2b4b4084a5cde771d1432, type: 3}
+--- !u!4 &4391781076937886297 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 2435421964960882750, guid: 6bffd9cecdd2b4b4084a5cde771d1432, type: 3}
+  m_PrefabInstance: {fileID: 2107375393425533543}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &3530138714173930209
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 5489911719142539037}
+    m_Modifications:
+    - target: {fileID: 2435421964960726046, guid: 6bffd9cecdd2b4b4084a5cde771d1432, type: 3}
+      propertyPath: m_Name
+      value: GrassBox (141)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2435421964960726046, guid: 6bffd9cecdd2b4b4084a5cde771d1432, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 2435421964960882750, guid: 6bffd9cecdd2b4b4084a5cde771d1432, type: 3}
+      propertyPath: m_RootOrder
+      value: 349
+      objectReference: {fileID: 0}
+    - target: {fileID: 2435421964960882750, guid: 6bffd9cecdd2b4b4084a5cde771d1432, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 13
+      objectReference: {fileID: 0}
+    - target: {fileID: 2435421964960882750, guid: 6bffd9cecdd2b4b4084a5cde771d1432, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 2435421964960882750, guid: 6bffd9cecdd2b4b4084a5cde771d1432, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 2435421964960882750, guid: 6bffd9cecdd2b4b4084a5cde771d1432, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2435421964960882750, guid: 6bffd9cecdd2b4b4084a5cde771d1432, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2435421964960882750, guid: 6bffd9cecdd2b4b4084a5cde771d1432, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2435421964960882750, guid: 6bffd9cecdd2b4b4084a5cde771d1432, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2435421964960882750, guid: 6bffd9cecdd2b4b4084a5cde771d1432, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2435421964960882750, guid: 6bffd9cecdd2b4b4084a5cde771d1432, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2435421964960882750, guid: 6bffd9cecdd2b4b4084a5cde771d1432, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 6bffd9cecdd2b4b4084a5cde771d1432, type: 3}
+--- !u!4 &1238992557575084767 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 2435421964960882750, guid: 6bffd9cecdd2b4b4084a5cde771d1432, type: 3}
+  m_PrefabInstance: {fileID: 3530138714173930209}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &5317726014523534431
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 5489911719142539037}
+    m_Modifications:
+    - target: {fileID: 2435421964960726046, guid: 6bffd9cecdd2b4b4084a5cde771d1432, type: 3}
+      propertyPath: m_Name
+      value: GrassBox (140)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2435421964960726046, guid: 6bffd9cecdd2b4b4084a5cde771d1432, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 2435421964960882750, guid: 6bffd9cecdd2b4b4084a5cde771d1432, type: 3}
+      propertyPath: m_RootOrder
+      value: 348
+      objectReference: {fileID: 0}
+    - target: {fileID: 2435421964960882750, guid: 6bffd9cecdd2b4b4084a5cde771d1432, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 13
+      objectReference: {fileID: 0}
+    - target: {fileID: 2435421964960882750, guid: 6bffd9cecdd2b4b4084a5cde771d1432, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 2435421964960882750, guid: 6bffd9cecdd2b4b4084a5cde771d1432, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 2435421964960882750, guid: 6bffd9cecdd2b4b4084a5cde771d1432, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2435421964960882750, guid: 6bffd9cecdd2b4b4084a5cde771d1432, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2435421964960882750, guid: 6bffd9cecdd2b4b4084a5cde771d1432, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2435421964960882750, guid: 6bffd9cecdd2b4b4084a5cde771d1432, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2435421964960882750, guid: 6bffd9cecdd2b4b4084a5cde771d1432, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2435421964960882750, guid: 6bffd9cecdd2b4b4084a5cde771d1432, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2435421964960882750, guid: 6bffd9cecdd2b4b4084a5cde771d1432, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 6bffd9cecdd2b4b4084a5cde771d1432, type: 3}
+--- !u!4 &7493990866959862881 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 2435421964960882750, guid: 6bffd9cecdd2b4b4084a5cde771d1432, type: 3}
+  m_PrefabInstance: {fileID: 5317726014523534431}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &5345814874907293165
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 5489911719142539037}
+    m_Modifications:
+    - target: {fileID: 2435421964960726046, guid: 6bffd9cecdd2b4b4084a5cde771d1432, type: 3}
+      propertyPath: m_Name
+      value: GrassBox (142)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2435421964960726046, guid: 6bffd9cecdd2b4b4084a5cde771d1432, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 2435421964960882750, guid: 6bffd9cecdd2b4b4084a5cde771d1432, type: 3}
+      propertyPath: m_RootOrder
+      value: 350
+      objectReference: {fileID: 0}
+    - target: {fileID: 2435421964960882750, guid: 6bffd9cecdd2b4b4084a5cde771d1432, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 14
+      objectReference: {fileID: 0}
+    - target: {fileID: 2435421964960882750, guid: 6bffd9cecdd2b4b4084a5cde771d1432, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.75
+      objectReference: {fileID: 0}
+    - target: {fileID: 2435421964960882750, guid: 6bffd9cecdd2b4b4084a5cde771d1432, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 2435421964960882750, guid: 6bffd9cecdd2b4b4084a5cde771d1432, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2435421964960882750, guid: 6bffd9cecdd2b4b4084a5cde771d1432, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2435421964960882750, guid: 6bffd9cecdd2b4b4084a5cde771d1432, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2435421964960882750, guid: 6bffd9cecdd2b4b4084a5cde771d1432, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2435421964960882750, guid: 6bffd9cecdd2b4b4084a5cde771d1432, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2435421964960882750, guid: 6bffd9cecdd2b4b4084a5cde771d1432, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2435421964960882750, guid: 6bffd9cecdd2b4b4084a5cde771d1432, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 6bffd9cecdd2b4b4084a5cde771d1432, type: 3}
+--- !u!4 &7781231770413061587 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 2435421964960882750, guid: 6bffd9cecdd2b4b4084a5cde771d1432, type: 3}
+  m_PrefabInstance: {fileID: 5345814874907293165}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &5489911718409276423
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -384,6 +854,10 @@ PrefabInstance:
     - target: {fileID: 2435421964960726046, guid: 6bffd9cecdd2b4b4084a5cde771d1432, type: 3}
       propertyPath: m_Name
       value: GrassBox (134)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2435421964960726046, guid: 6bffd9cecdd2b4b4084a5cde771d1432, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 2435421964960882750, guid: 6bffd9cecdd2b4b4084a5cde771d1432, type: 3}
       propertyPath: m_RootOrder
@@ -447,6 +921,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: GrassBox (190)
       objectReference: {fileID: 0}
+    - target: {fileID: 2435421964960726046, guid: 6bffd9cecdd2b4b4084a5cde771d1432, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 2435421964960882750, guid: 6bffd9cecdd2b4b4084a5cde771d1432, type: 3}
       propertyPath: m_RootOrder
       value: 322
@@ -508,6 +986,10 @@ PrefabInstance:
     - target: {fileID: 2895322455619634327, guid: 28d7a6decfb764557908695909381fb6, type: 3}
       propertyPath: m_Name
       value: CrystalBox2 (20)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2895322455619634327, guid: 28d7a6decfb764557908695909381fb6, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 2895322455619672247, guid: 28d7a6decfb764557908695909381fb6, type: 3}
       propertyPath: m_RootOrder
@@ -571,6 +1053,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: GrassBox (74)
       objectReference: {fileID: 0}
+    - target: {fileID: 2435421964960726046, guid: 6bffd9cecdd2b4b4084a5cde771d1432, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 2435421964960882750, guid: 6bffd9cecdd2b4b4084a5cde771d1432, type: 3}
       propertyPath: m_RootOrder
       value: 222
@@ -632,6 +1118,10 @@ PrefabInstance:
     - target: {fileID: 2435421964960726046, guid: 6bffd9cecdd2b4b4084a5cde771d1432, type: 3}
       propertyPath: m_Name
       value: GrassBox (152)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2435421964960726046, guid: 6bffd9cecdd2b4b4084a5cde771d1432, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 2435421964960882750, guid: 6bffd9cecdd2b4b4084a5cde771d1432, type: 3}
       propertyPath: m_RootOrder
@@ -695,6 +1185,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: GrassBox (195)
       objectReference: {fileID: 0}
+    - target: {fileID: 2435421964960726046, guid: 6bffd9cecdd2b4b4084a5cde771d1432, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 2435421964960882750, guid: 6bffd9cecdd2b4b4084a5cde771d1432, type: 3}
       propertyPath: m_RootOrder
       value: 327
@@ -756,6 +1250,10 @@ PrefabInstance:
     - target: {fileID: 2435421964960726046, guid: 6bffd9cecdd2b4b4084a5cde771d1432, type: 3}
       propertyPath: m_Name
       value: GrassBox (19)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2435421964960726046, guid: 6bffd9cecdd2b4b4084a5cde771d1432, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 2435421964960882750, guid: 6bffd9cecdd2b4b4084a5cde771d1432, type: 3}
       propertyPath: m_RootOrder
@@ -819,6 +1317,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: GrassBox (147)
       objectReference: {fileID: 0}
+    - target: {fileID: 2435421964960726046, guid: 6bffd9cecdd2b4b4084a5cde771d1432, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 2435421964960882750, guid: 6bffd9cecdd2b4b4084a5cde771d1432, type: 3}
       propertyPath: m_RootOrder
       value: 287
@@ -880,6 +1382,10 @@ PrefabInstance:
     - target: {fileID: 1159251707130074282, guid: 2519ee2fffb724006a8126325ce9eaa1, type: 3}
       propertyPath: m_Name
       value: CrystalBox3 (21)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1159251707130074282, guid: 2519ee2fffb724006a8126325ce9eaa1, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 1159251707130497162, guid: 2519ee2fffb724006a8126325ce9eaa1, type: 3}
       propertyPath: m_RootOrder
@@ -943,6 +1449,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: GrassBox (103)
       objectReference: {fileID: 0}
+    - target: {fileID: 2435421964960726046, guid: 6bffd9cecdd2b4b4084a5cde771d1432, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 2435421964960882750, guid: 6bffd9cecdd2b4b4084a5cde771d1432, type: 3}
       propertyPath: m_RootOrder
       value: 249
@@ -1004,6 +1514,10 @@ PrefabInstance:
     - target: {fileID: 6519401657621111884, guid: cf9c7023bca084c89a74329bc9819a54, type: 3}
       propertyPath: m_Name
       value: CrystalBox (17)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6519401657621111884, guid: cf9c7023bca084c89a74329bc9819a54, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 6519401657621477484, guid: cf9c7023bca084c89a74329bc9819a54, type: 3}
       propertyPath: m_RootOrder
@@ -1067,6 +1581,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: CrystalBox3 (36)
       objectReference: {fileID: 0}
+    - target: {fileID: 1159251707130074282, guid: 2519ee2fffb724006a8126325ce9eaa1, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 1159251707130497162, guid: 2519ee2fffb724006a8126325ce9eaa1, type: 3}
       propertyPath: m_RootOrder
       value: 86
@@ -1128,6 +1646,10 @@ PrefabInstance:
     - target: {fileID: 2435421964960726046, guid: 6bffd9cecdd2b4b4084a5cde771d1432, type: 3}
       propertyPath: m_Name
       value: GrassBox (23)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2435421964960726046, guid: 6bffd9cecdd2b4b4084a5cde771d1432, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 2435421964960882750, guid: 6bffd9cecdd2b4b4084a5cde771d1432, type: 3}
       propertyPath: m_RootOrder
@@ -1191,6 +1713,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: CrystalBox3 (34)
       objectReference: {fileID: 0}
+    - target: {fileID: 1159251707130074282, guid: 2519ee2fffb724006a8126325ce9eaa1, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 1159251707130497162, guid: 2519ee2fffb724006a8126325ce9eaa1, type: 3}
       propertyPath: m_RootOrder
       value: 141
@@ -1252,6 +1778,10 @@ PrefabInstance:
     - target: {fileID: 2435421964960726046, guid: 6bffd9cecdd2b4b4084a5cde771d1432, type: 3}
       propertyPath: m_Name
       value: GrassBox (10)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2435421964960726046, guid: 6bffd9cecdd2b4b4084a5cde771d1432, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 2435421964960882750, guid: 6bffd9cecdd2b4b4084a5cde771d1432, type: 3}
       propertyPath: m_RootOrder
@@ -1315,6 +1845,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: GrassBox (46)
       objectReference: {fileID: 0}
+    - target: {fileID: 2435421964960726046, guid: 6bffd9cecdd2b4b4084a5cde771d1432, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 2435421964960882750, guid: 6bffd9cecdd2b4b4084a5cde771d1432, type: 3}
       propertyPath: m_RootOrder
       value: 194
@@ -1376,6 +1910,10 @@ PrefabInstance:
     - target: {fileID: 1159251707130074282, guid: 2519ee2fffb724006a8126325ce9eaa1, type: 3}
       propertyPath: m_Name
       value: CrystalBox3 (11)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1159251707130074282, guid: 2519ee2fffb724006a8126325ce9eaa1, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 1159251707130497162, guid: 2519ee2fffb724006a8126325ce9eaa1, type: 3}
       propertyPath: m_RootOrder
@@ -1439,6 +1977,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: GrassBox (188)
       objectReference: {fileID: 0}
+    - target: {fileID: 2435421964960726046, guid: 6bffd9cecdd2b4b4084a5cde771d1432, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 2435421964960882750, guid: 6bffd9cecdd2b4b4084a5cde771d1432, type: 3}
       propertyPath: m_RootOrder
       value: 320
@@ -1500,6 +2042,10 @@ PrefabInstance:
     - target: {fileID: 2435421964960726046, guid: 6bffd9cecdd2b4b4084a5cde771d1432, type: 3}
       propertyPath: m_Name
       value: GrassBox (92)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2435421964960726046, guid: 6bffd9cecdd2b4b4084a5cde771d1432, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 2435421964960882750, guid: 6bffd9cecdd2b4b4084a5cde771d1432, type: 3}
       propertyPath: m_RootOrder
@@ -1563,6 +2109,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: GrassBox (50)
       objectReference: {fileID: 0}
+    - target: {fileID: 2435421964960726046, guid: 6bffd9cecdd2b4b4084a5cde771d1432, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 2435421964960882750, guid: 6bffd9cecdd2b4b4084a5cde771d1432, type: 3}
       propertyPath: m_RootOrder
       value: 198
@@ -1624,6 +2174,10 @@ PrefabInstance:
     - target: {fileID: 2435421964960726046, guid: 6bffd9cecdd2b4b4084a5cde771d1432, type: 3}
       propertyPath: m_Name
       value: GrassBox (114)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2435421964960726046, guid: 6bffd9cecdd2b4b4084a5cde771d1432, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 2435421964960882750, guid: 6bffd9cecdd2b4b4084a5cde771d1432, type: 3}
       propertyPath: m_RootOrder
@@ -1687,6 +2241,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: GrassBox (139)
       objectReference: {fileID: 0}
+    - target: {fileID: 2435421964960726046, guid: 6bffd9cecdd2b4b4084a5cde771d1432, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 2435421964960882750, guid: 6bffd9cecdd2b4b4084a5cde771d1432, type: 3}
       propertyPath: m_RootOrder
       value: 283
@@ -1748,6 +2306,10 @@ PrefabInstance:
     - target: {fileID: 2435421964960726046, guid: 6bffd9cecdd2b4b4084a5cde771d1432, type: 3}
       propertyPath: m_Name
       value: GrassBox (177)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2435421964960726046, guid: 6bffd9cecdd2b4b4084a5cde771d1432, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 2435421964960882750, guid: 6bffd9cecdd2b4b4084a5cde771d1432, type: 3}
       propertyPath: m_RootOrder
@@ -1811,6 +2373,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: GrassBox (75)
       objectReference: {fileID: 0}
+    - target: {fileID: 2435421964960726046, guid: 6bffd9cecdd2b4b4084a5cde771d1432, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 2435421964960882750, guid: 6bffd9cecdd2b4b4084a5cde771d1432, type: 3}
       propertyPath: m_RootOrder
       value: 223
@@ -1872,6 +2438,10 @@ PrefabInstance:
     - target: {fileID: 2435421964960726046, guid: 6bffd9cecdd2b4b4084a5cde771d1432, type: 3}
       propertyPath: m_Name
       value: GrassBox (72)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2435421964960726046, guid: 6bffd9cecdd2b4b4084a5cde771d1432, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 2435421964960882750, guid: 6bffd9cecdd2b4b4084a5cde771d1432, type: 3}
       propertyPath: m_RootOrder
@@ -1935,6 +2505,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: GrassBox (86)
       objectReference: {fileID: 0}
+    - target: {fileID: 2435421964960726046, guid: 6bffd9cecdd2b4b4084a5cde771d1432, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 2435421964960882750, guid: 6bffd9cecdd2b4b4084a5cde771d1432, type: 3}
       propertyPath: m_RootOrder
       value: 234
@@ -1996,6 +2570,10 @@ PrefabInstance:
     - target: {fileID: 1159251707130074282, guid: 2519ee2fffb724006a8126325ce9eaa1, type: 3}
       propertyPath: m_Name
       value: CrystalBox3 (23)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1159251707130074282, guid: 2519ee2fffb724006a8126325ce9eaa1, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 1159251707130497162, guid: 2519ee2fffb724006a8126325ce9eaa1, type: 3}
       propertyPath: m_RootOrder
@@ -2059,6 +2637,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: CrystalBox3 (39)
       objectReference: {fileID: 0}
+    - target: {fileID: 1159251707130074282, guid: 2519ee2fffb724006a8126325ce9eaa1, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 1159251707130497162, guid: 2519ee2fffb724006a8126325ce9eaa1, type: 3}
       propertyPath: m_RootOrder
       value: 87
@@ -2120,6 +2702,10 @@ PrefabInstance:
     - target: {fileID: 2435421964960726046, guid: 6bffd9cecdd2b4b4084a5cde771d1432, type: 3}
       propertyPath: m_Name
       value: GrassBox (112)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2435421964960726046, guid: 6bffd9cecdd2b4b4084a5cde771d1432, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 2435421964960882750, guid: 6bffd9cecdd2b4b4084a5cde771d1432, type: 3}
       propertyPath: m_RootOrder
@@ -2183,6 +2769,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: GrassBox (149)
       objectReference: {fileID: 0}
+    - target: {fileID: 2435421964960726046, guid: 6bffd9cecdd2b4b4084a5cde771d1432, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 2435421964960882750, guid: 6bffd9cecdd2b4b4084a5cde771d1432, type: 3}
       propertyPath: m_RootOrder
       value: 289
@@ -2244,6 +2834,10 @@ PrefabInstance:
     - target: {fileID: 2435421964960726046, guid: 6bffd9cecdd2b4b4084a5cde771d1432, type: 3}
       propertyPath: m_Name
       value: GrassBox (101)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2435421964960726046, guid: 6bffd9cecdd2b4b4084a5cde771d1432, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 2435421964960882750, guid: 6bffd9cecdd2b4b4084a5cde771d1432, type: 3}
       propertyPath: m_RootOrder
@@ -2307,6 +2901,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: GrassBox (118)
       objectReference: {fileID: 0}
+    - target: {fileID: 2435421964960726046, guid: 6bffd9cecdd2b4b4084a5cde771d1432, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 2435421964960882750, guid: 6bffd9cecdd2b4b4084a5cde771d1432, type: 3}
       propertyPath: m_RootOrder
       value: 262
@@ -2368,6 +2966,10 @@ PrefabInstance:
     - target: {fileID: 2435421964960726046, guid: 6bffd9cecdd2b4b4084a5cde771d1432, type: 3}
       propertyPath: m_Name
       value: GrassBox (25)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2435421964960726046, guid: 6bffd9cecdd2b4b4084a5cde771d1432, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 2435421964960882750, guid: 6bffd9cecdd2b4b4084a5cde771d1432, type: 3}
       propertyPath: m_RootOrder
@@ -2431,6 +3033,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: GrassBox (66)
       objectReference: {fileID: 0}
+    - target: {fileID: 2435421964960726046, guid: 6bffd9cecdd2b4b4084a5cde771d1432, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 2435421964960882750, guid: 6bffd9cecdd2b4b4084a5cde771d1432, type: 3}
       propertyPath: m_RootOrder
       value: 214
@@ -2492,6 +3098,10 @@ PrefabInstance:
     - target: {fileID: 6519401657621111884, guid: cf9c7023bca084c89a74329bc9819a54, type: 3}
       propertyPath: m_Name
       value: CrystalBox (28)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6519401657621111884, guid: cf9c7023bca084c89a74329bc9819a54, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 6519401657621477484, guid: cf9c7023bca084c89a74329bc9819a54, type: 3}
       propertyPath: m_RootOrder
@@ -2555,6 +3165,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: CrystalBox (15)
       objectReference: {fileID: 0}
+    - target: {fileID: 6519401657621111884, guid: cf9c7023bca084c89a74329bc9819a54, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 6519401657621477484, guid: cf9c7023bca084c89a74329bc9819a54, type: 3}
       propertyPath: m_RootOrder
       value: 37
@@ -2616,6 +3230,10 @@ PrefabInstance:
     - target: {fileID: 2895322455619634327, guid: 28d7a6decfb764557908695909381fb6, type: 3}
       propertyPath: m_Name
       value: CrystalBox2 (9)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2895322455619634327, guid: 28d7a6decfb764557908695909381fb6, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 2895322455619672247, guid: 28d7a6decfb764557908695909381fb6, type: 3}
       propertyPath: m_RootOrder
@@ -2679,6 +3297,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: GrassBox (44)
       objectReference: {fileID: 0}
+    - target: {fileID: 2435421964960726046, guid: 6bffd9cecdd2b4b4084a5cde771d1432, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 2435421964960882750, guid: 6bffd9cecdd2b4b4084a5cde771d1432, type: 3}
       propertyPath: m_RootOrder
       value: 192
@@ -2740,6 +3362,10 @@ PrefabInstance:
     - target: {fileID: 2435421964960726046, guid: 6bffd9cecdd2b4b4084a5cde771d1432, type: 3}
       propertyPath: m_Name
       value: GrassBox (129)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2435421964960726046, guid: 6bffd9cecdd2b4b4084a5cde771d1432, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 2435421964960882750, guid: 6bffd9cecdd2b4b4084a5cde771d1432, type: 3}
       propertyPath: m_RootOrder
@@ -2803,6 +3429,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: GrassBox (26)
       objectReference: {fileID: 0}
+    - target: {fileID: 2435421964960726046, guid: 6bffd9cecdd2b4b4084a5cde771d1432, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 2435421964960882750, guid: 6bffd9cecdd2b4b4084a5cde771d1432, type: 3}
       propertyPath: m_RootOrder
       value: 174
@@ -2864,6 +3494,10 @@ PrefabInstance:
     - target: {fileID: 2435421964960726046, guid: 6bffd9cecdd2b4b4084a5cde771d1432, type: 3}
       propertyPath: m_Name
       value: GrassBox (70)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2435421964960726046, guid: 6bffd9cecdd2b4b4084a5cde771d1432, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 2435421964960882750, guid: 6bffd9cecdd2b4b4084a5cde771d1432, type: 3}
       propertyPath: m_RootOrder
@@ -2927,6 +3561,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: GrassBox (121)
       objectReference: {fileID: 0}
+    - target: {fileID: 2435421964960726046, guid: 6bffd9cecdd2b4b4084a5cde771d1432, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 2435421964960882750, guid: 6bffd9cecdd2b4b4084a5cde771d1432, type: 3}
       propertyPath: m_RootOrder
       value: 265
@@ -2988,6 +3626,10 @@ PrefabInstance:
     - target: {fileID: 2435421964960726046, guid: 6bffd9cecdd2b4b4084a5cde771d1432, type: 3}
       propertyPath: m_Name
       value: GrassBox (24)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2435421964960726046, guid: 6bffd9cecdd2b4b4084a5cde771d1432, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 2435421964960882750, guid: 6bffd9cecdd2b4b4084a5cde771d1432, type: 3}
       propertyPath: m_RootOrder
@@ -3051,6 +3693,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: GrassBox (63)
       objectReference: {fileID: 0}
+    - target: {fileID: 2435421964960726046, guid: 6bffd9cecdd2b4b4084a5cde771d1432, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 2435421964960882750, guid: 6bffd9cecdd2b4b4084a5cde771d1432, type: 3}
       propertyPath: m_RootOrder
       value: 211
@@ -3112,6 +3758,10 @@ PrefabInstance:
     - target: {fileID: 6519401657621111884, guid: cf9c7023bca084c89a74329bc9819a54, type: 3}
       propertyPath: m_Name
       value: CrystalBox (39)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6519401657621111884, guid: cf9c7023bca084c89a74329bc9819a54, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 6519401657621477484, guid: cf9c7023bca084c89a74329bc9819a54, type: 3}
       propertyPath: m_RootOrder
@@ -3175,6 +3825,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: CrystalBox (50)
       objectReference: {fileID: 0}
+    - target: {fileID: 6519401657621111884, guid: cf9c7023bca084c89a74329bc9819a54, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 6519401657621477484, guid: cf9c7023bca084c89a74329bc9819a54, type: 3}
       propertyPath: m_RootOrder
       value: 84
@@ -3236,6 +3890,10 @@ PrefabInstance:
     - target: {fileID: 2435421964960726046, guid: 6bffd9cecdd2b4b4084a5cde771d1432, type: 3}
       propertyPath: m_Name
       value: GrassBox (138)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2435421964960726046, guid: 6bffd9cecdd2b4b4084a5cde771d1432, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 2435421964960882750, guid: 6bffd9cecdd2b4b4084a5cde771d1432, type: 3}
       propertyPath: m_RootOrder
@@ -3299,6 +3957,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: CrystalBox3 (30)
       objectReference: {fileID: 0}
+    - target: {fileID: 1159251707130074282, guid: 2519ee2fffb724006a8126325ce9eaa1, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 1159251707130497162, guid: 2519ee2fffb724006a8126325ce9eaa1, type: 3}
       propertyPath: m_RootOrder
       value: 139
@@ -3360,6 +4022,10 @@ PrefabInstance:
     - target: {fileID: 6519401657621111884, guid: cf9c7023bca084c89a74329bc9819a54, type: 3}
       propertyPath: m_Name
       value: CrystalBox (66)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6519401657621111884, guid: cf9c7023bca084c89a74329bc9819a54, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 6519401657621477484, guid: cf9c7023bca084c89a74329bc9819a54, type: 3}
       propertyPath: m_RootOrder
@@ -3423,6 +4089,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: CrystalBox3 (47)
       objectReference: {fileID: 0}
+    - target: {fileID: 1159251707130074282, guid: 2519ee2fffb724006a8126325ce9eaa1, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 1159251707130497162, guid: 2519ee2fffb724006a8126325ce9eaa1, type: 3}
       propertyPath: m_RootOrder
       value: 145
@@ -3484,6 +4154,10 @@ PrefabInstance:
     - target: {fileID: 2435421964960726046, guid: 6bffd9cecdd2b4b4084a5cde771d1432, type: 3}
       propertyPath: m_Name
       value: GrassBox (51)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2435421964960726046, guid: 6bffd9cecdd2b4b4084a5cde771d1432, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 2435421964960882750, guid: 6bffd9cecdd2b4b4084a5cde771d1432, type: 3}
       propertyPath: m_RootOrder
@@ -3547,6 +4221,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: GrassBox (99)
       objectReference: {fileID: 0}
+    - target: {fileID: 2435421964960726046, guid: 6bffd9cecdd2b4b4084a5cde771d1432, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 2435421964960882750, guid: 6bffd9cecdd2b4b4084a5cde771d1432, type: 3}
       propertyPath: m_RootOrder
       value: 245
@@ -3608,6 +4286,10 @@ PrefabInstance:
     - target: {fileID: 1159251707130074282, guid: 2519ee2fffb724006a8126325ce9eaa1, type: 3}
       propertyPath: m_Name
       value: CrystalBox3 (17)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1159251707130074282, guid: 2519ee2fffb724006a8126325ce9eaa1, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 1159251707130497162, guid: 2519ee2fffb724006a8126325ce9eaa1, type: 3}
       propertyPath: m_RootOrder
@@ -3671,6 +4353,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: CrystalBox2 (29)
       objectReference: {fileID: 0}
+    - target: {fileID: 2895322455619634327, guid: 28d7a6decfb764557908695909381fb6, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 2895322455619672247, guid: 28d7a6decfb764557908695909381fb6, type: 3}
       propertyPath: m_RootOrder
       value: 120
@@ -3732,6 +4418,10 @@ PrefabInstance:
     - target: {fileID: 1159251707130074282, guid: 2519ee2fffb724006a8126325ce9eaa1, type: 3}
       propertyPath: m_Name
       value: CrystalBox3 (40)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1159251707130074282, guid: 2519ee2fffb724006a8126325ce9eaa1, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 1159251707130497162, guid: 2519ee2fffb724006a8126325ce9eaa1, type: 3}
       propertyPath: m_RootOrder
@@ -3795,6 +4485,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: CrystalBox3 (41)
       objectReference: {fileID: 0}
+    - target: {fileID: 1159251707130074282, guid: 2519ee2fffb724006a8126325ce9eaa1, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 1159251707130497162, guid: 2519ee2fffb724006a8126325ce9eaa1, type: 3}
       propertyPath: m_RootOrder
       value: 91
@@ -3856,6 +4550,10 @@ PrefabInstance:
     - target: {fileID: 2435421964960726046, guid: 6bffd9cecdd2b4b4084a5cde771d1432, type: 3}
       propertyPath: m_Name
       value: GrassBox (178)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2435421964960726046, guid: 6bffd9cecdd2b4b4084a5cde771d1432, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 2435421964960882750, guid: 6bffd9cecdd2b4b4084a5cde771d1432, type: 3}
       propertyPath: m_RootOrder
@@ -3919,6 +4617,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: GrassBox (194)
       objectReference: {fileID: 0}
+    - target: {fileID: 2435421964960726046, guid: 6bffd9cecdd2b4b4084a5cde771d1432, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 2435421964960882750, guid: 6bffd9cecdd2b4b4084a5cde771d1432, type: 3}
       propertyPath: m_RootOrder
       value: 326
@@ -3980,6 +4682,10 @@ PrefabInstance:
     - target: {fileID: 1159251707130074282, guid: 2519ee2fffb724006a8126325ce9eaa1, type: 3}
       propertyPath: m_Name
       value: CrystalBox3 (15)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1159251707130074282, guid: 2519ee2fffb724006a8126325ce9eaa1, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 1159251707130497162, guid: 2519ee2fffb724006a8126325ce9eaa1, type: 3}
       propertyPath: m_RootOrder
@@ -4043,6 +4749,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: CrystalBox3 (20)
       objectReference: {fileID: 0}
+    - target: {fileID: 1159251707130074282, guid: 2519ee2fffb724006a8126325ce9eaa1, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 1159251707130497162, guid: 2519ee2fffb724006a8126325ce9eaa1, type: 3}
       propertyPath: m_RootOrder
       value: 23
@@ -4104,6 +4814,10 @@ PrefabInstance:
     - target: {fileID: 2895322455619634327, guid: 28d7a6decfb764557908695909381fb6, type: 3}
       propertyPath: m_Name
       value: CrystalBox2 (6)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2895322455619634327, guid: 28d7a6decfb764557908695909381fb6, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 2895322455619672247, guid: 28d7a6decfb764557908695909381fb6, type: 3}
       propertyPath: m_RootOrder
@@ -4167,6 +4881,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: GrassBox (131)
       objectReference: {fileID: 0}
+    - target: {fileID: 2435421964960726046, guid: 6bffd9cecdd2b4b4084a5cde771d1432, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 2435421964960882750, guid: 6bffd9cecdd2b4b4084a5cde771d1432, type: 3}
       propertyPath: m_RootOrder
       value: 275
@@ -4228,6 +4946,10 @@ PrefabInstance:
     - target: {fileID: 2435421964960726046, guid: 6bffd9cecdd2b4b4084a5cde771d1432, type: 3}
       propertyPath: m_Name
       value: GrassBox (108)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2435421964960726046, guid: 6bffd9cecdd2b4b4084a5cde771d1432, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 2435421964960882750, guid: 6bffd9cecdd2b4b4084a5cde771d1432, type: 3}
       propertyPath: m_RootOrder
@@ -4291,6 +5013,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: GrassBox (168)
       objectReference: {fileID: 0}
+    - target: {fileID: 2435421964960726046, guid: 6bffd9cecdd2b4b4084a5cde771d1432, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 2435421964960882750, guid: 6bffd9cecdd2b4b4084a5cde771d1432, type: 3}
       propertyPath: m_RootOrder
       value: 304
@@ -4352,6 +5078,10 @@ PrefabInstance:
     - target: {fileID: 2435421964960726046, guid: 6bffd9cecdd2b4b4084a5cde771d1432, type: 3}
       propertyPath: m_Name
       value: GrassBox (116)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2435421964960726046, guid: 6bffd9cecdd2b4b4084a5cde771d1432, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 2435421964960882750, guid: 6bffd9cecdd2b4b4084a5cde771d1432, type: 3}
       propertyPath: m_RootOrder
@@ -4415,6 +5145,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: CrystalBox2 (33)
       objectReference: {fileID: 0}
+    - target: {fileID: 2895322455619634327, guid: 28d7a6decfb764557908695909381fb6, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 2895322455619672247, guid: 28d7a6decfb764557908695909381fb6, type: 3}
       propertyPath: m_RootOrder
       value: 128
@@ -4476,6 +5210,10 @@ PrefabInstance:
     - target: {fileID: 2435421964960726046, guid: 6bffd9cecdd2b4b4084a5cde771d1432, type: 3}
       propertyPath: m_Name
       value: GrassBox (55)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2435421964960726046, guid: 6bffd9cecdd2b4b4084a5cde771d1432, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 2435421964960882750, guid: 6bffd9cecdd2b4b4084a5cde771d1432, type: 3}
       propertyPath: m_RootOrder
@@ -4539,6 +5277,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: GrassBox (133)
       objectReference: {fileID: 0}
+    - target: {fileID: 2435421964960726046, guid: 6bffd9cecdd2b4b4084a5cde771d1432, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 2435421964960882750, guid: 6bffd9cecdd2b4b4084a5cde771d1432, type: 3}
       propertyPath: m_RootOrder
       value: 277
@@ -4600,6 +5342,10 @@ PrefabInstance:
     - target: {fileID: 2435421964960726046, guid: 6bffd9cecdd2b4b4084a5cde771d1432, type: 3}
       propertyPath: m_Name
       value: GrassBox (4)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2435421964960726046, guid: 6bffd9cecdd2b4b4084a5cde771d1432, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 2435421964960882750, guid: 6bffd9cecdd2b4b4084a5cde771d1432, type: 3}
       propertyPath: m_RootOrder
@@ -4663,6 +5409,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: GrassBox (32)
       objectReference: {fileID: 0}
+    - target: {fileID: 2435421964960726046, guid: 6bffd9cecdd2b4b4084a5cde771d1432, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 2435421964960882750, guid: 6bffd9cecdd2b4b4084a5cde771d1432, type: 3}
       propertyPath: m_RootOrder
       value: 180
@@ -4724,6 +5474,10 @@ PrefabInstance:
     - target: {fileID: 1159251707130074282, guid: 2519ee2fffb724006a8126325ce9eaa1, type: 3}
       propertyPath: m_Name
       value: CrystalBox3 (4)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1159251707130074282, guid: 2519ee2fffb724006a8126325ce9eaa1, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 1159251707130497162, guid: 2519ee2fffb724006a8126325ce9eaa1, type: 3}
       propertyPath: m_RootOrder
@@ -4787,6 +5541,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: GrassBox (7)
       objectReference: {fileID: 0}
+    - target: {fileID: 2435421964960726046, guid: 6bffd9cecdd2b4b4084a5cde771d1432, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 2435421964960882750, guid: 6bffd9cecdd2b4b4084a5cde771d1432, type: 3}
       propertyPath: m_RootOrder
       value: 155
@@ -4848,6 +5606,10 @@ PrefabInstance:
     - target: {fileID: 6519401657621111884, guid: cf9c7023bca084c89a74329bc9819a54, type: 3}
       propertyPath: m_Name
       value: CrystalBox (16)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6519401657621111884, guid: cf9c7023bca084c89a74329bc9819a54, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 6519401657621477484, guid: cf9c7023bca084c89a74329bc9819a54, type: 3}
       propertyPath: m_RootOrder
@@ -4911,6 +5673,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: GrassBox (67)
       objectReference: {fileID: 0}
+    - target: {fileID: 2435421964960726046, guid: 6bffd9cecdd2b4b4084a5cde771d1432, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 2435421964960882750, guid: 6bffd9cecdd2b4b4084a5cde771d1432, type: 3}
       propertyPath: m_RootOrder
       value: 215
@@ -4972,6 +5738,10 @@ PrefabInstance:
     - target: {fileID: 1159251707130074282, guid: 2519ee2fffb724006a8126325ce9eaa1, type: 3}
       propertyPath: m_Name
       value: CrystalBox3 (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1159251707130074282, guid: 2519ee2fffb724006a8126325ce9eaa1, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 1159251707130497162, guid: 2519ee2fffb724006a8126325ce9eaa1, type: 3}
       propertyPath: m_RootOrder
@@ -5035,6 +5805,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: GrassBox (123)
       objectReference: {fileID: 0}
+    - target: {fileID: 2435421964960726046, guid: 6bffd9cecdd2b4b4084a5cde771d1432, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 2435421964960882750, guid: 6bffd9cecdd2b4b4084a5cde771d1432, type: 3}
       propertyPath: m_RootOrder
       value: 267
@@ -5096,6 +5870,10 @@ PrefabInstance:
     - target: {fileID: 2435421964960726046, guid: 6bffd9cecdd2b4b4084a5cde771d1432, type: 3}
       propertyPath: m_Name
       value: GrassBox (43)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2435421964960726046, guid: 6bffd9cecdd2b4b4084a5cde771d1432, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 2435421964960882750, guid: 6bffd9cecdd2b4b4084a5cde771d1432, type: 3}
       propertyPath: m_RootOrder
@@ -5159,6 +5937,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: CrystalBox (36)
       objectReference: {fileID: 0}
+    - target: {fileID: 6519401657621111884, guid: cf9c7023bca084c89a74329bc9819a54, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 6519401657621477484, guid: cf9c7023bca084c89a74329bc9819a54, type: 3}
       propertyPath: m_RootOrder
       value: 69
@@ -5220,6 +6002,10 @@ PrefabInstance:
     - target: {fileID: 2435421964960726046, guid: 6bffd9cecdd2b4b4084a5cde771d1432, type: 3}
       propertyPath: m_Name
       value: GrassBox (117)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2435421964960726046, guid: 6bffd9cecdd2b4b4084a5cde771d1432, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 2435421964960882750, guid: 6bffd9cecdd2b4b4084a5cde771d1432, type: 3}
       propertyPath: m_RootOrder
@@ -5283,6 +6069,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: GrassBox (210)
       objectReference: {fileID: 0}
+    - target: {fileID: 2435421964960726046, guid: 6bffd9cecdd2b4b4084a5cde771d1432, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 2435421964960882750, guid: 6bffd9cecdd2b4b4084a5cde771d1432, type: 3}
       propertyPath: m_RootOrder
       value: 342
@@ -5344,6 +6134,10 @@ PrefabInstance:
     - target: {fileID: 2895322455619634327, guid: 28d7a6decfb764557908695909381fb6, type: 3}
       propertyPath: m_Name
       value: CrystalBox2 (27)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2895322455619634327, guid: 28d7a6decfb764557908695909381fb6, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 2895322455619672247, guid: 28d7a6decfb764557908695909381fb6, type: 3}
       propertyPath: m_RootOrder
@@ -5407,6 +6201,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: GrassBox (42)
       objectReference: {fileID: 0}
+    - target: {fileID: 2435421964960726046, guid: 6bffd9cecdd2b4b4084a5cde771d1432, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 2435421964960882750, guid: 6bffd9cecdd2b4b4084a5cde771d1432, type: 3}
       propertyPath: m_RootOrder
       value: 190
@@ -5468,6 +6266,10 @@ PrefabInstance:
     - target: {fileID: 2895322455619634327, guid: 28d7a6decfb764557908695909381fb6, type: 3}
       propertyPath: m_Name
       value: CrystalBox2 (14)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2895322455619634327, guid: 28d7a6decfb764557908695909381fb6, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 2895322455619672247, guid: 28d7a6decfb764557908695909381fb6, type: 3}
       propertyPath: m_RootOrder
@@ -5531,6 +6333,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: GrassBox (91)
       objectReference: {fileID: 0}
+    - target: {fileID: 2435421964960726046, guid: 6bffd9cecdd2b4b4084a5cde771d1432, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 2435421964960882750, guid: 6bffd9cecdd2b4b4084a5cde771d1432, type: 3}
       propertyPath: m_RootOrder
       value: 237
@@ -5592,6 +6398,10 @@ PrefabInstance:
     - target: {fileID: 6519401657621111884, guid: cf9c7023bca084c89a74329bc9819a54, type: 3}
       propertyPath: m_Name
       value: CrystalBox (72)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6519401657621111884, guid: cf9c7023bca084c89a74329bc9819a54, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 6519401657621477484, guid: cf9c7023bca084c89a74329bc9819a54, type: 3}
       propertyPath: m_RootOrder
@@ -5655,6 +6465,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: GrassBox (199)
       objectReference: {fileID: 0}
+    - target: {fileID: 2435421964960726046, guid: 6bffd9cecdd2b4b4084a5cde771d1432, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 2435421964960882750, guid: 6bffd9cecdd2b4b4084a5cde771d1432, type: 3}
       propertyPath: m_RootOrder
       value: 331
@@ -5716,6 +6530,10 @@ PrefabInstance:
     - target: {fileID: 6519401657621111884, guid: cf9c7023bca084c89a74329bc9819a54, type: 3}
       propertyPath: m_Name
       value: CrystalBox (14)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6519401657621111884, guid: cf9c7023bca084c89a74329bc9819a54, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 6519401657621477484, guid: cf9c7023bca084c89a74329bc9819a54, type: 3}
       propertyPath: m_RootOrder
@@ -5779,6 +6597,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: GrassBox (151)
       objectReference: {fileID: 0}
+    - target: {fileID: 2435421964960726046, guid: 6bffd9cecdd2b4b4084a5cde771d1432, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 2435421964960882750, guid: 6bffd9cecdd2b4b4084a5cde771d1432, type: 3}
       propertyPath: m_RootOrder
       value: 291
@@ -5840,6 +6662,10 @@ PrefabInstance:
     - target: {fileID: 6519401657621111884, guid: cf9c7023bca084c89a74329bc9819a54, type: 3}
       propertyPath: m_Name
       value: CrystalBox (13)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6519401657621111884, guid: cf9c7023bca084c89a74329bc9819a54, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 6519401657621477484, guid: cf9c7023bca084c89a74329bc9819a54, type: 3}
       propertyPath: m_RootOrder
@@ -5903,6 +6729,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: GrassBox (126)
       objectReference: {fileID: 0}
+    - target: {fileID: 2435421964960726046, guid: 6bffd9cecdd2b4b4084a5cde771d1432, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 2435421964960882750, guid: 6bffd9cecdd2b4b4084a5cde771d1432, type: 3}
       propertyPath: m_RootOrder
       value: 270
@@ -5964,6 +6794,10 @@ PrefabInstance:
     - target: {fileID: 6519401657621111884, guid: cf9c7023bca084c89a74329bc9819a54, type: 3}
       propertyPath: m_Name
       value: CrystalBox (29)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6519401657621111884, guid: cf9c7023bca084c89a74329bc9819a54, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 6519401657621477484, guid: cf9c7023bca084c89a74329bc9819a54, type: 3}
       propertyPath: m_RootOrder
@@ -6027,6 +6861,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: GrassBox (60)
       objectReference: {fileID: 0}
+    - target: {fileID: 2435421964960726046, guid: 6bffd9cecdd2b4b4084a5cde771d1432, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 2435421964960882750, guid: 6bffd9cecdd2b4b4084a5cde771d1432, type: 3}
       propertyPath: m_RootOrder
       value: 208
@@ -6088,6 +6926,10 @@ PrefabInstance:
     - target: {fileID: 2435421964960726046, guid: 6bffd9cecdd2b4b4084a5cde771d1432, type: 3}
       propertyPath: m_Name
       value: GrassBox (113)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2435421964960726046, guid: 6bffd9cecdd2b4b4084a5cde771d1432, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 2435421964960882750, guid: 6bffd9cecdd2b4b4084a5cde771d1432, type: 3}
       propertyPath: m_RootOrder
@@ -6151,6 +6993,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: GrassBox (45)
       objectReference: {fileID: 0}
+    - target: {fileID: 2435421964960726046, guid: 6bffd9cecdd2b4b4084a5cde771d1432, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 2435421964960882750, guid: 6bffd9cecdd2b4b4084a5cde771d1432, type: 3}
       propertyPath: m_RootOrder
       value: 193
@@ -6212,6 +7058,10 @@ PrefabInstance:
     - target: {fileID: 2435421964960726046, guid: 6bffd9cecdd2b4b4084a5cde771d1432, type: 3}
       propertyPath: m_Name
       value: GrassBox (211)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2435421964960726046, guid: 6bffd9cecdd2b4b4084a5cde771d1432, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 2435421964960882750, guid: 6bffd9cecdd2b4b4084a5cde771d1432, type: 3}
       propertyPath: m_RootOrder
@@ -6275,6 +7125,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: CrystalBox (76)
       objectReference: {fileID: 0}
+    - target: {fileID: 6519401657621111884, guid: cf9c7023bca084c89a74329bc9819a54, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 6519401657621477484, guid: cf9c7023bca084c89a74329bc9819a54, type: 3}
       propertyPath: m_RootOrder
       value: 131
@@ -6336,6 +7190,10 @@ PrefabInstance:
     - target: {fileID: 2895322455619634327, guid: 28d7a6decfb764557908695909381fb6, type: 3}
       propertyPath: m_Name
       value: CrystalBox2 (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2895322455619634327, guid: 28d7a6decfb764557908695909381fb6, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 2895322455619672247, guid: 28d7a6decfb764557908695909381fb6, type: 3}
       propertyPath: m_RootOrder
@@ -6399,6 +7257,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: CrystalBox (12)
       objectReference: {fileID: 0}
+    - target: {fileID: 6519401657621111884, guid: cf9c7023bca084c89a74329bc9819a54, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 6519401657621477484, guid: cf9c7023bca084c89a74329bc9819a54, type: 3}
       propertyPath: m_RootOrder
       value: 33
@@ -6460,6 +7322,10 @@ PrefabInstance:
     - target: {fileID: 2435421964960726046, guid: 6bffd9cecdd2b4b4084a5cde771d1432, type: 3}
       propertyPath: m_Name
       value: GrassBox (201)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2435421964960726046, guid: 6bffd9cecdd2b4b4084a5cde771d1432, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 2435421964960882750, guid: 6bffd9cecdd2b4b4084a5cde771d1432, type: 3}
       propertyPath: m_RootOrder
@@ -6523,6 +7389,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: GrassBox (59)
       objectReference: {fileID: 0}
+    - target: {fileID: 2435421964960726046, guid: 6bffd9cecdd2b4b4084a5cde771d1432, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 2435421964960882750, guid: 6bffd9cecdd2b4b4084a5cde771d1432, type: 3}
       propertyPath: m_RootOrder
       value: 201
@@ -6584,6 +7454,10 @@ PrefabInstance:
     - target: {fileID: 6519401657621111884, guid: cf9c7023bca084c89a74329bc9819a54, type: 3}
       propertyPath: m_Name
       value: CrystalBox (23)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6519401657621111884, guid: cf9c7023bca084c89a74329bc9819a54, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 6519401657621477484, guid: cf9c7023bca084c89a74329bc9819a54, type: 3}
       propertyPath: m_RootOrder
@@ -6647,6 +7521,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: GrassBox (22)
       objectReference: {fileID: 0}
+    - target: {fileID: 2435421964960726046, guid: 6bffd9cecdd2b4b4084a5cde771d1432, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 2435421964960882750, guid: 6bffd9cecdd2b4b4084a5cde771d1432, type: 3}
       propertyPath: m_RootOrder
       value: 170
@@ -6708,6 +7586,10 @@ PrefabInstance:
     - target: {fileID: 2435421964960726046, guid: 6bffd9cecdd2b4b4084a5cde771d1432, type: 3}
       propertyPath: m_Name
       value: GrassBox (165)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2435421964960726046, guid: 6bffd9cecdd2b4b4084a5cde771d1432, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 2435421964960882750, guid: 6bffd9cecdd2b4b4084a5cde771d1432, type: 3}
       propertyPath: m_RootOrder
@@ -6771,6 +7653,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: CrystalBox3 (29)
       objectReference: {fileID: 0}
+    - target: {fileID: 1159251707130074282, guid: 2519ee2fffb724006a8126325ce9eaa1, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 1159251707130497162, guid: 2519ee2fffb724006a8126325ce9eaa1, type: 3}
       propertyPath: m_RootOrder
       value: 134
@@ -6832,6 +7718,10 @@ PrefabInstance:
     - target: {fileID: 6519401657621111884, guid: cf9c7023bca084c89a74329bc9819a54, type: 3}
       propertyPath: m_Name
       value: CrystalBox (25)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6519401657621111884, guid: cf9c7023bca084c89a74329bc9819a54, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 6519401657621477484, guid: cf9c7023bca084c89a74329bc9819a54, type: 3}
       propertyPath: m_RootOrder
@@ -6895,6 +7785,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: GrassBox (97)
       objectReference: {fileID: 0}
+    - target: {fileID: 2435421964960726046, guid: 6bffd9cecdd2b4b4084a5cde771d1432, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 2435421964960882750, guid: 6bffd9cecdd2b4b4084a5cde771d1432, type: 3}
       propertyPath: m_RootOrder
       value: 243
@@ -6956,6 +7850,10 @@ PrefabInstance:
     - target: {fileID: 6519401657621111884, guid: cf9c7023bca084c89a74329bc9819a54, type: 3}
       propertyPath: m_Name
       value: CrystalBox (46)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6519401657621111884, guid: cf9c7023bca084c89a74329bc9819a54, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 6519401657621477484, guid: cf9c7023bca084c89a74329bc9819a54, type: 3}
       propertyPath: m_RootOrder
@@ -7019,6 +7917,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: CrystalBox3 (33)
       objectReference: {fileID: 0}
+    - target: {fileID: 1159251707130074282, guid: 2519ee2fffb724006a8126325ce9eaa1, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 1159251707130497162, guid: 2519ee2fffb724006a8126325ce9eaa1, type: 3}
       propertyPath: m_RootOrder
       value: 136
@@ -7080,6 +7982,10 @@ PrefabInstance:
     - target: {fileID: 2435421964960726046, guid: 6bffd9cecdd2b4b4084a5cde771d1432, type: 3}
       propertyPath: m_Name
       value: GrassBox (79)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2435421964960726046, guid: 6bffd9cecdd2b4b4084a5cde771d1432, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 2435421964960882750, guid: 6bffd9cecdd2b4b4084a5cde771d1432, type: 3}
       propertyPath: m_RootOrder
@@ -7143,6 +8049,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: CrystalBox (49)
       objectReference: {fileID: 0}
+    - target: {fileID: 6519401657621111884, guid: cf9c7023bca084c89a74329bc9819a54, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 6519401657621477484, guid: cf9c7023bca084c89a74329bc9819a54, type: 3}
       propertyPath: m_RootOrder
       value: 85
@@ -7204,6 +8114,10 @@ PrefabInstance:
     - target: {fileID: 2895322455619634327, guid: 28d7a6decfb764557908695909381fb6, type: 3}
       propertyPath: m_Name
       value: CrystalBox2 (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2895322455619634327, guid: 28d7a6decfb764557908695909381fb6, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 2895322455619672247, guid: 28d7a6decfb764557908695909381fb6, type: 3}
       propertyPath: m_RootOrder
@@ -7267,6 +8181,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: GrassBox (40)
       objectReference: {fileID: 0}
+    - target: {fileID: 2435421964960726046, guid: 6bffd9cecdd2b4b4084a5cde771d1432, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 2435421964960882750, guid: 6bffd9cecdd2b4b4084a5cde771d1432, type: 3}
       propertyPath: m_RootOrder
       value: 188
@@ -7328,6 +8246,10 @@ PrefabInstance:
     - target: {fileID: 2895322455619634327, guid: 28d7a6decfb764557908695909381fb6, type: 3}
       propertyPath: m_Name
       value: CrystalBox2 (24)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2895322455619634327, guid: 28d7a6decfb764557908695909381fb6, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 2895322455619672247, guid: 28d7a6decfb764557908695909381fb6, type: 3}
       propertyPath: m_RootOrder
@@ -7391,6 +8313,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: GrassBox (73)
       objectReference: {fileID: 0}
+    - target: {fileID: 2435421964960726046, guid: 6bffd9cecdd2b4b4084a5cde771d1432, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 2435421964960882750, guid: 6bffd9cecdd2b4b4084a5cde771d1432, type: 3}
       propertyPath: m_RootOrder
       value: 221
@@ -7452,6 +8378,10 @@ PrefabInstance:
     - target: {fileID: 2435421964960726046, guid: 6bffd9cecdd2b4b4084a5cde771d1432, type: 3}
       propertyPath: m_Name
       value: GrassBox (34)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2435421964960726046, guid: 6bffd9cecdd2b4b4084a5cde771d1432, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 2435421964960882750, guid: 6bffd9cecdd2b4b4084a5cde771d1432, type: 3}
       propertyPath: m_RootOrder
@@ -7515,6 +8445,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: GrassBox (206)
       objectReference: {fileID: 0}
+    - target: {fileID: 2435421964960726046, guid: 6bffd9cecdd2b4b4084a5cde771d1432, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 2435421964960882750, guid: 6bffd9cecdd2b4b4084a5cde771d1432, type: 3}
       propertyPath: m_RootOrder
       value: 338
@@ -7576,6 +8510,10 @@ PrefabInstance:
     - target: {fileID: 6519401657621111884, guid: cf9c7023bca084c89a74329bc9819a54, type: 3}
       propertyPath: m_Name
       value: CrystalBox (26)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6519401657621111884, guid: cf9c7023bca084c89a74329bc9819a54, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 6519401657621477484, guid: cf9c7023bca084c89a74329bc9819a54, type: 3}
       propertyPath: m_RootOrder
@@ -7639,6 +8577,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: GrassBox (172)
       objectReference: {fileID: 0}
+    - target: {fileID: 2435421964960726046, guid: 6bffd9cecdd2b4b4084a5cde771d1432, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 2435421964960882750, guid: 6bffd9cecdd2b4b4084a5cde771d1432, type: 3}
       propertyPath: m_RootOrder
       value: 308
@@ -7700,6 +8642,10 @@ PrefabInstance:
     - target: {fileID: 6519401657621111884, guid: cf9c7023bca084c89a74329bc9819a54, type: 3}
       propertyPath: m_Name
       value: CrystalBox (7)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6519401657621111884, guid: cf9c7023bca084c89a74329bc9819a54, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 6519401657621477484, guid: cf9c7023bca084c89a74329bc9819a54, type: 3}
       propertyPath: m_RootOrder
@@ -7763,6 +8709,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: GrassBox (173)
       objectReference: {fileID: 0}
+    - target: {fileID: 2435421964960726046, guid: 6bffd9cecdd2b4b4084a5cde771d1432, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 2435421964960882750, guid: 6bffd9cecdd2b4b4084a5cde771d1432, type: 3}
       propertyPath: m_RootOrder
       value: 309
@@ -7824,6 +8774,10 @@ PrefabInstance:
     - target: {fileID: 2435421964960726046, guid: 6bffd9cecdd2b4b4084a5cde771d1432, type: 3}
       propertyPath: m_Name
       value: GrassBox (27)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2435421964960726046, guid: 6bffd9cecdd2b4b4084a5cde771d1432, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 2435421964960882750, guid: 6bffd9cecdd2b4b4084a5cde771d1432, type: 3}
       propertyPath: m_RootOrder
@@ -7887,6 +8841,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: CrystalBox3 (25)
       objectReference: {fileID: 0}
+    - target: {fileID: 1159251707130074282, guid: 2519ee2fffb724006a8126325ce9eaa1, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 1159251707130497162, guid: 2519ee2fffb724006a8126325ce9eaa1, type: 3}
       propertyPath: m_RootOrder
       value: 46
@@ -7948,6 +8906,10 @@ PrefabInstance:
     - target: {fileID: 2435421964960726046, guid: 6bffd9cecdd2b4b4084a5cde771d1432, type: 3}
       propertyPath: m_Name
       value: GrassBox (5)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2435421964960726046, guid: 6bffd9cecdd2b4b4084a5cde771d1432, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 2435421964960882750, guid: 6bffd9cecdd2b4b4084a5cde771d1432, type: 3}
       propertyPath: m_RootOrder
@@ -8011,6 +8973,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: CrystalBox (57)
       objectReference: {fileID: 0}
+    - target: {fileID: 6519401657621111884, guid: cf9c7023bca084c89a74329bc9819a54, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 6519401657621477484, guid: cf9c7023bca084c89a74329bc9819a54, type: 3}
       propertyPath: m_RootOrder
       value: 101
@@ -8072,6 +9038,10 @@ PrefabInstance:
     - target: {fileID: 2435421964960726046, guid: 6bffd9cecdd2b4b4084a5cde771d1432, type: 3}
       propertyPath: m_Name
       value: GrassBox (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2435421964960726046, guid: 6bffd9cecdd2b4b4084a5cde771d1432, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 2435421964960882750, guid: 6bffd9cecdd2b4b4084a5cde771d1432, type: 3}
       propertyPath: m_RootOrder
@@ -8135,6 +9105,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: GrassBox (136)
       objectReference: {fileID: 0}
+    - target: {fileID: 2435421964960726046, guid: 6bffd9cecdd2b4b4084a5cde771d1432, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 2435421964960882750, guid: 6bffd9cecdd2b4b4084a5cde771d1432, type: 3}
       propertyPath: m_RootOrder
       value: 280
@@ -8196,6 +9170,10 @@ PrefabInstance:
     - target: {fileID: 2435421964960726046, guid: 6bffd9cecdd2b4b4084a5cde771d1432, type: 3}
       propertyPath: m_Name
       value: GrassBox (186)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2435421964960726046, guid: 6bffd9cecdd2b4b4084a5cde771d1432, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 2435421964960882750, guid: 6bffd9cecdd2b4b4084a5cde771d1432, type: 3}
       propertyPath: m_RootOrder
@@ -8259,6 +9237,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: CrystalBox3 (12)
       objectReference: {fileID: 0}
+    - target: {fileID: 1159251707130074282, guid: 2519ee2fffb724006a8126325ce9eaa1, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 1159251707130497162, guid: 2519ee2fffb724006a8126325ce9eaa1, type: 3}
       propertyPath: m_RootOrder
       value: 133
@@ -8320,6 +9302,10 @@ PrefabInstance:
     - target: {fileID: 6519401657621111884, guid: cf9c7023bca084c89a74329bc9819a54, type: 3}
       propertyPath: m_Name
       value: CrystalBox (5)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6519401657621111884, guid: cf9c7023bca084c89a74329bc9819a54, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 6519401657621477484, guid: cf9c7023bca084c89a74329bc9819a54, type: 3}
       propertyPath: m_RootOrder
@@ -8383,6 +9369,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: CrystalBox2 (13)
       objectReference: {fileID: 0}
+    - target: {fileID: 2895322455619634327, guid: 28d7a6decfb764557908695909381fb6, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 2895322455619672247, guid: 28d7a6decfb764557908695909381fb6, type: 3}
       propertyPath: m_RootOrder
       value: 45
@@ -8444,6 +9434,10 @@ PrefabInstance:
     - target: {fileID: 1159251707130074282, guid: 2519ee2fffb724006a8126325ce9eaa1, type: 3}
       propertyPath: m_Name
       value: CrystalBox3 (48)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1159251707130074282, guid: 2519ee2fffb724006a8126325ce9eaa1, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 1159251707130497162, guid: 2519ee2fffb724006a8126325ce9eaa1, type: 3}
       propertyPath: m_RootOrder
@@ -8507,6 +9501,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: CrystalBox (8)
       objectReference: {fileID: 0}
+    - target: {fileID: 6519401657621111884, guid: cf9c7023bca084c89a74329bc9819a54, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 6519401657621477484, guid: cf9c7023bca084c89a74329bc9819a54, type: 3}
       propertyPath: m_RootOrder
       value: 21
@@ -8568,6 +9566,10 @@ PrefabInstance:
     - target: {fileID: 2435421964960726046, guid: 6bffd9cecdd2b4b4084a5cde771d1432, type: 3}
       propertyPath: m_Name
       value: GrassBox (30)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2435421964960726046, guid: 6bffd9cecdd2b4b4084a5cde771d1432, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 2435421964960882750, guid: 6bffd9cecdd2b4b4084a5cde771d1432, type: 3}
       propertyPath: m_RootOrder
@@ -8631,6 +9633,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: CrystalBox (24)
       objectReference: {fileID: 0}
+    - target: {fileID: 6519401657621111884, guid: cf9c7023bca084c89a74329bc9819a54, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 6519401657621477484, guid: cf9c7023bca084c89a74329bc9819a54, type: 3}
       propertyPath: m_RootOrder
       value: 60
@@ -8692,6 +9698,10 @@ PrefabInstance:
     - target: {fileID: 1159251707130074282, guid: 2519ee2fffb724006a8126325ce9eaa1, type: 3}
       propertyPath: m_Name
       value: CrystalBox3 (18)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1159251707130074282, guid: 2519ee2fffb724006a8126325ce9eaa1, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 1159251707130497162, guid: 2519ee2fffb724006a8126325ce9eaa1, type: 3}
       propertyPath: m_RootOrder
@@ -8755,6 +9765,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: GrassBox (163)
       objectReference: {fileID: 0}
+    - target: {fileID: 2435421964960726046, guid: 6bffd9cecdd2b4b4084a5cde771d1432, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 2435421964960882750, guid: 6bffd9cecdd2b4b4084a5cde771d1432, type: 3}
       propertyPath: m_RootOrder
       value: 299
@@ -8816,6 +9830,10 @@ PrefabInstance:
     - target: {fileID: 1159251707130074282, guid: 2519ee2fffb724006a8126325ce9eaa1, type: 3}
       propertyPath: m_Name
       value: CrystalBox3 (5)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1159251707130074282, guid: 2519ee2fffb724006a8126325ce9eaa1, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 1159251707130497162, guid: 2519ee2fffb724006a8126325ce9eaa1, type: 3}
       propertyPath: m_RootOrder
@@ -8879,6 +9897,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: CrystalBox3 (13)
       objectReference: {fileID: 0}
+    - target: {fileID: 1159251707130074282, guid: 2519ee2fffb724006a8126325ce9eaa1, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 1159251707130497162, guid: 2519ee2fffb724006a8126325ce9eaa1, type: 3}
       propertyPath: m_RootOrder
       value: 14
@@ -8940,6 +9962,10 @@ PrefabInstance:
     - target: {fileID: 2895322455619634327, guid: 28d7a6decfb764557908695909381fb6, type: 3}
       propertyPath: m_Name
       value: CrystalBox2 (17)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2895322455619634327, guid: 28d7a6decfb764557908695909381fb6, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 2895322455619672247, guid: 28d7a6decfb764557908695909381fb6, type: 3}
       propertyPath: m_RootOrder
@@ -9003,6 +10029,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: GrassBox (48)
       objectReference: {fileID: 0}
+    - target: {fileID: 2435421964960726046, guid: 6bffd9cecdd2b4b4084a5cde771d1432, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 2435421964960882750, guid: 6bffd9cecdd2b4b4084a5cde771d1432, type: 3}
       propertyPath: m_RootOrder
       value: 196
@@ -9064,6 +10094,10 @@ PrefabInstance:
     - target: {fileID: 6519401657621111884, guid: cf9c7023bca084c89a74329bc9819a54, type: 3}
       propertyPath: m_Name
       value: CrystalBox (18)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6519401657621111884, guid: cf9c7023bca084c89a74329bc9819a54, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 6519401657621477484, guid: cf9c7023bca084c89a74329bc9819a54, type: 3}
       propertyPath: m_RootOrder
@@ -9127,6 +10161,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: GrassBox (119)
       objectReference: {fileID: 0}
+    - target: {fileID: 2435421964960726046, guid: 6bffd9cecdd2b4b4084a5cde771d1432, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 2435421964960882750, guid: 6bffd9cecdd2b4b4084a5cde771d1432, type: 3}
       propertyPath: m_RootOrder
       value: 263
@@ -9188,6 +10226,10 @@ PrefabInstance:
     - target: {fileID: 2435421964960726046, guid: 6bffd9cecdd2b4b4084a5cde771d1432, type: 3}
       propertyPath: m_Name
       value: GrassBox (120)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2435421964960726046, guid: 6bffd9cecdd2b4b4084a5cde771d1432, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 2435421964960882750, guid: 6bffd9cecdd2b4b4084a5cde771d1432, type: 3}
       propertyPath: m_RootOrder
@@ -9251,6 +10293,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: GrassBox (17)
       objectReference: {fileID: 0}
+    - target: {fileID: 2435421964960726046, guid: 6bffd9cecdd2b4b4084a5cde771d1432, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 2435421964960882750, guid: 6bffd9cecdd2b4b4084a5cde771d1432, type: 3}
       propertyPath: m_RootOrder
       value: 165
@@ -9312,6 +10358,10 @@ PrefabInstance:
     - target: {fileID: 6519401657621111884, guid: cf9c7023bca084c89a74329bc9819a54, type: 3}
       propertyPath: m_Name
       value: CrystalBox (75)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6519401657621111884, guid: cf9c7023bca084c89a74329bc9819a54, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 6519401657621477484, guid: cf9c7023bca084c89a74329bc9819a54, type: 3}
       propertyPath: m_RootOrder
@@ -9375,6 +10425,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: CrystalBox (20)
       objectReference: {fileID: 0}
+    - target: {fileID: 6519401657621111884, guid: cf9c7023bca084c89a74329bc9819a54, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 6519401657621477484, guid: cf9c7023bca084c89a74329bc9819a54, type: 3}
       propertyPath: m_RootOrder
       value: 56
@@ -9436,6 +10490,10 @@ PrefabInstance:
     - target: {fileID: 6519401657621111884, guid: cf9c7023bca084c89a74329bc9819a54, type: 3}
       propertyPath: m_Name
       value: CrystalBox (22)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6519401657621111884, guid: cf9c7023bca084c89a74329bc9819a54, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 6519401657621477484, guid: cf9c7023bca084c89a74329bc9819a54, type: 3}
       propertyPath: m_RootOrder
@@ -9499,6 +10557,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: GrassBox (189)
       objectReference: {fileID: 0}
+    - target: {fileID: 2435421964960726046, guid: 6bffd9cecdd2b4b4084a5cde771d1432, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 2435421964960882750, guid: 6bffd9cecdd2b4b4084a5cde771d1432, type: 3}
       propertyPath: m_RootOrder
       value: 321
@@ -9560,6 +10622,10 @@ PrefabInstance:
     - target: {fileID: 6519401657621111884, guid: cf9c7023bca084c89a74329bc9819a54, type: 3}
       propertyPath: m_Name
       value: CrystalBox (64)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6519401657621111884, guid: cf9c7023bca084c89a74329bc9819a54, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 6519401657621477484, guid: cf9c7023bca084c89a74329bc9819a54, type: 3}
       propertyPath: m_RootOrder
@@ -9623,6 +10689,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: GrassBox (64)
       objectReference: {fileID: 0}
+    - target: {fileID: 2435421964960726046, guid: 6bffd9cecdd2b4b4084a5cde771d1432, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 2435421964960882750, guid: 6bffd9cecdd2b4b4084a5cde771d1432, type: 3}
       propertyPath: m_RootOrder
       value: 212
@@ -9684,6 +10754,10 @@ PrefabInstance:
     - target: {fileID: 1159251707130074282, guid: 2519ee2fffb724006a8126325ce9eaa1, type: 3}
       propertyPath: m_Name
       value: CrystalBox3 (43)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1159251707130074282, guid: 2519ee2fffb724006a8126325ce9eaa1, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 1159251707130497162, guid: 2519ee2fffb724006a8126325ce9eaa1, type: 3}
       propertyPath: m_RootOrder
@@ -9747,6 +10821,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: GrassBox (176)
       objectReference: {fileID: 0}
+    - target: {fileID: 2435421964960726046, guid: 6bffd9cecdd2b4b4084a5cde771d1432, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 2435421964960882750, guid: 6bffd9cecdd2b4b4084a5cde771d1432, type: 3}
       propertyPath: m_RootOrder
       value: 312
@@ -9808,6 +10886,10 @@ PrefabInstance:
     - target: {fileID: 6519401657621111884, guid: cf9c7023bca084c89a74329bc9819a54, type: 3}
       propertyPath: m_Name
       value: CrystalBox (35)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6519401657621111884, guid: cf9c7023bca084c89a74329bc9819a54, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 6519401657621477484, guid: cf9c7023bca084c89a74329bc9819a54, type: 3}
       propertyPath: m_RootOrder
@@ -9871,6 +10953,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: CrystalBox3 (49)
       objectReference: {fileID: 0}
+    - target: {fileID: 1159251707130074282, guid: 2519ee2fffb724006a8126325ce9eaa1, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 1159251707130497162, guid: 2519ee2fffb724006a8126325ce9eaa1, type: 3}
       propertyPath: m_RootOrder
       value: 147
@@ -9932,6 +11018,10 @@ PrefabInstance:
     - target: {fileID: 2435421964960726046, guid: 6bffd9cecdd2b4b4084a5cde771d1432, type: 3}
       propertyPath: m_Name
       value: GrassBox (57)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2435421964960726046, guid: 6bffd9cecdd2b4b4084a5cde771d1432, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 2435421964960882750, guid: 6bffd9cecdd2b4b4084a5cde771d1432, type: 3}
       propertyPath: m_RootOrder
@@ -9995,6 +11085,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: GrassBox (37)
       objectReference: {fileID: 0}
+    - target: {fileID: 2435421964960726046, guid: 6bffd9cecdd2b4b4084a5cde771d1432, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 2435421964960882750, guid: 6bffd9cecdd2b4b4084a5cde771d1432, type: 3}
       propertyPath: m_RootOrder
       value: 185
@@ -10056,6 +11150,10 @@ PrefabInstance:
     - target: {fileID: 2435421964960726046, guid: 6bffd9cecdd2b4b4084a5cde771d1432, type: 3}
       propertyPath: m_Name
       value: GrassBox (38)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2435421964960726046, guid: 6bffd9cecdd2b4b4084a5cde771d1432, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 2435421964960882750, guid: 6bffd9cecdd2b4b4084a5cde771d1432, type: 3}
       propertyPath: m_RootOrder
@@ -10119,6 +11217,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: GrassBox (146)
       objectReference: {fileID: 0}
+    - target: {fileID: 2435421964960726046, guid: 6bffd9cecdd2b4b4084a5cde771d1432, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 2435421964960882750, guid: 6bffd9cecdd2b4b4084a5cde771d1432, type: 3}
       propertyPath: m_RootOrder
       value: 286
@@ -10180,6 +11282,10 @@ PrefabInstance:
     - target: {fileID: 2435421964960726046, guid: 6bffd9cecdd2b4b4084a5cde771d1432, type: 3}
       propertyPath: m_Name
       value: GrassBox (158)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2435421964960726046, guid: 6bffd9cecdd2b4b4084a5cde771d1432, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 2435421964960882750, guid: 6bffd9cecdd2b4b4084a5cde771d1432, type: 3}
       propertyPath: m_RootOrder
@@ -10243,6 +11349,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: CrystalBox (56)
       objectReference: {fileID: 0}
+    - target: {fileID: 6519401657621111884, guid: cf9c7023bca084c89a74329bc9819a54, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 6519401657621477484, guid: cf9c7023bca084c89a74329bc9819a54, type: 3}
       propertyPath: m_RootOrder
       value: 95
@@ -10304,6 +11414,10 @@ PrefabInstance:
     - target: {fileID: 2435421964960726046, guid: 6bffd9cecdd2b4b4084a5cde771d1432, type: 3}
       propertyPath: m_Name
       value: GrassBox (128)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2435421964960726046, guid: 6bffd9cecdd2b4b4084a5cde771d1432, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 2435421964960882750, guid: 6bffd9cecdd2b4b4084a5cde771d1432, type: 3}
       propertyPath: m_RootOrder
@@ -10367,6 +11481,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: GrassBox (84)
       objectReference: {fileID: 0}
+    - target: {fileID: 2435421964960726046, guid: 6bffd9cecdd2b4b4084a5cde771d1432, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 2435421964960882750, guid: 6bffd9cecdd2b4b4084a5cde771d1432, type: 3}
       propertyPath: m_RootOrder
       value: 232
@@ -10428,6 +11546,10 @@ PrefabInstance:
     - target: {fileID: 2435421964960726046, guid: 6bffd9cecdd2b4b4084a5cde771d1432, type: 3}
       propertyPath: m_Name
       value: GrassBox (203)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2435421964960726046, guid: 6bffd9cecdd2b4b4084a5cde771d1432, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 2435421964960882750, guid: 6bffd9cecdd2b4b4084a5cde771d1432, type: 3}
       propertyPath: m_RootOrder
@@ -10491,6 +11613,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: GrassBox (153)
       objectReference: {fileID: 0}
+    - target: {fileID: 2435421964960726046, guid: 6bffd9cecdd2b4b4084a5cde771d1432, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 2435421964960882750, guid: 6bffd9cecdd2b4b4084a5cde771d1432, type: 3}
       propertyPath: m_RootOrder
       value: 293
@@ -10552,6 +11678,10 @@ PrefabInstance:
     - target: {fileID: 2895322455619634327, guid: 28d7a6decfb764557908695909381fb6, type: 3}
       propertyPath: m_Name
       value: CrystalBox2 (30)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2895322455619634327, guid: 28d7a6decfb764557908695909381fb6, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 2895322455619672247, guid: 28d7a6decfb764557908695909381fb6, type: 3}
       propertyPath: m_RootOrder
@@ -10615,6 +11745,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: CrystalBox (51)
       objectReference: {fileID: 0}
+    - target: {fileID: 6519401657621111884, guid: cf9c7023bca084c89a74329bc9819a54, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 6519401657621477484, guid: cf9c7023bca084c89a74329bc9819a54, type: 3}
       propertyPath: m_RootOrder
       value: 100
@@ -10676,6 +11810,10 @@ PrefabInstance:
     - target: {fileID: 2435421964960726046, guid: 6bffd9cecdd2b4b4084a5cde771d1432, type: 3}
       propertyPath: m_Name
       value: GrassBox (187)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2435421964960726046, guid: 6bffd9cecdd2b4b4084a5cde771d1432, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 2435421964960882750, guid: 6bffd9cecdd2b4b4084a5cde771d1432, type: 3}
       propertyPath: m_RootOrder
@@ -10739,6 +11877,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: CrystalBox (33)
       objectReference: {fileID: 0}
+    - target: {fileID: 6519401657621111884, guid: cf9c7023bca084c89a74329bc9819a54, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 6519401657621477484, guid: cf9c7023bca084c89a74329bc9819a54, type: 3}
       propertyPath: m_RootOrder
       value: 72
@@ -10800,6 +11942,10 @@ PrefabInstance:
     - target: {fileID: 1159251707130074282, guid: 2519ee2fffb724006a8126325ce9eaa1, type: 3}
       propertyPath: m_Name
       value: CrystalBox3 (44)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1159251707130074282, guid: 2519ee2fffb724006a8126325ce9eaa1, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 1159251707130497162, guid: 2519ee2fffb724006a8126325ce9eaa1, type: 3}
       propertyPath: m_RootOrder
@@ -10863,6 +12009,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: CrystalBox (30)
       objectReference: {fileID: 0}
+    - target: {fileID: 6519401657621111884, guid: cf9c7023bca084c89a74329bc9819a54, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 6519401657621477484, guid: cf9c7023bca084c89a74329bc9819a54, type: 3}
       propertyPath: m_RootOrder
       value: 62
@@ -10924,6 +12074,10 @@ PrefabInstance:
     - target: {fileID: 2435421964960726046, guid: 6bffd9cecdd2b4b4084a5cde771d1432, type: 3}
       propertyPath: m_Name
       value: GrassBox (171)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2435421964960726046, guid: 6bffd9cecdd2b4b4084a5cde771d1432, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 2435421964960882750, guid: 6bffd9cecdd2b4b4084a5cde771d1432, type: 3}
       propertyPath: m_RootOrder
@@ -10987,6 +12141,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: GrassBox (124)
       objectReference: {fileID: 0}
+    - target: {fileID: 2435421964960726046, guid: 6bffd9cecdd2b4b4084a5cde771d1432, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 2435421964960882750, guid: 6bffd9cecdd2b4b4084a5cde771d1432, type: 3}
       propertyPath: m_RootOrder
       value: 268
@@ -11048,6 +12206,10 @@ PrefabInstance:
     - target: {fileID: 1159251707130074282, guid: 2519ee2fffb724006a8126325ce9eaa1, type: 3}
       propertyPath: m_Name
       value: CrystalBox3 (9)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1159251707130074282, guid: 2519ee2fffb724006a8126325ce9eaa1, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 1159251707130497162, guid: 2519ee2fffb724006a8126325ce9eaa1, type: 3}
       propertyPath: m_RootOrder
@@ -11111,6 +12273,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: CrystalBox (61)
       objectReference: {fileID: 0}
+    - target: {fileID: 6519401657621111884, guid: cf9c7023bca084c89a74329bc9819a54, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 6519401657621477484, guid: cf9c7023bca084c89a74329bc9819a54, type: 3}
       propertyPath: m_RootOrder
       value: 112
@@ -11172,6 +12338,10 @@ PrefabInstance:
     - target: {fileID: 2435421964960726046, guid: 6bffd9cecdd2b4b4084a5cde771d1432, type: 3}
       propertyPath: m_Name
       value: GrassBox (155)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2435421964960726046, guid: 6bffd9cecdd2b4b4084a5cde771d1432, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 2435421964960882750, guid: 6bffd9cecdd2b4b4084a5cde771d1432, type: 3}
       propertyPath: m_RootOrder
@@ -11235,6 +12405,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: CrystalBox2 (8)
       objectReference: {fileID: 0}
+    - target: {fileID: 2895322455619634327, guid: 28d7a6decfb764557908695909381fb6, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 2895322455619672247, guid: 28d7a6decfb764557908695909381fb6, type: 3}
       propertyPath: m_RootOrder
       value: 41
@@ -11296,6 +12470,10 @@ PrefabInstance:
     - target: {fileID: 6519401657621111884, guid: cf9c7023bca084c89a74329bc9819a54, type: 3}
       propertyPath: m_Name
       value: CrystalBox (62)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6519401657621111884, guid: cf9c7023bca084c89a74329bc9819a54, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 6519401657621477484, guid: cf9c7023bca084c89a74329bc9819a54, type: 3}
       propertyPath: m_RootOrder
@@ -11359,6 +12537,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: GrassBox (144)
       objectReference: {fileID: 0}
+    - target: {fileID: 2435421964960726046, guid: 6bffd9cecdd2b4b4084a5cde771d1432, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 2435421964960882750, guid: 6bffd9cecdd2b4b4084a5cde771d1432, type: 3}
       propertyPath: m_RootOrder
       value: 284
@@ -11420,6 +12602,10 @@ PrefabInstance:
     - target: {fileID: 2435421964960726046, guid: 6bffd9cecdd2b4b4084a5cde771d1432, type: 3}
       propertyPath: m_Name
       value: GrassBox (85)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2435421964960726046, guid: 6bffd9cecdd2b4b4084a5cde771d1432, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 2435421964960882750, guid: 6bffd9cecdd2b4b4084a5cde771d1432, type: 3}
       propertyPath: m_RootOrder
@@ -11483,6 +12669,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: GrassBox (154)
       objectReference: {fileID: 0}
+    - target: {fileID: 2435421964960726046, guid: 6bffd9cecdd2b4b4084a5cde771d1432, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 2435421964960882750, guid: 6bffd9cecdd2b4b4084a5cde771d1432, type: 3}
       propertyPath: m_RootOrder
       value: 294
@@ -11544,6 +12734,10 @@ PrefabInstance:
     - target: {fileID: 2435421964960726046, guid: 6bffd9cecdd2b4b4084a5cde771d1432, type: 3}
       propertyPath: m_Name
       value: GrassBox (39)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2435421964960726046, guid: 6bffd9cecdd2b4b4084a5cde771d1432, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 2435421964960882750, guid: 6bffd9cecdd2b4b4084a5cde771d1432, type: 3}
       propertyPath: m_RootOrder
@@ -11607,6 +12801,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: GrassBox (156)
       objectReference: {fileID: 0}
+    - target: {fileID: 2435421964960726046, guid: 6bffd9cecdd2b4b4084a5cde771d1432, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 2435421964960882750, guid: 6bffd9cecdd2b4b4084a5cde771d1432, type: 3}
       propertyPath: m_RootOrder
       value: 296
@@ -11668,6 +12866,10 @@ PrefabInstance:
     - target: {fileID: 1159251707130074282, guid: 2519ee2fffb724006a8126325ce9eaa1, type: 3}
       propertyPath: m_Name
       value: CrystalBox3 (16)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1159251707130074282, guid: 2519ee2fffb724006a8126325ce9eaa1, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 1159251707130497162, guid: 2519ee2fffb724006a8126325ce9eaa1, type: 3}
       propertyPath: m_RootOrder
@@ -11731,6 +12933,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: GrassBox (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 2435421964960726046, guid: 6bffd9cecdd2b4b4084a5cde771d1432, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 2435421964960882750, guid: 6bffd9cecdd2b4b4084a5cde771d1432, type: 3}
       propertyPath: m_RootOrder
       value: 149
@@ -11792,6 +12998,10 @@ PrefabInstance:
     - target: {fileID: 1159251707130074282, guid: 2519ee2fffb724006a8126325ce9eaa1, type: 3}
       propertyPath: m_Name
       value: CrystalBox3 (7)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1159251707130074282, guid: 2519ee2fffb724006a8126325ce9eaa1, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 1159251707130497162, guid: 2519ee2fffb724006a8126325ce9eaa1, type: 3}
       propertyPath: m_RootOrder
@@ -11855,6 +13065,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: GrassBox (204)
       objectReference: {fileID: 0}
+    - target: {fileID: 2435421964960726046, guid: 6bffd9cecdd2b4b4084a5cde771d1432, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 2435421964960882750, guid: 6bffd9cecdd2b4b4084a5cde771d1432, type: 3}
       propertyPath: m_RootOrder
       value: 336
@@ -11916,6 +13130,10 @@ PrefabInstance:
     - target: {fileID: 2895322455619634327, guid: 28d7a6decfb764557908695909381fb6, type: 3}
       propertyPath: m_Name
       value: CrystalBox2 (31)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2895322455619634327, guid: 28d7a6decfb764557908695909381fb6, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 2895322455619672247, guid: 28d7a6decfb764557908695909381fb6, type: 3}
       propertyPath: m_RootOrder
@@ -11979,6 +13197,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: CrystalBox (31)
       objectReference: {fileID: 0}
+    - target: {fileID: 6519401657621111884, guid: cf9c7023bca084c89a74329bc9819a54, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 6519401657621477484, guid: cf9c7023bca084c89a74329bc9819a54, type: 3}
       propertyPath: m_RootOrder
       value: 61
@@ -12040,6 +13262,10 @@ PrefabInstance:
     - target: {fileID: 1159251707130074282, guid: 2519ee2fffb724006a8126325ce9eaa1, type: 3}
       propertyPath: m_Name
       value: CrystalBox3 (38)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1159251707130074282, guid: 2519ee2fffb724006a8126325ce9eaa1, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 1159251707130497162, guid: 2519ee2fffb724006a8126325ce9eaa1, type: 3}
       propertyPath: m_RootOrder
@@ -12103,6 +13329,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: CrystalBox3 (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 1159251707130074282, guid: 2519ee2fffb724006a8126325ce9eaa1, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 1159251707130497162, guid: 2519ee2fffb724006a8126325ce9eaa1, type: 3}
       propertyPath: m_RootOrder
       value: 1
@@ -12164,6 +13394,10 @@ PrefabInstance:
     - target: {fileID: 6519401657621111884, guid: cf9c7023bca084c89a74329bc9819a54, type: 3}
       propertyPath: m_Name
       value: CrystalBox (67)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6519401657621111884, guid: cf9c7023bca084c89a74329bc9819a54, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 6519401657621477484, guid: cf9c7023bca084c89a74329bc9819a54, type: 3}
       propertyPath: m_RootOrder
@@ -12227,6 +13461,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: GrassBox (76)
       objectReference: {fileID: 0}
+    - target: {fileID: 2435421964960726046, guid: 6bffd9cecdd2b4b4084a5cde771d1432, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 2435421964960882750, guid: 6bffd9cecdd2b4b4084a5cde771d1432, type: 3}
       propertyPath: m_RootOrder
       value: 224
@@ -12288,6 +13526,10 @@ PrefabInstance:
     - target: {fileID: 2435421964960726046, guid: 6bffd9cecdd2b4b4084a5cde771d1432, type: 3}
       propertyPath: m_Name
       value: GrassBox (90)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2435421964960726046, guid: 6bffd9cecdd2b4b4084a5cde771d1432, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 2435421964960882750, guid: 6bffd9cecdd2b4b4084a5cde771d1432, type: 3}
       propertyPath: m_RootOrder
@@ -12351,6 +13593,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: GrassBox (137)
       objectReference: {fileID: 0}
+    - target: {fileID: 2435421964960726046, guid: 6bffd9cecdd2b4b4084a5cde771d1432, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 2435421964960882750, guid: 6bffd9cecdd2b4b4084a5cde771d1432, type: 3}
       propertyPath: m_RootOrder
       value: 281
@@ -12412,6 +13658,10 @@ PrefabInstance:
     - target: {fileID: 2435421964960726046, guid: 6bffd9cecdd2b4b4084a5cde771d1432, type: 3}
       propertyPath: m_Name
       value: GrassBox (35)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2435421964960726046, guid: 6bffd9cecdd2b4b4084a5cde771d1432, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 2435421964960882750, guid: 6bffd9cecdd2b4b4084a5cde771d1432, type: 3}
       propertyPath: m_RootOrder
@@ -12475,6 +13725,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: CrystalBox3 (10)
       objectReference: {fileID: 0}
+    - target: {fileID: 1159251707130074282, guid: 2519ee2fffb724006a8126325ce9eaa1, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 1159251707130497162, guid: 2519ee2fffb724006a8126325ce9eaa1, type: 3}
       propertyPath: m_RootOrder
       value: 11
@@ -12536,6 +13790,10 @@ PrefabInstance:
     - target: {fileID: 2435421964960726046, guid: 6bffd9cecdd2b4b4084a5cde771d1432, type: 3}
       propertyPath: m_Name
       value: GrassBox (29)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2435421964960726046, guid: 6bffd9cecdd2b4b4084a5cde771d1432, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 2435421964960882750, guid: 6bffd9cecdd2b4b4084a5cde771d1432, type: 3}
       propertyPath: m_RootOrder
@@ -12599,6 +13857,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: CrystalBox (44)
       objectReference: {fileID: 0}
+    - target: {fileID: 6519401657621111884, guid: cf9c7023bca084c89a74329bc9819a54, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 6519401657621477484, guid: cf9c7023bca084c89a74329bc9819a54, type: 3}
       propertyPath: m_RootOrder
       value: 74
@@ -12660,6 +13922,10 @@ PrefabInstance:
     - target: {fileID: 2435421964960726046, guid: 6bffd9cecdd2b4b4084a5cde771d1432, type: 3}
       propertyPath: m_Name
       value: GrassBox (83)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2435421964960726046, guid: 6bffd9cecdd2b4b4084a5cde771d1432, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 2435421964960882750, guid: 6bffd9cecdd2b4b4084a5cde771d1432, type: 3}
       propertyPath: m_RootOrder
@@ -12723,6 +13989,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: GrassBox (47)
       objectReference: {fileID: 0}
+    - target: {fileID: 2435421964960726046, guid: 6bffd9cecdd2b4b4084a5cde771d1432, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 2435421964960882750, guid: 6bffd9cecdd2b4b4084a5cde771d1432, type: 3}
       propertyPath: m_RootOrder
       value: 195
@@ -12784,6 +14054,10 @@ PrefabInstance:
     - target: {fileID: 2435421964960726046, guid: 6bffd9cecdd2b4b4084a5cde771d1432, type: 3}
       propertyPath: m_Name
       value: GrassBox (169)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2435421964960726046, guid: 6bffd9cecdd2b4b4084a5cde771d1432, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 2435421964960882750, guid: 6bffd9cecdd2b4b4084a5cde771d1432, type: 3}
       propertyPath: m_RootOrder
@@ -12847,6 +14121,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: GrassBox (12)
       objectReference: {fileID: 0}
+    - target: {fileID: 2435421964960726046, guid: 6bffd9cecdd2b4b4084a5cde771d1432, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 2435421964960882750, guid: 6bffd9cecdd2b4b4084a5cde771d1432, type: 3}
       propertyPath: m_RootOrder
       value: 160
@@ -12908,6 +14186,10 @@ PrefabInstance:
     - target: {fileID: 2435421964960726046, guid: 6bffd9cecdd2b4b4084a5cde771d1432, type: 3}
       propertyPath: m_Name
       value: GrassBox (105)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2435421964960726046, guid: 6bffd9cecdd2b4b4084a5cde771d1432, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 2435421964960882750, guid: 6bffd9cecdd2b4b4084a5cde771d1432, type: 3}
       propertyPath: m_RootOrder
@@ -12971,6 +14253,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: GrassBox (36)
       objectReference: {fileID: 0}
+    - target: {fileID: 2435421964960726046, guid: 6bffd9cecdd2b4b4084a5cde771d1432, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 2435421964960882750, guid: 6bffd9cecdd2b4b4084a5cde771d1432, type: 3}
       propertyPath: m_RootOrder
       value: 184
@@ -13032,6 +14318,10 @@ PrefabInstance:
     - target: {fileID: 2435421964960726046, guid: 6bffd9cecdd2b4b4084a5cde771d1432, type: 3}
       propertyPath: m_Name
       value: GrassBox (135)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2435421964960726046, guid: 6bffd9cecdd2b4b4084a5cde771d1432, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 2435421964960882750, guid: 6bffd9cecdd2b4b4084a5cde771d1432, type: 3}
       propertyPath: m_RootOrder
@@ -13095,6 +14385,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: GrassBox (166)
       objectReference: {fileID: 0}
+    - target: {fileID: 2435421964960726046, guid: 6bffd9cecdd2b4b4084a5cde771d1432, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 2435421964960882750, guid: 6bffd9cecdd2b4b4084a5cde771d1432, type: 3}
       propertyPath: m_RootOrder
       value: 302
@@ -13156,6 +14450,10 @@ PrefabInstance:
     - target: {fileID: 2435421964960726046, guid: 6bffd9cecdd2b4b4084a5cde771d1432, type: 3}
       propertyPath: m_Name
       value: GrassBox (20)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2435421964960726046, guid: 6bffd9cecdd2b4b4084a5cde771d1432, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 2435421964960882750, guid: 6bffd9cecdd2b4b4084a5cde771d1432, type: 3}
       propertyPath: m_RootOrder
@@ -13219,6 +14517,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: CrystalBox3 (6)
       objectReference: {fileID: 0}
+    - target: {fileID: 1159251707130074282, guid: 2519ee2fffb724006a8126325ce9eaa1, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 1159251707130497162, guid: 2519ee2fffb724006a8126325ce9eaa1, type: 3}
       propertyPath: m_RootOrder
       value: 6
@@ -13280,6 +14582,10 @@ PrefabInstance:
     - target: {fileID: 6519401657621111884, guid: cf9c7023bca084c89a74329bc9819a54, type: 3}
       propertyPath: m_Name
       value: CrystalBox (37)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6519401657621111884, guid: cf9c7023bca084c89a74329bc9819a54, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 6519401657621477484, guid: cf9c7023bca084c89a74329bc9819a54, type: 3}
       propertyPath: m_RootOrder
@@ -13343,6 +14649,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: GrassBox (6)
       objectReference: {fileID: 0}
+    - target: {fileID: 2435421964960726046, guid: 6bffd9cecdd2b4b4084a5cde771d1432, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 2435421964960882750, guid: 6bffd9cecdd2b4b4084a5cde771d1432, type: 3}
       propertyPath: m_RootOrder
       value: 154
@@ -13404,6 +14714,10 @@ PrefabInstance:
     - target: {fileID: 6519401657621111884, guid: cf9c7023bca084c89a74329bc9819a54, type: 3}
       propertyPath: m_Name
       value: CrystalBox (59)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6519401657621111884, guid: cf9c7023bca084c89a74329bc9819a54, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 6519401657621477484, guid: cf9c7023bca084c89a74329bc9819a54, type: 3}
       propertyPath: m_RootOrder
@@ -13467,6 +14781,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: GrassBox (130)
       objectReference: {fileID: 0}
+    - target: {fileID: 2435421964960726046, guid: 6bffd9cecdd2b4b4084a5cde771d1432, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 2435421964960882750, guid: 6bffd9cecdd2b4b4084a5cde771d1432, type: 3}
       propertyPath: m_RootOrder
       value: 274
@@ -13528,6 +14846,10 @@ PrefabInstance:
     - target: {fileID: 2435421964960726046, guid: 6bffd9cecdd2b4b4084a5cde771d1432, type: 3}
       propertyPath: m_Name
       value: GrassBox (33)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2435421964960726046, guid: 6bffd9cecdd2b4b4084a5cde771d1432, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 2435421964960882750, guid: 6bffd9cecdd2b4b4084a5cde771d1432, type: 3}
       propertyPath: m_RootOrder
@@ -13591,6 +14913,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: CrystalBox (6)
       objectReference: {fileID: 0}
+    - target: {fileID: 6519401657621111884, guid: cf9c7023bca084c89a74329bc9819a54, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 6519401657621477484, guid: cf9c7023bca084c89a74329bc9819a54, type: 3}
       propertyPath: m_RootOrder
       value: 20
@@ -13652,6 +14978,10 @@ PrefabInstance:
     - target: {fileID: 2435421964960726046, guid: 6bffd9cecdd2b4b4084a5cde771d1432, type: 3}
       propertyPath: m_Name
       value: GrassBox (31)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2435421964960726046, guid: 6bffd9cecdd2b4b4084a5cde771d1432, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 2435421964960882750, guid: 6bffd9cecdd2b4b4084a5cde771d1432, type: 3}
       propertyPath: m_RootOrder
@@ -13715,6 +15045,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: GrassBox (170)
       objectReference: {fileID: 0}
+    - target: {fileID: 2435421964960726046, guid: 6bffd9cecdd2b4b4084a5cde771d1432, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 2435421964960882750, guid: 6bffd9cecdd2b4b4084a5cde771d1432, type: 3}
       propertyPath: m_RootOrder
       value: 306
@@ -13776,6 +15110,10 @@ PrefabInstance:
     - target: {fileID: 6519401657621111884, guid: cf9c7023bca084c89a74329bc9819a54, type: 3}
       propertyPath: m_Name
       value: CrystalBox (40)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6519401657621111884, guid: cf9c7023bca084c89a74329bc9819a54, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 6519401657621477484, guid: cf9c7023bca084c89a74329bc9819a54, type: 3}
       propertyPath: m_RootOrder
@@ -13839,6 +15177,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: GrassBox (157)
       objectReference: {fileID: 0}
+    - target: {fileID: 2435421964960726046, guid: 6bffd9cecdd2b4b4084a5cde771d1432, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 2435421964960882750, guid: 6bffd9cecdd2b4b4084a5cde771d1432, type: 3}
       propertyPath: m_RootOrder
       value: 297
@@ -13900,6 +15242,10 @@ PrefabInstance:
     - target: {fileID: 1159251707130074282, guid: 2519ee2fffb724006a8126325ce9eaa1, type: 3}
       propertyPath: m_Name
       value: CrystalBox3 (8)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1159251707130074282, guid: 2519ee2fffb724006a8126325ce9eaa1, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 1159251707130497162, guid: 2519ee2fffb724006a8126325ce9eaa1, type: 3}
       propertyPath: m_RootOrder
@@ -13963,6 +15309,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: GrassBox (115)
       objectReference: {fileID: 0}
+    - target: {fileID: 2435421964960726046, guid: 6bffd9cecdd2b4b4084a5cde771d1432, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 2435421964960882750, guid: 6bffd9cecdd2b4b4084a5cde771d1432, type: 3}
       propertyPath: m_RootOrder
       value: 259
@@ -14024,6 +15374,10 @@ PrefabInstance:
     - target: {fileID: 2435421964960726046, guid: 6bffd9cecdd2b4b4084a5cde771d1432, type: 3}
       propertyPath: m_Name
       value: GrassBox (106)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2435421964960726046, guid: 6bffd9cecdd2b4b4084a5cde771d1432, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 2435421964960882750, guid: 6bffd9cecdd2b4b4084a5cde771d1432, type: 3}
       propertyPath: m_RootOrder
@@ -14087,6 +15441,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: GrassBox (94)
       objectReference: {fileID: 0}
+    - target: {fileID: 2435421964960726046, guid: 6bffd9cecdd2b4b4084a5cde771d1432, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 2435421964960882750, guid: 6bffd9cecdd2b4b4084a5cde771d1432, type: 3}
       propertyPath: m_RootOrder
       value: 240
@@ -14148,6 +15506,10 @@ PrefabInstance:
     - target: {fileID: 2435421964960726046, guid: 6bffd9cecdd2b4b4084a5cde771d1432, type: 3}
       propertyPath: m_Name
       value: GrassBox (209)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2435421964960726046, guid: 6bffd9cecdd2b4b4084a5cde771d1432, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 2435421964960882750, guid: 6bffd9cecdd2b4b4084a5cde771d1432, type: 3}
       propertyPath: m_RootOrder
@@ -14211,6 +15573,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: GrassBox (54)
       objectReference: {fileID: 0}
+    - target: {fileID: 2435421964960726046, guid: 6bffd9cecdd2b4b4084a5cde771d1432, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 2435421964960882750, guid: 6bffd9cecdd2b4b4084a5cde771d1432, type: 3}
       propertyPath: m_RootOrder
       value: 206
@@ -14272,6 +15638,10 @@ PrefabInstance:
     - target: {fileID: 6519401657621111884, guid: cf9c7023bca084c89a74329bc9819a54, type: 3}
       propertyPath: m_Name
       value: CrystalBox (73)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6519401657621111884, guid: cf9c7023bca084c89a74329bc9819a54, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 6519401657621477484, guid: cf9c7023bca084c89a74329bc9819a54, type: 3}
       propertyPath: m_RootOrder
@@ -14335,6 +15705,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: GrassBox (192)
       objectReference: {fileID: 0}
+    - target: {fileID: 2435421964960726046, guid: 6bffd9cecdd2b4b4084a5cde771d1432, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 2435421964960882750, guid: 6bffd9cecdd2b4b4084a5cde771d1432, type: 3}
       propertyPath: m_RootOrder
       value: 324
@@ -14396,6 +15770,10 @@ PrefabInstance:
     - target: {fileID: 1159251707130074282, guid: 2519ee2fffb724006a8126325ce9eaa1, type: 3}
       propertyPath: m_Name
       value: CrystalBox3 (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1159251707130074282, guid: 2519ee2fffb724006a8126325ce9eaa1, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 1159251707130497162, guid: 2519ee2fffb724006a8126325ce9eaa1, type: 3}
       propertyPath: m_RootOrder
@@ -14459,6 +15837,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: CrystalBox3 (24)
       objectReference: {fileID: 0}
+    - target: {fileID: 1159251707130074282, guid: 2519ee2fffb724006a8126325ce9eaa1, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 1159251707130497162, guid: 2519ee2fffb724006a8126325ce9eaa1, type: 3}
       propertyPath: m_RootOrder
       value: 47
@@ -14520,6 +15902,10 @@ PrefabInstance:
     - target: {fileID: 2435421964960726046, guid: 6bffd9cecdd2b4b4084a5cde771d1432, type: 3}
       propertyPath: m_Name
       value: GrassBox (207)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2435421964960726046, guid: 6bffd9cecdd2b4b4084a5cde771d1432, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 2435421964960882750, guid: 6bffd9cecdd2b4b4084a5cde771d1432, type: 3}
       propertyPath: m_RootOrder
@@ -14583,6 +15969,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: GrassBox (200)
       objectReference: {fileID: 0}
+    - target: {fileID: 2435421964960726046, guid: 6bffd9cecdd2b4b4084a5cde771d1432, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 2435421964960882750, guid: 6bffd9cecdd2b4b4084a5cde771d1432, type: 3}
       propertyPath: m_RootOrder
       value: 332
@@ -14644,6 +16034,10 @@ PrefabInstance:
     - target: {fileID: 2435421964960726046, guid: 6bffd9cecdd2b4b4084a5cde771d1432, type: 3}
       propertyPath: m_Name
       value: GrassBox (28)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2435421964960726046, guid: 6bffd9cecdd2b4b4084a5cde771d1432, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 2435421964960882750, guid: 6bffd9cecdd2b4b4084a5cde771d1432, type: 3}
       propertyPath: m_RootOrder
@@ -14707,6 +16101,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: GrassBox (14)
       objectReference: {fileID: 0}
+    - target: {fileID: 2435421964960726046, guid: 6bffd9cecdd2b4b4084a5cde771d1432, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 2435421964960882750, guid: 6bffd9cecdd2b4b4084a5cde771d1432, type: 3}
       propertyPath: m_RootOrder
       value: 162
@@ -14768,6 +16166,10 @@ PrefabInstance:
     - target: {fileID: 2435421964960726046, guid: 6bffd9cecdd2b4b4084a5cde771d1432, type: 3}
       propertyPath: m_Name
       value: GrassBox (196)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2435421964960726046, guid: 6bffd9cecdd2b4b4084a5cde771d1432, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 2435421964960882750, guid: 6bffd9cecdd2b4b4084a5cde771d1432, type: 3}
       propertyPath: m_RootOrder
@@ -14831,6 +16233,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: CrystalBox2 (35)
       objectReference: {fileID: 0}
+    - target: {fileID: 2895322455619634327, guid: 28d7a6decfb764557908695909381fb6, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 2895322455619672247, guid: 28d7a6decfb764557908695909381fb6, type: 3}
       propertyPath: m_RootOrder
       value: 130
@@ -14892,6 +16298,10 @@ PrefabInstance:
     - target: {fileID: 2435421964960726046, guid: 6bffd9cecdd2b4b4084a5cde771d1432, type: 3}
       propertyPath: m_Name
       value: GrassBox (125)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2435421964960726046, guid: 6bffd9cecdd2b4b4084a5cde771d1432, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 2435421964960882750, guid: 6bffd9cecdd2b4b4084a5cde771d1432, type: 3}
       propertyPath: m_RootOrder
@@ -14955,6 +16365,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: GrassBox (80)
       objectReference: {fileID: 0}
+    - target: {fileID: 2435421964960726046, guid: 6bffd9cecdd2b4b4084a5cde771d1432, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 2435421964960882750, guid: 6bffd9cecdd2b4b4084a5cde771d1432, type: 3}
       propertyPath: m_RootOrder
       value: 228
@@ -15016,6 +16430,10 @@ PrefabInstance:
     - target: {fileID: 2435421964960726046, guid: 6bffd9cecdd2b4b4084a5cde771d1432, type: 3}
       propertyPath: m_Name
       value: GrassBox (93)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2435421964960726046, guid: 6bffd9cecdd2b4b4084a5cde771d1432, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 2435421964960882750, guid: 6bffd9cecdd2b4b4084a5cde771d1432, type: 3}
       propertyPath: m_RootOrder
@@ -15079,6 +16497,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: CrystalBox (19)
       objectReference: {fileID: 0}
+    - target: {fileID: 6519401657621111884, guid: cf9c7023bca084c89a74329bc9819a54, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 6519401657621477484, guid: cf9c7023bca084c89a74329bc9819a54, type: 3}
       propertyPath: m_RootOrder
       value: 57
@@ -15140,6 +16562,10 @@ PrefabInstance:
     - target: {fileID: 2435421964960726046, guid: 6bffd9cecdd2b4b4084a5cde771d1432, type: 3}
       propertyPath: m_Name
       value: GrassBox (68)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2435421964960726046, guid: 6bffd9cecdd2b4b4084a5cde771d1432, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 2435421964960882750, guid: 6bffd9cecdd2b4b4084a5cde771d1432, type: 3}
       propertyPath: m_RootOrder
@@ -15203,6 +16629,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: CrystalBox (54)
       objectReference: {fileID: 0}
+    - target: {fileID: 6519401657621111884, guid: cf9c7023bca084c89a74329bc9819a54, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 6519401657621477484, guid: cf9c7023bca084c89a74329bc9819a54, type: 3}
       propertyPath: m_RootOrder
       value: 97
@@ -15264,6 +16694,10 @@ PrefabInstance:
     - target: {fileID: 6519401657621111884, guid: cf9c7023bca084c89a74329bc9819a54, type: 3}
       propertyPath: m_Name
       value: CrystalBox (10)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6519401657621111884, guid: cf9c7023bca084c89a74329bc9819a54, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 6519401657621477484, guid: cf9c7023bca084c89a74329bc9819a54, type: 3}
       propertyPath: m_RootOrder
@@ -15327,6 +16761,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: GrassBox (174)
       objectReference: {fileID: 0}
+    - target: {fileID: 2435421964960726046, guid: 6bffd9cecdd2b4b4084a5cde771d1432, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 2435421964960882750, guid: 6bffd9cecdd2b4b4084a5cde771d1432, type: 3}
       propertyPath: m_RootOrder
       value: 310
@@ -15388,6 +16826,10 @@ PrefabInstance:
     - target: {fileID: 2435421964960726046, guid: 6bffd9cecdd2b4b4084a5cde771d1432, type: 3}
       propertyPath: m_Name
       value: GrassBox (179)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2435421964960726046, guid: 6bffd9cecdd2b4b4084a5cde771d1432, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 2435421964960882750, guid: 6bffd9cecdd2b4b4084a5cde771d1432, type: 3}
       propertyPath: m_RootOrder
@@ -15451,6 +16893,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: GrassBox (205)
       objectReference: {fileID: 0}
+    - target: {fileID: 2435421964960726046, guid: 6bffd9cecdd2b4b4084a5cde771d1432, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 2435421964960882750, guid: 6bffd9cecdd2b4b4084a5cde771d1432, type: 3}
       propertyPath: m_RootOrder
       value: 337
@@ -15512,6 +16958,10 @@ PrefabInstance:
     - target: {fileID: 1159251707130074282, guid: 2519ee2fffb724006a8126325ce9eaa1, type: 3}
       propertyPath: m_Name
       value: CrystalBox3 (28)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1159251707130074282, guid: 2519ee2fffb724006a8126325ce9eaa1, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 1159251707130497162, guid: 2519ee2fffb724006a8126325ce9eaa1, type: 3}
       propertyPath: m_RootOrder
@@ -15575,6 +17025,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: GrassBox (191)
       objectReference: {fileID: 0}
+    - target: {fileID: 2435421964960726046, guid: 6bffd9cecdd2b4b4084a5cde771d1432, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 2435421964960882750, guid: 6bffd9cecdd2b4b4084a5cde771d1432, type: 3}
       propertyPath: m_RootOrder
       value: 323
@@ -15636,6 +17090,10 @@ PrefabInstance:
     - target: {fileID: 2895322455619634327, guid: 28d7a6decfb764557908695909381fb6, type: 3}
       propertyPath: m_Name
       value: CrystalBox2 (12)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2895322455619634327, guid: 28d7a6decfb764557908695909381fb6, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 2895322455619672247, guid: 28d7a6decfb764557908695909381fb6, type: 3}
       propertyPath: m_RootOrder
@@ -15699,6 +17157,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: GrassBox (122)
       objectReference: {fileID: 0}
+    - target: {fileID: 2435421964960726046, guid: 6bffd9cecdd2b4b4084a5cde771d1432, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 2435421964960882750, guid: 6bffd9cecdd2b4b4084a5cde771d1432, type: 3}
       propertyPath: m_RootOrder
       value: 266
@@ -15760,6 +17222,10 @@ PrefabInstance:
     - target: {fileID: 2435421964960726046, guid: 6bffd9cecdd2b4b4084a5cde771d1432, type: 3}
       propertyPath: m_Name
       value: GrassBox (53)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2435421964960726046, guid: 6bffd9cecdd2b4b4084a5cde771d1432, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 2435421964960882750, guid: 6bffd9cecdd2b4b4084a5cde771d1432, type: 3}
       propertyPath: m_RootOrder
@@ -15823,6 +17289,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: GrassBox (193)
       objectReference: {fileID: 0}
+    - target: {fileID: 2435421964960726046, guid: 6bffd9cecdd2b4b4084a5cde771d1432, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 2435421964960882750, guid: 6bffd9cecdd2b4b4084a5cde771d1432, type: 3}
       propertyPath: m_RootOrder
       value: 325
@@ -15884,6 +17354,10 @@ PrefabInstance:
     - target: {fileID: 6519401657621111884, guid: cf9c7023bca084c89a74329bc9819a54, type: 3}
       propertyPath: m_Name
       value: CrystalBox (48)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6519401657621111884, guid: cf9c7023bca084c89a74329bc9819a54, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 6519401657621477484, guid: cf9c7023bca084c89a74329bc9819a54, type: 3}
       propertyPath: m_RootOrder
@@ -15947,6 +17421,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: GrassBox (65)
       objectReference: {fileID: 0}
+    - target: {fileID: 2435421964960726046, guid: 6bffd9cecdd2b4b4084a5cde771d1432, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 2435421964960882750, guid: 6bffd9cecdd2b4b4084a5cde771d1432, type: 3}
       propertyPath: m_RootOrder
       value: 213
@@ -16008,6 +17486,10 @@ PrefabInstance:
     - target: {fileID: 2435421964960726046, guid: 6bffd9cecdd2b4b4084a5cde771d1432, type: 3}
       propertyPath: m_Name
       value: GrassBox
+      objectReference: {fileID: 0}
+    - target: {fileID: 2435421964960726046, guid: 6bffd9cecdd2b4b4084a5cde771d1432, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 2435421964960882750, guid: 6bffd9cecdd2b4b4084a5cde771d1432, type: 3}
       propertyPath: m_RootOrder
@@ -16071,6 +17553,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: CrystalBox (45)
       objectReference: {fileID: 0}
+    - target: {fileID: 6519401657621111884, guid: cf9c7023bca084c89a74329bc9819a54, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 6519401657621477484, guid: cf9c7023bca084c89a74329bc9819a54, type: 3}
       propertyPath: m_RootOrder
       value: 80
@@ -16132,6 +17618,10 @@ PrefabInstance:
     - target: {fileID: 1159251707130074282, guid: 2519ee2fffb724006a8126325ce9eaa1, type: 3}
       propertyPath: m_Name
       value: CrystalBox3 (37)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1159251707130074282, guid: 2519ee2fffb724006a8126325ce9eaa1, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 1159251707130497162, guid: 2519ee2fffb724006a8126325ce9eaa1, type: 3}
       propertyPath: m_RootOrder
@@ -16195,6 +17685,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: GrassBox (82)
       objectReference: {fileID: 0}
+    - target: {fileID: 2435421964960726046, guid: 6bffd9cecdd2b4b4084a5cde771d1432, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 2435421964960882750, guid: 6bffd9cecdd2b4b4084a5cde771d1432, type: 3}
       propertyPath: m_RootOrder
       value: 230
@@ -16256,6 +17750,10 @@ PrefabInstance:
     - target: {fileID: 2435421964960726046, guid: 6bffd9cecdd2b4b4084a5cde771d1432, type: 3}
       propertyPath: m_Name
       value: GrassBox (145)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2435421964960726046, guid: 6bffd9cecdd2b4b4084a5cde771d1432, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 2435421964960882750, guid: 6bffd9cecdd2b4b4084a5cde771d1432, type: 3}
       propertyPath: m_RootOrder
@@ -16319,6 +17817,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: GrassBox (69)
       objectReference: {fileID: 0}
+    - target: {fileID: 2435421964960726046, guid: 6bffd9cecdd2b4b4084a5cde771d1432, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 2435421964960882750, guid: 6bffd9cecdd2b4b4084a5cde771d1432, type: 3}
       propertyPath: m_RootOrder
       value: 216
@@ -16380,6 +17882,10 @@ PrefabInstance:
     - target: {fileID: 2435421964960726046, guid: 6bffd9cecdd2b4b4084a5cde771d1432, type: 3}
       propertyPath: m_Name
       value: GrassBox (100)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2435421964960726046, guid: 6bffd9cecdd2b4b4084a5cde771d1432, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 2435421964960882750, guid: 6bffd9cecdd2b4b4084a5cde771d1432, type: 3}
       propertyPath: m_RootOrder
@@ -16443,6 +17949,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: GrassBox (16)
       objectReference: {fileID: 0}
+    - target: {fileID: 2435421964960726046, guid: 6bffd9cecdd2b4b4084a5cde771d1432, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 2435421964960882750, guid: 6bffd9cecdd2b4b4084a5cde771d1432, type: 3}
       propertyPath: m_RootOrder
       value: 164
@@ -16504,6 +18014,10 @@ PrefabInstance:
     - target: {fileID: 6519401657621111884, guid: cf9c7023bca084c89a74329bc9819a54, type: 3}
       propertyPath: m_Name
       value: CrystalBox (43)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6519401657621111884, guid: cf9c7023bca084c89a74329bc9819a54, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 6519401657621477484, guid: cf9c7023bca084c89a74329bc9819a54, type: 3}
       propertyPath: m_RootOrder
@@ -16567,6 +18081,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: CrystalBox3 (14)
       objectReference: {fileID: 0}
+    - target: {fileID: 1159251707130074282, guid: 2519ee2fffb724006a8126325ce9eaa1, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 1159251707130497162, guid: 2519ee2fffb724006a8126325ce9eaa1, type: 3}
       propertyPath: m_RootOrder
       value: 13
@@ -16628,6 +18146,10 @@ PrefabInstance:
     - target: {fileID: 6519401657621111884, guid: cf9c7023bca084c89a74329bc9819a54, type: 3}
       propertyPath: m_Name
       value: CrystalBox (21)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6519401657621111884, guid: cf9c7023bca084c89a74329bc9819a54, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 6519401657621477484, guid: cf9c7023bca084c89a74329bc9819a54, type: 3}
       propertyPath: m_RootOrder
@@ -16691,6 +18213,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: CrystalBox (63)
       objectReference: {fileID: 0}
+    - target: {fileID: 6519401657621111884, guid: cf9c7023bca084c89a74329bc9819a54, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 6519401657621477484, guid: cf9c7023bca084c89a74329bc9819a54, type: 3}
       propertyPath: m_RootOrder
       value: 114
@@ -16752,6 +18278,10 @@ PrefabInstance:
     - target: {fileID: 2435421964960726046, guid: 6bffd9cecdd2b4b4084a5cde771d1432, type: 3}
       propertyPath: m_Name
       value: GrassBox (198)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2435421964960726046, guid: 6bffd9cecdd2b4b4084a5cde771d1432, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 2435421964960882750, guid: 6bffd9cecdd2b4b4084a5cde771d1432, type: 3}
       propertyPath: m_RootOrder
@@ -16815,6 +18345,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: GrassBox (96)
       objectReference: {fileID: 0}
+    - target: {fileID: 2435421964960726046, guid: 6bffd9cecdd2b4b4084a5cde771d1432, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 2435421964960882750, guid: 6bffd9cecdd2b4b4084a5cde771d1432, type: 3}
       propertyPath: m_RootOrder
       value: 242
@@ -16876,6 +18410,10 @@ PrefabInstance:
     - target: {fileID: 2435421964960726046, guid: 6bffd9cecdd2b4b4084a5cde771d1432, type: 3}
       propertyPath: m_Name
       value: GrassBox (61)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2435421964960726046, guid: 6bffd9cecdd2b4b4084a5cde771d1432, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 2435421964960882750, guid: 6bffd9cecdd2b4b4084a5cde771d1432, type: 3}
       propertyPath: m_RootOrder
@@ -16939,6 +18477,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: GrassBox (164)
       objectReference: {fileID: 0}
+    - target: {fileID: 2435421964960726046, guid: 6bffd9cecdd2b4b4084a5cde771d1432, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 2435421964960882750, guid: 6bffd9cecdd2b4b4084a5cde771d1432, type: 3}
       propertyPath: m_RootOrder
       value: 300
@@ -17000,6 +18542,10 @@ PrefabInstance:
     - target: {fileID: 2435421964960726046, guid: 6bffd9cecdd2b4b4084a5cde771d1432, type: 3}
       propertyPath: m_Name
       value: GrassBox (185)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2435421964960726046, guid: 6bffd9cecdd2b4b4084a5cde771d1432, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 2435421964960882750, guid: 6bffd9cecdd2b4b4084a5cde771d1432, type: 3}
       propertyPath: m_RootOrder
@@ -17063,6 +18609,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: GrassBox (87)
       objectReference: {fileID: 0}
+    - target: {fileID: 2435421964960726046, guid: 6bffd9cecdd2b4b4084a5cde771d1432, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 2435421964960882750, guid: 6bffd9cecdd2b4b4084a5cde771d1432, type: 3}
       propertyPath: m_RootOrder
       value: 235
@@ -17124,6 +18674,10 @@ PrefabInstance:
     - target: {fileID: 6519401657621111884, guid: cf9c7023bca084c89a74329bc9819a54, type: 3}
       propertyPath: m_Name
       value: CrystalBox (53)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6519401657621111884, guid: cf9c7023bca084c89a74329bc9819a54, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 6519401657621477484, guid: cf9c7023bca084c89a74329bc9819a54, type: 3}
       propertyPath: m_RootOrder
@@ -17187,6 +18741,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: GrassBox (52)
       objectReference: {fileID: 0}
+    - target: {fileID: 2435421964960726046, guid: 6bffd9cecdd2b4b4084a5cde771d1432, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 2435421964960882750, guid: 6bffd9cecdd2b4b4084a5cde771d1432, type: 3}
       propertyPath: m_RootOrder
       value: 200
@@ -17248,6 +18806,10 @@ PrefabInstance:
     - target: {fileID: 2435421964960726046, guid: 6bffd9cecdd2b4b4084a5cde771d1432, type: 3}
       propertyPath: m_Name
       value: GrassBox (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2435421964960726046, guid: 6bffd9cecdd2b4b4084a5cde771d1432, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 2435421964960882750, guid: 6bffd9cecdd2b4b4084a5cde771d1432, type: 3}
       propertyPath: m_RootOrder
@@ -17311,6 +18873,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: GrassBox (132)
       objectReference: {fileID: 0}
+    - target: {fileID: 2435421964960726046, guid: 6bffd9cecdd2b4b4084a5cde771d1432, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 2435421964960882750, guid: 6bffd9cecdd2b4b4084a5cde771d1432, type: 3}
       propertyPath: m_RootOrder
       value: 276
@@ -17372,6 +18938,10 @@ PrefabInstance:
     - target: {fileID: 2435421964960726046, guid: 6bffd9cecdd2b4b4084a5cde771d1432, type: 3}
       propertyPath: m_Name
       value: GrassBox (208)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2435421964960726046, guid: 6bffd9cecdd2b4b4084a5cde771d1432, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 2435421964960882750, guid: 6bffd9cecdd2b4b4084a5cde771d1432, type: 3}
       propertyPath: m_RootOrder
@@ -17435,6 +19005,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: GrassBox (148)
       objectReference: {fileID: 0}
+    - target: {fileID: 2435421964960726046, guid: 6bffd9cecdd2b4b4084a5cde771d1432, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 2435421964960882750, guid: 6bffd9cecdd2b4b4084a5cde771d1432, type: 3}
       propertyPath: m_RootOrder
       value: 288
@@ -17496,6 +19070,10 @@ PrefabInstance:
     - target: {fileID: 2435421964960726046, guid: 6bffd9cecdd2b4b4084a5cde771d1432, type: 3}
       propertyPath: m_Name
       value: GrassBox (78)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2435421964960726046, guid: 6bffd9cecdd2b4b4084a5cde771d1432, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 2435421964960882750, guid: 6bffd9cecdd2b4b4084a5cde771d1432, type: 3}
       propertyPath: m_RootOrder
@@ -17559,6 +19137,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: CrystalBox3 (45)
       objectReference: {fileID: 0}
+    - target: {fileID: 1159251707130074282, guid: 2519ee2fffb724006a8126325ce9eaa1, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 1159251707130497162, guid: 2519ee2fffb724006a8126325ce9eaa1, type: 3}
       propertyPath: m_RootOrder
       value: 143
@@ -17620,6 +19202,10 @@ PrefabInstance:
     - target: {fileID: 2895322455619634327, guid: 28d7a6decfb764557908695909381fb6, type: 3}
       propertyPath: m_Name
       value: CrystalBox2 (22)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2895322455619634327, guid: 28d7a6decfb764557908695909381fb6, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 2895322455619672247, guid: 28d7a6decfb764557908695909381fb6, type: 3}
       propertyPath: m_RootOrder
@@ -17683,6 +19269,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: CrystalBox (34)
       objectReference: {fileID: 0}
+    - target: {fileID: 6519401657621111884, guid: cf9c7023bca084c89a74329bc9819a54, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 6519401657621477484, guid: cf9c7023bca084c89a74329bc9819a54, type: 3}
       propertyPath: m_RootOrder
       value: 71
@@ -17744,6 +19334,10 @@ PrefabInstance:
     - target: {fileID: 2895322455619634327, guid: 28d7a6decfb764557908695909381fb6, type: 3}
       propertyPath: m_Name
       value: CrystalBox2 (10)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2895322455619634327, guid: 28d7a6decfb764557908695909381fb6, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 2895322455619672247, guid: 28d7a6decfb764557908695909381fb6, type: 3}
       propertyPath: m_RootOrder
@@ -17807,6 +19401,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: CrystalBox (52)
       objectReference: {fileID: 0}
+    - target: {fileID: 6519401657621111884, guid: cf9c7023bca084c89a74329bc9819a54, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 6519401657621477484, guid: cf9c7023bca084c89a74329bc9819a54, type: 3}
       propertyPath: m_RootOrder
       value: 99
@@ -17868,6 +19466,10 @@ PrefabInstance:
     - target: {fileID: 2435421964960726046, guid: 6bffd9cecdd2b4b4084a5cde771d1432, type: 3}
       propertyPath: m_Name
       value: GrassBox (102)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2435421964960726046, guid: 6bffd9cecdd2b4b4084a5cde771d1432, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 2435421964960882750, guid: 6bffd9cecdd2b4b4084a5cde771d1432, type: 3}
       propertyPath: m_RootOrder
@@ -17931,6 +19533,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: CrystalBox3 (46)
       objectReference: {fileID: 0}
+    - target: {fileID: 1159251707130074282, guid: 2519ee2fffb724006a8126325ce9eaa1, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 1159251707130497162, guid: 2519ee2fffb724006a8126325ce9eaa1, type: 3}
       propertyPath: m_RootOrder
       value: 142
@@ -17992,6 +19598,10 @@ PrefabInstance:
     - target: {fileID: 6519401657621111884, guid: cf9c7023bca084c89a74329bc9819a54, type: 3}
       propertyPath: m_Name
       value: CrystalBox (27)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6519401657621111884, guid: cf9c7023bca084c89a74329bc9819a54, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 6519401657621477484, guid: cf9c7023bca084c89a74329bc9819a54, type: 3}
       propertyPath: m_RootOrder
@@ -18055,6 +19665,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: GrassBox (197)
       objectReference: {fileID: 0}
+    - target: {fileID: 2435421964960726046, guid: 6bffd9cecdd2b4b4084a5cde771d1432, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 2435421964960882750, guid: 6bffd9cecdd2b4b4084a5cde771d1432, type: 3}
       propertyPath: m_RootOrder
       value: 329
@@ -18116,6 +19730,10 @@ PrefabInstance:
     - target: {fileID: 2895322455619634327, guid: 28d7a6decfb764557908695909381fb6, type: 3}
       propertyPath: m_Name
       value: CrystalBox2 (28)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2895322455619634327, guid: 28d7a6decfb764557908695909381fb6, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 2895322455619672247, guid: 28d7a6decfb764557908695909381fb6, type: 3}
       propertyPath: m_RootOrder
@@ -18179,6 +19797,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: GrassBox (98)
       objectReference: {fileID: 0}
+    - target: {fileID: 2435421964960726046, guid: 6bffd9cecdd2b4b4084a5cde771d1432, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 2435421964960882750, guid: 6bffd9cecdd2b4b4084a5cde771d1432, type: 3}
       propertyPath: m_RootOrder
       value: 244
@@ -18240,6 +19862,10 @@ PrefabInstance:
     - target: {fileID: 2435421964960726046, guid: 6bffd9cecdd2b4b4084a5cde771d1432, type: 3}
       propertyPath: m_Name
       value: GrassBox (81)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2435421964960726046, guid: 6bffd9cecdd2b4b4084a5cde771d1432, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 2435421964960882750, guid: 6bffd9cecdd2b4b4084a5cde771d1432, type: 3}
       propertyPath: m_RootOrder
@@ -18303,6 +19929,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: GrassBox (15)
       objectReference: {fileID: 0}
+    - target: {fileID: 2435421964960726046, guid: 6bffd9cecdd2b4b4084a5cde771d1432, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 2435421964960882750, guid: 6bffd9cecdd2b4b4084a5cde771d1432, type: 3}
       propertyPath: m_RootOrder
       value: 163
@@ -18364,6 +19994,10 @@ PrefabInstance:
     - target: {fileID: 2895322455619634327, guid: 28d7a6decfb764557908695909381fb6, type: 3}
       propertyPath: m_Name
       value: CrystalBox2 (21)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2895322455619634327, guid: 28d7a6decfb764557908695909381fb6, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 2895322455619672247, guid: 28d7a6decfb764557908695909381fb6, type: 3}
       propertyPath: m_RootOrder
@@ -18427,6 +20061,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: CrystalBox2 (26)
       objectReference: {fileID: 0}
+    - target: {fileID: 2895322455619634327, guid: 28d7a6decfb764557908695909381fb6, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 2895322455619672247, guid: 28d7a6decfb764557908695909381fb6, type: 3}
       propertyPath: m_RootOrder
       value: 108
@@ -18488,6 +20126,10 @@ PrefabInstance:
     - target: {fileID: 6519401657621111884, guid: cf9c7023bca084c89a74329bc9819a54, type: 3}
       propertyPath: m_Name
       value: CrystalBox (58)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6519401657621111884, guid: cf9c7023bca084c89a74329bc9819a54, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 6519401657621477484, guid: cf9c7023bca084c89a74329bc9819a54, type: 3}
       propertyPath: m_RootOrder
@@ -18551,6 +20193,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: GrassBox (8)
       objectReference: {fileID: 0}
+    - target: {fileID: 2435421964960726046, guid: 6bffd9cecdd2b4b4084a5cde771d1432, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 2435421964960882750, guid: 6bffd9cecdd2b4b4084a5cde771d1432, type: 3}
       propertyPath: m_RootOrder
       value: 156
@@ -18612,6 +20258,10 @@ PrefabInstance:
     - target: {fileID: 6519401657621111884, guid: cf9c7023bca084c89a74329bc9819a54, type: 3}
       propertyPath: m_Name
       value: CrystalBox (74)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6519401657621111884, guid: cf9c7023bca084c89a74329bc9819a54, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 6519401657621477484, guid: cf9c7023bca084c89a74329bc9819a54, type: 3}
       propertyPath: m_RootOrder
@@ -18675,6 +20325,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: GrassBox (58)
       objectReference: {fileID: 0}
+    - target: {fileID: 2435421964960726046, guid: 6bffd9cecdd2b4b4084a5cde771d1432, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 2435421964960882750, guid: 6bffd9cecdd2b4b4084a5cde771d1432, type: 3}
       propertyPath: m_RootOrder
       value: 202
@@ -18736,6 +20390,10 @@ PrefabInstance:
     - target: {fileID: 2895322455619634327, guid: 28d7a6decfb764557908695909381fb6, type: 3}
       propertyPath: m_Name
       value: CrystalBox2 (23)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2895322455619634327, guid: 28d7a6decfb764557908695909381fb6, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 2895322455619672247, guid: 28d7a6decfb764557908695909381fb6, type: 3}
       propertyPath: m_RootOrder
@@ -18799,6 +20457,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: GrassBox (41)
       objectReference: {fileID: 0}
+    - target: {fileID: 2435421964960726046, guid: 6bffd9cecdd2b4b4084a5cde771d1432, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 2435421964960882750, guid: 6bffd9cecdd2b4b4084a5cde771d1432, type: 3}
       propertyPath: m_RootOrder
       value: 189
@@ -18860,6 +20522,10 @@ PrefabInstance:
     - target: {fileID: 6519401657621111884, guid: cf9c7023bca084c89a74329bc9819a54, type: 3}
       propertyPath: m_Name
       value: CrystalBox (77)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6519401657621111884, guid: cf9c7023bca084c89a74329bc9819a54, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 6519401657621477484, guid: cf9c7023bca084c89a74329bc9819a54, type: 3}
       propertyPath: m_RootOrder
@@ -18923,6 +20589,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: GrassBox (150)
       objectReference: {fileID: 0}
+    - target: {fileID: 2435421964960726046, guid: 6bffd9cecdd2b4b4084a5cde771d1432, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 2435421964960882750, guid: 6bffd9cecdd2b4b4084a5cde771d1432, type: 3}
       propertyPath: m_RootOrder
       value: 290
@@ -18984,6 +20654,10 @@ PrefabInstance:
     - target: {fileID: 1159251707130074282, guid: 2519ee2fffb724006a8126325ce9eaa1, type: 3}
       propertyPath: m_Name
       value: CrystalBox3 (19)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1159251707130074282, guid: 2519ee2fffb724006a8126325ce9eaa1, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 1159251707130497162, guid: 2519ee2fffb724006a8126325ce9eaa1, type: 3}
       propertyPath: m_RootOrder
@@ -19047,6 +20721,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: GrassBox (109)
       objectReference: {fileID: 0}
+    - target: {fileID: 2435421964960726046, guid: 6bffd9cecdd2b4b4084a5cde771d1432, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 2435421964960882750, guid: 6bffd9cecdd2b4b4084a5cde771d1432, type: 3}
       propertyPath: m_RootOrder
       value: 255
@@ -19108,6 +20786,10 @@ PrefabInstance:
     - target: {fileID: 2435421964960726046, guid: 6bffd9cecdd2b4b4084a5cde771d1432, type: 3}
       propertyPath: m_Name
       value: GrassBox (62)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2435421964960726046, guid: 6bffd9cecdd2b4b4084a5cde771d1432, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 2435421964960882750, guid: 6bffd9cecdd2b4b4084a5cde771d1432, type: 3}
       propertyPath: m_RootOrder
@@ -19171,6 +20853,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: GrassBox (175)
       objectReference: {fileID: 0}
+    - target: {fileID: 2435421964960726046, guid: 6bffd9cecdd2b4b4084a5cde771d1432, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 2435421964960882750, guid: 6bffd9cecdd2b4b4084a5cde771d1432, type: 3}
       propertyPath: m_RootOrder
       value: 311
@@ -19232,6 +20918,10 @@ PrefabInstance:
     - target: {fileID: 6519401657621111884, guid: cf9c7023bca084c89a74329bc9819a54, type: 3}
       propertyPath: m_Name
       value: CrystalBox (68)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6519401657621111884, guid: cf9c7023bca084c89a74329bc9819a54, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 6519401657621477484, guid: cf9c7023bca084c89a74329bc9819a54, type: 3}
       propertyPath: m_RootOrder
@@ -19295,6 +20985,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: GrassBox (9)
       objectReference: {fileID: 0}
+    - target: {fileID: 2435421964960726046, guid: 6bffd9cecdd2b4b4084a5cde771d1432, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 2435421964960882750, guid: 6bffd9cecdd2b4b4084a5cde771d1432, type: 3}
       propertyPath: m_RootOrder
       value: 157
@@ -19356,6 +21050,10 @@ PrefabInstance:
     - target: {fileID: 2435421964960726046, guid: 6bffd9cecdd2b4b4084a5cde771d1432, type: 3}
       propertyPath: m_Name
       value: GrassBox (77)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2435421964960726046, guid: 6bffd9cecdd2b4b4084a5cde771d1432, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 2435421964960882750, guid: 6bffd9cecdd2b4b4084a5cde771d1432, type: 3}
       propertyPath: m_RootOrder
@@ -19419,6 +21117,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: GrassBox (49)
       objectReference: {fileID: 0}
+    - target: {fileID: 2435421964960726046, guid: 6bffd9cecdd2b4b4084a5cde771d1432, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 2435421964960882750, guid: 6bffd9cecdd2b4b4084a5cde771d1432, type: 3}
       propertyPath: m_RootOrder
       value: 197
@@ -19480,6 +21182,10 @@ PrefabInstance:
     - target: {fileID: 2895322455619634327, guid: 28d7a6decfb764557908695909381fb6, type: 3}
       propertyPath: m_Name
       value: CrystalBox2 (18)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2895322455619634327, guid: 28d7a6decfb764557908695909381fb6, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 2895322455619672247, guid: 28d7a6decfb764557908695909381fb6, type: 3}
       propertyPath: m_RootOrder
@@ -19543,6 +21249,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: GrassBox (13)
       objectReference: {fileID: 0}
+    - target: {fileID: 2435421964960726046, guid: 6bffd9cecdd2b4b4084a5cde771d1432, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 2435421964960882750, guid: 6bffd9cecdd2b4b4084a5cde771d1432, type: 3}
       propertyPath: m_RootOrder
       value: 161
@@ -19604,6 +21314,10 @@ PrefabInstance:
     - target: {fileID: 1159251707130074282, guid: 2519ee2fffb724006a8126325ce9eaa1, type: 3}
       propertyPath: m_Name
       value: CrystalBox3 (32)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1159251707130074282, guid: 2519ee2fffb724006a8126325ce9eaa1, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 1159251707130497162, guid: 2519ee2fffb724006a8126325ce9eaa1, type: 3}
       propertyPath: m_RootOrder
@@ -19667,6 +21381,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: CrystalBox (9)
       objectReference: {fileID: 0}
+    - target: {fileID: 6519401657621111884, guid: cf9c7023bca084c89a74329bc9819a54, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 6519401657621477484, guid: cf9c7023bca084c89a74329bc9819a54, type: 3}
       propertyPath: m_RootOrder
       value: 31
@@ -19728,6 +21446,10 @@ PrefabInstance:
     - target: {fileID: 1159251707130074282, guid: 2519ee2fffb724006a8126325ce9eaa1, type: 3}
       propertyPath: m_Name
       value: CrystalBox3 (31)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1159251707130074282, guid: 2519ee2fffb724006a8126325ce9eaa1, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 1159251707130497162, guid: 2519ee2fffb724006a8126325ce9eaa1, type: 3}
       propertyPath: m_RootOrder
@@ -19791,6 +21513,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: CrystalBox (60)
       objectReference: {fileID: 0}
+    - target: {fileID: 6519401657621111884, guid: cf9c7023bca084c89a74329bc9819a54, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 6519401657621477484, guid: cf9c7023bca084c89a74329bc9819a54, type: 3}
       propertyPath: m_RootOrder
       value: 111
@@ -19852,6 +21578,10 @@ PrefabInstance:
     - target: {fileID: 1159251707130074282, guid: 2519ee2fffb724006a8126325ce9eaa1, type: 3}
       propertyPath: m_Name
       value: CrystalBox3 (26)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1159251707130074282, guid: 2519ee2fffb724006a8126325ce9eaa1, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 1159251707130497162, guid: 2519ee2fffb724006a8126325ce9eaa1, type: 3}
       propertyPath: m_RootOrder
@@ -19915,6 +21645,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: GrassBox (127)
       objectReference: {fileID: 0}
+    - target: {fileID: 2435421964960726046, guid: 6bffd9cecdd2b4b4084a5cde771d1432, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 2435421964960882750, guid: 6bffd9cecdd2b4b4084a5cde771d1432, type: 3}
       propertyPath: m_RootOrder
       value: 271
@@ -19976,6 +21710,10 @@ PrefabInstance:
     - target: {fileID: 6519401657621111884, guid: cf9c7023bca084c89a74329bc9819a54, type: 3}
       propertyPath: m_Name
       value: CrystalBox (55)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6519401657621111884, guid: cf9c7023bca084c89a74329bc9819a54, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 6519401657621477484, guid: cf9c7023bca084c89a74329bc9819a54, type: 3}
       propertyPath: m_RootOrder
@@ -20039,6 +21777,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: CrystalBox2 (34)
       objectReference: {fileID: 0}
+    - target: {fileID: 2895322455619634327, guid: 28d7a6decfb764557908695909381fb6, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 2895322455619672247, guid: 28d7a6decfb764557908695909381fb6, type: 3}
       propertyPath: m_RootOrder
       value: 129
@@ -20100,6 +21842,10 @@ PrefabInstance:
     - target: {fileID: 6519401657621111884, guid: cf9c7023bca084c89a74329bc9819a54, type: 3}
       propertyPath: m_Name
       value: CrystalBox (47)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6519401657621111884, guid: cf9c7023bca084c89a74329bc9819a54, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 6519401657621477484, guid: cf9c7023bca084c89a74329bc9819a54, type: 3}
       propertyPath: m_RootOrder
@@ -20163,6 +21909,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: CrystalBox3 (35)
       objectReference: {fileID: 0}
+    - target: {fileID: 1159251707130074282, guid: 2519ee2fffb724006a8126325ce9eaa1, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 1159251707130497162, guid: 2519ee2fffb724006a8126325ce9eaa1, type: 3}
       propertyPath: m_RootOrder
       value: 140
@@ -20224,6 +21974,10 @@ PrefabInstance:
     - target: {fileID: 1159251707130074282, guid: 2519ee2fffb724006a8126325ce9eaa1, type: 3}
       propertyPath: m_Name
       value: CrystalBox3 (50)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1159251707130074282, guid: 2519ee2fffb724006a8126325ce9eaa1, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 1159251707130497162, guid: 2519ee2fffb724006a8126325ce9eaa1, type: 3}
       propertyPath: m_RootOrder
@@ -20287,6 +22041,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: GrassBox (107)
       objectReference: {fileID: 0}
+    - target: {fileID: 2435421964960726046, guid: 6bffd9cecdd2b4b4084a5cde771d1432, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 2435421964960882750, guid: 6bffd9cecdd2b4b4084a5cde771d1432, type: 3}
       propertyPath: m_RootOrder
       value: 253
@@ -20348,6 +22106,10 @@ PrefabInstance:
     - target: {fileID: 2435421964960726046, guid: 6bffd9cecdd2b4b4084a5cde771d1432, type: 3}
       propertyPath: m_Name
       value: GrassBox (202)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2435421964960726046, guid: 6bffd9cecdd2b4b4084a5cde771d1432, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 2435421964960882750, guid: 6bffd9cecdd2b4b4084a5cde771d1432, type: 3}
       propertyPath: m_RootOrder
@@ -20411,6 +22173,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: CrystalBox2 (4)
       objectReference: {fileID: 0}
+    - target: {fileID: 2895322455619634327, guid: 28d7a6decfb764557908695909381fb6, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 2895322455619672247, guid: 28d7a6decfb764557908695909381fb6, type: 3}
       propertyPath: m_RootOrder
       value: 28
@@ -20472,6 +22238,10 @@ PrefabInstance:
     - target: {fileID: 2435421964960726046, guid: 6bffd9cecdd2b4b4084a5cde771d1432, type: 3}
       propertyPath: m_Name
       value: GrassBox (95)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2435421964960726046, guid: 6bffd9cecdd2b4b4084a5cde771d1432, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 2435421964960882750, guid: 6bffd9cecdd2b4b4084a5cde771d1432, type: 3}
       propertyPath: m_RootOrder
@@ -20535,6 +22305,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: GrassBox (11)
       objectReference: {fileID: 0}
+    - target: {fileID: 2435421964960726046, guid: 6bffd9cecdd2b4b4084a5cde771d1432, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 2435421964960882750, guid: 6bffd9cecdd2b4b4084a5cde771d1432, type: 3}
       propertyPath: m_RootOrder
       value: 159
@@ -20596,6 +22370,10 @@ PrefabInstance:
     - target: {fileID: 6519401657621111884, guid: cf9c7023bca084c89a74329bc9819a54, type: 3}
       propertyPath: m_Name
       value: CrystalBox (41)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6519401657621111884, guid: cf9c7023bca084c89a74329bc9819a54, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 6519401657621477484, guid: cf9c7023bca084c89a74329bc9819a54, type: 3}
       propertyPath: m_RootOrder
@@ -20659,6 +22437,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: CrystalBox (42)
       objectReference: {fileID: 0}
+    - target: {fileID: 6519401657621111884, guid: cf9c7023bca084c89a74329bc9819a54, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 6519401657621477484, guid: cf9c7023bca084c89a74329bc9819a54, type: 3}
       propertyPath: m_RootOrder
       value: 76
@@ -20720,6 +22502,10 @@ PrefabInstance:
     - target: {fileID: 2435421964960726046, guid: 6bffd9cecdd2b4b4084a5cde771d1432, type: 3}
       propertyPath: m_Name
       value: GrassBox (56)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2435421964960726046, guid: 6bffd9cecdd2b4b4084a5cde771d1432, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 2435421964960882750, guid: 6bffd9cecdd2b4b4084a5cde771d1432, type: 3}
       propertyPath: m_RootOrder
@@ -20783,6 +22569,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: GrassBox (21)
       objectReference: {fileID: 0}
+    - target: {fileID: 2435421964960726046, guid: 6bffd9cecdd2b4b4084a5cde771d1432, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 2435421964960882750, guid: 6bffd9cecdd2b4b4084a5cde771d1432, type: 3}
       propertyPath: m_RootOrder
       value: 169
@@ -20844,6 +22634,10 @@ PrefabInstance:
     - target: {fileID: 2895322455619634327, guid: 28d7a6decfb764557908695909381fb6, type: 3}
       propertyPath: m_Name
       value: CrystalBox2 (32)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2895322455619634327, guid: 28d7a6decfb764557908695909381fb6, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 2895322455619672247, guid: 28d7a6decfb764557908695909381fb6, type: 3}
       propertyPath: m_RootOrder
@@ -20907,6 +22701,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: GrassBox (18)
       objectReference: {fileID: 0}
+    - target: {fileID: 2435421964960726046, guid: 6bffd9cecdd2b4b4084a5cde771d1432, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 2435421964960882750, guid: 6bffd9cecdd2b4b4084a5cde771d1432, type: 3}
       propertyPath: m_RootOrder
       value: 166
@@ -20968,6 +22766,10 @@ PrefabInstance:
     - target: {fileID: 2435421964960726046, guid: 6bffd9cecdd2b4b4084a5cde771d1432, type: 3}
       propertyPath: m_Name
       value: GrassBox (180)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2435421964960726046, guid: 6bffd9cecdd2b4b4084a5cde771d1432, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 2435421964960882750, guid: 6bffd9cecdd2b4b4084a5cde771d1432, type: 3}
       propertyPath: m_RootOrder
@@ -21031,6 +22833,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: CrystalBox3 (22)
       objectReference: {fileID: 0}
+    - target: {fileID: 1159251707130074282, guid: 2519ee2fffb724006a8126325ce9eaa1, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 1159251707130497162, guid: 2519ee2fffb724006a8126325ce9eaa1, type: 3}
       propertyPath: m_RootOrder
       value: 25
@@ -21092,6 +22898,10 @@ PrefabInstance:
     - target: {fileID: 2435421964960726046, guid: 6bffd9cecdd2b4b4084a5cde771d1432, type: 3}
       propertyPath: m_Name
       value: GrassBox (167)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2435421964960726046, guid: 6bffd9cecdd2b4b4084a5cde771d1432, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 2435421964960882750, guid: 6bffd9cecdd2b4b4084a5cde771d1432, type: 3}
       propertyPath: m_RootOrder
@@ -21155,6 +22965,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: GrassBox (104)
       objectReference: {fileID: 0}
+    - target: {fileID: 2435421964960726046, guid: 6bffd9cecdd2b4b4084a5cde771d1432, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 2435421964960882750, guid: 6bffd9cecdd2b4b4084a5cde771d1432, type: 3}
       propertyPath: m_RootOrder
       value: 250
@@ -21216,6 +23030,10 @@ PrefabInstance:
     - target: {fileID: 6519401657621111884, guid: cf9c7023bca084c89a74329bc9819a54, type: 3}
       propertyPath: m_Name
       value: CrystalBox (38)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6519401657621111884, guid: cf9c7023bca084c89a74329bc9819a54, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 6519401657621477484, guid: cf9c7023bca084c89a74329bc9819a54, type: 3}
       propertyPath: m_RootOrder
@@ -21279,6 +23097,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: CrystalBox3 (27)
       objectReference: {fileID: 0}
+    - target: {fileID: 1159251707130074282, guid: 2519ee2fffb724006a8126325ce9eaa1, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 1159251707130497162, guid: 2519ee2fffb724006a8126325ce9eaa1, type: 3}
       propertyPath: m_RootOrder
       value: 48
@@ -21340,6 +23162,10 @@ PrefabInstance:
     - target: {fileID: 2895322455619634327, guid: 28d7a6decfb764557908695909381fb6, type: 3}
       propertyPath: m_Name
       value: CrystalBox2 (5)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2895322455619634327, guid: 28d7a6decfb764557908695909381fb6, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 2895322455619672247, guid: 28d7a6decfb764557908695909381fb6, type: 3}
       propertyPath: m_RootOrder
@@ -21403,6 +23229,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: GrassBox (71)
       objectReference: {fileID: 0}
+    - target: {fileID: 2435421964960726046, guid: 6bffd9cecdd2b4b4084a5cde771d1432, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 2435421964960882750, guid: 6bffd9cecdd2b4b4084a5cde771d1432, type: 3}
       propertyPath: m_RootOrder
       value: 218
@@ -21464,6 +23294,10 @@ PrefabInstance:
     - target: {fileID: 6519401657621111884, guid: cf9c7023bca084c89a74329bc9819a54, type: 3}
       propertyPath: m_Name
       value: CrystalBox (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6519401657621111884, guid: cf9c7023bca084c89a74329bc9819a54, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 6519401657621477484, guid: cf9c7023bca084c89a74329bc9819a54, type: 3}
       propertyPath: m_RootOrder
@@ -21527,6 +23361,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: CrystalBox3 (42)
       objectReference: {fileID: 0}
+    - target: {fileID: 1159251707130074282, guid: 2519ee2fffb724006a8126325ce9eaa1, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 1159251707130497162, guid: 2519ee2fffb724006a8126325ce9eaa1, type: 3}
       propertyPath: m_RootOrder
       value: 92
@@ -21588,6 +23426,10 @@ PrefabInstance:
     - target: {fileID: 2895322455619634327, guid: 28d7a6decfb764557908695909381fb6, type: 3}
       propertyPath: m_Name
       value: CrystalBox2 (25)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2895322455619634327, guid: 28d7a6decfb764557908695909381fb6, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 2895322455619672247, guid: 28d7a6decfb764557908695909381fb6, type: 3}
       propertyPath: m_RootOrder
@@ -21651,6 +23493,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: CrystalBox (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 6519401657621111884, guid: cf9c7023bca084c89a74329bc9819a54, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 6519401657621477484, guid: cf9c7023bca084c89a74329bc9819a54, type: 3}
       propertyPath: m_RootOrder
       value: 7
@@ -21701,4 +23547,70 @@ PrefabInstance:
 Transform:
   m_CorrespondingSourceObject: {fileID: 6519401657621477484, guid: cf9c7023bca084c89a74329bc9819a54, type: 3}
   m_PrefabInstance: {fileID: 5489911720551923592}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &6269158678356442689
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 5489911719142539037}
+    m_Modifications:
+    - target: {fileID: 2435421964960726046, guid: 6bffd9cecdd2b4b4084a5cde771d1432, type: 3}
+      propertyPath: m_Name
+      value: GrassBox (88)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2435421964960726046, guid: 6bffd9cecdd2b4b4084a5cde771d1432, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 2435421964960882750, guid: 6bffd9cecdd2b4b4084a5cde771d1432, type: 3}
+      propertyPath: m_RootOrder
+      value: 344
+      objectReference: {fileID: 0}
+    - target: {fileID: 2435421964960882750, guid: 6bffd9cecdd2b4b4084a5cde771d1432, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 2435421964960882750, guid: 6bffd9cecdd2b4b4084a5cde771d1432, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2435421964960882750, guid: 6bffd9cecdd2b4b4084a5cde771d1432, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 2435421964960882750, guid: 6bffd9cecdd2b4b4084a5cde771d1432, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2435421964960882750, guid: 6bffd9cecdd2b4b4084a5cde771d1432, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2435421964960882750, guid: 6bffd9cecdd2b4b4084a5cde771d1432, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2435421964960882750, guid: 6bffd9cecdd2b4b4084a5cde771d1432, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2435421964960882750, guid: 6bffd9cecdd2b4b4084a5cde771d1432, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2435421964960882750, guid: 6bffd9cecdd2b4b4084a5cde771d1432, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2435421964960882750, guid: 6bffd9cecdd2b4b4084a5cde771d1432, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 6bffd9cecdd2b4b4084a5cde771d1432, type: 3}
+--- !u!4 &8560460832391257727 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 2435421964960882750, guid: 6bffd9cecdd2b4b4084a5cde771d1432, type: 3}
+  m_PrefabInstance: {fileID: 6269158678356442689}
   m_PrefabAsset: {fileID: 0}

@@ -6,13 +6,13 @@ public class Weapon : MonoBehaviour
 {
     public enum Type { Melee, Range, Axe, PickAxe };
     public Type type;
-    public int damage;
-    public float rate;  //  속도
+    public float damage;
+    public float rate;  //  ????
 
     public bool isAttack;
 
-    public BoxCollider meleeArea;   // 근접 범위
-    public TrailRenderer trailEffect;   //  효과
+    public BoxCollider meleeArea;   // ???? ????
+    public TrailRenderer trailEffect;   //  ????
 
     public Transform bulletPos;
     public GameObject bullet;
@@ -72,7 +72,7 @@ public class Weapon : MonoBehaviour
     {
 
         yield return new WaitForSeconds(rate);
-        //총알 발사
+        //???? ????
         isAttack = false;
 
         GameObject instantBullet = Instantiate(bullet, bulletPos.position, bulletPos.rotation);

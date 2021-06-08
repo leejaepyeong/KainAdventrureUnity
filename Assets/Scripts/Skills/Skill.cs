@@ -16,8 +16,8 @@ public class Skill : ScriptableObject
     public string skillName;
 
     public int mana;
-    public float dataValue; // 효과 수치
-    public float delayTime; // 지속시간
+    public float dataValue; // ????
+    public float delayTime; // ????
 
     [TextArea] public string skillData;
 }

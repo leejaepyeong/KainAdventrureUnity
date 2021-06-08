@@ -6,7 +6,7 @@ public class Materials : MonoBehaviour
 {
     public MaterialData materialData;
 
-    private int currentHp;
+    private float currentHp;
 
     bool isHit = false;
     bool isBreak = false;
@@ -22,7 +22,7 @@ public class Materials : MonoBehaviour
         currentHp = materialData.hp;
     }
 
-    void Hit(int _damage)
+    void Hit(float _damage)
     {
         isHit = true;
         hitEffect.gameObject.SetActive(true);
