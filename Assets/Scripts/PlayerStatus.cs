@@ -6,29 +6,9 @@ using UnityEngine.UI;
 public class PlayerStatus : MonoBehaviour
 {
     public static PlayerStatus instance;
+    public PlayerStatusData playerData;
 
-
-    public float maxHp;
-    public float currentHp;
-
-    public float maxMp;
-    public float currentMp;
-
-    public float meleeDamage;
-    public float rangeDamage;
-    public float resourceDamage;  //자원 채취 대미지
-
-    public float defence;
-
-    public float hpRegen;
-    public float mpRegen;
-
-    public float hpRegenTime;
-    public float mpRegenTime;
-
-    public float maxExp;
-    public float currentExp;
-    public int level = 1;
+    
 
     public Image hpBar;
     public Image mpBar;
@@ -49,6 +29,7 @@ public class PlayerStatus : MonoBehaviour
     private void Start()
     {
         instance = this;
+        playerData.currentHp = playerData.maxHp;
     }
 
     private void Update()
@@ -62,24 +43,24 @@ public class PlayerStatus : MonoBehaviour
 
     void StatusInfo()
     {
-        levelTxt.text = level.ToString();
-        hPTxt.text = currentHp.ToString() + " / " + maxHp.ToString();
-        mPTxt.text = currentMp.ToString() + " / " + maxMp.ToString();
-        mAttTxt.text = meleeDamage.ToString();
-        rAttTxt.text = rangeDamage.ToString();
-        reAttTxt.text = resourceDamage.ToString();
-        defTxt.text = defence.ToString();
+        levelTxt.text = playerData.level.ToString();
+        hPTxt.text = playerData.currentHp.ToString() + " / " + playerData.maxHp.ToString();
+        mPTxt.text = playerData.currentMp.ToString() + " / " + playerData.maxMp.ToString();
+        mAttTxt.text = playerData.meleeDamage.ToString();
+        rAttTxt.text = playerData.rangeDamage.ToString();
+        reAttTxt.text = playerData.resourceDamage.ToString();
+        defTxt.text = playerData.defence.ToString();
     }
     void LevelUp()
     {
-        if(currentExp >= maxExp)
+        if(playerData.currentExp >= playerData.maxExp)
         {
-            level++;
+            playerData.level++;
             GameManager.instance.stat += 3;
-            
 
-            currentExp =currentExp - maxExp;
-            maxExp *= 2;
+
+            playerData.currentExp = playerData.currentExp - playerData.maxExp;
+            playerData.maxExp *= 2;
         }    
     }
 
@@ -89,9 +70,9 @@ public class PlayerStatus : MonoBehaviour
         {
             GameManager.instance.stat--;
 
-            meleeDamage += 2;
-            rangeDamage += 1;
-            resourceDamage += 1;
+            playerData.meleeDamage += 2;
+            playerData.rangeDamage += 1;
+            playerData.resourceDamage += 1;
 
         }
     }
@@ -101,7 +82,7 @@ public class PlayerStatus : MonoBehaviour
         if (GameManager.instance.stat > 0)
         {
             GameManager.instance.stat--;
-            defence += 1;
+            playerData.defence += 1;
         }
     }
 
@@ -111,38 +92,38 @@ public class PlayerStatus : MonoBehaviour
         {
             GameManager.instance.stat--;
 
-            maxHp += 10;
-            currentHp += 10;
+            playerData.maxHp += 10;
+            playerData.currentHp += 10;
 
-            maxMp += 5;
-            currentMp += 5;
+            playerData.maxMp += 5;
+            playerData.currentMp += 5;
         }
     }
 
 
     public void IncreaseHp(int _data)
     {
-        currentHp += _data;
+        playerData.currentHp += _data;
     }
     public void IncreaseMp(int _data)
     {
-        currentMp += _data;
+        playerData.currentMp += _data;
     }
 
 
     public void HpBarControl()
     {
-        hpBar.fillAmount = (float)currentHp / maxHp;
+        hpBar.fillAmount = playerData.currentHp / playerData.maxHp;
     }
 
     public void MpBarControl()
     {
-        mpBar.fillAmount = (float)currentMp / maxMp;
+        mpBar.fillAmount = playerData.currentMp / playerData.maxMp;
     }
 
     public void ExpBarControl()
     {
-        expBar.fillAmount = (float)currentExp / maxExp;
+        expBar.fillAmount = playerData.currentExp / playerData.maxExp;
     }
 
 

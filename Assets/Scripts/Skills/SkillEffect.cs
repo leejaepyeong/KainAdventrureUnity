@@ -5,6 +5,7 @@ using UnityEngine;
 public class SkillEffect : MonoBehaviour
 {
     //public static Skill instance;
+    public PlayerStatusData playerdata;
 
     public Skill[] skill;
 
@@ -38,13 +39,13 @@ public class SkillEffect : MonoBehaviour
     {
         if(isSkill[_num] == 0)
         {
-            if (PlayerStatus.instance.currentMp < skill[_num].mana)
+            if (playerdata.currentMp < skill[_num].mana)
             {
                 return;
             }
 
             isSkill[_num] = 1;
-            PlayerStatus.instance.currentMp -= skill[_num].mana;
+            playerdata.currentMp -= skill[_num].mana;
             
                 
 
@@ -83,9 +84,11 @@ public class SkillEffect : MonoBehaviour
         switch(skill[_num].skillName)
         {
             case "AttackUp":
-                PlayerStatus.instance.meleeDamage *= skill[_num].dataValue;
+                playerdata.meleeDamage *= skill[_num].dataValue;
+                playerdata.rangeDamage *= skill[_num].dataValue;
                 yield return new WaitForSeconds(skill[_num].delayTime);
-                PlayerStatus.instance.meleeDamage /= skill[_num].dataValue;
+                playerdata.meleeDamage /= skill[_num].dataValue;
+                playerdata.rangeDamage /= skill[_num].dataValue;
                 break;
             case "DeffenceUp":
                 break;
@@ -104,9 +107,9 @@ public class SkillEffect : MonoBehaviour
     {
         GameObject SkillObject = Instantiate(skill[_num].skillPrefab, player.transform.position, player.transform.rotation);
 
-        PlayerStatus.instance.currentHp += skill[_num].dataValue;
-        if (PlayerStatus.instance.currentHp >= PlayerStatus.instance.maxHp)
-            PlayerStatus.instance.currentHp = PlayerStatus.instance.maxHp;
+        playerdata.currentHp += skill[_num].dataValue;
+        if (playerdata.currentHp >= playerdata.maxHp)
+            playerdata.currentHp = playerdata.maxHp;
 
         Destroy(SkillObject, 0.5f);
         yield return new WaitForSeconds(skill[_num].delayTime);

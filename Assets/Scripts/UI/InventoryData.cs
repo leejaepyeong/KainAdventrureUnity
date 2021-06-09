@@ -9,7 +9,7 @@ public class InventoryData : ScriptableObject
 {
     public string InvenMenu;
 
-    public int[] itemCount;
-    public Item[] item;   // 획득 아이템 이미지
+    public int[] itemCount; // 아이템 갯수
+    public int[] itemIDs;   // 아이템 아이디
 
 }

@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 6685669318277114977}
   - component: {fileID: 6685669318277114976}
   - component: {fileID: 8607415098089140589}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: GoldWood
   m_TagString: Item
   m_Icon: {fileID: 0}

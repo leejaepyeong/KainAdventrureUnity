@@ -6,6 +6,8 @@ public class Materials : MonoBehaviour
 {
     public MaterialData materialData;
 
+    public PlayerStatusData playerData;
+
     private float currentHp;
 
     bool isHit = false;
@@ -32,7 +34,7 @@ public class Materials : MonoBehaviour
         if(currentHp <= 0)
         {
             isBreak = true;
-            PlayerStatus.instance.currentExp += materialData.exp;
+            playerData.currentExp += materialData.exp;
             Reward();
         }
 

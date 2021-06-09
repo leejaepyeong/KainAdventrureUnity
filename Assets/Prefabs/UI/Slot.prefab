@@ -241,6 +241,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7f80f315d1e059c4694c303dab4d8853, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  SomeDB:
+  - {fileID: 11400000, guid: 325a74c53e7f4a546a81fad6ee4fc4af, type: 2}
+  - {fileID: 11400000, guid: 0d8c9fef26c9323419d0cb39f32bb362, type: 2}
+  - {fileID: 11400000, guid: c156f1791d6e0514db61f1fe170edd52, type: 2}
+  invenData:
+  - {fileID: 11400000, guid: a5a3047115e199544867fdf085b9acd5, type: 2}
+  - {fileID: 11400000, guid: 43da5b80c6d988440bee01d9a3549aea, type: 2}
+  - {fileID: 11400000, guid: 5e3bceffec51c4f4b8464c9c91b1511e, type: 2}
   item: {fileID: 0}
   itemCount: 0
   ItemImage: {fileID: 2453701981424655753}

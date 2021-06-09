@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 6316409508062169660}
   - component: {fileID: 7177615914712450367}
   - component: {fileID: -4773545465456552089}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Sapphire
   m_TagString: Item
   m_Icon: {fileID: 0}

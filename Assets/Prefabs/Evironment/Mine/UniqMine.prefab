@@ -110,6 +110,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   materialData: {fileID: 11400000, guid: 43a6e894804ef4b4cba6c9091fc07639, type: 2}
+  playerData: {fileID: 11400000, guid: a73d2b31f426b684f8d3fbecec08196a, type: 2}
   treeReward: []
   mineReward:
   - {fileID: 6316409508062169661, guid: 9e1e9e5d8cdd345f880fe67c60605818, type: 3}

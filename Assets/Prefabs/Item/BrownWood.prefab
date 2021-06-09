@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 755778123374878130}
   - component: {fileID: 3989829351902775986}
   - component: {fileID: -1897943654304667762}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: BrownWood
   m_TagString: Item
   m_Icon: {fileID: 0}

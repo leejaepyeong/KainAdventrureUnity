@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 4518719509729901763}
   - component: {fileID: -4144820523400555779}
   - component: {fileID: 5014093307227215583}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: SilverWood
   m_TagString: Item
   m_Icon: {fileID: 0}

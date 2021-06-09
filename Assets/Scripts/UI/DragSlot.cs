@@ -7,10 +7,16 @@ public class DragSlot : MonoBehaviour
 {
     static public DragSlot instance;
 
+    public ItemDB[] SomeDB;
+    public InventoryData[] draginvenData;
     public Slot dragSlot;
 
     [SerializeField]
     private Image imageItem;
+
+    public int invenType;
+    public int getNum;
+    public int setNum;
 
     void Start()
     {
@@ -28,5 +34,21 @@ public class DragSlot : MonoBehaviour
         Color color = imageItem.color;
         color.a = _alpha;
         imageItem.color = color;
+    }
+
+
+
+    public void Change()
+    {
+        int CountTemp = draginvenData[invenType].itemCount[getNum];
+        int IdTemp = draginvenData[invenType].itemIDs[getNum];
+
+        draginvenData[invenType].itemCount[getNum] = draginvenData[invenType].itemCount[setNum];
+        draginvenData[invenType].itemIDs[getNum] = draginvenData[invenType].itemIDs[setNum];
+
+        draginvenData[invenType].itemCount[setNum] = CountTemp;
+        draginvenData[invenType].itemIDs[setNum] = IdTemp;
+
+
     }
 }

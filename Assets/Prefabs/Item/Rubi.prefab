@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 9019029123665555428}
   - component: {fileID: 8876664926182295688}
   - component: {fileID: 4327474597066446901}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Rubi
   m_TagString: Item
   m_Icon: {fileID: 0}

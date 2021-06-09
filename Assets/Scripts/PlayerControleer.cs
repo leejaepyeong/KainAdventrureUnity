@@ -46,7 +46,7 @@ public class PlayerControleer : MonoBehaviour
     //public bool[] hasWeapons;
     private int weaponIndex = 0;
 
-    
+    public PlayerStatusData playerData;
     
     //민감도
     [SerializeField]
@@ -334,10 +334,10 @@ public class PlayerControleer : MonoBehaviour
     {
         if(!isDead)
         {
-            PlayerStatus.instance.currentHp -= _damage;
+            playerData.currentHp -= _damage;
             anim.SetTrigger("Damage");
 
-            if (PlayerStatus.instance.currentHp <= 0)
+            if (playerData.currentHp <= 0)
                 Dead();
         }
     }

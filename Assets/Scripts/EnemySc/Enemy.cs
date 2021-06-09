@@ -5,7 +5,11 @@ using UnityEngine.AI;
 
 public class Enemy : MonoBehaviour
 {
+    public Quest quest;
+
     public EnemyData enemyData;
+
+    public PlayerStatusData playerData;
 
     //??
     protected float currentHp;
@@ -62,7 +66,8 @@ public class Enemy : MonoBehaviour
         RunSpeed = walkSpeed * 1.5f;
         applySpeed = walkSpeed;
 
-
+        Target = FindObjectOfType<PlayerControleer>().transform;
+        quest = FindObjectOfType<Quest>();
     }
 
     // Update is called once per frame
@@ -225,8 +230,9 @@ public class Enemy : MonoBehaviour
         if (currentHp <= 0)
         {
             isDead = true;
+            quest.MonsterDead(enemyData);
             anim.SetTrigger("Die");
-            PlayerStatus.instance.currentExp += enemyData.Exp;
+            playerData.currentExp += enemyData.Exp;
             Destroy(gameObject, 2f);
             
         }
@@ -246,7 +252,7 @@ public class Enemy : MonoBehaviour
             
             if(!isHit)
             {
-                Hit(playerAttack.damage + PlayerStatus.instance.meleeDamage);
+                Hit(playerAttack.damage + playerData.meleeDamage);
             }
 
         }
@@ -257,9 +263,19 @@ public class Enemy : MonoBehaviour
 
             if (!isHit)
             {
-                Hit(bullet.damage + PlayerStatus.instance.rangeDamage);
+                Hit(bullet.damage + playerData.rangeDamage);
                 Destroy(other.gameObject, 0.1f);
 
+            }
+        }
+        else if(other.tag == "PlayerSkill")
+        {
+            AttackSkill skill = other.GetComponent<AttackSkill>();
+
+            if(!isHit)
+            {
+                Hit(skill.skill.dataValue);
+                Destroy(other.gameObject, 0.1f);
             }
         }
     }

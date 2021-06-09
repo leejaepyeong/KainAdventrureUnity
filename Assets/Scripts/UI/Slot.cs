@@ -6,6 +6,9 @@ using UnityEngine.EventSystems;
 
 public class Slot : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler, IPointerClickHandler, IBeginDragHandler, IDragHandler, IEndDragHandler, IDropHandler
 {
+    public ItemDB[] SomeDB;
+    public InventoryData[] invenData;
+
 
     public Item item;   // 획득 아이템 이미지
     public int itemCount;   //  획득한 아이템 갯수
@@ -25,7 +28,7 @@ public class Slot : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler, IP
     }
 
     //이미지 투명도 조절
-    private void SetColor(float _alpha)
+    public void SetColor(float _alpha)
     {
         Color color = ItemImage.color;
         color.a = _alpha;   // 알파값
@@ -34,7 +37,7 @@ public class Slot : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler, IP
     }
 
     // 아이템 획득
-    public void AddItem(Item _item, int _count = 1)
+    public void AddItem(Item _item, int _count)
     {
         item = _item;
         itemCount = _count;
@@ -59,7 +62,7 @@ public class Slot : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler, IP
     public void SetSlotCount(int _num)
     {
         itemCount += _num;
-        text_Count.text = _num.ToString();
+        text_Count.text = itemCount.ToString();
 
         if (itemCount <= 0)
             ClearSlot();
@@ -103,6 +106,16 @@ public class Slot : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler, IP
             DragSlot.instance.DragSetImage(ItemImage);
 
             DragSlot.instance.transform.position = eventData.position;
+
+            //DragSlot.instance.draginvenData[(int)item.itemType].itemCount.Length
+            for (int i = 0; i < invenData[(int)item.itemType].itemCount.Length; i++)
+            {
+                if(item == SomeDB[(int)item.itemType].items[invenData[(int)item.itemType].itemIDs[i]])
+                {
+                    DragSlot.instance.getNum = i;
+                }
+            }
+
         }
 
     }
@@ -128,6 +141,15 @@ public class Slot : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler, IP
         //빈 슬롯일때 호출 안되게
         if (DragSlot.instance.dragSlot != null)
         {
+            for (int i = 0; i < invenData[(int)item.itemType].itemCount.Length; i++)
+            {
+                if (item == SomeDB[(int)item.itemType].items[invenData[(int)item.itemType].itemIDs[i]])
+                {
+                    DragSlot.instance.setNum = i;
+                    DragSlot.instance.invenType = (int)item.itemType;
+                }
+            }
+            Debug.Log(gameObject.name);
             ChangeSlot();
         }
 
@@ -135,7 +157,7 @@ public class Slot : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler, IP
 
     void ChangeSlot()
     {
-        Item _tempItem = item;
+        Item _tempItem = item;  // 치환용
         int _tempItemCount = itemCount;
 
         AddItem(DragSlot.instance.dragSlot.item, DragSlot.instance.dragSlot.itemCount);
@@ -149,6 +171,8 @@ public class Slot : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler, IP
         {
             DragSlot.instance.dragSlot.ClearSlot();
         }
+
+        DragSlot.instance.Change();
     }
 
     
