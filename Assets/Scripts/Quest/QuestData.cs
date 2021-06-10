@@ -8,6 +8,7 @@ public class QuestData : ScriptableObject
 {
     public bool isStart = false;
     public bool isClear = false;
+    public bool isReward = false;
 
     public enum Type { Kill, Resource}
 
@@ -17,15 +18,18 @@ public class QuestData : ScriptableObject
 
     public ItemType itemType;
 
-    public string QuestName;    // 퀘스트 이름
+    public string QuestName;    // ?????? ????
 
-    public int monsterId;   // 적 아이디
-    public int ResourseId; // 자원 목록 ID값
-    public int Value;   // 클리어해야 하는 양
+    public int monsterId;   // ?? ??????
+    public int ResourseId; // ???? ???? ID??
+    public int Value;   // ?????????? ???? ??
+    public int MaxValue;
+
+    
 
 
     [TextArea]
-    public string QuestDesc;    // 퀘스트 내용
+    public string QuestDesc;    // ?????? ????
 
     public float expReward;
     public int coinReward;

@@ -9,6 +9,7 @@ public class InfoManager : MonoBehaviour
     bool isMenuOn = false;
     bool isStatusOn = false;
     bool isMapOn = false;
+    bool isQuestOn = false;
 
     //???? ????????
     public GameObject MenuPannel;
@@ -16,6 +17,7 @@ public class InfoManager : MonoBehaviour
     public GameObject StatusPannel;
     public GameObject MiniMapPannel;
     public GameObject InvenPannel;
+    public GameObject QuestPannel;
 
     private void Update()
     {
@@ -103,6 +105,37 @@ public class InfoManager : MonoBehaviour
         
     }
 
+    public void QuestOpen()
+    {
+        if (!isInfoOn)
+        {
+            isInfoOn = true;
+
+            isQuestOn = true;
+            GameManager.instance.isInfoOn = true;
+
+            QuestPannel.SetActive(true);
+            MenuPannel.SetActive(false);
+        }
+
+
+    }
+
+    public void QuestClose()
+    {
+        if (isInfoOn && isQuestOn)
+        {
+            isInfoOn = false;
+
+            isQuestOn = false;
+            GameManager.instance.isInfoOn = false;
+
+            QuestPannel.SetActive(false);
+            MenuBtn.SetActive(true);
+        }
+
+    }
+
 
     void TryOpenMenu()
     {
@@ -143,6 +176,19 @@ public class InfoManager : MonoBehaviour
             else
             {
                 StatusClose();
+            }
+        }
+
+        if (Input.GetKeyDown(KeyCode.Q))
+        {
+            if (!isQuestOn)
+            {
+                MenuBtn.SetActive(false);
+                QuestOpen();
+            }
+            else
+            {
+                QuestClose();
             }
         }
     }

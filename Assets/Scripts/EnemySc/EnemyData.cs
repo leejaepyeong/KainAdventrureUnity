@@ -5,7 +5,7 @@ using UnityEngine;
 [CreateAssetMenu(fileName = "New Enemy", menuName = "New Enemy/enemy")]
 public class EnemyData : ScriptableObject
 {
-    // 적 종류
+    // ?? ????
     public enum EnemyType
     {
         normal,
@@ -17,13 +17,15 @@ public class EnemyData : ScriptableObject
 
     public EnemyType enemyType;
 
-    //스탯
+    //????
     public int hp;
     public int mp;
     public int damage;
     public int defense;
     public float delay;
     public float moveSpeed;
+    public int skillDamage;
+
 
     public int hpRegen;
     public int mpRegen;
@@ -31,7 +33,8 @@ public class EnemyData : ScriptableObject
 
     public int Exp;
 
-    // 정보
+    public float targetRange;
+    // ????
     [TextArea] public string enemyData;
 
    

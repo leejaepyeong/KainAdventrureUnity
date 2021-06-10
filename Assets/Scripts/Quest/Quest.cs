@@ -11,15 +11,16 @@ public class Quest : MonoBehaviour
 
     public InventoryData[] inventoryData;
 
+    
+
     private void Update()
     {
         isSuccess();
+        ResourceState();
+
     }
 
-    void Alram(int _num)
-    {
-        questDatas[_num].isStart = true;
-    }
+
 
     public void MonsterDead(EnemyData enemy)
     {
@@ -43,9 +44,10 @@ public class Quest : MonoBehaviour
                 {
                     for (int j = 0; j < inventoryData[1].itemIDs.Length; j++)
                     {
-                        if(inventoryData[1].itemIDs[i] == questDatas[i].ResourseId)
+                        if(inventoryData[1].itemIDs[j] == questDatas[i].ResourseId)
                         {
-
+                            questDatas[i].Value -= inventoryData[1].itemCount[j];
+                            if (questDatas[i].Value <= 0) questDatas[i].Value = 0;
                         }
                     }
                 }
@@ -82,7 +84,7 @@ public class Quest : MonoBehaviour
         questDatas[_num].isClear = true;
     }
 
-    //보상받기
+    //??
     public void GetReward()
     {
         playerData.currentExp += questDatas[0].expReward;

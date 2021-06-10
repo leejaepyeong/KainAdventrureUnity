@@ -101,16 +101,6 @@ public class PlayerStatus : MonoBehaviour
     }
 
 
-    public void IncreaseHp(int _data)
-    {
-        playerData.currentHp += _data;
-    }
-    public void IncreaseMp(int _data)
-    {
-        playerData.currentMp += _data;
-    }
-
-
     public void HpBarControl()
     {
         hpBar.fillAmount = playerData.currentHp / playerData.maxHp;

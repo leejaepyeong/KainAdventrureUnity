@@ -13,6 +13,8 @@ public class PlayerControleer : MonoBehaviour
 
     float applySpeed; // 적용 속도
 
+    float currentTime = 0;  // 시간값 (회복관려)
+
 
     //스틱기준
     public Transform Stick;         // stick
@@ -39,9 +41,9 @@ public class PlayerControleer : MonoBehaviour
     bool isSwap;
     public bool isDead = false;
     bool isHit = false;
+    bool isSafe;
 
     //무기
-
     public GameObject[] weapons;
     //public bool[] hasWeapons;
     private int weaponIndex = 0;
@@ -104,6 +106,7 @@ public class PlayerControleer : MonoBehaviour
             GetInput();
             Move();
             Run();
+            Recover();
             if (GameManager.instance.is1stCam)
             {
                 tryJump();
@@ -239,6 +242,25 @@ public class PlayerControleer : MonoBehaviour
         }
     }
 
+    void Recover()
+    {
+        if(!isHit)
+        {
+            currentTime += Time.deltaTime;
+            if(currentTime >= playerData.hpRegenTime)
+            {
+                currentTime = 0;
+                if(playerData.currentHp < playerData.maxHp)
+                    playerData.currentHp += playerData.hpRegen;
+
+                if (playerData.currentMp < playerData.maxMp)
+                    playerData.currentMp += playerData.mpRegen;
+
+            }
+        }
+    }
+
+
     void tryJump()
     {
         if (isJump)
@@ -334,12 +356,27 @@ public class PlayerControleer : MonoBehaviour
     {
         if(!isDead)
         {
-            playerData.currentHp -= _damage;
+            StopCoroutine(HitCoroutine());
+            StartCoroutine(HitCoroutine());
+
+            playerData.currentHp -= ((_damage - playerData.defence) <= 0 ? 1 : _damage - playerData.defence);
             anim.SetTrigger("Damage");
 
             if (playerData.currentHp <= 0)
                 Dead();
+
+            
         }
+    }
+
+
+    IEnumerator HitCoroutine()
+    {
+        isHit = true;
+
+        yield return new WaitForSeconds(5f);
+
+        isHit = false;
     }
 
 
@@ -440,6 +477,11 @@ public class PlayerControleer : MonoBehaviour
         {
             Enemy enemy = other.GetComponentInParent<Enemy>();
             onDamage(enemy.enemyData.damage);
+        }
+        else if(other.tag == "EnemySkill")
+        {
+            Enemy enemy = other.GetComponentInParent<Enemy>();
+            onDamage(enemy.enemyData.skillDamage);
         }
         
     }

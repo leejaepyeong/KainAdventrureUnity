@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
+using UnityEngine.UI;
 
 public class Enemy : MonoBehaviour
 {
@@ -14,8 +15,7 @@ public class Enemy : MonoBehaviour
     //??
     protected float currentHp;
     protected float currentMp;
-    protected float damage;
-    protected float defense;
+
     protected float delay;
 
     // ???
@@ -23,15 +23,18 @@ public class Enemy : MonoBehaviour
     protected float RunSpeed;
     protected float applySpeed;
 
-    // ??
-    protected float hpRegen;
-    protected float mpRegen;
+    // 회복 시간
     protected float regenTime;
 
     protected Vector3 direction;  // ??
 
     public Transform Target;    // ??
     public BoxCollider meleeArea;   // ?? ????
+    public GameObject skillArea;
+
+    public Image hpBar;
+    
+
 
     // 
     protected float currentTime = 5f;
@@ -43,6 +46,8 @@ public class Enemy : MonoBehaviour
     protected bool isRegen = true;  // ????????
     protected bool isSight = false; // ???????? ????
     protected bool isAttack = false;    // ??????
+    protected bool isSkill = false;
+    protected bool isSkillCool = true;
 
     [SerializeField]
     protected Rigidbody rigid;
@@ -68,6 +73,7 @@ public class Enemy : MonoBehaviour
 
         Target = FindObjectOfType<PlayerControleer>().transform;
         quest = FindObjectOfType<Quest>();
+
     }
 
     // Update is called once per frame
@@ -80,10 +86,16 @@ public class Enemy : MonoBehaviour
             RegenTime();
             AiMoveCheck();
             Targeteting();
+            SkillOn();
+            
         }
-        
     }
 
+
+        
+
+    
+    
     protected void AiMoveCheck()
     {
         float distance = Vector3.Distance(transform.position,Target.transform.position);
@@ -138,24 +150,41 @@ public class Enemy : MonoBehaviour
         }
         
     }
-  
+
+    protected virtual void SkillOn()
+    {
+        if(!isDead && isSkillCool)
+        {
+            
+            RaycastHit[] rayHits = Physics.SphereCastAll(transform.position, 1f,
+                                  transform.forward, enemyData.targetRange, LayerMask.GetMask("Player"));
+
+            if (rayHits.Length > 0 && !isAttack && !Target.GetComponent<PlayerControleer>().isDead)
+            {
+                isSkillCool = false;
+                StartCoroutine(Skill());
+            }
+        }
+    }
+
 
     protected virtual void Targeteting()
     {
         if (!isDead)
         {
             float targetRadius = 0f;
-            float targetRange = 0f;
+            
 
 
             targetRadius = 0.5f;       
 
             RaycastHit[] rayHits = Physics.SphereCastAll(transform.position, targetRadius,
-                                  transform.forward, targetRange, LayerMask.GetMask("Player"));
+                                  transform.forward, enemyData.targetRange, LayerMask.GetMask("Player"));
        
 
-            if (rayHits.Length > 0 && !isAttack && !Target.GetComponent<PlayerControleer>().isDead)
+            if (rayHits.Length > 0 && !isAttack && !Target.GetComponent<PlayerControleer>().isDead && !isSkill)
             {
+
                 StartCoroutine(Attack());
             }
         }
@@ -186,6 +215,12 @@ public class Enemy : MonoBehaviour
     }
 
 
+    protected virtual IEnumerator Skill()
+    {
+        yield return null;
+    }
+
+
     protected virtual void HPRegen()
     {
         if(isRegen && currentHp < enemyData.hp)
@@ -194,11 +229,15 @@ public class Enemy : MonoBehaviour
             regenTime = enemyData.regenTime / 2;
 
             currentHp += enemyData.hpRegen;
+
+            
         }
            
 
         if (currentHp > enemyData.hp)
             currentHp = enemyData.hp;
+
+        hpBar.fillAmount = currentHp / enemyData.hp;
     }
 
     protected virtual void MPRegen()
@@ -225,10 +264,12 @@ public class Enemy : MonoBehaviour
     {
         
         isHit = true;
-        currentHp -= _damage;
+        currentHp -= ( (_damage - enemyData.defense) <= 0 ? 1 : _damage - enemyData.defense);
+        hpBar.fillAmount = currentHp / enemyData.hp;
 
         if (currentHp <= 0)
         {
+
             isDead = true;
             quest.MonsterDead(enemyData);
             anim.SetTrigger("Die");

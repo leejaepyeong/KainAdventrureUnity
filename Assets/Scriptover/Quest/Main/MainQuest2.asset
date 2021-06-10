@@ -10,16 +10,20 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 545d958acc5ae4f40a02296d8b0b66a0, type: 3}
-  m_Name: quest1
+  m_Name: MainQuest2
   m_EditorClassIdentifier: 
   isStart: 0
   isClear: 0
+  isReward: 0
   type: 0
-  QuestName: KillMission1
+  itemType: 0
+  QuestName: Kill MushKing2
   monsterId: 1
   ResourseId: 0
-  Value: 10
-  QuestDesc: "\uB108\uC758 \uD798\uC744 \uD14C\uC2A4\uD2B8\uD558\uACA0\uB2E4.\n\uBC84\uC12F
-    10\uB9C8\uB9AC\uB97C \uC7A1\uC544\uC624\uB3C4\uB85D"
-  expReward: 20
-  coinReward: 300
+  Value: 3
+  MaxValue: 3
+  QuestDesc: 'Kill the Boss
+
+    MushKing * 3'
+  expReward: 3000
+  coinReward: 3000

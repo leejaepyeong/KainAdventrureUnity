@@ -10,17 +10,20 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 545d958acc5ae4f40a02296d8b0b66a0, type: 3}
-  m_Name: quest2
+  m_Name: quest1
   m_EditorClassIdentifier: 
-  isStart: 0
-  isClear: 0
+  isStart: 1
+  isClear: 1
+  isReward: 1
   type: 0
   itemType: 0
-  QuestName: ResourceMission1
-  monsterId: 0
-  ResourseId: 1
-  Value: 10
-  QuestDesc: "\uB108\uC758 \uC218\uC9D1\uB825\uC744 \uD14C\uC2A4\uD2B8\uD558\uACA0\uB2E4.\nBrownWood
-    10\uAC1C\uB97C \uAC00\uC838\uC640"
+  QuestName: Kill Enemy1
+  monsterId: 1
+  ResourseId: 0
+  Value: 0
+  MaxValue: 10
+  QuestDesc: 'Test Your Power
+
+    Kill MushRoom * 10'
   expReward: 20
   coinReward: 300

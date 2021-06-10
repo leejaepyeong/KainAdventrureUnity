@@ -5,19 +5,19 @@ using UnityEngine;
 [System.Serializable]
 public class ItemEffect
 {
-    public string itemName; // 아이템 이름
-    [Tooltip("HP, MP만 가능합니다")]
-    public string[] part; //효과 부위
-    public int[] num; // 효과 수치
+    public string itemName; // ?????? ????
+    [Tooltip("HP, MP?? ??????????")]
+    public string[] part; //???? ????
+    public int[] num; // ???? ????
 
 };
 
 public class ItemEffectDataBase : MonoBehaviour
 {
     [SerializeField]
-    private ItemEffect[] itemEffects;   // 아이템 효과들
+    private ItemEffect[] itemEffects;   // ?????? ??????
 
-    //컴포넌트
+    //????????
     [SerializeField]
     private PlayerStatus thePlayerStatus;
     /*
@@ -66,21 +66,21 @@ public class ItemEffectDataBase : MonoBehaviour
                         switch (itemEffects[x].part[y])
                         {
                             case HP:
-                                thePlayerStatus.IncreaseHp(itemEffects[x].num[y]);
+                                //thePlayerStatus.IncreaseHp(itemEffects[x].num[y]);
                                 break;
                             case MP:
-                                thePlayerStatus.IncreaseMp(itemEffects[x].num[y]);
+                                //thePlayerStatus.IncreaseMp(itemEffects[x].num[y]);
                                 break;
                             default:
-                                Debug.Log("잘못된 Status부위. HP, MP만 가능합니다");
+                                Debug.Log("?????? Status????. HP, MP?? ??????????");
                                 break;
                         }
-                        Debug.Log(_item.itemName + " 을 사용");
+                        Debug.Log(_item.itemName + " ?? ????");
                     }
                     return;
                 }
             }
-            Debug.Log("일치하는 아이템 없다");
+            Debug.Log("???????? ?????? ????");
         }
 
     }

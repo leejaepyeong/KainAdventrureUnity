@@ -13,17 +13,17 @@ MonoBehaviour:
   m_Name: PlayerData
   m_EditorClassIdentifier: 
   maxHp: 50
-  currentHp: 10
+  currentHp: 0
   maxMp: 10
-  currentMp: 0
-  meleeDamage: 26
+  currentMp: 10
+  meleeDamage: 20
   rangeDamage: 50
   resourceDamage: 5
   defence: 0
   hpRegen: 5
-  mpRegen: 5
-  hpRegenTime: 5
-  mpRegenTime: 5
-  maxExp: 40
-  currentExp: 33
-  level: 3
+  mpRegen: 2
+  hpRegenTime: 10
+  mpRegenTime: 10
+  maxExp: 20
+  currentExp: 11
+  level: 2
