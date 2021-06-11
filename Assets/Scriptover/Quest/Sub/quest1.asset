@@ -13,14 +13,14 @@ MonoBehaviour:
   m_Name: quest1
   m_EditorClassIdentifier: 
   isStart: 1
-  isClear: 1
-  isReward: 1
+  isClear: 0
+  isReward: 0
   type: 0
   itemType: 0
   QuestName: Kill Enemy1
   monsterId: 1
   ResourseId: 0
-  Value: 0
+  Value: 2
   MaxValue: 10
   QuestDesc: 'Test Your Power
 

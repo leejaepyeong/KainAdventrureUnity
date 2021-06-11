@@ -4,13 +4,14 @@ using UnityEngine;
 
 public class Quest : MonoBehaviour
 {
-    public EnemyDB enemyDB;
+    public EnemyDB enemyDB;   // ÀÏ¹Ý Àû
     public QuestData[] questDatas;
     public PlayerStatusData playerData;
     public MoneyData moneyData;
 
     public InventoryData[] inventoryData;
 
+    public GameObject[] questTab;
     
 
     private void Update()
@@ -26,10 +27,14 @@ public class Quest : MonoBehaviour
     {
         for (int i = 0; i < questDatas.Length; i++)
         {
-            if (questDatas[i].isStart && questDatas[i].type == QuestData.Type.Kill && enemyDB.GetIDFrom(enemy) == questDatas[i].monsterId)
+            if(questDatas[i].isStart && questDatas[i].type == QuestData.Type.Kill)
             {
-                questDatas[i].Value--;
+                    if (enemyDB.GetIDFrom(enemy) == questDatas[i].monsterId)
+                    {
+                        questDatas[i].Value--;
+                    }
             }
+            
         }
         
     }
@@ -91,4 +96,17 @@ public class Quest : MonoBehaviour
         moneyData.Coin += questDatas[0].coinReward;
     }
 
+
+    public void MainQuestBtn()
+    {
+        questTab[0].SetActive(true);
+        questTab[1].SetActive(false);
+
+    }
+
+    public void SubQuestBtn()
+    {
+        questTab[0].SetActive(false);
+        questTab[1].SetActive(true);
+    }
 }

@@ -113,6 +113,7 @@ public class Inventory : MonoBehaviour
         for (int i = 0; i < inventoryData[num].itemIDs.Length; i++)
         {
             var itemID = SomeDB[num].GetIDFrom(_item);
+
             if (inventoryData[num].itemIDs[i] == 0 && itemID != 0)
             {
                 inventoryData[num].itemIDs[i] = itemID;

@@ -149,7 +149,7 @@ public class Slot : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler, IP
                     DragSlot.instance.invenType = (int)item.itemType;
                 }
             }
-            Debug.Log(gameObject.name);
+
             ChangeSlot();
         }
 
