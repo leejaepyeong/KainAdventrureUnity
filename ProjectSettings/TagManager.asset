@@ -16,6 +16,7 @@ TagManager:
   - PlayerSkill
   - Quest
   - EnemySkill
+  - ResetZone
   layers:
   - Default
   - TransparentFX

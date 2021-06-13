@@ -60,8 +60,8 @@ public class PlayerControleer : MonoBehaviour
     Vector3 offset = new Vector3(-0.197f,2.215f,-3.116f);
 
     //미니맵
-    public Transform MiniCamPos;
-
+    public Transform MiniCamPos;    // 미니맵 카메라 위치
+    public Transform resetPos;  // hide 맵에서 리셋 될 위치
 
     // 컴포넌트 가져오기
     private Rigidbody playerRigid;
@@ -483,7 +483,52 @@ public class PlayerControleer : MonoBehaviour
             Enemy enemy = other.GetComponentInParent<Enemy>();
             onDamage(enemy.enemyData.skillDamage);
         }
-        
+        else if(other.tag == "NPC")
+        {
+            actionTxt.gameObject.SetActive(true);
+            NPC npc = other.GetComponent<NPC>();
+            npc.anim.SetTrigger("PlayerInOut");
+            actionTxt.text = "- Press 'P' key to Talk -";
+        }
+        else if(other.tag == "ResetZone")
+        {
+            playerData.currentHp -= 10;
+            if (playerData.currentHp<=0)
+                playerData.currentHp = 1;
+
+            transform.position = resetPos.position;
+        }
     }
 
+    private void OnTriggerStay(Collider other)
+    {
+        if (other.tag == "NPC")
+        {
+            NPC npc = other.GetComponent<NPC>();
+            SetText(npc);
+        }
+    }
+
+    void SetText(NPC _npc)
+    {
+        
+        if (Input.GetKeyDown(KeyCode.P))
+        {
+            actionTxt.gameObject.SetActive(false);
+            _npc.OpenPannel();
+        }
+    }
+
+    private void OnTriggerExit(Collider other)
+    {
+        if(other.tag == "NPC")
+        {
+
+            actionTxt.gameObject.SetActive(false);
+            NPC npc = other.GetComponent<NPC>();
+            npc.closePannel();
+            npc.anim.SetTrigger("PlayerInOut");
+        }
+       
+    }
 }

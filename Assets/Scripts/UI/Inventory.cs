@@ -23,12 +23,15 @@ public class Inventory : MonoBehaviour
     public Text coin;
     public GameObject[] invenMenu;  // 0 : 장비 1 : 아이템 2: 구조
     public SlotPresenter[] slotPresenters;
+    public Text[] tabTxt;   // 탭 텍스트
+
 
     private int menuNum = 0;    // 0 : 장비 1 : 아이템 2: 구조
 
 
     private void Start()
     {
+        tabTxt[0].color = Color.red;
         CheckInvenList();
     }
 
@@ -54,20 +57,26 @@ public class Inventory : MonoBehaviour
 
     public void EquipOn()
     {
+        tabTxt[menuNum].color = Color.white;
         menuNum = 0;
         ChangeMenu();
+        tabTxt[menuNum].color = Color.red;
     }
 
     public void ItemOn()
     {
+        tabTxt[menuNum].color = Color.white;
         menuNum = 1;
         ChangeMenu();
+        tabTxt[menuNum].color = Color.green;
     }
 
     public void StructOn()
     {
+        tabTxt[menuNum].color = Color.white;
         menuNum = 2;
         ChangeMenu();
+        tabTxt[menuNum].color = Color.blue;
     }
 
     // 아이템 목록 바꾸기 장비 아이템 가구
