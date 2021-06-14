@@ -24,6 +24,6 @@ MonoBehaviour:
   mpRegen: 2
   hpRegenTime: 10
   mpRegenTime: 10
-  maxExp: 20
-  currentExp: 11
-  level: 2
+  maxExp: 10
+  currentExp: 0
+  level: 1
