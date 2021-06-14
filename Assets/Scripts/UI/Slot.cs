@@ -149,7 +149,7 @@ public class Slot : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler, IP
                     DragSlot.instance.invenType = (int)item.itemType;
                 }
             }
-            Debug.Log(gameObject.name);
+
             ChangeSlot();
         }
 
@@ -177,10 +177,11 @@ public class Slot : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler, IP
 
     
     // 마우스가 슬롯에 들어갈때 발동
+    //아이템 설명보기
     public void OnPointerEnter(PointerEventData eventData)
     {
         if (item != null)
-            theItemEffectDatabase.ShowToolTip(item, transform.position);
+            theItemEffectDatabase.ShowToolTip(item);
     }
 
     // 마우스가 슬롯에 나올때 발동

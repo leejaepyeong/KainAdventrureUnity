@@ -8,7 +8,9 @@ public class MushKing : Enemy
 
     protected override IEnumerator Skill()
     {
+
         isSkill = true;
+        yield return new WaitForSeconds(0.5f);
         anim.SetTrigger("Skill1");
         yield return new WaitForSeconds(0.3f);
         skillArea.SetActive(true);

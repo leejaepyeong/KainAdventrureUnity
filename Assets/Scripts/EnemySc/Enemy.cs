@@ -267,9 +267,8 @@ public class Enemy : MonoBehaviour
         currentHp -= ( (_damage - enemyData.defense) <= 0 ? 1 : _damage - enemyData.defense);
         hpBar.fillAmount = currentHp / enemyData.hp;
 
-        if (currentHp <= 0)
+        if (currentHp <= 0 && !isDead)
         {
-
             isDead = true;
             quest.MonsterDead(enemyData);
             anim.SetTrigger("Die");

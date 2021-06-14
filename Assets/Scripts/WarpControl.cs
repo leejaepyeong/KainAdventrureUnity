@@ -28,9 +28,15 @@ public class WarpControl : MonoBehaviour
         warpImg[warpNum].SetActive(true);
     }
 
+    public void MoveWood()
+    {
+        warpImg[warpNum].SetActive(false);
+        warpNum = 2;
+        warpImg[warpNum].SetActive(true);
+    }
+
     public void Move()
     {
         player.transform.position = warps[warpNum].transform.position;
-
     }
 }

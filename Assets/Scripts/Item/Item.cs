@@ -21,6 +21,7 @@ public class Item : ScriptableObject
     public string weaponType;   // ?? ??
 
     public int coinValue;
+    public int value;
 
     public enum ItemType
     {

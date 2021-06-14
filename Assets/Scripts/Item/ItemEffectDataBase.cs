@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 [System.Serializable]
 public class ItemEffect
@@ -28,6 +29,10 @@ public class ItemEffectDataBase : MonoBehaviour
     */
     private const string HP = "HP", MP = "MP";
 
+    public GameObject dataPannel;
+    public Text dataTitleTxt;
+    public Text dataDescTxt;
+    public Image dataImg;
 
 
     private void Start()
@@ -35,14 +40,18 @@ public class ItemEffectDataBase : MonoBehaviour
         //theWeaponManager = FindObjectOfType<WeaponManager>();
     }
 
-    public void ShowToolTip(Item _item, Vector3 _pos)
+    public void ShowToolTip(Item _item)
     {
-       // theSlotToolTip.ShowToolTip(_item, _pos);
+        dataPannel.SetActive(true);
+        dataTitleTxt.text = _item.itemName;
+        dataDescTxt.text = _item.itemDesc;
+        dataImg.sprite = _item.itemImage;
+        
     }
 
     public void HideToolTip()
     {
-       // theSlotToolTip.HideToolTip();
+        dataPannel.SetActive(false);
     }
 
     public void UseItem(Item _item)
