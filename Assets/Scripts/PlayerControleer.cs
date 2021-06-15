@@ -321,23 +321,28 @@ public class PlayerControleer : MonoBehaviour
         }
     }
 
+
+
     public void SkillBtn1()
     {
-        isSkill = true;
-        Skill(0);
+
+        if(!isSkill)
+            Skill(0);
     }
 
     public void SkillBtn2()
     {
-        isSkill = true;
-        Skill(1);
+        if (!isSkill)
+            Skill(1);
     }
 
     public void SkillBtn3()
     {
-        isSkill = true;
-        Skill(2);
+        Debug.Log("ABC");
+        if (!isSkill)
+            Skill(2);
     }
+
 
     void Skill(int skillnum)
     {

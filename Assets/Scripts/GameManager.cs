@@ -44,13 +44,13 @@ public class GameManager : MonoBehaviour
 
     void RotateSky()
     {
-        degree += 10 * Time.deltaTime;
+        degree += 30 * Time.deltaTime;
 
         if (degree >= 360)
         {
             degree = 0;
             skynum++;
-            if (skynum >= 3)
+            if (skynum >= 4)
                 skynum = 0;
 
             RenderSettings.skybox = skyMaterials[skynum];

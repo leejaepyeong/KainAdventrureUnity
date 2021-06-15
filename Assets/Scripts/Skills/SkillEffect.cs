@@ -72,9 +72,19 @@ public class SkillEffect : MonoBehaviour
         float time = skill[_num].delayTime;
         while (time>0)
         {
-            time -= Time.deltaTime;
+
+            yield return new WaitForSeconds(0.1f);
+
+            time -= 0.1f;
+
+            if (time < 0)
+                time = 0;
+
+            skillCool[_num].fillAmount = time / skill[_num].delayTime; 
 
         }
+
+
         yield return null;
     }
 
@@ -100,7 +110,7 @@ public class SkillEffect : MonoBehaviour
             case "AttackUp":
                 playerdata.meleeDamage *= skill[_num].dataValue;
                 playerdata.rangeDamage *= skill[_num].dataValue;
-                yield return new WaitForSeconds(skill[_num].delayTime);
+                yield return new WaitForSeconds(skill[_num].delayTime - 1);
                 playerdata.meleeDamage /= skill[_num].dataValue;
                 playerdata.rangeDamage /= skill[_num].dataValue;
                 break;
@@ -125,8 +135,8 @@ public class SkillEffect : MonoBehaviour
         if (playerdata.currentHp >= playerdata.maxHp)
             playerdata.currentHp = playerdata.maxHp;
 
-        Destroy(SkillObject, 0.5f);
-        yield return new WaitForSeconds(skill[_num].delayTime);
+        Destroy(SkillObject, 1.5f);
+        yield return new WaitForSeconds(skill[_num].delayTime - 1.5f);
         isSkill[_num] = 0;
     }
 
