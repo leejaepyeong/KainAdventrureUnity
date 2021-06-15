@@ -4,30 +4,13 @@ using UnityEngine;
 using UnityEngine.UI;
 
 [System.Serializable]
-public class ItemEffect
-{
-    public string itemName; // ?????? ????
-    [Tooltip("HP, MP?? ??????????")]
-    public string[] part; //???? ????
-    public int[] num; // ???? ????
 
-};
 
 public class ItemEffectDataBase : MonoBehaviour
 {
-    [SerializeField]
-    private ItemEffect[] itemEffects;   // ?????? ??????
+    public Equipment equipment;
 
-    //????????
-    [SerializeField]
-    private PlayerStatus thePlayerStatus;
-    /*
-    [SerializeField]
-    private WeaponManager theWeaponManager;
-    [SerializeField]
-    private SlotToolTip theSlotToolTip;
-    */
-    private const string HP = "HP", MP = "MP";
+    public PlayerStatusData playerStatusData;
 
     public GameObject dataPannel;
     public Text dataTitleTxt;
@@ -35,10 +18,6 @@ public class ItemEffectDataBase : MonoBehaviour
     public Image dataImg;
 
 
-    private void Start()
-    {
-        //theWeaponManager = FindObjectOfType<WeaponManager>();
-    }
 
     public void ShowToolTip(Item _item)
     {
@@ -54,42 +33,36 @@ public class ItemEffectDataBase : MonoBehaviour
         dataPannel.SetActive(false);
     }
 
-    public void UseItem(Item _item)
+    public void UseItem(Item _item, int _id)
     {
-        /*
         if (_item.itemType == Item.ItemType.Equipment)
         {
-            StartCoroutine(theWeaponManager.ChangeWeaponCoroutine(_item.weaponType, _item.itemName));
-
-        }
-        */
-
-       if (_item.itemType == Item.ItemType.Used)
-        {
-            for (int x = 0; x < itemEffects.Length; x++)
+            switch(_item.equipType)
             {
-                if (itemEffects[x].itemName == _item.itemName)
-                {
-                    for (int y = 0; y < itemEffects[x].part.Length; y++)
-                    {
-                        switch (itemEffects[x].part[y])
-                        {
-                            case HP:
-                                //thePlayerStatus.IncreaseHp(itemEffects[x].num[y]);
-                                break;
-                            case MP:
-                                //thePlayerStatus.IncreaseMp(itemEffects[x].num[y]);
-                                break;
-                            default:
-                                Debug.Log("?????? Status????. HP, MP?? ??????????");
-                                break;
-                        }
-                        Debug.Log(_item.itemName + " ?? ????");
-                    }
-                    return;
-                }
+                case Item.EquipType.Sword:
+                    equipment.equipItem[(int)Item.EquipType.Sword] = _item;
+                    break;
+                case Item.EquipType.Arrow:
+
+                    equipment.equipItem[(int)Item.EquipType.Arrow] = _item;
+                    break;
+                case Item.EquipType.Armor:
+                    equipment.equipItem[(int)Item.EquipType.Armor] = _item;
+                    break;
             }
-            Debug.Log("???????? ?????? ????");
+        }
+
+       if (_item.itemType == Item.ItemType.Ingredient && _item.isUsed)
+        {
+            switch (_item.useType)
+            {
+                case Item.UseType.Hp:
+                    playerStatusData.currentHp += playerStatusData.maxHp / _item.value;
+                    break;
+                case Item.UseType.Mp:
+                    playerStatusData.currentMp += playerStatusData.maxMp / _item.value;
+                    break;
+            }
         }
 
     }

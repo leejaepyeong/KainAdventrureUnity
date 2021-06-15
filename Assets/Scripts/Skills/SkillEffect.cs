@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class SkillEffect : MonoBehaviour
 {
@@ -17,6 +18,7 @@ public class SkillEffect : MonoBehaviour
 
     private int currentSkillNum;
 
+    public Image[] skillCool; 
 
     //????????
     public PlayerControleer player;
@@ -25,6 +27,7 @@ public class SkillEffect : MonoBehaviour
     private void Update()
     {
         SkillPos();
+        
     }
 
     void SkillPos()
@@ -46,8 +49,8 @@ public class SkillEffect : MonoBehaviour
 
             isSkill[_num] = 1;
             playerdata.currentMp -= skill[_num].mana;
-            
-                
+
+            StartCoroutine(SkiilCool(_num));    
 
             switch (skill[_num].type)
             {
@@ -62,6 +65,17 @@ public class SkillEffect : MonoBehaviour
                     break;
             }
         }
+    }
+
+    IEnumerator SkiilCool(int _num)
+    {
+        float time = skill[_num].delayTime;
+        while (time>0)
+        {
+            time -= Time.deltaTime;
+
+        }
+        yield return null;
     }
 
     IEnumerator AttackSkill(int _num)

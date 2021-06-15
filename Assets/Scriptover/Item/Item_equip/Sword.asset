@@ -19,3 +19,7 @@ MonoBehaviour:
   itemPrefab: {fileID: 0}
   weaponType: 
   coinValue: 0
+  value: 0
+  equipType: 1
+  isUsed: 0
+  isEquip: 0

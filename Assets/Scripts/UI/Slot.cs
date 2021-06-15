@@ -64,6 +64,22 @@ public class Slot : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler, IP
         itemCount += _num;
         text_Count.text = itemCount.ToString();
 
+        int itemId = SomeDB[(int)item.itemType].GetIDFrom(item);
+
+
+        for (int i = 0; i < invenData[(int)item.itemType].itemCount.Length; i++)
+        {
+            if(invenData[(int)item.itemType].itemIDs[i] == itemId)
+            {
+                invenData[(int)item.itemType].itemCount[i]--;
+                
+                if(invenData[(int)item.itemType].itemCount[i] <= 0)
+                {
+                    invenData[(int)item.itemType].itemIDs[i] = 0;
+                }
+            }
+        }
+
         if (itemCount <= 0)
             ClearSlot();
     }
@@ -88,8 +104,10 @@ public class Slot : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler, IP
         {
             if (item != null)
             {
-                theItemEffectDatabase.UseItem(item);
-                if (item.itemType == Item.ItemType.Used)
+                int itemId = SomeDB[(int)item.itemType].GetIDFrom(item);
+
+                theItemEffectDatabase.UseItem(item, itemId);
+                if (item.isUsed)
                 {
                     SetSlotCount(-1);
                 }

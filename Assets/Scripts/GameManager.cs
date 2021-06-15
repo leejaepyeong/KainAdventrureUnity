@@ -23,6 +23,10 @@ public class GameManager : MonoBehaviour
     public GameObject statusCount;
     public Text statusCountTxt;
 
+    public Material[] skyMaterials;
+
+    int skynum = 0;
+    float degree = 0;   //회전각
 
     // Start is called before the first frame update
     void Awake()
@@ -35,6 +39,25 @@ public class GameManager : MonoBehaviour
     void Update()
     {
         ControlStatus();
+        RotateSky();
+    }
+
+    void RotateSky()
+    {
+        degree += 10 * Time.deltaTime;
+
+        if (degree >= 360)
+        {
+            degree = 0;
+            skynum++;
+            if (skynum >= 3)
+                skynum = 0;
+
+            RenderSettings.skybox = skyMaterials[skynum];
+        }
+            
+
+        RenderSettings.skybox.SetFloat("_Rotation",degree);
     }
 
     public void ChangeCamera()

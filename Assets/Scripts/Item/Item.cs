@@ -27,8 +27,29 @@ public class Item : ScriptableObject
     {
         Equipment,
         Ingredient,
-        Used,
+        Struct,
         Coin
     }
 
+    public enum EquipType
+    {
+        None,
+        Sword,
+        Arrow,
+        Armor
+    }
+
+    public EquipType equipType;
+
+    public enum UseType
+    {
+        None,
+        Hp,
+        Mp
+    }
+
+    public UseType useType;
+
+    public bool isUsed = false;
+    public bool isEquip = false;
 }

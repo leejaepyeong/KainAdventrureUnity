@@ -22,3 +22,6 @@ MonoBehaviour:
   weaponType: 
   coinValue: 10000
   value: 30
+  equipType: 2
+  isUsed: 0
+  isEquip: 0
