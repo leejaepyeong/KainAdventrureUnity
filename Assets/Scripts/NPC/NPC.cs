@@ -4,24 +4,30 @@ using UnityEngine;
 
 public class NPC : MonoBehaviour
 {
-    public GameObject pannel;
-
     public Animator anim;
+
+    public enum NPCType {Shop, Nurse, Smith, HideMap }
+    public NPCType npcType;
+
+   
 
 
     private void Start()
     {
         anim = GetComponentInParent<Animator>();
+
     }
 
     public void OpenPannel()
     {
-        pannel.SetActive(true);
+        WhoMeet.instanse.npcPannels[WhoMeet.instanse.number].SetActive(true);
     }
 
     public void closePannel()
     {
-        pannel.SetActive(false);
+        WhoMeet.instanse.npcPannels[WhoMeet.instanse.number].SetActive(false);
     }
+
+    
 
 }

@@ -75,6 +75,8 @@ public class PlayerControleer : MonoBehaviour
     private Inventory theInventory; // 인벤토리
     [SerializeField]
     private Text actionTxt; // 아이템 텍스트
+    [SerializeField]
+    private Text NPCTxt;    // npc 상호작용 텍스트
 
     // Start is called before the first frame update
     void Start()
@@ -490,10 +492,14 @@ public class PlayerControleer : MonoBehaviour
         }
         else if(other.tag == "NPC")
         {
-            actionTxt.gameObject.SetActive(true);
+            NPCTxt.gameObject.SetActive(true);
             NPC npc = other.GetComponent<NPC>();
+
+            WhoMeet.instanse.number = (int)npc.npcType;
+            WhoMeet.instanse.npc = npc;
+
             npc.anim.SetTrigger("PlayerInOut");
-            actionTxt.text = "- Press 'P' key to Talk -";
+            NPCTxt.text = "- Press 'P' or 'Click' to Talk -";
         }
         else if(other.tag == "ResetZone")
         {
@@ -510,26 +516,27 @@ public class PlayerControleer : MonoBehaviour
         if (other.tag == "NPC")
         {
             NPC npc = other.GetComponent<NPC>();
-            SetText(npc);
+
+            if (Input.GetKeyDown(KeyCode.P))
+                SetText(npc);
         }
     }
 
-    void SetText(NPC _npc)
+    public void SetText(NPC _npc)
     {
-        
-        if (Input.GetKeyDown(KeyCode.P))
-        {
-            actionTxt.gameObject.SetActive(false);
-            _npc.OpenPannel();
-        }
+        NPCTxt.gameObject.SetActive(false);
+        _npc.OpenPannel();
     }
+
+
+
 
     private void OnTriggerExit(Collider other)
     {
         if(other.tag == "NPC")
         {
 
-            actionTxt.gameObject.SetActive(false);
+            NPCTxt.gameObject.SetActive(false);
             NPC npc = other.GetComponent<NPC>();
             npc.closePannel();
             npc.anim.SetTrigger("PlayerInOut");
