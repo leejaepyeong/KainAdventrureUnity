@@ -17,6 +17,7 @@ TagManager:
   - Quest
   - EnemySkill
   - ResetZone
+  - EnemyBullet
   layers:
   - Default
   - TransparentFX

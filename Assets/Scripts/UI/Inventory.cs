@@ -7,13 +7,14 @@ using UnityEngine.UI;
 
 public class Inventory : MonoBehaviour
 {
-    public static bool inventoryActivated = false;  // 장비창 활성화 유무
+    public static bool inventoryActivated = false;  // Equip State
 
+    public PlayerStatusData playerData; //  player Data
+    public ItemDB[] SomeDB; // Item  DataBase
+    public InventoryData[] inventoryData;   //  inventroy Data
+    public MoneyData moneyData; //  My Coin Data
+    public Equipment equip; //  Equip Data
 
-    public ItemDB[] SomeDB;
-    public InventoryData[] inventoryData;
-    public MoneyData moneyData;
-   
     [SerializeField]
     private GameObject go_InventoryBase;
     [SerializeField]
@@ -21,20 +22,25 @@ public class Inventory : MonoBehaviour
 
 
     public Text coin;
-    public GameObject[] invenMenu;  // 0 : 장비 1 : 아이템 2: 구조
+    public GameObject[] invenMenu;  // 0 : equip 1 : item 2: struct
     public SlotPresenter[] slotPresenters;
-    public Text[] tabTxt;   // 탭 텍스트
+    public Text[] tabTxt;   // ?? ??????
 
+    public Image[] equipItems;  //  ?? ?? ??? ??? 
 
-    private int menuNum = 0;    // 0 : 장비 1 : 아이템 2: 구조
+    private int menuNum = 0;    // 0 : equip 1 : item 2: struct
 
 
     private void Start()
     {
         tabTxt[0].color = Color.red;
         CheckInvenList();
+        EquipInven();
     }
 
+
+
+    // invenList
     public void CheckInvenList()
     {
         coin.text = moneyData.Coin.ToString() + " Gold";
@@ -47,12 +53,17 @@ public class Inventory : MonoBehaviour
                 if(inventoryData[i].itemIDs[j] != 0)
                     slotPresenters[i].slots[j].AddItem(SomeDB[i].items[inventoryData[i].itemIDs[j]], inventoryData[i].itemCount[j]);
 
-                /*
-                if(inventoryData[i].item[j] != null)
-                    slotPresenters[i].slots[j].AddItem(inventoryData[i].item[j], inventoryData[i].itemCount[j]);
-                */
             }
         }
+    }
+
+    public void EquipInven()
+    {
+        for (int i = 1; i < equip.equipItem.Length; i++)
+        {
+            equipItems[i-1].sprite = equip.equipItem[i].itemImage;
+        }
+        
     }
 
     public void EquipOn()
@@ -79,7 +90,7 @@ public class Inventory : MonoBehaviour
         tabTxt[menuNum].color = Color.blue;
     }
 
-    // 아이템 목록 바꾸기 장비 아이템 가구
+    // Menu Change
     void ChangeMenu()
     {
         foreach(GameObject menu in invenMenu)
@@ -90,7 +101,7 @@ public class Inventory : MonoBehaviour
         invenMenu[menuNum].SetActive(true);
     }
 
-    //아이템 수집
+    // Get Item > Add or Create
     public void AcquireItem(Item _item, int _count = 1)
     {
         int num = (int)_item.itemType;

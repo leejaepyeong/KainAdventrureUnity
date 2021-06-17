@@ -20,8 +20,10 @@ MonoBehaviour:
   defense: 5
   delay: 0
   moveSpeed: 3
+  skillDamage: 0
   hpRegen: 10
   mpRegen: 0
   regenTime: 0
   Exp: 20
+  targetRange: 0
   enemyData: "\uADFC\uBCF8\uC740 \uADFC\uBCF8!"

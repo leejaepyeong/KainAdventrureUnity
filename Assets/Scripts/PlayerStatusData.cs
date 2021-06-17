@@ -13,7 +13,7 @@ public class PlayerStatusData : ScriptableObject
 
     public float meleeDamage;
     public float rangeDamage;
-    public float resourceDamage;  //자원 채취 대미지
+    public float resourceDamage;  //???? ???? ??????
 
     public float defence;
 
@@ -26,4 +26,8 @@ public class PlayerStatusData : ScriptableObject
     public float maxExp;
     public float currentExp;
     public int level = 1;
+
+    public int stateCount;  // ?? ?? ? ?? ???
+
+
 }

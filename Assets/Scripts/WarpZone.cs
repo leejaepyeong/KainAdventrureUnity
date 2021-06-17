@@ -5,11 +5,10 @@ using UnityEngine;
 public class WarpZone : MonoBehaviour
 {
     public GameObject warpPannel;
-    public InfoManager infoManager;
 
     private void OnTriggerEnter(Collider other)
     {
-        if(other.tag=="Player" && !infoManager.isInfoOn)
+        if(other.tag=="Player" && !InfoManager.isInfoOn)
             warpPannel.SetActive(true);
     }
 

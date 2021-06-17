@@ -126,11 +126,11 @@ public class Materials : MonoBehaviour
 
             if(materialData.materialType == MaterialData.MaterialType.Tree && playerAttack.type == Weapon.Type.Axe)
             {
-                Hit(playerAttack.damage);
+                Hit(playerData.resourceDamage);
             }
             else if(materialData.materialType == MaterialData.MaterialType.Mine && playerAttack.type == Weapon.Type.PickAxe)
             {
-                Hit(playerAttack.damage);
+                Hit(playerData.resourceDamage);
             }
             
 

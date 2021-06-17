@@ -12,15 +12,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 545d958acc5ae4f40a02296d8b0b66a0, type: 3}
   m_Name: quest2
   m_EditorClassIdentifier: 
-  isStart: 1
-  isClear: 1
-  isReward: 1
+  isStart: 0
+  isClear: 0
+  isReward: 0
   type: 1
   itemType: 1
   QuestName: Collect Wood1
   monsterId: 0
   ResourseId: 1
-  Value: 0
+  Value: 10
   MaxValue: 10
   QuestDesc: 'Test Your Skill
 

@@ -4,14 +4,14 @@ using UnityEngine;
 
 public class InfoManager : MonoBehaviour
 {
-    public bool isInfoOn = false;   // ??? ?????  ??? ??
+    public static bool isInfoOn = false;   // 정보창 열림
 
     bool isMenuOn = false;
     bool isStatusOn = false;
     bool isMapOn = false;
     bool isQuestOn = false;
 
-    //???? ????????
+    //각 메뉴들 패널
     public GameObject MenuPannel;
     public GameObject MenuBtn;
     public GameObject StatusPannel;
@@ -24,6 +24,7 @@ public class InfoManager : MonoBehaviour
         TryOpenMenu();
     }
 
+    // 메뉴창 오픈
     public void MenuOpen()
     {
 
@@ -33,6 +34,7 @@ public class InfoManager : MonoBehaviour
 
     }
 
+    // 메뉴창 닫기
     public void MenuClose()
     {
 
@@ -42,6 +44,7 @@ public class InfoManager : MonoBehaviour
         MenuBtn.SetActive(true);
     }
 
+    // 스텟창 오픈
     public void StatusOpen()
     {
         if(!isInfoOn)
@@ -58,6 +61,7 @@ public class InfoManager : MonoBehaviour
 
     }
 
+    // 스텟창 닫기
     public void StatusClose()
     {
         if(isInfoOn && isStatusOn)
@@ -74,6 +78,7 @@ public class InfoManager : MonoBehaviour
         
     }
 
+    // 미니맵 오픈
     public void MapOpen()
     {
         if(!isInfoOn)
@@ -90,6 +95,7 @@ public class InfoManager : MonoBehaviour
 
     }
 
+    // 미니맵 닫기
     public void MapClose()
     {
         if(isInfoOn && isMapOn)
@@ -105,6 +111,7 @@ public class InfoManager : MonoBehaviour
         
     }
 
+    // 퀘스트 창 오픈
     public void QuestOpen()
     {
         if (!isInfoOn)
@@ -121,6 +128,8 @@ public class InfoManager : MonoBehaviour
 
     }
 
+
+    // 퀘스트 창 닫기
     public void QuestClose()
     {
         if (isInfoOn && isQuestOn)
@@ -136,7 +145,7 @@ public class InfoManager : MonoBehaviour
 
     }
 
-
+    // 단축키로 메뉴 창 열기
     void TryOpenMenu()
     {
         if (Input.GetKeyDown(KeyCode.I))

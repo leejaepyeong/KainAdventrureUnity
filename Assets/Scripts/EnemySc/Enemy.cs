@@ -172,11 +172,8 @@ public class Enemy : MonoBehaviour
     {
         if (!isDead)
         {
-            float targetRadius = 0f;
-            
-
-
-            targetRadius = 0.5f;       
+            float targetRadius = 0.5f;
+                 
 
             RaycastHit[] rayHits = Physics.SphereCastAll(transform.position, targetRadius,
                                   transform.forward, enemyData.targetRange, LayerMask.GetMask("Player"));
@@ -184,7 +181,8 @@ public class Enemy : MonoBehaviour
 
             if (rayHits.Length > 0 && !isAttack && !Target.GetComponent<PlayerControleer>().isDead && !isSkill)
             {
-
+                isWalking = false;
+                isAttack = true;
                 StartCoroutine(Attack());
             }
         }
@@ -193,25 +191,7 @@ public class Enemy : MonoBehaviour
 
     protected virtual IEnumerator Attack()
     {
-        isWalking = false;
-        isAttack = true;
-
-        
-
-        anim.SetTrigger("Attack");
-
-                yield return new WaitForSeconds(0.2f);
-                meleeArea.enabled = true;
-
-                yield return new WaitForSeconds(0.3f);
-                meleeArea.enabled = false;
-
-                yield return new WaitForSeconds(enemyData.delay - 0.5f);
-     
-        //?????????? ?????? ??????
-
-        isAttack = false;
-
+        yield return null;
     }
 
 
@@ -277,7 +257,7 @@ public class Enemy : MonoBehaviour
             
         }
 
-        yield return new WaitForSeconds(0.7f);
+        yield return new WaitForSeconds(0.4f);
 
         isHit = false;
     }
@@ -287,23 +267,19 @@ public class Enemy : MonoBehaviour
         // ????
         if (other.tag == "PlayerAttack")
         {
-
             Weapon playerAttack = other.transform.parent.gameObject.GetComponent<Weapon>();
-            
-            if(!isHit)
+
+            if (!isHit && playerAttack.type == Weapon.Type.Melee && !isDead)
             {
-                Hit(playerAttack.damage + playerData.meleeDamage);
+                Hit(playerData.meleeDamage);
             }
 
         }
         else if(other.tag == "PlayerRange") //??? ??
         {
-
-            Bullets bullet = other.gameObject.GetComponent<Bullets>();
-
-            if (!isHit)
+            if (!isHit && !isDead)
             {
-                Hit(bullet.damage + playerData.rangeDamage);
+                Hit(playerData.rangeDamage);
                 Destroy(other.gameObject, 0.1f);
 
             }

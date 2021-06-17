@@ -45,7 +45,6 @@ public class PlayerControleer : MonoBehaviour
 
     //무기
     public GameObject[] weapons;
-    //public bool[] hasWeapons;
     private int weaponIndex = 0;
 
     public PlayerStatusData playerData;
@@ -57,7 +56,9 @@ public class PlayerControleer : MonoBehaviour
     [SerializeField]
     private float cameraRotationLimit;  // 카메라 각도 
     private float currentCameraRotationX = 0;   // 현재 보는 각도
-    Vector3 offset = new Vector3(-0.197f,2.215f,-3.116f);
+    Vector3 offset = new Vector3(-0.197f,2.365f,-3.716f);
+
+    public GameObject cameraOrign;
 
     //미니맵
     public Transform MiniCamPos;    // 미니맵 카메라 위치
@@ -67,7 +68,7 @@ public class PlayerControleer : MonoBehaviour
     private Rigidbody playerRigid;
     private CapsuleCollider capsulCollider;
     public Animator anim;
-    public Camera[] theCamera;
+    public Camera theCamera;
     public Weapon equipWeapon;  //장비 종류
     public SkillEffect skillBook; // 스킬 종류
     public CrossHair crossHair; // 현재 초점
@@ -98,6 +99,8 @@ public class PlayerControleer : MonoBehaviour
         Radius *= Can;  // 반지름을 부모 크기에 맞
 
         MoveFlag = false;
+
+        
     }
 
     // Update is called once per frame
@@ -118,7 +121,7 @@ public class PlayerControleer : MonoBehaviour
 
             tryEquipChange();
 
-            if (GameManager.instance.is1stCam)
+            if (GameManager.instance.is1stCam && !InfoManager.isInfoOn)
             {
                 CameraRotation();
                 CharacterRotation();
@@ -179,7 +182,16 @@ public class PlayerControleer : MonoBehaviour
             }
         }
 
-        theCamera[1].transform.position = transform.position + offset;
+        if(!GameManager.instance.is1stCam)
+        {
+            theCamera.transform.position = transform.position + offset;
+            theCamera.transform.rotation = Quaternion.Euler(30f,3.6f,0f);
+        }
+        else
+        {
+            theCamera.transform.position = cameraOrign.transform.position;
+        }
+            
 
         if (!isRun)
         {
@@ -450,7 +462,7 @@ public class PlayerControleer : MonoBehaviour
         currentCameraRotationX = Mathf.Clamp(currentCameraRotationX, -cameraRotationLimit, cameraRotationLimit);
         // 최소  최대  카메라 회전값 설정
 
-        theCamera[0].transform.localEulerAngles = new Vector3(currentCameraRotationX, 0f, 0f);
+        theCamera.transform.localEulerAngles = new Vector3(currentCameraRotationX, 0f, 0f);
 
     }
 
@@ -489,6 +501,11 @@ public class PlayerControleer : MonoBehaviour
         {
             Enemy enemy = other.GetComponentInParent<Enemy>();
             onDamage(enemy.enemyData.skillDamage);
+        }
+        else if(other.tag =="EnemyBullet")
+        {
+            Bullets bullet = other.GetComponent<Bullets>();
+            onDamage(bullet.enemyData.damage);
         }
         else if(other.tag == "NPC")
         {

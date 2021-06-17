@@ -5,25 +5,26 @@ using UnityEngine.UI;
 
 public class ShopSlot : MonoBehaviour
 {
-    public ShopDB shopDB;   // 상점 데이터 배이스
-    public MoneyData MyCoin;    // 소지금 확인
+    public ShopDB shopDB;   // Shop Data Base
+    public MoneyData MyCoin;    // Player Money Data
 
-    public GameObject[] itemCheck;  // 슬롯 전부 에서 자기거 찾기용
-    public int myNum;   // 슬롯 번호
+    public GameObject[] itemCheck;  // Items
+    public int myNum;   // item number
 
     public Item item;
     public Image itemImage;
 
-    public Inventory myInven;   // 자신 인벤토리
+    public Inventory myInven;   // equip inventory
 
     [SerializeField]
-    private Text ItemName;  // 아이템 이름 및  판매 상태
+    private Text ItemName;  // item Name
     [SerializeField]
-    private Text showTxt;   //  코인 유무
+    private Text showTxt;   //  Text
     [SerializeField]
-    private Text coinTxt;   //플레이어 코인 양
+    private Text coinTxt;   // Your Coin Txt
 
-    
+
+    // Set item number;
     private void Start()
     {
         for (int i = 0; i < itemCheck.Length; i++)
@@ -42,6 +43,7 @@ public class ShopSlot : MonoBehaviour
         }
     }
 
+    // show hot many items;
     void showItemCount()
     {
         coinTxt.text = MyCoin.Coin.ToString();
@@ -52,7 +54,7 @@ public class ShopSlot : MonoBehaviour
             ItemName.text = shopDB.items[myNum].itemName + "\n" + shopDB.items[myNum].coinValue.ToString() + " Coin\n" + shopDB.isSold[myNum].ToString();
     }
 
-
+    // item purchase
     public void Purchase()
     {
         if(MyCoin.Coin >= shopDB.items[myNum].coinValue)
@@ -67,12 +69,13 @@ public class ShopSlot : MonoBehaviour
         else
         {
             showTxt.gameObject.SetActive(true);
-            showTxt.text = "- 골드가 부족합니다 -";
+            showTxt.text = "- You need Money! -";
             Invoke("DisappearItem", 1f);
         }
 
     }
 
+    // item txt  disappear
     void DisappearItem()
     {
         showTxt.gameObject.SetActive(false);

@@ -9,6 +9,8 @@ using UnityEngine.UI;
 public class ItemEffectDataBase : MonoBehaviour
 {
     public Equipment equipment;
+    public Inventory inventroy;
+
 
     public PlayerStatusData playerStatusData;
 
@@ -40,16 +42,23 @@ public class ItemEffectDataBase : MonoBehaviour
             switch(_item.equipType)
             {
                 case Item.EquipType.Sword:
+                    playerStatusData.meleeDamage -= equipment.equipItem[1].value;
                     equipment.equipItem[(int)Item.EquipType.Sword] = _item;
+                    playerStatusData.meleeDamage += _item.value;
                     break;
                 case Item.EquipType.Arrow:
-
+                    playerStatusData.rangeDamage -= equipment.equipItem[2].value;
                     equipment.equipItem[(int)Item.EquipType.Arrow] = _item;
+                    playerStatusData.rangeDamage += _item.value;
                     break;
                 case Item.EquipType.Armor:
+                    playerStatusData.defence -= equipment.equipItem[3].value;
                     equipment.equipItem[(int)Item.EquipType.Armor] = _item;
+                    playerStatusData.defence += _item.value;
                     break;
             }
+
+            inventroy.EquipInven();
         }
 
        if (_item.itemType == Item.ItemType.Ingredient && _item.isUsed)

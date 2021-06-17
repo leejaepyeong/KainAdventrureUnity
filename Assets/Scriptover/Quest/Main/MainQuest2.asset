@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 545d958acc5ae4f40a02296d8b0b66a0, type: 3}
   m_Name: MainQuest2
   m_EditorClassIdentifier: 
-  isStart: 1
+  isStart: 0
   isClear: 0
   isReward: 0
   type: 0
@@ -20,7 +20,7 @@ MonoBehaviour:
   QuestName: Kill MushKing2
   monsterId: 7
   ResourseId: 0
-  Value: 2
+  Value: 0
   MaxValue: 3
   QuestDesc: 'Kill the Boss
 

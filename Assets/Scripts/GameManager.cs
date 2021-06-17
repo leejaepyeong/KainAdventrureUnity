@@ -7,25 +7,27 @@ public class GameManager : MonoBehaviour
 {
     public static GameManager instance;
 
+    public PlayerStatusData playerData;
+
     //상태
     public bool is1stCam = true;
     public bool isInfoOn = false;
+    
 
     public Text cameraTxt;  //  카메라 시점 텍스트
 
-    public int stat = 0;   // 스탯 추가 갯수
 
     public Image[] weaponImage; // 현재 무기 상태
 
     //필요 컴포넌트
     public PlayerControleer player;
-    public GameObject controlPad;
-    public GameObject statusCount;
-    public Text statusCountTxt;
+    public GameObject controlPad;   // 3인칭용 컨트롤 패드
+    public GameObject statusCount;  // 스텟 패널
+    public Text statusCountTxt; // 스텟 추가 갯수
 
-    public Material[] skyMaterials;
+    public Material[] skyMaterials; // 하늘 매터리얼
 
-    int skynum = 0;
+    int skynum = 0; // 하늘배경
     float degree = 0;   //회전각
 
     // Start is called before the first frame update
@@ -42,9 +44,10 @@ public class GameManager : MonoBehaviour
         RotateSky();
     }
 
+    // 하늘 회전 및 변경
     void RotateSky()
     {
-        degree += 30 * Time.deltaTime;
+        degree += 10 * Time.deltaTime;
 
         if (degree >= 360)
         {
@@ -60,6 +63,7 @@ public class GameManager : MonoBehaviour
         RenderSettings.skybox.SetFloat("_Rotation",degree);
     }
 
+    // 카메라 시점 변경
     public void ChangeCamera()
     {
         is1stCam = !is1stCam;
@@ -67,8 +71,6 @@ public class GameManager : MonoBehaviour
         if (!is1stCam)
         {
             cameraTxt.text = "3";
-            player.theCamera[1].gameObject.SetActive(true);
-            player.theCamera[0].gameObject.SetActive(false);
             controlPad.SetActive(true);
 
 
@@ -76,16 +78,15 @@ public class GameManager : MonoBehaviour
         else
         {
             cameraTxt.text = "1";
-            player.theCamera[1].gameObject.SetActive(false);
-            player.theCamera[0].gameObject.SetActive(true);
             controlPad.SetActive(false);
         }
             
     }
 
+    // 스텟 찍기 열기
     public void ControlStatus()
     {
-        if(stat > 0)
+        if(playerData.stateCount > 0)
         {
             statusCount.SetActive(true);
         }
@@ -93,7 +94,7 @@ public class GameManager : MonoBehaviour
         {
             statusCount.SetActive(false);
         }
-        statusCountTxt.text = stat.ToString();
+        statusCountTxt.text = playerData.stateCount.ToString();
     }
 
     

@@ -56,8 +56,7 @@ public class PlayerStatus : MonoBehaviour
         if(playerData.currentExp >= playerData.maxExp)
         {
             playerData.level++;
-            GameManager.instance.stat += 3;
-
+            playerData.stateCount += 3;
 
             playerData.currentExp = playerData.currentExp - playerData.maxExp;
             playerData.maxExp *= 2;
@@ -66,9 +65,9 @@ public class PlayerStatus : MonoBehaviour
 
     public void StateDamageUp()
     {
-        if(GameManager.instance.stat > 0)
+        if(playerData.stateCount > 0)
         {
-            GameManager.instance.stat--;
+            playerData.stateCount--;
 
             playerData.meleeDamage += 2;
             playerData.rangeDamage += 1;
@@ -79,18 +78,18 @@ public class PlayerStatus : MonoBehaviour
 
     public void StateDefenceUp()
     {
-        if (GameManager.instance.stat > 0)
+        if (playerData.stateCount > 0)
         {
-            GameManager.instance.stat--;
+            playerData.stateCount--;
             playerData.defence += 1;
         }
     }
 
     public void StateHpMpUp()
     {
-        if (GameManager.instance.stat > 0)
+        if (playerData.stateCount > 0)
         {
-            GameManager.instance.stat--;
+            playerData.stateCount--;
 
             playerData.maxHp += 10;
             playerData.currentHp += 10;
