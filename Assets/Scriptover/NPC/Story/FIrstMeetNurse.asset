@@ -1,0 +1,29 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: daa531ecf5c31274c9bed98e78ef0b9c, type: 3}
+  m_Name: FIrstMeetNurse
+  m_EditorClassIdentifier: 
+  StoryTxt:
+  - "\uAE85! \uC0C1\uCC98\uAC00 \uB108\uBB34 \uC2EC\uD558\uC796\uC544!!\n\uCE58\uB8CC\uD574\uB4DC\uB9B4\uAC8C\uC694"
+  - "\uC6D0\uB798 \uC774\uB7F0 \uBAB8\uC785\uB2C8\uB2E4.\n\uD544\uC694\uC5C6\uC5B4\uC694.\n"
+  - "\uB2F9\uC2E0\uC774 \uC18C\uBB38\uC73C\uB85C \uB4E3\uB358 \uBC14\uB85C \uADF8\n\uC880....
+    \uC544\uB2C8 \uC6A9\uC0AC?"
+  - "(\uC880....?)\n\uB124  \uB9DE\uC544\uC694"
+  - "\uC774\uB807\uAC8C \uBD59\uB2E4\uB2C8 \uC601\uAD11\uC774\uC5D0\uC694\n\uC804
+    \uCE58\uC720\uC0AC \uB2F9\uC2E0\uC758 \uBAB8\uC744 \uD68C\uBCF5\uC2DC\uCF1C\uB4DC\uB824\uC694"
+  - "\uC624 \uACF5\uC9DC\uC785\uB2C8\uAE4C?"
+  - "\uC544\uB1E8... \uB3C8 \uBC1B\uC544\uC694 \uD6D7"
+  - .............
+  npcDB:
+  - {fileID: 11400000, guid: 80b1dd6f06e8ba547ac87b407bd26caf, type: 2}
+  - {fileID: 11400000, guid: c3b27d2cc213c1447b471398aa98faa7, type: 2}
+  stroyTurn: 0000000001000000000000000100000000000000010000000000000001000000

@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
-
+using UnityEngine.SceneManagement;
 public class GameManager : MonoBehaviour
 {
     public static GameManager instance;
@@ -98,4 +98,16 @@ public class GameManager : MonoBehaviour
     }
 
     
+
+    public void TitleClick()
+    {
+        InfoManager.isInfoOn = false;
+        SceneManager.LoadScene("Title");
+    }
+
+    public void QuitClick()
+    {
+        InfoManager.isInfoOn = false;
+        Application.Quit();
+    }
 }

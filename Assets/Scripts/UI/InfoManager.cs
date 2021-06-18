@@ -10,6 +10,7 @@ public class InfoManager : MonoBehaviour
     bool isStatusOn = false;
     bool isMapOn = false;
     bool isQuestOn = false;
+    bool isOptionOn = false;
 
     //각 메뉴들 패널
     public GameObject MenuPannel;
@@ -18,6 +19,7 @@ public class InfoManager : MonoBehaviour
     public GameObject MiniMapPannel;
     public GameObject InvenPannel;
     public GameObject QuestPannel;
+    public GameObject OptionPannel;
 
     private void Update()
     {
@@ -200,6 +202,20 @@ public class InfoManager : MonoBehaviour
                 QuestClose();
             }
         }
+
+        if(Input.GetKeyDown(KeyCode.F10))
+        {
+            if (!isOptionOn)
+            {
+                MenuBtn.SetActive(false);
+                OptionOpen();
+            }
+            else
+            {
+                Debug.Log("Close");
+                OptionClose();
+            }
+        }
     }
 
     public void OpenInventory()
@@ -228,7 +244,38 @@ public class InfoManager : MonoBehaviour
             GameManager.instance.isInfoOn = false;
             MenuBtn.SetActive(true);
         }
+    }
 
-        
+    public void OptionOpen()
+    {
+        if (!isInfoOn)
+        {
+            isInfoOn = true;
+
+            isOptionOn = true;
+            GameManager.instance.isInfoOn = true;
+
+            OptionPannel.SetActive(true);
+            MenuPannel.SetActive(false);
+
+        }
+
+    }
+
+    // 스텟창 닫기
+    public void OptionClose()
+    {
+        if (isInfoOn && isOptionOn)
+        {
+            isInfoOn = false;
+
+            isOptionOn = false;
+            GameManager.instance.isInfoOn = false;
+
+            OptionPannel.SetActive(false);
+            MenuBtn.SetActive(true);
+        }
+
+
     }
 }

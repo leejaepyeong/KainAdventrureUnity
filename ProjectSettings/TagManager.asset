@@ -18,6 +18,7 @@ TagManager:
   - EnemySkill
   - ResetZone
   - EnemyBullet
+  - StoryZone
   layers:
   - Default
   - TransparentFX

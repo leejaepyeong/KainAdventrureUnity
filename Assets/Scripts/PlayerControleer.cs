@@ -106,12 +106,13 @@ public class PlayerControleer : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(!isDead)
+        if(!isDead && !StoryOn.instance.isStory)
         {
             GetInput();
             Move();
             Run();
             Recover();
+
             if (GameManager.instance.is1stCam)
             {
                 tryJump();
@@ -127,10 +128,8 @@ public class PlayerControleer : MonoBehaviour
                 CharacterRotation();
             }
         }
-       
-        
-
     }
+
 
     void GetInput()
     {
@@ -138,6 +137,7 @@ public class PlayerControleer : MonoBehaviour
         isAttack = Input.GetButtonDown("Fire1");
         isRun = Input.GetKey(KeyCode.LeftShift);
         isChange = Input.GetKeyDown(KeyCode.E);
+       
     }
 
     void Move()
@@ -313,7 +313,22 @@ public class PlayerControleer : MonoBehaviour
             crossHair.FireAnimation();
             equipWeapon.Use();
         }
+
+        RaycastHit hitInfo;
+
+        Physics.Raycast(transform.position, transform.forward, out hitInfo, 1.5f);
+        Debug.DrawRay(transform.position, transform.forward * 1.5f, Color.blue, 0.3f);
+
+        if (hitInfo.transform.gameObject.tag == "StoryZone")
+        {
+            NPCStoryData npcData = hitInfo.transform.GetComponent<NPCStoryData>();
+            StoryOn.instance.npcStory = npcData.npcStory[npcData.number];
+            npcData.number = 1;
+            StoryOn.instance.Story();
+        }
     }
+
+
 
     //스킬
     void trySkill()
@@ -352,7 +367,7 @@ public class PlayerControleer : MonoBehaviour
 
     public void SkillBtn3()
     {
-        Debug.Log("ABC");
+
         if (!isSkill)
             Skill(2);
     }
@@ -471,6 +486,9 @@ public class PlayerControleer : MonoBehaviour
         actionTxt.gameObject.SetActive(false);
     }
 
+
+   
+
     // 충돌 여부
     private void OnCollisionEnter(Collision collision)
     {
@@ -537,12 +555,14 @@ public class PlayerControleer : MonoBehaviour
             if (Input.GetKeyDown(KeyCode.P))
                 SetText(npc);
         }
+        
     }
 
     public void SetText(NPC _npc)
     {
         NPCTxt.gameObject.SetActive(false);
         _npc.OpenPannel();
+        InfoManager.isInfoOn = true;
     }
 
 
@@ -552,7 +572,7 @@ public class PlayerControleer : MonoBehaviour
     {
         if(other.tag == "NPC")
         {
-
+            InfoManager.isInfoOn = false;
             NPCTxt.gameObject.SetActive(false);
             NPC npc = other.GetComponent<NPC>();
             npc.closePannel();

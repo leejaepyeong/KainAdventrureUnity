@@ -15,7 +15,6 @@ public class NPC : MonoBehaviour
     private void Start()
     {
         anim = GetComponentInParent<Animator>();
-
     }
 
     public void OpenPannel()
