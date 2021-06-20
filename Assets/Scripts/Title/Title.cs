@@ -10,6 +10,7 @@ public class Title : MonoBehaviour
     public void StartClick()
     {
         SceneManager.LoadScene("Advanture");
+
     }
 
     public void QuitClick()

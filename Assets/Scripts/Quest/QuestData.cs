@@ -33,4 +33,6 @@ public class QuestData : ScriptableObject
 
     public float expReward;
     public int coinReward;
+
+    public bool cynematic;
 }

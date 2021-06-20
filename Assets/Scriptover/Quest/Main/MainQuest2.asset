@@ -17,13 +17,13 @@ MonoBehaviour:
   isReward: 0
   type: 0
   itemType: 0
-  QuestName: Kill MushKing2
-  monsterId: 7
+  QuestName: Kill GolemKing
+  monsterId: 8
   ResourseId: 0
-  Value: 0
-  MaxValue: 3
+  Value: 1
+  MaxValue: 1
   QuestDesc: 'Kill the Boss
 
-    MushKing * 3'
-  expReward: 3000
-  coinReward: 3000
+    GolemKing * 1'
+  expReward: 5000
+  coinReward: 5000

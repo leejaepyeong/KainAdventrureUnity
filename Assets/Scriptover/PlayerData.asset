@@ -15,16 +15,16 @@ MonoBehaviour:
   maxHp: 100
   currentHp: 100
   maxMp: 1000
-  currentMp: 990
+  currentMp: 1000
   meleeDamage: 54
-  rangeDamage: 52
+  rangeDamage: 1010
   resourceDamage: 8
   defence: 0
   hpRegen: 5
   mpRegen: 2
   hpRegenTime: 10
   mpRegenTime: 10
-  maxExp: 20
-  currentExp: 2
-  level: 2
-  stateCount: 1
+  maxExp: 320
+  currentExp: 202
+  level: 6
+  stateCount: 13

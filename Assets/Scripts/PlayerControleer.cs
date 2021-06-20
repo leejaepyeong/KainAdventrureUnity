@@ -316,10 +316,9 @@ public class PlayerControleer : MonoBehaviour
 
         RaycastHit hitInfo;
 
-        Physics.Raycast(transform.position, transform.forward, out hitInfo, 1.5f);
-        Debug.DrawRay(transform.position, transform.forward * 1.5f, Color.blue, 0.3f);
+        
 
-        if (hitInfo.transform.gameObject.tag == "StoryZone")
+        if (Physics.Raycast(transform.position, transform.forward, out hitInfo, 1.5f) &&hitInfo.transform.gameObject.tag == "StoryZone")
         {
             NPCStoryData npcData = hitInfo.transform.GetComponent<NPCStoryData>();
             StoryOn.instance.npcStory = npcData.npcStory[npcData.number];

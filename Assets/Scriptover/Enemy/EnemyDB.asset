@@ -15,11 +15,11 @@ MonoBehaviour:
   enemys:
   - {fileID: 0}
   - {fileID: 11400000, guid: 8e51ccffc3265b5438e2800f0c3cbb30, type: 2}
-  - {fileID: 11400000, guid: ffbf76447c7b7ca43a1a0d85d65730ec, type: 2}
-  - {fileID: 0}
+  - {fileID: 11400000, guid: 4b2554af52eb540d3878c6219c530dc0, type: 2}
+  - {fileID: 11400000, guid: b68ff5f4f7fcd4ab48564e122407fa4f, type: 2}
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 11400000, guid: 2d9ac70180d704c86a22784a0ada6042, type: 2}
-  - {fileID: 0}
+  - {fileID: 11400000, guid: 2f8fe2cbf538af847b89ecdbe24b2543, type: 2}
   - {fileID: 0}
