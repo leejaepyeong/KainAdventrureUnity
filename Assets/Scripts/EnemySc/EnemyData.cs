@@ -24,7 +24,9 @@ public class EnemyData : ScriptableObject
     public int defense;
     public float delay;
     public float moveSpeed;
-    public int skillDamage;
+    public int skillDamage1;
+    public int skillDamage2;
+    public int skillDamage3;
 
 
     public int hpRegen;

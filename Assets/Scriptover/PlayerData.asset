@@ -12,10 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ff919b027581761439efcd5d47287618, type: 3}
   m_Name: PlayerData
   m_EditorClassIdentifier: 
-  maxHp: 100
-  currentHp: 100
+  maxHp: 3000
+  currentHp: 1580
   maxMp: 1000
-  currentMp: 1000
+  currentMp: 7
   meleeDamage: 54
   rangeDamage: 1010
   resourceDamage: 8
@@ -24,7 +24,7 @@ MonoBehaviour:
   mpRegen: 2
   hpRegenTime: 10
   mpRegenTime: 10
-  maxExp: 320
-  currentExp: 202
-  level: 6
-  stateCount: 13
+  maxExp: 1280
+  currentExp: 744
+  level: 8
+  stateCount: 40

@@ -2,10 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class MushKing : Enemy
+public class MushKing : MeleeEnemy
 {
-    
-
     protected override IEnumerator Skill()
     {
 
@@ -13,14 +11,17 @@ public class MushKing : Enemy
         yield return new WaitForSeconds(0.5f);
         anim.SetTrigger("Skill1");
         yield return new WaitForSeconds(0.3f);
-        skillArea.SetActive(true);
+        skillArea[0].SetActive(true);
 
         yield return new WaitForSeconds(0.9f);
-        skillArea.SetActive(false);
+        skillArea[0].SetActive(false);
         isSkill = false;
 
         yield return new WaitForSeconds(5f);
         isSkillCool = true;
+
+
+        yield return base.Skill();
     }
 
 }

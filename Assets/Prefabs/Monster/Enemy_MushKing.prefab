@@ -5622,7 +5622,7 @@ GameObject:
   - component: {fileID: 8165483829235328382}
   - component: {fileID: 1516552809124278002}
   - component: {fileID: 5969223279434027139}
-  - component: {fileID: 678994991598888761}
+  - component: {fileID: -6906146887866037482}
   m_Layer: 8
   m_Name: Enemy_MushKing
   m_TagString: Moster
@@ -5711,7 +5711,7 @@ NavMeshAgent:
   m_Acceleration: 4
   avoidancePriority: 50
   m_AngularSpeed: 100
-  m_StoppingDistance: 0
+  m_StoppingDistance: 0.1
   m_AutoTraverseOffMeshLink: 1
   m_AutoBraking: 1
   m_AutoRepath: 1
@@ -5719,7 +5719,7 @@ NavMeshAgent:
   m_BaseOffset: 0
   m_WalkableMask: 4294967295
   m_ObstacleAvoidanceType: 4
---- !u!114 &678994991598888761
+--- !u!114 &-6906146887866037482
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -5728,7 +5728,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 5938374081510439671}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c0b7ad1a13d9f49f8a034280062520d3, type: 3}
+  m_Script: {fileID: 11500000, guid: b22727ff19d444b52acf9d3f33de7ae5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   quest: {fileID: 0}
@@ -5736,7 +5736,8 @@ MonoBehaviour:
   playerData: {fileID: 11400000, guid: a73d2b31f426b684f8d3fbecec08196a, type: 2}
   Target: {fileID: 0}
   meleeArea: {fileID: 4682675951876947895}
-  skillArea: {fileID: 1143818522424244130}
+  skillArea:
+  - {fileID: 1143818522424244130}
   hpBar: {fileID: 4012595317154105501}
   rigid: {fileID: 1516552809124278002}
   boxCollider: {fileID: 8165483829235328382}
@@ -5844,7 +5845,7 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 0
   serializedVersion: 2
-  m_Size: {x: 1.0609, y: 0.61807066, z: 0.37398875}
+  m_Size: {x: 1.0609, y: 0.61807066, z: 0.52}
   m_Center: {x: -0.0049951295, y: 0.22459024, z: -0.03307754}
 --- !u!1 &7568501943231675775
 GameObject:

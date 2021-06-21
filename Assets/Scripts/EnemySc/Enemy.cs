@@ -30,7 +30,7 @@ public class Enemy : MonoBehaviour
 
     public Transform Target;    // ??
     public BoxCollider meleeArea;   // ?? ????
-    public GameObject skillArea;
+    public GameObject[] skillArea;
 
     public Image hpBar;
     
@@ -48,6 +48,7 @@ public class Enemy : MonoBehaviour
     protected bool isAttack = false;    // ??????
     protected bool isSkill = false;
     protected bool isSkillCool = true;
+    protected bool isArea = false;
 
     [SerializeField]
     protected Rigidbody rigid;
@@ -92,9 +93,6 @@ public class Enemy : MonoBehaviour
     }
 
 
-        
-
-    
     
     protected void AiMoveCheck()
     {
@@ -110,6 +108,7 @@ public class Enemy : MonoBehaviour
         {
             isSight = false;
 
+            nav.speed = 0;
             nav.isStopped = true;
             nav.updatePosition = false;
             nav.updateRotation = false;
@@ -117,7 +116,7 @@ public class Enemy : MonoBehaviour
             isWalking = false;
         }
 
-        if (isSight)
+        if (isSight && !isArea)
         {
             nav.isStopped = false;
             nav.updatePosition = true;
@@ -127,12 +126,14 @@ public class Enemy : MonoBehaviour
             isWalking = true;
         }
         
-        if(isAttack)
+        if(isArea)
         {
+            nav.speed = 0;
             nav.isStopped = true;
             nav.updatePosition = false;
             nav.updateRotation = false;
             nav.velocity = Vector3.zero;
+            isWalking = false;
         }
        
     }
@@ -155,15 +156,22 @@ public class Enemy : MonoBehaviour
     {
         if(!isDead && isSkillCool)
         {
-            
-            RaycastHit[] rayHits = Physics.SphereCastAll(transform.position, 1f,
-                                  transform.forward, enemyData.targetRange, LayerMask.GetMask("Player"));
 
-            if (rayHits.Length > 0 && !isAttack && !Target.GetComponent<PlayerControleer>().isDead)
+            
+            RaycastHit[] rayHits = Physics.SphereCastAll(transform.position, enemyData.targetRange + 1.5f,
+                                  transform.up, 0.5f, LayerMask.GetMask("Player"));
+
+            
+
+            if (rayHits.Length > 0 && !Target.GetComponent<PlayerControleer>().isDead)
             {
+                isArea = true;
                 isSkillCool = false;
                 StartCoroutine(Skill());
             }
+
+            else if (rayHits.Length == 0)
+                isArea = false;
         }
     }
 
@@ -172,19 +180,23 @@ public class Enemy : MonoBehaviour
     {
         if (!isDead)
         {
-            float targetRadius = 0.5f;
                  
 
-            RaycastHit[] rayHits = Physics.SphereCastAll(transform.position, targetRadius,
-                                  transform.forward, enemyData.targetRange, LayerMask.GetMask("Player"));
-       
+            RaycastHit[] rayHits = Physics.SphereCastAll(transform.position, enemyData.targetRange + 0.2f,
+                                  transform.up, 0.5f, LayerMask.GetMask("Player"));
+
 
             if (rayHits.Length > 0 && !isAttack && !Target.GetComponent<PlayerControleer>().isDead && !isSkill)
             {
+                isArea = true;
                 isWalking = false;
                 isAttack = true;
                 StartCoroutine(Attack());
             }
+
+            else if(rayHits.Length == 0)
+                isArea = false;
+
         }
 
     }

@@ -19,6 +19,7 @@ TagManager:
   - ResetZone
   - EnemyBullet
   - StoryZone
+  - DeadZone
   layers:
   - Default
   - TransparentFX

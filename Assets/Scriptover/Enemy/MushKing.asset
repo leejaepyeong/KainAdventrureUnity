@@ -20,7 +20,9 @@ MonoBehaviour:
   defense: 10
   delay: 1.2
   moveSpeed: 3
-  skillDamage: 50
+  skillDamage1: 50
+  skillDamage2: 0
+  skillDamage3: 0
   hpRegen: 30
   mpRegen: 2
   regenTime: 10

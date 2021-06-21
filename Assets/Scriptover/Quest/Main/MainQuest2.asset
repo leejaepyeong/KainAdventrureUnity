@@ -12,18 +12,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 545d958acc5ae4f40a02296d8b0b66a0, type: 3}
   m_Name: MainQuest2
   m_EditorClassIdentifier: 
-  isStart: 0
-  isClear: 0
+  isStart: 1
+  isClear: 1
   isReward: 0
   type: 0
   itemType: 0
   QuestName: Kill GolemKing
   monsterId: 8
   ResourseId: 0
-  Value: 1
+  Value: 0
   MaxValue: 1
   QuestDesc: 'Kill the Boss
 
     GolemKing * 1'
   expReward: 5000
   coinReward: 5000
+  cynematic: 1

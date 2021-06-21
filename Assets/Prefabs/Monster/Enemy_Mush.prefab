@@ -637,7 +637,7 @@ NavMeshAgent:
   m_Acceleration: 4
   avoidancePriority: 50
   m_AngularSpeed: 100
-  m_StoppingDistance: 0
+  m_StoppingDistance: 0.1
   m_AutoTraverseOffMeshLink: 1
   m_AutoBraking: 1
   m_AutoRepath: 1
@@ -662,7 +662,8 @@ MonoBehaviour:
   playerData: {fileID: 11400000, guid: a73d2b31f426b684f8d3fbecec08196a, type: 2}
   Target: {fileID: 0}
   meleeArea: {fileID: 1665611841547507551}
-  skillArea: {fileID: 0}
+  skillArea:
+  - {fileID: 0}
   hpBar: {fileID: 1665611842392724101}
   rigid: {fileID: 1665611841952970246}
   boxCollider: {fileID: 1665611841952970241}

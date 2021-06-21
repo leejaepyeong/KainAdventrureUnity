@@ -25,31 +25,42 @@ public class Event : MonoBehaviour
         if (!isGameStart.isGameStart)
             StartCynematic();
 
-
         mainClear += WallDestroy;
         mainClear += SynematicOn;
 
-        for (int i = 0; i < questData.Length; i++)
+        for (int i = 1; i < questData.Length; i++)
         {
-            if(questData[i].isClear)
+            if(!questData[i].isClear)
             {
-                Destroy(Walls[i]);
+                currentQuestIndex = i;
+                break;
             }
+
+            Destroy(Walls[i]);
         }
     }
 
     private void Update()
     {
 
-        if (questData[currentQuestIndex].isClear && !questData[currentQuestIndex].cynematic)
-            mainClear();
+        for (int i = currentQuestIndex; i < questData.Length; i++)
+        {
+            if (questData[i].isClear && !questData[i].cynematic)
+            {
+                mainClear();
+            }
+                
+        }
+        
     }
 
+    // Wall Destroy
     void WallDestroy()
     {
-        Destroy(Walls[currentQuestIndex],5f);
+        Destroy(Walls[currentQuestIndex],6f);
     }
 
+    // cynematic On
     void SynematicOn()
     {
         mainCam.SetActive(false);
@@ -58,11 +69,13 @@ public class Event : MonoBehaviour
         questData[currentQuestIndex].cynematic = true;
 
         Invoke("CamOff", 8f);
+        
     }
 
+    // First Game Start Cynematic
     void StartCynematic()
     {
-        
+        currentQuestIndex--;
 
         isGameStart.isGameStart = true; // game is Start First Cynematic
 
@@ -71,13 +84,17 @@ public class Event : MonoBehaviour
         cynematic[0].SetActive(true);
 
         Invoke("CamOff", 15f);
+
+        
     }
 
 
+    // cam Change
     void CamOff()
     {
         cynematic[currentQuestIndex].SetActive(false);
         mainCam.SetActive(true);
         cynemCam.SetActive(false);
+        currentQuestIndex++;
     }
 }

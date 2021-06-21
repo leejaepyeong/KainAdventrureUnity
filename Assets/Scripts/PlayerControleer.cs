@@ -43,6 +43,8 @@ public class PlayerControleer : MonoBehaviour
     bool isHit = false;
     bool isSafe;
 
+    public bool allPause;
+
     //무기
     public GameObject[] weapons;
     private int weaponIndex = 0;
@@ -63,6 +65,7 @@ public class PlayerControleer : MonoBehaviour
     //미니맵
     public Transform MiniCamPos;    // 미니맵 카메라 위치
     public Transform resetPos;  // hide 맵에서 리셋 될 위치
+    public Transform reset; //  DeadZone > Reset
 
     // 컴포넌트 가져오기
     private Rigidbody playerRigid;
@@ -113,20 +116,25 @@ public class PlayerControleer : MonoBehaviour
             Run();
             Recover();
 
-            if (GameManager.instance.is1stCam)
+            if(!allPause)
             {
-                tryJump();
-                tryAttack();
-                trySkill();
+                if (GameManager.instance.is1stCam)
+                {
+                    tryJump();
+                    tryAttack();
+                    trySkill();
+                }
+
+                tryEquipChange();
+
+                if (GameManager.instance.is1stCam && !InfoManager.isInfoOn)
+                {
+                    CameraRotation();
+                    CharacterRotation();
+                }
             }
 
-            tryEquipChange();
-
-            if (GameManager.instance.is1stCam && !InfoManager.isInfoOn)
-            {
-                CameraRotation();
-                CharacterRotation();
-            }
+            
         }
     }
 
@@ -417,6 +425,8 @@ public class PlayerControleer : MonoBehaviour
     {
         isDead = true;
         anim.SetTrigger("Die");
+
+        Invoke("ResetPosition",5f);
     }
 
     void tryEquipChange()
@@ -486,6 +496,13 @@ public class PlayerControleer : MonoBehaviour
     }
 
 
+    void ResetPosition()
+    {
+        isDead = false;
+        transform.position = reset.position;
+        playerData.currentHp = 1;
+        playerData.currentMp = 1;
+    }
    
 
     // 충돌 여부
@@ -516,8 +533,8 @@ public class PlayerControleer : MonoBehaviour
         }
         else if(other.tag == "EnemySkill")
         {
-            Enemy enemy = other.GetComponentInParent<Enemy>();
-            onDamage(enemy.enemyData.skillDamage);
+            EnemySkillDamage skillDamage = other.GetComponent<EnemySkillDamage>();
+            onDamage(skillDamage.damage);
         }
         else if(other.tag =="EnemyBullet")
         {
@@ -543,6 +560,10 @@ public class PlayerControleer : MonoBehaviour
 
             transform.position = resetPos.position;
         }
+        else if(other.tag == "DeadZone")
+        {
+            ResetPosition();
+        }
     }
 
     private void OnTriggerStay(Collider other)
@@ -562,6 +583,7 @@ public class PlayerControleer : MonoBehaviour
         NPCTxt.gameObject.SetActive(false);
         _npc.OpenPannel();
         InfoManager.isInfoOn = true;
+        allPause = true;
     }
 
 
@@ -576,6 +598,7 @@ public class PlayerControleer : MonoBehaviour
             NPC npc = other.GetComponent<NPC>();
             npc.closePannel();
             npc.anim.SetTrigger("PlayerInOut");
+            allPause = false;
         }
        
     }

@@ -35,6 +35,13 @@ public class WarpControl : MonoBehaviour
         warpImg[warpNum].SetActive(true);
     }
 
+    public void MoveCastle()
+    {
+        warpImg[warpNum].SetActive(false);
+        warpNum = 3;
+        warpImg[warpNum].SetActive(true);
+    }
+
     public void Move()
     {
         player.transform.position = warps[warpNum].transform.position;
