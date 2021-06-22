@@ -17,4 +17,7 @@ public class WarpZone : MonoBehaviour
         if(other.tag=="Player")
             warpPannel.SetActive(false);
     }
+
+
+    
 }

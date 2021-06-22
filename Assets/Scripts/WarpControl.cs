@@ -2,10 +2,12 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class WarpControl : MonoBehaviour
 {
     public WarpZone[] warps;
+    public GameObject CastleEnterZone;
 
     public PlayerControleer player;
 
@@ -40,6 +42,11 @@ public class WarpControl : MonoBehaviour
         warpImg[warpNum].SetActive(false);
         warpNum = 3;
         warpImg[warpNum].SetActive(true);
+    }
+
+    public void EnterToCastleScene()
+    {
+        player.transform.position = CastleEnterZone.transform.position;
     }
 
     public void Move()

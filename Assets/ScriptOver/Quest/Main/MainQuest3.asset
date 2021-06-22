@@ -18,12 +18,13 @@ MonoBehaviour:
   type: 0
   itemType: 0
   QuestName: Kill DevilKing
-  monsterId: 7
+  monsterId: 9
   ResourseId: 0
-  Value: 0
-  MaxValue: 3
+  Value: 1
+  MaxValue: 1
   QuestDesc: 'Kill the Boss
 
     DevilKing * 1'
   expReward: 0
   coinReward: 0
+  cynematic: 0

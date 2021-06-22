@@ -13,9 +13,9 @@ MonoBehaviour:
   m_Name: PlayerData
   m_EditorClassIdentifier: 
   maxHp: 3000
-  currentHp: 1580
+  currentHp: 3000
   maxMp: 1000
-  currentMp: 7
+  currentMp: 143
   meleeDamage: 54
   rangeDamage: 1010
   resourceDamage: 8
@@ -24,7 +24,7 @@ MonoBehaviour:
   mpRegen: 2
   hpRegenTime: 10
   mpRegenTime: 10
-  maxExp: 1280
-  currentExp: 744
-  level: 8
-  stateCount: 40
+  maxExp: 2560
+  currentExp: 214
+  level: 9
+  stateCount: 43

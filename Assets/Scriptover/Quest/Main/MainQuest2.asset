@@ -12,8 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 545d958acc5ae4f40a02296d8b0b66a0, type: 3}
   m_Name: MainQuest2
   m_EditorClassIdentifier: 
-  isStart: 1
-  isClear: 1
+  isStart: 0
+  isClear: 0
   isReward: 0
   type: 0
   itemType: 0
@@ -27,4 +27,4 @@ MonoBehaviour:
     GolemKing * 1'
   expReward: 5000
   coinReward: 5000
-  cynematic: 1
+  cynematic: 0

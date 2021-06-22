@@ -602,4 +602,11 @@ public class PlayerControleer : MonoBehaviour
         }
        
     }
+
+
+
+    public void EndingPos()
+    {
+
+    }
 }

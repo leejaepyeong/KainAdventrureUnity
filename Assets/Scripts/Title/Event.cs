@@ -6,6 +6,7 @@ using UnityEngine;
 public class Event : MonoBehaviour
 {
     public Action mainClear;
+    public Action Ending;
 
     public IsGameStart isGameStart;
 
@@ -19,6 +20,7 @@ public class Event : MonoBehaviour
     public GameObject[] Walls;
     public QuestData[] questData;
     public GameObject[] cynematic;
+    public GameObject lastCynematic;
 
     private void Start()
     {
@@ -96,5 +98,13 @@ public class Event : MonoBehaviour
         mainCam.SetActive(true);
         cynemCam.SetActive(false);
         currentQuestIndex++;
+    }
+
+
+    public void EndingCynematic()
+    {
+        Ending();
+
+        lastCynematic.SetActive(true);
     }
 }

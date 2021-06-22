@@ -7,6 +7,7 @@ public class GolemKing : MeleeEnemy
 
     protected override IEnumerator Skill()
     {
+        yield return base.Skill();
 
 
         int random = Random.Range(0,3);
@@ -51,7 +52,7 @@ public class GolemKing : MeleeEnemy
         isSkillCool = true;
 
 
-        yield return base.Skill();
+        
     }
 
 

@@ -33,8 +33,9 @@ public class Enemy : MonoBehaviour
     public GameObject[] skillArea;
 
     public Image hpBar;
-    
 
+
+    public GameObject[] SkillPrefabs;
 
     // 
     protected float currentTime = 5f;
@@ -209,6 +210,7 @@ public class Enemy : MonoBehaviour
 
     protected virtual IEnumerator Skill()
     {
+
         yield return null;
     }
 
