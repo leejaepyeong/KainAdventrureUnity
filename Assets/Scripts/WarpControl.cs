@@ -10,6 +10,8 @@ public class WarpControl : MonoBehaviour
     public GameObject CastleEnterZone;
 
     public PlayerControleer player;
+    public QuestData[] questData;
+    public Text actionTxt;
 
     int warpNum = 0;
 
@@ -46,11 +48,27 @@ public class WarpControl : MonoBehaviour
 
     public void EnterToCastleScene()
     {
-        player.transform.position = CastleEnterZone.transform.position;
+        if(questData[2].isStart)
+            player.transform.position = CastleEnterZone.transform.position;
+        else
+        {
+            actionTxt.gameObject.SetActive(true);
+            actionTxt.text = "You need Quest Start";
+
+            Invoke("Disappear", 1f);
+        }
+    }
+
+    void Disappear()
+    {
+        actionTxt.gameObject.SetActive(false);
     }
 
     public void Move()
     {
+        if (warpNum == 3 && !questData[1].isClear)
+            return;
+
         player.transform.position = warps[warpNum].transform.position;
     }
 }

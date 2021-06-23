@@ -19,6 +19,13 @@ public class Weapon : MonoBehaviour
 
     public PlayerControleer playerControl;
 
+    AudioSource audio;
+
+    private void Start()
+    {
+        audio = GetComponent<AudioSource>();
+    }
+
     public void Use()
     {
         if(!isAttack)
@@ -41,11 +48,13 @@ public class Weapon : MonoBehaviour
             else if (type == Type.PickAxe)
             {
                 playerControl.anim.SetTrigger("PickAxe");
+                audio.Play();
                 StartCoroutine(PickAxing());
             }
             else if (type == Type.Axe)
             {
-                playerControl.anim.SetTrigger("Axe");
+               
+                audio.Play();
                 StartCoroutine(Axing());
             }
         }
@@ -86,12 +95,14 @@ public class Weapon : MonoBehaviour
 
     IEnumerator Axing()
     {
+        yield return new WaitForSeconds(0.25f);
+        playerControl.anim.SetTrigger("Axe");
         yield return new WaitForSeconds(0.1f);
         meleeArea.gameObject.SetActive(true);
         yield return new WaitForSeconds(0.4f);
 
         meleeArea.gameObject.SetActive(false);
-        yield return new WaitForSeconds(rate - 0.5f);
+        yield return new WaitForSeconds(rate - 0.7f);
 
         isAttack = false;
 

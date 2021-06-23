@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 3519553770622162807}
   - component: {fileID: 3519553770622162808}
   m_Layer: 0
-  m_Name: EnemyRespawn MarioMap
+  m_Name: EnemyRespawn GolemKing
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -44,5 +44,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemyPrefabs:
-  - {fileID: 5938374081510439671, guid: 13bf6b26f437948b4849545713ce2c90, type: 3}
+  - {fileID: 1924092031063069134, guid: 82e32947b8e664405907843677b6918c, type: 3}
   enemyPrefab: {fileID: 0}

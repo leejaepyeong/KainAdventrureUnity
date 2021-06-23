@@ -2,11 +2,11 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Event : MonoBehaviour
 {
     public Action mainClear;
-    public Action Ending;
 
     public IsGameStart isGameStart;
 
@@ -21,6 +21,10 @@ public class Event : MonoBehaviour
     public QuestData[] questData;
     public GameObject[] cynematic;
     public GameObject lastCynematic;
+    public GameObject vitcoryPannel;
+    
+
+    public GameObject endingZone;
 
     private void Start()
     {
@@ -45,13 +49,17 @@ public class Event : MonoBehaviour
     private void Update()
     {
 
-        for (int i = currentQuestIndex; i < questData.Length; i++)
+        for (int i = currentQuestIndex; i < questData.Length - 1; i++)
         {
             if (questData[i].isClear && !questData[i].cynematic)
             {
                 mainClear();
-            }
-                
+            }    
+        }
+
+        if(questData[3].isClear)
+        {
+            endingZone.SetActive(true);
         }
         
     }
@@ -59,7 +67,7 @@ public class Event : MonoBehaviour
     // Wall Destroy
     void WallDestroy()
     {
-        Destroy(Walls[currentQuestIndex],6f);
+         Destroy(Walls[currentQuestIndex],6f);
     }
 
     // cynematic On
@@ -103,8 +111,31 @@ public class Event : MonoBehaviour
 
     public void EndingCynematic()
     {
-        Ending();
+        vitcoryPannel.SetActive(false);
+        questData[3].cynematic = true;
+
+        mainCam.SetActive(false);
+        cynemCam.SetActive(true);
 
         lastCynematic.SetActive(true);
+
+        Invoke("MovetoTitle", 21f);
+    }
+
+
+    void MovetoTitle()
+    {
+        lastCynematic.SetActive(false);
+        mainCam.SetActive(true);
+        cynemCam.SetActive(false);
+
+        //Allreset();
+
+        SceneManager.LoadScene("Title");
+    }
+
+    void Allreset()
+    {
+
     }
 }

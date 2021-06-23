@@ -188,6 +188,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7917672610237201734}
   - component: {fileID: 7488676649661682180}
+  - component: {fileID: 2092839920970010475}
   m_Layer: 8
   m_Name: SkillArea
   m_TagString: EnemySkill
@@ -223,6 +224,21 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1.3, y: 1, z: 1.3}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &2092839920970010475
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1143818522424244130}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d9e9238ebd2874f5c804b969953e619e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  skillType: 0
+  enemyData: {fileID: 11400000, guid: 2d9ac70180d704c86a22784a0ada6042, type: 2}
+  damage: 0
 --- !u!1 &1159569962530401525
 GameObject:
   m_ObjectHideFlags: 0
@@ -5739,6 +5755,7 @@ MonoBehaviour:
   skillArea:
   - {fileID: 1143818522424244130}
   hpBar: {fileID: 4012595317154105501}
+  SkillPrefabs: []
   rigid: {fileID: 1516552809124278002}
   boxCollider: {fileID: 8165483829235328382}
   nav: {fileID: 5969223279434027139}
