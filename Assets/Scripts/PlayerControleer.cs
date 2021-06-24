@@ -138,7 +138,7 @@ public class PlayerControleer : MonoBehaviour
         }
     }
 
-
+    // 입력값 받기
     void GetInput()
     {
         isJump = Input.GetButtonDown("Jump");
@@ -148,10 +148,12 @@ public class PlayerControleer : MonoBehaviour
        
     }
 
+    // 이동
     void Move()
     {
         MiniCamPos.position = transform.position + new Vector3(0,90,0);
 
+        // 1인칭 시점용 이동
         if (GameManager.instance.is1stCam) // GameManager.instance.is1stCam
         {
 
@@ -177,6 +179,7 @@ public class PlayerControleer : MonoBehaviour
                 isMove = false;
             }
         }
+        // 3인칭 용 이동
         else
         {
             if (MoveFlag)
@@ -190,6 +193,7 @@ public class PlayerControleer : MonoBehaviour
             }
         }
 
+        // 시점에 따른 카메라 위치 변화 
         if(!GameManager.instance.is1stCam)
         {
             theCamera.transform.position = transform.position + offset;
@@ -210,7 +214,7 @@ public class PlayerControleer : MonoBehaviour
       
     }
 
-
+    // 조이스틱 드래그
     public void Drag(BaseEventData _Data)
     {
         if(!GameManager.instance.is1stCam)
@@ -264,6 +268,7 @@ public class PlayerControleer : MonoBehaviour
         }
     }
 
+    // 자연 회복
     void Recover()
     {
         if(!isHit)
@@ -282,7 +287,7 @@ public class PlayerControleer : MonoBehaviour
         }
     }
 
-
+    // 점프 시도 (space키)
     void tryJump()
     {
         if (isJump)
@@ -305,6 +310,7 @@ public class PlayerControleer : MonoBehaviour
      
     }
 
+    // 공격 시도
     void tryAttack()
     {
         if (isAttack)
@@ -358,7 +364,7 @@ public class PlayerControleer : MonoBehaviour
     }
 
 
-
+    // 터치용 스킬 버튼
     public void SkillBtn1()
     {
 
@@ -380,6 +386,7 @@ public class PlayerControleer : MonoBehaviour
     }
 
 
+    // 스킬 사용
     void Skill(int skillnum)
     {
         isSkill = true;
@@ -393,6 +400,7 @@ public class PlayerControleer : MonoBehaviour
         isSkill = false;
     }
 
+    // 적으로부터 대미지 입음
     public void onDamage(int _damage)
     {
         if(!isDead)
@@ -421,6 +429,7 @@ public class PlayerControleer : MonoBehaviour
     }
 
 
+    // 플레이어 사망
     void Dead()
     {
         isDead = true;
@@ -429,6 +438,7 @@ public class PlayerControleer : MonoBehaviour
         Invoke("ResetPosition",5f);
     }
 
+    // 무기 교체 시도
     void tryEquipChange()
     {
         if (isChange && !isJump && !equipWeapon.isAttack)
@@ -464,6 +474,7 @@ public class PlayerControleer : MonoBehaviour
         isSwap = false;
     }
 
+    // 마우스에 따른 플레이어 회전
     void CharacterRotation()
     {
         //좌우 캐릭터 회전
@@ -490,12 +501,14 @@ public class PlayerControleer : MonoBehaviour
 
     }
 
+    // 활성화 텍스트 삭제용
     void DisappearItem()
     {
         actionTxt.gameObject.SetActive(false);
     }
 
 
+    // 사망 시 초기화
     void ResetPosition()
     {
         isDead = false;
@@ -526,22 +539,22 @@ public class PlayerControleer : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.tag == "EnemyAttack")
+        if (other.tag == "EnemyAttack") // 근점 공격
         {
             Enemy enemy = other.GetComponentInParent<Enemy>();
             onDamage(enemy.enemyData.damage);
         }
-        else if(other.tag == "EnemySkill")
+        else if(other.tag == "EnemySkill")  // 스킬
         {
             EnemySkillDamage skillDamage = other.GetComponent<EnemySkillDamage>();
             onDamage(skillDamage.damage);
         }
-        else if(other.tag =="EnemyBullet")
+        else if(other.tag =="EnemyBullet")  // 원거리
         {
             Bullets bullet = other.GetComponent<Bullets>();
             onDamage(bullet.enemyData.damage);
         }
-        else if(other.tag == "NPC")
+        else if(other.tag == "NPC") // NPC 마주침
         {
             NPCTxt.gameObject.SetActive(true);
             NPC npc = other.GetComponent<NPC>();
@@ -552,7 +565,7 @@ public class PlayerControleer : MonoBehaviour
             npc.anim.SetTrigger("PlayerInOut");
             NPCTxt.text = "- Press 'P' or 'Click' to Talk -";
         }
-        else if(other.tag == "ResetZone")
+        else if(other.tag == "ResetZone")   // 숨겨진 길 맵 리셋 존
         {
             playerData.currentHp -= 10;
             if (playerData.currentHp<=0)
@@ -560,12 +573,13 @@ public class PlayerControleer : MonoBehaviour
 
             transform.position = resetPos.position;
         }
-        else if(other.tag == "DeadZone")
+        else if(other.tag == "DeadZone")    // 사망 존
         {
             ResetPosition();
         }
     }
 
+    // npc 목록 사용(힐 / 상점 / 강화)
     private void OnTriggerStay(Collider other)
     {
         if (other.tag == "NPC")
@@ -603,10 +617,4 @@ public class PlayerControleer : MonoBehaviour
        
     }
 
-
-
-    public void EndingPos()
-    {
-
-    }
 }

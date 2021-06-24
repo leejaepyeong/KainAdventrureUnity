@@ -6,6 +6,8 @@ using UnityEngine.SceneManagement;
 
 public class Event : MonoBehaviour
 {
+    public static Event instanse;
+
     public Action mainClear;
 
     public IsGameStart isGameStart;
@@ -22,19 +24,25 @@ public class Event : MonoBehaviour
     public GameObject[] cynematic;
     public GameObject lastCynematic;
     public GameObject vitcoryPannel;
-    
 
     public GameObject endingZone;
 
+    public AudioSource audio;
+
     private void Start()
     {
+        if (instanse == null)
+            instanse = this;
+
+        audio = GetComponent<AudioSource>();
+
         if (!isGameStart.isGameStart)
             StartCynematic();
 
         mainClear += WallDestroy;
         mainClear += SynematicOn;
 
-        for (int i = 1; i < questData.Length; i++)
+        for (int i = 1; i < questData.Length - 1; i++)
         {
             if(!questData[i].isClear)
             {
@@ -134,8 +142,4 @@ public class Event : MonoBehaviour
         SceneManager.LoadScene("Title");
     }
 
-    void Allreset()
-    {
-
-    }
 }

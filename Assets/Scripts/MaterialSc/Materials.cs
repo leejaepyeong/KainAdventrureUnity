@@ -19,9 +19,12 @@ public class Materials : MonoBehaviour
 
     private int rewardCase; // 0 : Normal , 1 : Uniq, 2 : Legend
 
+    AudioSource audio;
+
     private void Start()
     {
         currentHp = materialData.hp;
+        audio = GetComponent<AudioSource>();
     }
 
     void Hit(float _damage)
@@ -120,7 +123,7 @@ public class Materials : MonoBehaviour
     {
         if (other.tag == "PlayerAttack" && !isHit)
         {
-            
+            audio.Play();
 
             Weapon playerAttack = other.transform.parent.gameObject.GetComponent<Weapon>();
 

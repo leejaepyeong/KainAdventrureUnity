@@ -19,12 +19,7 @@ public class Weapon : MonoBehaviour
 
     public PlayerControleer playerControl;
 
-    AudioSource audio;
 
-    private void Start()
-    {
-        audio = GetComponent<AudioSource>();
-    }
 
     public void Use()
     {
@@ -48,13 +43,11 @@ public class Weapon : MonoBehaviour
             else if (type == Type.PickAxe)
             {
                 playerControl.anim.SetTrigger("PickAxe");
-                audio.Play();
                 StartCoroutine(PickAxing());
             }
             else if (type == Type.Axe)
             {
                
-                audio.Play();
                 StartCoroutine(Axing());
             }
         }

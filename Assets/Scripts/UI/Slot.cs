@@ -6,20 +6,20 @@ using UnityEngine.EventSystems;
 
 public class Slot : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler, IPointerClickHandler, IBeginDragHandler, IDragHandler, IEndDragHandler, IDropHandler
 {
-    public ItemDB[] SomeDB;
-    public InventoryData[] invenData;
+    public ItemDB[] SomeDB; // ì•„ì´í…œ ë°ì´í„°ë² ì´ìŠ¤
+    public InventoryData[] invenData;   // ì¸ë²¤í† ë¦¬ ë°ì´í„°
 
 
-    public Item item;   // È¹µæ ¾ÆÀÌÅÛ ÀÌ¹ÌÁö
-    public int itemCount;   //  È¹µæÇÑ ¾ÆÀÌÅÛ °¹¼ö
-    public Image ItemImage; // ¾ÆÀÌÅÛ ÀÌ¹ÌÁö
+    public Item item;   // íšë“ ì•„ì´í…œ ì´ë¯¸ì§€
+    public int itemCount;   //  íšë“í•œ ì•„ì´í…œ ê°¯ìˆ˜
+    public Image ItemImage; // ì•„ì´í…œ ì´ë¯¸ì§€
 
     [SerializeField]
-    private Text text_Count;
+    private Text text_Count;    // ì•„ì´í…œ ê°¯ìˆ˜
     [SerializeField]
-    private GameObject go_CountImage;
+    private GameObject go_CountImage;   // ì•„ì´í…œ ê°¯ìˆ˜ ë³´ì—¬ì¤„ ì´ë¯¸ì§€
 
-    private ItemEffectDataBase theItemEffectDatabase;
+    private ItemEffectDataBase theItemEffectDatabase;   // ì•„ì´í…œ íš¨ê³¼ ë°œí˜„ (ì¥ì°© ì†Œë¹„ ë“±)
 
 
     void Start()
@@ -27,21 +27,21 @@ public class Slot : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler, IP
         theItemEffectDatabase = FindObjectOfType<ItemEffectDataBase>();
     }
 
-    //ÀÌ¹ÌÁö Åõ¸íµµ Á¶Àı
+    //ì´ë¯¸ì§€ íˆ¬ëª…ë„ ì¡°ì ˆ
     public void SetColor(float _alpha)
     {
         Color color = ItemImage.color;
-        color.a = _alpha;   // ¾ËÆÄ°ª
+        color.a = _alpha;   // ì•ŒíŒŒê°’
         ItemImage.color = color;
 
     }
 
-    // ¾ÆÀÌÅÛ È¹µæ
+    // ì•„ì´í…œ íšë“
     public void AddItem(Item _item, int _count)
     {
         item = _item;
         itemCount = _count;
-        ItemImage.sprite = item.itemImage;  // sprite¿¡ ÀÌ¹ÌÁö ³Ö¾îÁà¾ß´ë¼­ .spriteÃß°¡
+        ItemImage.sprite = item.itemImage;  // spriteì— ì´ë¯¸ì§€ ë„£ì–´ì¤˜ì•¼ëŒ€ì„œ .spriteì¶”ê°€
 
         if (item.itemType != Item.ItemType.Equipment)
         {
@@ -58,7 +58,7 @@ public class Slot : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler, IP
         SetColor(1);
     }
 
-    // ¾ÆÀÌÅÛ °¹¼ö Á¶Á¤
+    // ì•„ì´í…œ ê°¯ìˆ˜ ì¡°ì •
     public void SetSlotCount(int _num)
     {
         itemCount += _num;
@@ -66,7 +66,7 @@ public class Slot : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler, IP
 
         int itemId = SomeDB[(int)item.itemType].GetIDFrom(item);
 
-
+        // ì¸ë²¤ ë°ì´í„° ì•ˆì˜ ì•„ì´ë”” ë”°ë¥¸ ê°¯ìˆ˜ ì¡°ì ˆ 
         for (int i = 0; i < invenData[(int)item.itemType].itemCount.Length; i++)
         {
             if(invenData[(int)item.itemType].itemIDs[i] == itemId)
@@ -84,7 +84,7 @@ public class Slot : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler, IP
             ClearSlot();
     }
 
-    // ½½·Ô ÃÊ±âÈ­
+    // ìŠ¬ë¡¯ ì´ˆê¸°í™”
     void ClearSlot()
     {
         item = null;
@@ -97,9 +97,10 @@ public class Slot : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler, IP
 
     }
 
+    // ì•„ì´í…œ ì‚¬ìš©
     public void OnPointerClick(PointerEventData eventData)
     {
-        //ÀÌ °´Ã¼¿¡ ¸¶¿ì½º ¿ìÅ¬¸¯ÇÏ¸é ½ÇÇà
+        //ì´ ê°ì²´ì— ë§ˆìš°ìŠ¤ ìš°í´ë¦­í•˜ë©´ ì‹¤í–‰
         if (eventData.button == PointerEventData.InputButton.Right)
         {
             if (item != null)
@@ -115,7 +116,7 @@ public class Slot : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler, IP
         }
     }
 
-    // µå·¡±× ½ÃÀÛ
+    // ë“œë˜ê·¸ ì‹œì‘
     public void OnBeginDrag(PointerEventData eventData)
     {
         if (item != null)
@@ -146,17 +147,17 @@ public class Slot : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler, IP
         }
     }
 
-    // µå·¡±× ³õ±â
+    // ë“œë˜ê·¸ ë†“ê¸°
     public void OnEndDrag(PointerEventData eventData)
     {
         DragSlot.instance.SetColor(0);
         DragSlot.instance.dragSlot = null;
     }
 
-    // µå·¡±× ³õ±â ÇØ´ç ½½·Ô À§¿¡
+    // ë“œë˜ê·¸ ë†“ê¸° í•´ë‹¹ ìŠ¬ë¡¯ ìœ„ì—
     public void OnDrop(PointerEventData eventData)
     {
-        //ºó ½½·ÔÀÏ¶§ È£Ãâ ¾ÈµÇ°Ô
+        //ë¹ˆ ìŠ¬ë¡¯ì¼ë•Œ í˜¸ì¶œ ì•ˆë˜ê²Œ
         if (DragSlot.instance.dragSlot != null)
         {
             for (int i = 0; i < invenData[(int)item.itemType].itemCount.Length; i++)
@@ -173,13 +174,14 @@ public class Slot : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler, IP
 
     }
 
+    // ì•„ì´í…œ ê°„ì˜ ìë¦¬ ë°”ê¾¸ê¸°
     void ChangeSlot()
     {
-        Item _tempItem = item;  // Ä¡È¯¿ë
+        Item _tempItem = item;  // ì¹˜í™˜ìš©
         int _tempItemCount = itemCount;
 
         AddItem(DragSlot.instance.dragSlot.item, DragSlot.instance.dragSlot.itemCount);
-        // ÇØ´ç ½½·Ô¿¡ ¾ÆÀÌÅÛ ÀÌµ¿
+        // í•´ë‹¹ ìŠ¬ë¡¯ì— ì•„ì´í…œ ì´ë™
 
         if (_tempItem != null)
         {
@@ -194,15 +196,15 @@ public class Slot : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler, IP
     }
 
     
-    // ¸¶¿ì½º°¡ ½½·Ô¿¡ µé¾î°¥¶§ ¹ßµ¿
-    //¾ÆÀÌÅÛ ¼³¸íº¸±â
+    // ë§ˆìš°ìŠ¤ê°€ ìŠ¬ë¡¯ì— ë“¤ì–´ê°ˆë•Œ ë°œë™
+    //ì•„ì´í…œ ì„¤ëª…ë³´ê¸°
     public void OnPointerEnter(PointerEventData eventData)
     {
         if (item != null)
             theItemEffectDatabase.ShowToolTip(item);
     }
 
-    // ¸¶¿ì½º°¡ ½½·Ô¿¡ ³ª¿Ã¶§ ¹ßµ¿
+    // ë§ˆìš°ìŠ¤ê°€ ìŠ¬ë¡¯ì— ë‚˜ì˜¬ë•Œ ë°œë™
     public void OnPointerExit(PointerEventData eventData)
     {
         theItemEffectDatabase.HideToolTip();
