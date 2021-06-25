@@ -13,6 +13,13 @@ MonoBehaviour:
   m_Name: UpgradeDB
   m_EditorClassIdentifier: 
   itemUpgradeDatas:
+  - {fileID: 0}
   - {fileID: 11400000, guid: ac37972fbedc63d478030f5139b53d20, type: 2}
   - {fileID: 11400000, guid: 369d37cc1d1a97c44aab07ddba81387c, type: 2}
   - {fileID: 11400000, guid: 55926e34a48f047469256e85b61a3269, type: 2}
+  - {fileID: 11400000, guid: 0ef869ef7b1a14543b1f7b7d25244ae6, type: 2}
+  - {fileID: 11400000, guid: d1eef25add7dea240b8c0dda2637803c, type: 2}
+  - {fileID: 11400000, guid: f0ccbd7aa7227e5479bd6c2028d3b34d, type: 2}
+  - {fileID: 11400000, guid: 34defe4c9d550ba498834f7d0a332feb, type: 2}
+  - {fileID: 11400000, guid: 947ccb2a711476d4995390c0321b74c6, type: 2}
+  - {fileID: 11400000, guid: 5ddd1c80b17bfb646894350723d30c25, type: 2}

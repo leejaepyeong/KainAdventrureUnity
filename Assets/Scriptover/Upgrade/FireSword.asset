@@ -16,5 +16,7 @@ MonoBehaviour:
   MaterialItems:
   - {fileID: 11400000, guid: 4b73742849e01ec4aa5a6eafa32c66dd, type: 2}
   - {fileID: 11400000, guid: b58ae3bcc5c6ff242b656a077e97522d, type: 2}
-  - {fileID: 11400000, guid: dd377267dee2bc649b43ebfd3789a32f, type: 2}
+  - {fileID: 11400000, guid: 0b672cf2cd0cd83489dd4ded1f07ad82, type: 2}
   MaterialItemCount: 050000000200000002000000
+  inventoryData: {fileID: 11400000, guid: 43da5b80c6d988440bee01d9a3549aea, type: 2}
+  itemDB: {fileID: 11400000, guid: 0d8c9fef26c9323419d0cb39f32bb362, type: 2}

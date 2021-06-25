@@ -6,48 +6,99 @@ using UnityEngine.UI;
 // 업그레이드 관리
 public class UpgradeEquip : MonoBehaviour
 {
-    public Equipment equipment;    // 장비 중인 아이템
+    public static UpgradeEquip instance;    // 싱글톤 UpgradeEquip 
 
+    public Equipment equipment;
     public ItemUpgradeDB itemUpgradeDB; // 업그레이드 목록 데이터베이스
+    public ItemDB itemDB;
+    public ItemDB equipDB;
+    public InventoryData inventoryData; //  아이템 인벤토리
+
+    bool canUpgrade;
+    bool isUpgrade;     // 강화 시도중
 
     public GameObject tryAnim;  // 강화 중 애니메이션 오브젝트
+    public GameObject staticAnim;   // 평상 시 오브젝트
 
-    public Image[] equipImage; //아이템 이미지
-    public Text equipTxt;   // 장비템 이름
-    
+    public GameObject[] materials;  // 재료 오브젝트
     public Image[] materialImage;  //재료 이미지
-    public Text materialCountTxt;   //재료 갯수
+    public Text[] materialCountTxt;   //재료 갯수
 
     public Item upgradeItem;    // 업그레이드 대상인 아이템
+    public Image upgradeItemImg;    //업그레이드 아이템 이미지
+
     public GameObject succesPannel; // 성공 여부
     public Text successTxt; // 성공 여부  텍스트
 
-    private void Update()
+    int itemNum;    // 강화 아이템 아이디
+
+
+    private void Start()
     {
-        ShowEquipItem();
+        if (instance == null)
+            instance = this;
+
+        UpgradeItem(equipment.equipItem[1]);
     }
 
-    //장착 중인 장비 이미지 보여주기
-    void ShowEquipItem()
+
+    public void UpgradeItem(Item _item)
     {
-        // 0~2 장비템 갯수
-        for (int i = 0; i < equipment.equipItem.Length; i++)
+        upgradeItem = _item;
+        upgradeItemImg.sprite = _item.itemImage;
+
+        itemNum = equipDB.GetIDFrom(upgradeItem);
+
+        NeedMaterial();
+    }
+
+
+    void NeedMaterial()
+    {
+        for (int i = 0; i < materialImage.Length; i++)
         {
-            equipImage[i].sprite = equipment.equipItem[i].itemImage;
+            materials[i].SetActive(false);
+        }
+
+
+        for (int i = 0; i < itemUpgradeDB.itemUpgradeDatas[itemNum].MaterialItems.Length; i++)
+        {
+            materials[i].SetActive(true);
+
+            int itemID = itemDB.GetIDFrom(itemUpgradeDB.itemUpgradeDatas[itemNum].MaterialItems[i]);
+
+            for (int j = 0; j < inventoryData.itemIDs.Length; j++)
+            {
+                materialImage[i].sprite = itemUpgradeDB.itemUpgradeDatas[itemNum].MaterialItems[i].itemImage;
+                if (itemID == inventoryData.itemIDs[j])
+                {
+                    
+                    materialCountTxt[i].text = inventoryData.itemCount[j] + " / " + itemUpgradeDB.itemUpgradeDatas[itemNum].MaterialItemCount[i];
+                    break;
+                }
+                else
+                {
+                    materialCountTxt[i].text = 0 + " / " + itemUpgradeDB.itemUpgradeDatas[itemNum].MaterialItemCount[i];
+
+                }
+            }
         }
     }
 
-    // 강화 아이템 목록 바꾸기
-    void ChangeUpgradeItem(Item _item)
+    // 강화 시도
+    public void TryUpgrade()
     {
-        upgradeItem = _item;
+        canUpgrade = itemUpgradeDB.itemUpgradeDatas[itemNum].isEnoughItem();
+
+       if (canUpgrade && !isUpgrade)
+        {
+            isUpgrade = true;
+            itemUpgradeDB.itemUpgradeDatas[itemNum].UseMaterial();
+            StartCoroutine(DoUpgrade());
+        }
+        
     }
 
-    // 강화 시도
-    void TryUpgrade()
-    {
-        StartCoroutine(DoUpgrade());
-    }
 
     // 강화중
     IEnumerator DoUpgrade()
@@ -55,6 +106,7 @@ public class UpgradeEquip : MonoBehaviour
         int random = Random.Range(0,(upgradeItem.Upgrade + 1) * 2); // 1/2, 1/4, 1/8
 
         tryAnim.SetActive(true);
+        staticAnim.SetActive(false);
 
         successTxt.text = "- 강화 시도 -";
         yield return new WaitForSeconds(0.3f);
@@ -64,6 +116,7 @@ public class UpgradeEquip : MonoBehaviour
 
         yield return new WaitForSeconds(3f);
         tryAnim.SetActive(false);
+        staticAnim.SetActive(true);
         succesPannel.SetActive(false);
 
         if (random == 1)
@@ -81,6 +134,8 @@ public class UpgradeEquip : MonoBehaviour
         succesPannel.SetActive(true);
 
         yield return new WaitForSeconds(1.5f);
+
+        isUpgrade = false;
 
         succesPannel.SetActive(false);
         
