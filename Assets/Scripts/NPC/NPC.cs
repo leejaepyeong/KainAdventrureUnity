@@ -20,11 +20,13 @@ public class NPC : MonoBehaviour
     public void OpenPannel()
     {
         WhoMeet.instanse.npcPannels[WhoMeet.instanse.number].SetActive(true);
+        GameManager.instance.playerStop = true;
     }
 
     public void closePannel()
     {
         WhoMeet.instanse.npcPannels[WhoMeet.instanse.number].SetActive(false);
+        GameManager.instance.playerStop = false;
     }
 
     

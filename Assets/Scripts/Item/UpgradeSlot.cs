@@ -12,6 +12,12 @@ public class UpgradeSlot : MonoBehaviour
     public Text equipTxt;   // 장비템 이름
     public int slotNum; // 장비템 자리
 
+    UpgradeEquip upgradeEquip;
+
+    private void Start()
+    {
+        upgradeEquip = FindObjectOfType<UpgradeEquip>();
+    }
 
     private void Update()
     {
@@ -30,7 +36,7 @@ public class UpgradeSlot : MonoBehaviour
     // 강화할 아이템 고르기
     public void ChooseItem()
     {
-        UpgradeEquip.instance.UpgradeItem(item);
+        upgradeEquip.UpgradeItem(item);
     }
 
 

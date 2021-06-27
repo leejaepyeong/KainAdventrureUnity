@@ -22,6 +22,7 @@ MonoBehaviour:
   weaponType: 
   coinValue: 0
   value: 0
+  Upgrade: 0
   equipType: 3
   useType: 0
   isUsed: 0

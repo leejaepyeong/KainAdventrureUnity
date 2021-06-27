@@ -49,7 +49,6 @@ public class Inventory : MonoBehaviour
         {
             for (int j = 0; j < inventoryData[i].itemIDs.Length; j++)
             {
-
                 if(inventoryData[i].itemIDs[j] != 0)
                     slotPresenters[i].slots[j].AddItem(SomeDB[i].items[inventoryData[i].itemIDs[j]], inventoryData[i].itemCount[j]);
 
@@ -122,7 +121,6 @@ public class Inventory : MonoBehaviour
                 {
                     if (SomeDB[num].items[inventoryData[num].itemIDs[i]].itemName == _item.itemName)
                     {
-                        inventoryData[num].itemCount[i]++;
                         slotPresenters[num].slots[i].SetSlotCount(1);
                         return;
                     }

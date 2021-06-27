@@ -43,15 +43,15 @@ public class Slot : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler, IP
         itemCount = _count;
         ItemImage.sprite = item.itemImage;  // sprite에 이미지 넣어줘야대서 .sprite추가
 
+        go_CountImage.SetActive(true);
+
         if (item.itemType != Item.ItemType.Equipment)
         {
-            go_CountImage.SetActive(true);
             text_Count.text = itemCount.ToString();
         }
         else
         {
-            text_Count.text = "0";
-            go_CountImage.SetActive(false);
+            text_Count.text = "+ " + _item.Upgrade;
         }
 
 
@@ -66,16 +66,18 @@ public class Slot : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler, IP
 
         int itemId = SomeDB[(int)item.itemType].GetIDFrom(item);
 
+        int typeNumber = (int)item.itemType;
+
         // 인벤 데이터 안의 아이디 따른 갯수 조절 
-        for (int i = 0; i < invenData[(int)item.itemType].itemCount.Length; i++)
+        for (int i = 0; i < invenData[typeNumber].itemCount.Length; i++)
         {
-            if(invenData[(int)item.itemType].itemIDs[i] == itemId)
+            if(invenData[typeNumber].itemIDs[i] == itemId)
             {
-                invenData[(int)item.itemType].itemCount[i]--;
+                invenData[typeNumber].itemCount[i] += _num;
                 
-                if(invenData[(int)item.itemType].itemCount[i] <= 0)
+                if(invenData[typeNumber].itemCount[i] <= 0)
                 {
-                    invenData[(int)item.itemType].itemIDs[i] = 0;
+                    invenData[typeNumber].itemIDs[i] = 0;
                 }
             }
         }

@@ -10,8 +10,11 @@ public class GameManager : MonoBehaviour
     public PlayerStatusData playerData;
 
     //상태
-    public bool is1stCam = true;
-    public bool isInfoOn = false;
+    public bool is1stCam = true;    // 1인칭 시점
+    public bool isInfoOn = false;   // 정보창 열려있는지
+    public bool playerStop = false; // 플레이어만 멈추기
+
+    public bool isGameOn;   // 게임 진행중
     
 
     public Text cameraTxt;  //  카메라 시점 텍스트

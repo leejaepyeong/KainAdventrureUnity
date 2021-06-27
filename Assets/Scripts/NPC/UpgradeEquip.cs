@@ -6,8 +6,6 @@ using UnityEngine.UI;
 // 업그레이드 관리
 public class UpgradeEquip : MonoBehaviour
 {
-    public static UpgradeEquip instance;    // 싱글톤 UpgradeEquip 
-
     public Equipment equipment;
     public ItemUpgradeDB itemUpgradeDB; // 업그레이드 목록 데이터베이스
     public ItemDB itemDB;
@@ -26,6 +24,7 @@ public class UpgradeEquip : MonoBehaviour
 
     public Item upgradeItem;    // 업그레이드 대상인 아이템
     public Image upgradeItemImg;    //업그레이드 아이템 이미지
+    public Text upgradeTxt; // 업그레이드 정도
 
     public GameObject succesPannel; // 성공 여부
     public Text successTxt; // 성공 여부  텍스트
@@ -35,24 +34,23 @@ public class UpgradeEquip : MonoBehaviour
 
     private void Start()
     {
-        if (instance == null)
-            instance = this;
-
         UpgradeItem(equipment.equipItem[1]);
     }
 
 
+    // 업그레이드 아이템 정보 가져오기
     public void UpgradeItem(Item _item)
     {
         upgradeItem = _item;
         upgradeItemImg.sprite = _item.itemImage;
+        upgradeTxt.text = "+ " + upgradeItem.Upgrade.ToString();
 
         itemNum = equipDB.GetIDFrom(upgradeItem);
 
         NeedMaterial();
     }
 
-
+    // 필요 재료 개수
     void NeedMaterial()
     {
         for (int i = 0; i < materialImage.Length; i++)
@@ -94,6 +92,8 @@ public class UpgradeEquip : MonoBehaviour
         {
             isUpgrade = true;
             itemUpgradeDB.itemUpgradeDatas[itemNum].UseMaterial();
+
+            UpgradeItem(upgradeItem);
             StartCoroutine(DoUpgrade());
         }
         
@@ -103,6 +103,8 @@ public class UpgradeEquip : MonoBehaviour
     // 강화중
     IEnumerator DoUpgrade()
     {
+        GameManager.instance.playerStop = true;
+
         int random = Random.Range(0,(upgradeItem.Upgrade + 1) * 2); // 1/2, 1/4, 1/8
 
         tryAnim.SetActive(true);
@@ -138,7 +140,10 @@ public class UpgradeEquip : MonoBehaviour
         isUpgrade = false;
 
         succesPannel.SetActive(false);
-        
+
+        GameManager.instance.playerStop = false;
+
+
     }
 
 

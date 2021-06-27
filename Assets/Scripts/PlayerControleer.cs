@@ -43,7 +43,6 @@ public class PlayerControleer : MonoBehaviour
     bool isHit = false;
     bool isSafe;
 
-    public bool allPause;
 
     //무기
     public GameObject[] weapons;
@@ -112,18 +111,17 @@ public class PlayerControleer : MonoBehaviour
         if(!isDead && !StoryOn.instance.isStory)
         {
             GetInput();
-            Move();
-            Run();
+            
             Recover();
 
-            if(!allPause)
+            if(!GameManager.instance.playerStop)
             {
-                if (GameManager.instance.is1stCam)
-                {
-                    tryJump();
-                    tryAttack();
-                    trySkill();
-                }
+                Move();
+                Run();
+                tryJump();
+                tryAttack();
+                trySkill();
+                
 
                 tryEquipChange();
 
@@ -588,6 +586,8 @@ public class PlayerControleer : MonoBehaviour
 
             if (Input.GetKeyDown(KeyCode.P))
                 SetText(npc);
+
+            
         }
         
     }
@@ -596,23 +596,20 @@ public class PlayerControleer : MonoBehaviour
     {
         NPCTxt.gameObject.SetActive(false);
         _npc.OpenPannel();
-        InfoManager.isInfoOn = true;
-        allPause = true;
     }
 
-
+    
 
 
     private void OnTriggerExit(Collider other)
     {
         if(other.tag == "NPC")
         {
-            InfoManager.isInfoOn = false;
             NPCTxt.gameObject.SetActive(false);
             NPC npc = other.GetComponent<NPC>();
             npc.closePannel();
             npc.anim.SetTrigger("PlayerInOut");
-            allPause = false;
+            
         }
        
     }

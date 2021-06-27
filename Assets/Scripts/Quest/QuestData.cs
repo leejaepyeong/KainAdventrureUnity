@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 
-[CreateAssetMenu(fileName ="quest",menuName ="Quest/quest")]
+[CreateAssetMenu(fileName ="quest",menuName ="Info/quest")]
 public class QuestData : ScriptableObject
 {
     public bool isStart = false;
@@ -18,21 +18,21 @@ public class QuestData : ScriptableObject
 
     public ItemType itemType;
 
-    public string QuestName;    // ?????? ????
+    public string QuestName;    // 퀘스트 이름
 
-    public int monsterId;   // ?? ??????
-    public int ResourseId; // ???? ???? ID??
-    public int Value;   // ?????????? ???? ??
-    public int MaxValue;
+    public int monsterId;   // 몬스터 ID
+    public int ResourseId; // 자원 ID
+    public int Value;   // 현재 갯수
+    public int MaxValue;    // 필요 갯수
 
     
 
 
     [TextArea]
-    public string QuestDesc;    // ?????? ????
+    public string QuestDesc;    // 퀘스트 설명
 
-    public float expReward;
-    public int coinReward;
+    public float expReward; // 경험치 보상
+    public int coinReward;  // 코인 보상
 
-    public bool cynematic;
+    public bool cynematic;  // 시네마틱 영상 (메인퀘스트용)
 }

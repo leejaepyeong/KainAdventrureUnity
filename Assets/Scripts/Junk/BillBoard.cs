@@ -17,5 +17,7 @@ public class BillBoard : MonoBehaviour
     {
         transform.LookAt(transform.position + cam.rotation * Vector3.forward, cam.rotation * Vector3.up);
 
+        if(cam != Camera.main.transform)
+            cam = Camera.main.transform;
     }
 }

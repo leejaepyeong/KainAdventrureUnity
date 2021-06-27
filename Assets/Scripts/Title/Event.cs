@@ -38,6 +38,8 @@ public class Event : MonoBehaviour
 
         if (!isGameStart.isGameStart)
             StartCynematic();
+        else
+            GameManager.instance.isGameOn = true;
 
         mainClear += WallDestroy;
         mainClear += SynematicOn;
@@ -81,6 +83,8 @@ public class Event : MonoBehaviour
     // cynematic On
     void SynematicOn()
     {
+        GameManager.instance.isGameOn = false;
+
         mainCam.SetActive(false);
         cynemCam.SetActive(true);
         cynematic[currentQuestIndex].SetActive(true);
@@ -93,6 +97,8 @@ public class Event : MonoBehaviour
     // First Game Start Cynematic
     void StartCynematic()
     {
+        GameManager.instance.isGameOn = false;
+
         currentQuestIndex--;
 
         isGameStart.isGameStart = true; // game is Start First Cynematic
@@ -101,9 +107,10 @@ public class Event : MonoBehaviour
         cynemCam.SetActive(true);
         cynematic[0].SetActive(true);
 
-        Invoke("CamOff", 15f);
+        Invoke("CamOff", 32f);
 
         
+
     }
 
 
@@ -114,6 +121,8 @@ public class Event : MonoBehaviour
         mainCam.SetActive(true);
         cynemCam.SetActive(false);
         currentQuestIndex++;
+
+        GameManager.instance.isGameOn = true;
     }
 
 

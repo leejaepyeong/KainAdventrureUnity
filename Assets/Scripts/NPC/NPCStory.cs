@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 
 
-[CreateAssetMenu(fileName ="Story",menuName ="Story/story")]
+[CreateAssetMenu(fileName ="Story",menuName ="Info/story")]
 public class NPCStory : ScriptableObject
 {
     [TextArea]

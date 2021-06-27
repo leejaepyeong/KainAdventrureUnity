@@ -14,7 +14,8 @@ public class EnemyRespawn : MonoBehaviour
 
     private void Update()
     {
-        RespawnEnemy();
+        if(GameManager.instance.isGameOn)
+            RespawnEnemy();
         
     }
 
