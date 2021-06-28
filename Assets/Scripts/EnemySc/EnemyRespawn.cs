@@ -6,8 +6,8 @@ public class EnemyRespawn : MonoBehaviour
 {
     public GameObject[] enemyPrefabs;   // 프리팹 목록
     public GameObject enemyPrefab;  // 생성 객체
+    public float respawnTime;
 
-    float respawnTime = 20f;
     float currentTime = 0f;
 
    

@@ -12,8 +12,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9d46c0e149cacc942b7ce71220f60591, type: 3}
   m_Name: HowToControl
   m_EditorClassIdentifier: 
-  HelpTiltle: HowToControl
+  HelpTiltle: How To Control
   HelpTxt:
-  - 
+  - "PC(1\uC778\uCE6D)\n\uC774\uB3D9 : WASD   /   \uACF5\uACA9 : \uC88C\uD074\uB9AD  
+    /   \uC810\uD504 : spacebar\n\uC2A4\uD0AC : 1,2,3\uBC88\uD0A4   /   \uBB34\uAE30\uC804\uD658
+    : E   /   \uC815\uBCF4\uCC3D : Q, I, L, M\n\uB300\uD654\uD558\uAE30 : \uD074\uB9AD
+    or P\uD0A4"
+  - "\uBAA8\uBC14\uC77C(3\uC778\uCE6D)\n\uC774\uB3D9 : \uC870\uC774\uC2A4\uD2F1  
+    /  \uB098\uBA38\uC9C0 : \uD074\uB9AD"
   HelpImg:
-  - {fileID: 0}
+  - {fileID: 21300000, guid: 06077583213a98d46a92fe2e0bf26376, type: 3}
+  - {fileID: 21300000, guid: 4c68dbaa168fcb84288022b6573c0071, type: 3}

@@ -46,3 +46,4 @@ MonoBehaviour:
   enemyPrefabs:
   - {fileID: 1924092031063069134, guid: 82e32947b8e664405907843677b6918c, type: 3}
   enemyPrefab: {fileID: 0}
+  respawnTime: 40

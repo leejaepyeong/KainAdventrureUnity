@@ -48,3 +48,4 @@ MonoBehaviour:
   - {fileID: 5369806015344362722, guid: 62bd154269387441ca14594b56025bde, type: 3}
   - {fileID: 1369808732425255649, guid: 18bcef947b4164bd4b37e0308c073628, type: 3}
   enemyPrefab: {fileID: 0}
+  respawnTime: 20

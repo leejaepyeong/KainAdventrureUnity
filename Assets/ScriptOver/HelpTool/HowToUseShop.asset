@@ -12,8 +12,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9d46c0e149cacc942b7ce71220f60591, type: 3}
   m_Name: HowToUseShop
   m_EditorClassIdentifier: 
-  HelpTiltle: HowToUseShop
+  HelpTiltle: Use NPC
   HelpTxt:
-  - 
+  - "NPC\uCC3D \uC5F4\uAE30\nNPC\uADFC\uCC98\uC5D0 \uAC00\uC11C \uD074\uB9AD or P\uD0A4"
+  - "\uCE58\uB8CC\n150 \uACE8\uB4DC\uB85C \uCCB4\uB825 \uB9C8\uB098\uB97C \uC804\uBD80
+    \uD68C\uBCF5\n\uB098\uC911\uC5D0 \uAC08 \uC218\uB85D \uD6A8\uC728\uC774 \uC99D\uAC00"
+  - "\uC0C1\uC810\n\uB2E4\uC591\uD55C \uC7A5\uBE44 \uBC0F \uD3EC\uC158\uC744 \uAD6C\uB9E4
+    \uAC00\uB2A5\n\uBE44\uC300\uC218\uB85D \uC88B\uC740 \uAC70\uB2E4"
+  - "\uB300\uC7A5\uAC04\n\uC7A5\uBE44\uB97C \uAC15\uD654\uD560 \uC218 \uC788\uB294\uACF3\n\uAC15\uD654
+    \uC131\uACF5 \uB9C8\uB2E4 \uD655\uB960 \uC808\uBC18\uC73C\uB85C \uAC10\uC18C"
   HelpImg:
-  - {fileID: 0}
+  - {fileID: 21300000, guid: 0355084da746bdd4795ebff6031dc29e, type: 3}
+  - {fileID: 21300000, guid: 78ea9644344cc844487291659a6fd9de, type: 3}
+  - {fileID: 21300000, guid: d0f2bd2f731d05940be88b2de15efae3, type: 3}
+  - {fileID: 21300000, guid: 59e172459949ce748b48021eb28c4f61, type: 3}

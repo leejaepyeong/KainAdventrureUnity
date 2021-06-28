@@ -10,9 +10,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 9d46c0e149cacc942b7ce71220f60591, type: 3}
-  m_Name: WhatIsGame
+  m_Name: Story
   m_EditorClassIdentifier: 
-  HelpTiltle: WhatIsGame
+  HelpTiltle: Story
   HelpTxt:
   - "Kain Adventure\n\nRPG \uC7A5\uB974 \uAE30\uBC18\uC758 \uAC8C\uC784\n\uB9C8\uC655\uC73C\uB85C\uBD80\uD130
     \uC655\uAD6D\uC744 \uC9C0\uD0A4\uB294 \uAC8C\uC784\uC785\uB2C8\uB2E4.\n\n\uB808\uBC38\uC5C5
@@ -22,6 +22,12 @@ MonoBehaviour:
     \uB2F9\uD55C Kain\n\uC804\uC0DD\uC758 \uAE30\uD68C\uB97C \uC5BB\uAC8C \uB418\uC5B4
     \uBA38\uB098\uBA3C \uC655\uAD6D\uC73C\uB85C \uC624\uAC8C\uB41C\uB2E4.\n\n\uADF8\uB7F0\uB370
     \uC774\uAC8C \uBB34\uC2A8\uC77C...\n\uC0AC\uB78C\uC758 \uBAA8\uC2B5\uC774 \uC544\uB2CC
-    \uC880\uBE44\uC758 \uBAA8\uC2B5\uC73C\uB85C \uC804\uC0DD\uC774 "
+    \uC880\uBE44\uC758 \uBAA8\uC2B5\uC73C\uB85C \uC804\uC0DD\uC774 \uB418\uC5C8\uB2E4"
+  - "\uC790\uC2E0\uC758 \uC800\uC8FC\uB97C \uC5C6\uC560\uACE0 \uC655\uAD6D\uC744
+    \uAD6C\uD558\uAE30 \uC704\uD574\nKain\uC740 \uBAA8\uD5D8\uC744 \uB5A0\uB098\uAC8C
+    \uB41C\uB2E4.\n\n\uACFC\uC5F0 \uADF8\uB294 Happy Ending,\uC744 \uBCFC \uC218
+    \uC788\uC744\uAC00?"
   HelpImg:
-  - {fileID: 0}
+  - {fileID: 21300000, guid: c736d7040a9321246b7882ec0016fad6, type: 3}
+  - {fileID: 21300000, guid: be8d55d96b595e148903a18be3bf3365, type: 3}
+  - {fileID: 21300000, guid: 8f2871fc79a46ed4a879115f62d9d5cd, type: 3}

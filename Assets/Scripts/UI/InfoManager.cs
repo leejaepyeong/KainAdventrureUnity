@@ -11,15 +11,17 @@ public class InfoManager : MonoBehaviour
     bool isMapOn = false;
     bool isQuestOn = false;
     bool isOptionOn = false;
+    bool isHelpOn = false;
 
     //각 메뉴들 패널
-    public GameObject MenuPannel;
-    public GameObject MenuBtn;
-    public GameObject StatusPannel;
-    public GameObject MiniMapPannel;
-    public GameObject InvenPannel;
-    public GameObject QuestPannel;
-    public GameObject OptionPannel;
+    public GameObject MenuPannel;   // 메뉴창
+    public GameObject MenuBtn;  // 메뉴 버튼
+    public GameObject StatusPannel; // 스탯 창
+    public GameObject MiniMapPannel;    // 미니맵 창
+    public GameObject InvenPannel;  // 인벤토리 창
+    public GameObject QuestPannel;  // 퀘스트 창
+    public GameObject OptionPannel; // 옵션 창
+    public GameObject helpPannel;   // 도움말 창
 
     private void Update()
     {
@@ -277,5 +279,28 @@ public class InfoManager : MonoBehaviour
         }
 
 
+    }
+
+    public void HelpOpen()
+    {
+        isHelpOn = true;
+        isOptionOn = false;
+        OptionPannel.SetActive(false);
+
+        helpPannel.SetActive(true);
+
+    }
+    
+    public void HelpClose()
+    {
+        if (isInfoOn && isHelpOn)
+        {
+            isInfoOn = false;
+            isHelpOn = false;
+            GameManager.instance.isInfoOn = false;
+
+            helpPannel.SetActive(false);
+            MenuBtn.SetActive(true);
+        }
     }
 }

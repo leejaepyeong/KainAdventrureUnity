@@ -12,6 +12,6 @@ public class HelpTool : ScriptableObject
     [TextArea]
     public string[] HelpTxt;
 
-    public Image[] HelpImg;
+    public Sprite[] HelpImg;
 
 }

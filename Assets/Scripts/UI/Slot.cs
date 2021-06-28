@@ -128,7 +128,6 @@ public class Slot : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler, IP
 
             DragSlot.instance.transform.position = eventData.position;
 
-            //DragSlot.instance.draginvenData[(int)item.itemType].itemCount.Length
             for (int i = 0; i < invenData[(int)item.itemType].itemCount.Length; i++)
             {
                 if(item == SomeDB[(int)item.itemType].items[invenData[(int)item.itemType].itemIDs[i]])

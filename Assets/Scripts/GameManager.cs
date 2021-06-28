@@ -33,6 +33,7 @@ public class GameManager : MonoBehaviour
     int skynum = 0; // 하늘배경
     float degree = 0;   //회전각
 
+
     // Start is called before the first frame update
     void Awake()
     {
@@ -113,4 +114,6 @@ public class GameManager : MonoBehaviour
         InfoManager.isInfoOn = false;
         Application.Quit();
     }
+
+    
 }

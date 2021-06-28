@@ -57,7 +57,7 @@ public class PlayerControleer : MonoBehaviour
     [SerializeField]
     private float cameraRotationLimit;  // 카메라 각도 
     private float currentCameraRotationX = 0;   // 현재 보는 각도
-    Vector3 offset = new Vector3(-0.197f,2.365f,-3.716f);
+    Vector3 offset = new Vector3(-0.197f,3.165f,-4.616f);
 
     public GameObject cameraOrign;
 

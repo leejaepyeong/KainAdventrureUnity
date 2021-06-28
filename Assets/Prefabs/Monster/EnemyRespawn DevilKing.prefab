@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 3519553770622162807}
   - component: {fileID: 3519553770622162808}
   m_Layer: 0
-  m_Name: EnemyRespawn
+  m_Name: EnemyRespawn DevilKing
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -44,7 +44,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemyPrefabs:
-  - {fileID: 1665611841952970245, guid: 57bace7898c81ac4ca056331530e1b68, type: 3}
-  - {fileID: 5369806015344362722, guid: 62bd154269387441ca14594b56025bde, type: 3}
+  - {fileID: 79102479681527478, guid: 5dc782ef62a8c4aa48a9bf5f34f546d1, type: 3}
   enemyPrefab: {fileID: 0}
-  respawnTime: 20
+  respawnTime: 50
