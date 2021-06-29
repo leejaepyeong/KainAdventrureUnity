@@ -11,6 +11,7 @@ public class UpgradeEquip : MonoBehaviour
     public ItemDB itemDB;
     public ItemDB equipDB;
     public InventoryData inventoryData; //  아이템 인벤토리
+    public Inventory equipInventory;    // 장비창
 
     bool canUpgrade;
     bool isUpgrade;     // 강화 시도중
@@ -143,7 +144,7 @@ public class UpgradeEquip : MonoBehaviour
 
         GameManager.instance.playerStop = false;
 
-
+        equipInventory.CheckInvenList();
     }
 
 

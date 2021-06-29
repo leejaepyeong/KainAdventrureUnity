@@ -101,7 +101,7 @@ public class Enemy : MonoBehaviour
         nav.SetDestination(Target.position);
         anim.SetBool("Walk", isWalking);
 
-        if (distance < 10f)
+        if (distance < 11f)
         {
             isSight = true;
         }   

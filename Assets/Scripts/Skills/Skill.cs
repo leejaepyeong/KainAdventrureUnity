@@ -11,7 +11,7 @@ public class Skill : ScriptableObject
     public Type type;
 
     public GameObject skillPrefab;
-    public Image skillImage;
+    public Sprite skillImage;
 
     public string skillName;
 

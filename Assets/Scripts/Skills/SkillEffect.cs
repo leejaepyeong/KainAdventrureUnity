@@ -9,6 +9,11 @@ public class SkillEffect : MonoBehaviour
     public PlayerStatusData playerdata;
 
     public Skill[] skill;
+    public AudioClip[] attackClip;
+    public AudioClip[] buffClip;
+    public AudioClip[] healClip;
+
+    public AudioSource audioSource;
 
     public int[] isSkill = { 0 };   // 1~3 ?? ??(?? / ?? / ?)
 
@@ -92,6 +97,9 @@ public class SkillEffect : MonoBehaviour
     {
         GameObject SkillObject = Instantiate(skill[_num].skillPrefab, player.transform.position, player.transform.rotation);
 
+        audioSource.clip = attackClip[0];
+        audioSource.Play();
+
         Rigidbody skillRigid = SkillObject.GetComponent<Rigidbody>();
         skillRigid.velocity = skillPos.forward * 4;
 
@@ -104,8 +112,10 @@ public class SkillEffect : MonoBehaviour
     {
         buffSkillObject = Instantiate(skill[_num].skillPrefab, player.transform.position - new Vector3(0f,0f,-0.35f), player.transform.rotation);
 
+        audioSource.clip = buffClip[0];
+        audioSource.Play();
 
-        switch(skill[_num].skillName)
+        switch (skill[_num].skillName)
         {
             case "AttackUp":
                 playerdata.meleeDamage *= skill[_num].dataValue;
@@ -120,7 +130,7 @@ public class SkillEffect : MonoBehaviour
                 break;
         }
 
-        
+        audioSource.Stop();
 
         yield return new WaitForSeconds(1f);
         Destroy(buffSkillObject);
@@ -130,6 +140,9 @@ public class SkillEffect : MonoBehaviour
     IEnumerator HealSkill(int _num)
     {
         GameObject SkillObject = Instantiate(skill[_num].skillPrefab, player.transform.position, player.transform.rotation);
+
+        audioSource.clip = healClip[0];
+        audioSource.Play();
 
         playerdata.currentHp += skill[_num].dataValue;
         if (playerdata.currentHp >= playerdata.maxHp)

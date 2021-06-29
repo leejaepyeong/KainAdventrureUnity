@@ -55,7 +55,7 @@ public class DevilKing : MeleeEnemy
                 yield return new WaitForSeconds(0.1f);
                 skillArea[1].SetActive(true);
 
-                yield return new WaitForSeconds(0.4f);
+                yield return new WaitForSeconds(0.5f);
                 skillArea[1].SetActive(false);
 
                 break;

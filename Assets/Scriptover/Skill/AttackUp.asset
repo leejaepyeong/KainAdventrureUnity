@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   type: 1
   skillPrefab: {fileID: 178922, guid: fb9e27ece36ee4effbb7b021be0d95cb, type: 3}
-  skillImage: {fileID: 0}
+  skillImage: {fileID: 21300000, guid: 7df7ef7a23e39fb45a91256052a868e8, type: 3}
   skillName: AttackUp
   mana: 5
   dataValue: 2

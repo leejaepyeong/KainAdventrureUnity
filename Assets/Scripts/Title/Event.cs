@@ -12,22 +12,26 @@ public class Event : MonoBehaviour
 
     public IsGameStart isGameStart;
 
-    public int currentQuestIndex = 1;
+    public int currentQuestIndex = 1;   // 시네머신 카운트
 
-    public GameObject cynemCam;
-    public GameObject mainCam;
+    public GameObject cynemCam; // 시네머신용 카메라
+    public GameObject mainCam;  // 메인 카메라
 
     int[] wallState = { 0 };
   
-    public GameObject[] Walls;
-    public QuestData[] questData;
-    public GameObject[] cynematic;
-    public GameObject lastCynematic;
-    public GameObject vitcoryPannel;
+    public GameObject[] Walls;  // 벽 제거
+    public QuestData[] questData;   // 각 시네머신 관련 퀘스트
+    public GameObject[] cynematic;  // 시네머진 모음
+    public GameObject lastCynematic;    // 엔딩 시네머신
+    public GameObject vitcoryPannel;    // 승리 패널
 
     public GameObject endingZone;
 
     public AudioSource audio;
+
+    public PlayerControleer player;
+    public GameObject boss;
+    public Transform[] position;
 
     private void Start()
     {
@@ -99,7 +103,7 @@ public class Event : MonoBehaviour
     {
         GameManager.instance.isGameOn = false;
 
-        currentQuestIndex--;
+        currentQuestIndex = 0;
 
         isGameStart.isGameStart = true; // game is Start First Cynematic
 
@@ -110,7 +114,22 @@ public class Event : MonoBehaviour
         Invoke("CamOff", 32f);
 
         
+    }
 
+    public void LastBossCinematic()
+    {
+        player.transform.position = position[0].position;
+        boss.SetActive(false);
+
+        GameManager.instance.isGameOn = false;
+
+        currentQuestIndex = 3;
+
+        mainCam.SetActive(false);
+        cynemCam.SetActive(true);
+        cynematic[3].SetActive(true);
+
+        Invoke("CamOff", 29f);
     }
 
 
@@ -120,9 +139,19 @@ public class Event : MonoBehaviour
         cynematic[currentQuestIndex].SetActive(false);
         mainCam.SetActive(true);
         cynemCam.SetActive(false);
+
+        if (currentQuestIndex == 3)
+        {
+            player.transform.position = position[1].position;
+            boss.SetActive(true);
+        }
+            
+
         currentQuestIndex++;
 
         GameManager.instance.isGameOn = true;
+
+        
     }
 
 

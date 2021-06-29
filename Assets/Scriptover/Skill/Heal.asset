@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   type: 2
   skillPrefab: {fileID: 178922, guid: 3c9b4b58c180f254c8334b368c32e323, type: 3}
-  skillImage: {fileID: 0}
+  skillImage: {fileID: 21300000, guid: a7c2d9c1099a15f4ca295b8725023d76, type: 3}
   skillName: Heal
   mana: 2
   dataValue: 20

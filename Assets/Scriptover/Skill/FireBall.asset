@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   type: 0
   skillPrefab: {fileID: 8450978759926222664, guid: dcaf2a428bde46a44a11f09f06fcddde, type: 3}
-  skillImage: {fileID: 0}
+  skillImage: {fileID: 21300000, guid: 2d0997ac1b1fd664e98202450e7ea2d7, type: 3}
   skillName: FireBall
   mana: 2
   dataValue: 50
