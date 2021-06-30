@@ -12,19 +12,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 545d958acc5ae4f40a02296d8b0b66a0, type: 3}
   m_Name: MainQuest3
   m_EditorClassIdentifier: 
-  isStart: 0
-  isClear: 0
+  isStart: 1
+  isClear: 1
   isReward: 0
   type: 0
   itemType: 0
   QuestName: Kill DevilKing
   monsterId: 9
   ResourseId: 0
-  Value: 0
+  Value: -1
   MaxValue: 1
   QuestDesc: 'Kill the Boss
 
     DevilKing * 1'
   expReward: 0
   coinReward: 0
-  cynematic: 0
+  cynematic: 1

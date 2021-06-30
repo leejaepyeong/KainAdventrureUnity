@@ -19,7 +19,7 @@ public class PlayerControleer : MonoBehaviour
     //스틱기준
     public Transform Stick;         // stick
 
-    // ??????
+    // 조이스틱
     private Vector3 StickFirstPos;  // 처음 위치 스틱
     private Vector3 JoyVec;         // 벡터
     private float Radius;           // 반지름
@@ -330,7 +330,7 @@ public class PlayerControleer : MonoBehaviour
 
         
 
-        if (Physics.Raycast(transform.position, transform.forward, out hitInfo, 1.5f) &&hitInfo.transform.gameObject.tag == "StoryZone")
+        if (Physics.Raycast(transform.position + new Vector3(0,0.2f,0), transform.forward, out hitInfo, 1.5f) &&hitInfo.transform.gameObject.tag == "StoryZone")
         {
             NPCStoryData npcData = hitInfo.transform.GetComponent<NPCStoryData>();
             StoryOn.instance.npcStory = npcData.npcStory[npcData.number];
