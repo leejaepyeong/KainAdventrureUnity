@@ -12,7 +12,7 @@ public class Event : MonoBehaviour
 
     public IsGameStart isGameStart;
 
-    public int currentQuestIndex = 1;   // 시네머신 카운트
+    public int currentQuestIndex;   // 시네머신 카운트
 
     public GameObject cynemCam; // 시네머신용 카메라
     public GameObject mainCam;  // 메인 카메라
@@ -38,32 +38,38 @@ public class Event : MonoBehaviour
         if (instanse == null)
             instanse = this;
 
-        audio = GetComponent<AudioSource>();
-
-        if (!isGameStart.isGameStart)
-            StartCynematic();
-        else
-            GameManager.instance.isGameOn = true;
 
         mainClear += WallDestroy;
         mainClear += SynematicOn;
 
-        for (int i = 1; i < questData.Length - 1; i++)
+        if (!isGameStart.isGameStart)
+            StartCynematic();
+        else
         {
-            if(!questData[i].isClear)
-            {
-                currentQuestIndex = i;
-                break;
-            }
+            GameManager.instance.isGameOn = true;
 
-            Destroy(Walls[i]);
+            for (int i = 1; i < questData.Length - 1; i++)
+            {
+                if (!questData[i].isClear)
+                {
+                    currentQuestIndex = i;
+                    break;
+                }
+
+                Destroy(Walls[i]);
+            }
         }
+            
+
+        
+
+        
     }
 
     private void Update()
     {
 
-        for (int i = currentQuestIndex; i < questData.Length - 1; i++)
+        for (int i = 1; i < questData.Length - 1; i++)
         {
             if (questData[i].isClear && !questData[i].cynematic)
             {
@@ -101,6 +107,8 @@ public class Event : MonoBehaviour
     // First Game Start Cynematic
     void StartCynematic()
     {
+        player.transform.position = position[0].position;
+
         GameManager.instance.isGameOn = false;
 
         currentQuestIndex = 0;
@@ -144,6 +152,10 @@ public class Event : MonoBehaviour
         {
             player.transform.position = position[1].position;
             boss.SetActive(true);
+        }
+        else if(currentQuestIndex == 0)
+        {
+            player.transform.position = position[2].position;
         }
             
 

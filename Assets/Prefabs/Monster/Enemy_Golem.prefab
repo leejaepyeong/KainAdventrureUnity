@@ -564,9 +564,13 @@ MonoBehaviour:
   skillArea:
   - {fileID: 0}
   hpBar: {fileID: 6986607441784295951}
+  SkillPrefabs: []
   rigid: {fileID: 1369808732425255651}
   boxCollider: {fileID: 1369808732418922571}
   nav: {fileID: 1369808732425255650}
+  Coin:
+  - {fileID: 11400000, guid: a7b747cac21a94bd48597af908ea7d0e, type: 2}
+  - {fileID: 11400000, guid: a7b747cac21a94bd48597af908ea7d0e, type: 2}
 --- !u!1 &1369808732425262527
 GameObject:
   m_ObjectHideFlags: 0

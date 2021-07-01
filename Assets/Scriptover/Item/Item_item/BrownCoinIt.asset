@@ -17,6 +17,12 @@ MonoBehaviour:
     \uB0AE\uB2E4"
   itemType: 3
   itemImage: {fileID: 0}
-  itemPrefab: {fileID: 0}
+  itemPrefab: {fileID: 1433966521586366434, guid: dc041be410e8ba640bf7df3371b1a290, type: 3}
   weaponType: 
-  coinValue: 1
+  coinValue: 5
+  value: 0
+  Upgrade: 0
+  equipType: 0
+  useType: 0
+  isUsed: 0
+  isEquip: 0

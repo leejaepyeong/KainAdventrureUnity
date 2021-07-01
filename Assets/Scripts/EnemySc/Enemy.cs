@@ -12,24 +12,24 @@ public class Enemy : MonoBehaviour
 
     public PlayerStatusData playerData;
 
-    //??
+    //스탯
     protected float currentHp;
     protected float currentMp;
 
     protected float delay;
 
-    // ???
+    
     protected float walkSpeed;
     protected float RunSpeed;
     protected float applySpeed;
 
-    // 회복 시간
+    
     protected float regenTime;
 
-    protected Vector3 direction;  // ??
+    protected Vector3 direction;  // 방향
 
-    public Transform Target;    // ??
-    public BoxCollider meleeArea;   // ?? ????
+    public Transform Target;    // 타겟 플레이어
+    public BoxCollider meleeArea;   // 근접 공격 범우
     public GameObject[] skillArea;
 
     public Image hpBar;
@@ -40,13 +40,13 @@ public class Enemy : MonoBehaviour
     // 
     protected float currentTime = 5f;
 
-    // ??
-    protected bool isHit = false;   //????????
-    protected bool isDead = false;  // ????
-    protected bool isWalking = false;   // ????
-    protected bool isRegen = true;  // ????????
-    protected bool isSight = false; // ???????? ????
-    protected bool isAttack = false;    // ??????
+    // 상ㅌ
+    protected bool isHit = false;   //맞았는지
+    protected bool isDead = false;  // 죽었는지
+    protected bool isWalking = false;   // 걷는지
+    protected bool isRegen = true;  // 회복하는지
+    protected bool isSight = false; // 타겟 발견했는지
+    protected bool isAttack = false;    // 공격중인지
     protected bool isSkill = false;
     protected bool isSkillCool = true;
     protected bool isArea = false;
@@ -57,6 +57,8 @@ public class Enemy : MonoBehaviour
     protected BoxCollider boxCollider;
     protected Animator anim;
     public NavMeshAgent nav;
+
+    public Item[] Coin; //드랍 코인
 
 
 
@@ -267,6 +269,7 @@ public class Enemy : MonoBehaviour
             quest.MonsterDead(enemyData);
             anim.SetTrigger("Die");
             playerData.currentExp += enemyData.Exp;
+            DropCoin();
             Destroy(gameObject, 2f);
             
         }
@@ -274,6 +277,18 @@ public class Enemy : MonoBehaviour
         yield return new WaitForSeconds(0.4f);
 
         isHit = false;
+    }
+
+    // 코인 드랍
+    void DropCoin()
+    {
+        if (Coin[0] == null) return;
+
+        int num = Random.Range(0, 3);   // 1/3 상위코인 2/3 하위코인
+
+        if (num == 2) num = 1;
+
+        GameObject coin = Instantiate(Coin[num].itemPrefab,transform.position + new Vector3(0,0.5f,0),Quaternion.identity);
     }
 
     private void OnTriggerEnter(Collider other)

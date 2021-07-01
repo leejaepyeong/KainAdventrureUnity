@@ -16,6 +16,12 @@ MonoBehaviour:
   itemDesc: "\uD669\uAE08 \uB3D9\uC804  \uAC00\uC7A5 \uAC00\uCE58\uAC00 \uB192\uB2E4"
   itemType: 3
   itemImage: {fileID: 0}
-  itemPrefab: {fileID: 0}
+  itemPrefab: {fileID: 357234695530398502, guid: 78b6615de9e0a564a9e0b6ace09e86a1, type: 3}
   weaponType: 
-  coinValue: 100
+  coinValue: 150
+  value: 0
+  Upgrade: 0
+  equipType: 0
+  useType: 0
+  isUsed: 0
+  isEquip: 0

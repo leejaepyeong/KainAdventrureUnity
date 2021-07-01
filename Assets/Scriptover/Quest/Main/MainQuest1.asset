@@ -12,19 +12,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 545d958acc5ae4f40a02296d8b0b66a0, type: 3}
   m_Name: MainQuest1
   m_EditorClassIdentifier: 
-  isStart: 1
-  isClear: 1
+  isStart: 0
+  isClear: 0
   isReward: 0
   type: 0
   itemType: 0
   QuestName: Kill MushKing
   monsterId: 7
   ResourseId: 0
-  Value: 0
+  Value: 1
   MaxValue: 1
   QuestDesc: 'Kill the Boss
 
     MushKing * 1'
   expReward: 1000
   coinReward: 1000
-  cynematic: 1
+  cynematic: 0
