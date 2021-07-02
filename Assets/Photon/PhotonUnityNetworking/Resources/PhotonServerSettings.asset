@@ -38,6 +38,11 @@ MonoBehaviour:
   - DestroySpaceship
   - Fire
   - RespawnSpaceship
+  - AddPriceRPC
+  - HouseRPC
+  - BuyRPC
+  - InitGame
+  - RollRPC
   DisableAutoOpenWizard: 1
   ShowSettings: 0
   DevRegionSetOnce: 0
