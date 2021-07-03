@@ -12,6 +12,7 @@ public class Dice : MonoBehaviour
 
     private void Start()
     {
+        originPos = GetComponent<Transform>();
         originPos.position = transform.position;
     }
 

@@ -13,6 +13,12 @@ public class Title : MonoBehaviour
 
     }
 
+    public void DiceClick()
+    {
+        SceneManager.LoadScene("DiceMap");
+
+    }
+
     public void QuitClick()
     {
         Application.Quit();
