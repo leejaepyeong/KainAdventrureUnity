@@ -149,6 +149,31 @@ public class NetworkManager : MonoBehaviourPunCallbacks
         }
     }
 
+
+    public void LeaveRoom()
+    {
+        PhotonNetwork.LeaveRoom();
+    }
+
+    public override void OnLeftRoom()
+    {
+
+    }
+
+    public override void OnPlayerLeftRoom(Player otherPlayer)
+    {
+        string message = otherPlayer.NickName + "이 퇴장했습니다";
+
+        PV.RPC("LogRPC", RpcTarget.AllViaServer, message);
+
+        RoomRenewal();
+    }
+
+    void RoomRenewal()
+    {
+
+    }
+
     public void InitGame()
     {
         // 현재 방의 플레이어 수 Check
@@ -169,6 +194,7 @@ public class NetworkManager : MonoBehaviourPunCallbacks
         MyListRenewal();
     }
     
+    // 로비에서 방 상태
     void MyListRenewal()
     {
         maxPage = (myList.Count % CellBtn.Length == 0) ? myList.Count / CellBtn.Length : (myList.Count / CellBtn.Length) + 1;
@@ -184,10 +210,10 @@ public class NetworkManager : MonoBehaviourPunCallbacks
             CellBtn[i].transform.GetChild(0).GetComponent<Text>().text = (multiple + i < myList.Count) ? myList[multiple + i].Name : "";
             CellBtn[i].transform.GetChild(1).GetComponent<Text>().text = (multiple + i < myList.Count) ? myList[multiple + i].PlayerCount + " / " + myList[multiple + i].MaxPlayers : "";
 
-
         }
     }
 
+    // 방리스트 업데이트
     public override void OnRoomListUpdate(List<RoomInfo> roomList)
     {
         int roomCount = roomList.Count;
@@ -204,6 +230,7 @@ public class NetworkManager : MonoBehaviourPunCallbacks
         MyListRenewal();
     }
 
+    // 패널 열기
     void SetPanel(GameObject curPanel)
     {
         DisconnectPanel.SetActive(false);
@@ -229,6 +256,12 @@ public class NetworkManager : MonoBehaviourPunCallbacks
     public void Roll()
     {
         PV.RPC("RollRPC",RpcTarget.MasterClient);
+    }
+
+    [PunRPC]
+    void LogRPC(string logTxt)
+    {
+        LogTxt.text = logTxt;
     }
 
     [PunRPC]
