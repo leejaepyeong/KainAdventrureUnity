@@ -18,4 +18,4 @@ MonoBehaviour:
   damage: 2
   deffence: 0
   delay: 1.2
-  range: 2
+  range: 4.5

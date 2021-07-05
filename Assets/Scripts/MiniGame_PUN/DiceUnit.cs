@@ -52,14 +52,20 @@ public class DiceUnit : MonoBehaviourPun
 
     private void Update()
     {
-        PV.RPC("AiMove", RpcTarget.AllViaServer);
+        if (!PhotonNetwork.IsMasterClient)
+            return;
+
+        AiMove();
+
+        if (hp <= 0)
+            Die();
+
+            //PV.RPC("Die", RpcTarget.AllViaServer);
        
     }
 
     void UpdateTartget()
     {
-        if (target != null)
-        {
             GameObject[] enemies = GameObject.FindGameObjectsWithTag(enemyTag);
             float shortestDistance = Mathf.Infinity;
             GameObject nearestEnemy = null;
@@ -80,21 +86,25 @@ public class DiceUnit : MonoBehaviourPun
             {
                 target = nearestEnemy;
             }
-        }
+        
     }
 
 
-    [PunRPC]
     void AiMove()
     {
+
         if(!isAttack)
         {
-            anim.SetBool("Walk",isMove);
             isMove = true;
+            anim.SetBool("Walk",isMove);
+
             pathFinder.isStopped = false;
 
             if (target == null)
+            {
                 pathFinder.SetDestination(castle.transform.position);
+            }
+                
 
             else
             {
@@ -110,6 +120,7 @@ public class DiceUnit : MonoBehaviourPun
     protected virtual void tryAttack()
     {
         dist = Vector3.Distance(transform.position, target.transform.position);
+
 
         if(dist <= attackRange)
         {
@@ -132,10 +143,12 @@ public class DiceUnit : MonoBehaviourPun
         yield return null;
     }
     
-
+    [PunRPC]
     protected virtual void Die()
     {
         isDead = true;
+        PV.RPC("Die",RpcTarget.AllViaServer);
+        PhotonNetwork.Destroy(gameObject);
     }
 
 
@@ -143,6 +156,7 @@ public class DiceUnit : MonoBehaviourPun
     {
         if(collision.gameObject.tag == enemyTag && target == null)
         {
+            Debug.Log(collision.gameObject);
             UpdateTartget();
         }
     }

@@ -361,6 +361,7 @@ GameObject:
   - component: {fileID: 1905793640795684825}
   - component: {fileID: 1905793640795684828}
   - component: {fileID: 1905793640795684829}
+  - component: {fileID: 6826556314226951811}
   m_Layer: 0
   m_Name: BoxMan
   m_TagString: Untagged
@@ -411,7 +412,7 @@ Rigidbody:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1905793640795584601}
   serializedVersion: 2
-  m_Mass: 10
+  m_Mass: 100
   m_Drag: 0
   m_AngularDrag: 0
   m_UseGravity: 1
@@ -539,6 +540,19 @@ MonoBehaviour:
   anim: {fileID: 1905793640786214617}
   pathFinder: {fileID: 1905793640795684828}
   PV: {fileID: 1905793640795684825}
+--- !u!135 &6826556314226951811
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1905793640795584601}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 2.5
+  m_Center: {x: 0, y: 0.38, z: 0}
 --- !u!1 &1905793640795586131
 GameObject:
   m_ObjectHideFlags: 0

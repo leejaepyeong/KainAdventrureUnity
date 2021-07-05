@@ -1,23 +1,28 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Photon.Pun;
+using Photon.Realtime;
 
-public class Spawn : MonoBehaviour
+public class Spawn : MonoBehaviourPun
 {
     
     public DiceUnit[] diceUnits;
-    PlayerScript player;
+    public PlayerScript player;
+
+
 
     public IEnumerator UnitSpawn()
     {
         yield return null;
 
+
         for (int i = 0; i < player.playerHouse; i++)
         {
             int num = i % 3;
 
-            DiceUnit spwanUnit = Instantiate<DiceUnit>(diceUnits[0], transform.position, Quaternion.identity);
-            spwanUnit.gameObject.tag = gameObject.tag;
+            GameObject spwanUnit = PhotonNetwork.Instantiate(diceUnits[i].name, transform.position, Quaternion.identity);
+            spwanUnit.tag = gameObject.tag;
         }
     }
 }

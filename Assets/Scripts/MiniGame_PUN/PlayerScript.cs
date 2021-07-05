@@ -11,6 +11,8 @@ public class PlayerScript : MonoBehaviour
     // 플레이어 이동
     public IEnumerator Move(int diceNum)
     {
+        
+
         yield return null;
 
         int[] movePos = new int[diceNum];

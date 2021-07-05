@@ -34,7 +34,7 @@ public class Dice : MonoBehaviour
 
         for (int i = 0; i < Nums.Length; i++)
         {
-            if(Nums[i].position.y > 2)
+            if(Nums[i].position.y > -4.5)
             {
                 num = i + 1;
                 break;

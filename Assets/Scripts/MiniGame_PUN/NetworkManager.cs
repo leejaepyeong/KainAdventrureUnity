@@ -42,6 +42,7 @@ public class NetworkManager : MonoBehaviourPunCallbacks
 
     [Header("Boarder")]
     public Dice diceScript;
+    public BattleField battleField;
     public Transform[] Pos;
     public PlayerScript[] Players;
     public Text[] MoneyTexts;
@@ -70,7 +71,8 @@ public class NetworkManager : MonoBehaviourPunCallbacks
     private void Update()
     {
         // 상태
-        StatusTxt.text = PhotonNetwork.NetworkClientState.ToString();
+       // StatusTxt.text = PhotonNetwork.NetworkClientState.ToString();
+       if(PhotonNetwork.InLobby)
         LobbyInfoTxt.text = (PhotonNetwork.CountOfPlayers - PhotonNetwork.CountOfPlayersInRooms) + "로비 / " + PhotonNetwork.CountOfPlayers + "접속";
     }
 
@@ -88,7 +90,7 @@ public class NetworkManager : MonoBehaviourPunCallbacks
     }
 
     // 접속 끊기 버튼
-    public void DisConnect()
+    public void DisConnectBtn()
     {
         PhotonNetwork.Disconnect();
     }
@@ -115,7 +117,7 @@ public class NetworkManager : MonoBehaviourPunCallbacks
     }
 
     // 랜덤 방 입장
-    public void JoinRandomRoom()
+    public void JoinRandomRoomBtn()
     {
         PhotonNetwork.JoinRandomRoom();
     }
@@ -139,6 +141,11 @@ public class NetworkManager : MonoBehaviourPunCallbacks
         return PhotonNetwork.LocalPlayer.IsMasterClient;
     }
 
+    public void JoinTheRoom(RoomInfo _info)
+    {
+        PhotonNetwork.JoinRoom(_info.Name);
+    }
+
     // 방참가
     public override void OnJoinedRoom()
     {
@@ -150,15 +157,17 @@ public class NetworkManager : MonoBehaviourPunCallbacks
     }
 
 
-    public void LeaveRoom()
+    public void LeaveRoomBtn()
     {
         PhotonNetwork.LeaveRoom();
+        InitGameBtn.SetActive(false);
     }
 
     public override void OnLeftRoom()
     {
-
+        SetPanel(LobyPannel);
     }
+
 
     public override void OnPlayerLeftRoom(Player otherPlayer)
     {
@@ -171,7 +180,12 @@ public class NetworkManager : MonoBehaviourPunCallbacks
 
     void RoomRenewal()
     {
+        //SetPanel(RoomPanel);
 
+        if (master())
+        {
+            InitGameBtn.SetActive(true);
+        }
     }
 
     public void InitGame()
@@ -209,6 +223,7 @@ public class NetworkManager : MonoBehaviourPunCallbacks
             CellBtn[i].interactable = (multiple + i < myList.Count) ? true : false;
             CellBtn[i].transform.GetChild(0).GetComponent<Text>().text = (multiple + i < myList.Count) ? myList[multiple + i].Name : "";
             CellBtn[i].transform.GetChild(1).GetComponent<Text>().text = (multiple + i < myList.Count) ? myList[multiple + i].PlayerCount + " / " + myList[multiple + i].MaxPlayers : "";
+            CellBtn[i].GetComponent<RoomListItem>().SetUp(myList[multiple + i]);
 
         }
     }
@@ -230,6 +245,7 @@ public class NetworkManager : MonoBehaviourPunCallbacks
         MyListRenewal();
     }
 
+
     // 패널 열기
     void SetPanel(GameObject curPanel)
     {
@@ -239,6 +255,7 @@ public class NetworkManager : MonoBehaviourPunCallbacks
 
         curPanel.SetActive(true);
     }
+    
 
     [PunRPC]
     void InitGameRPC()
@@ -268,7 +285,6 @@ public class NetworkManager : MonoBehaviourPunCallbacks
     void RollRPC()
     {
         StartCoroutine(RollCo());
-
     }
 
     [PunRPC]
@@ -286,8 +302,10 @@ public class NetworkManager : MonoBehaviourPunCallbacks
         MoneyTexts[0].text = money0.ToString();
         MoneyTexts[1].text = money1.ToString();
 
-        if (money0 <= 0 || money1 >= 300) LogTxt.text = NicknameTxts[1].text + "이 승리하셨습니다";
-        else if (money1 <= 0 || money0 >= 300) LogTxt.text = NicknameTxts[0].text + "이 승리하셨습니다";
+
+
+       // if (money0 <= 0 || money1 >= 300) LogTxt.text = NicknameTxts[1].text + "이 승리하셨습니다";
+       // else if (money1 <= 0 || money0 >= 300) LogTxt.text = NicknameTxts[0].text + "이 승리하셨습니다";
     }
 
     IEnumerator RollCo()
@@ -298,6 +316,14 @@ public class NetworkManager : MonoBehaviourPunCallbacks
         yield return StartCoroutine(diceScript.Roll());
         yield return StartCoroutine(Players[turn].Move(diceScript.num));
         yield return new WaitForSeconds(0.2f);
+
+        if(turn == 1)
+        {
+            yield return new WaitForSeconds(1f);
+            yield return StartCoroutine(battleField.BattleStart());
+        }
+        
+
 
         PV.RPC("EndRollRPC", RpcTarget.AllViaServer, Players[0].money, Players[1].money);
 

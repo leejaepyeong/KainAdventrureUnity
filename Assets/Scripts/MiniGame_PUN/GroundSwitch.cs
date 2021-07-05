@@ -9,12 +9,11 @@ public class GroundSwitch : MonoBehaviourPun
 {
     public enum GroundType {GROUND, BUFF, DEBUFF, START }
     public GroundType groundType;
-    public GameObject buyPannel;
 
     public int price, owner;
-    private int purchseHouse = 0;
 
     PlayerScript curPlayer, otherPlayer;
+    public PlayerCastle[] playerCastle;
 
     PhotonView PV;
     TextMesh PriceTxt;
@@ -27,8 +26,8 @@ public class GroundSwitch : MonoBehaviourPun
         if(groundType == GroundType.GROUND)
         {
             PriceTxt = GetComponentInChildren<TextMesh>();
-            Houses = new GameObject[4] { transform.GetChild(0).gameObject, transform.GetChild(1).gameObject,
-                transform.GetChild(2).gameObject, transform.GetChild(3).gameObject };
+            PriceTxt.text = price.ToString();
+            Houses = new GameObject[2] { transform.GetChild(0).gameObject, transform.GetChild(1).gameObject};
         }
     }
 
@@ -41,6 +40,7 @@ public class GroundSwitch : MonoBehaviourPun
         if(groundType == GroundType.GROUND)
         {
             GroundOwner();
+            PV.RPC("AddPriceRPC", RpcTarget.AllViaServer);
         }
 
         else if(groundType == GroundType.BUFF)
@@ -50,66 +50,71 @@ public class GroundSwitch : MonoBehaviourPun
             switch(random)
             {
                 case 0:
-
+                    playerCastle[curPlayer.myNum].Hp += 20;
+                    if (playerCastle[curPlayer.myNum].Hp >= 100) playerCastle[curPlayer.myNum].Hp = 100;
                     break;
 
                 case 1:
+                    playerCastle[otherPlayer.myNum].Hp -= 20;
+                    break;
+            }
+
+            
+        }
+
+        else if (groundType == GroundType.DEBUFF)
+        {
+            int random = Random.Range(0, 2);
+
+            switch (random)
+            {
+                case 0:
+                    playerCastle[curPlayer.myNum].Hp -= 10;
+                    break;
+
+                case 1:
+                    playerCastle[otherPlayer.myNum].Hp += 10;
+                    if (playerCastle[otherPlayer.myNum].Hp >= 100) playerCastle[otherPlayer.myNum].Hp = 100;
                     break;
             }
         }
+
     }
 
     void GroundOwner()
     {
         int myNum = curPlayer.myNum;
 
-        if((owner == -1 || owner == myNum) && purchseHouse <= 1)
+        if(owner == -1)
         {
-            PV.RPC("HouseRPC", RpcTarget.MasterClient);
+            NetworkManager.NM.LogTxt.text = NetworkManager.NM.NicknameTxts[myNum].text + "가 땅을 구매했습니다";
+
+            curPlayer.money -= 10;
+
+            owner = myNum;
+
+            PV.RPC("BuyRPC", RpcTarget.AllViaServer, myNum);
+
+            curPlayer.playerHouse++;
+            Debug.Log(curPlayer.playerHouse);
         }
 
         else if(owner != myNum)
         {
             curPlayer.money -= price;
+            otherPlayer.money += price;
             NetworkManager.NM.LogTxt.text = NetworkManager.NM.NicknameTxts[myNum].text + "가 " + price + "을 잃었습니다";
             NetworkManager.NM.LogTxt.text = NetworkManager.NM.NicknameTxts[otherPlayer.myNum].text + "가 " + price + "을 얻었습니다";
 
         }
     }
 
-    // 집 사기
-    void AddGround()
-    {
-        int myNum = curPlayer.myNum;
-
-        PV.RPC("AddPriceRPC",RpcTarget.AllViaServer);
-        PV.RPC("BuyRPC", RpcTarget.AllViaServer, myNum);
-
-        curPlayer.playerHouse++;
-
-        purchseHouse++;
-    }
-
-    void CancleBuy()
-    {
-        buyPannel.SetActive(false);
-    }
-
-   
-
-    [PunRPC]
-    void HouseRPC(int myNum)
-    {
-        buyPannel.SetActive(true);
-    }
+    
 
     [PunRPC]
     void BuyRPC(int myNum)
     {
-        curPlayer.money -= price;
-
-        owner = myNum;
-        Houses[myNum + purchseHouse].SetActive(true);
+        Houses[myNum].SetActive(true);
     }
 
     [PunRPC]

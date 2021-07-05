@@ -636,6 +636,7 @@ GameObject:
   - component: {fileID: 4670779937211997611}
   - component: {fileID: 4670779937211997600}
   - component: {fileID: 4670779937211997615}
+  - component: {fileID: 564974846625728933}
   m_Layer: 0
   m_Name: SpearMan
   m_TagString: Untagged
@@ -686,7 +687,7 @@ Rigidbody:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4670779937211864501}
   serializedVersion: 2
-  m_Mass: 10
+  m_Mass: 100
   m_Drag: 0
   m_AngularDrag: 0
   m_UseGravity: 1
@@ -814,6 +815,19 @@ MonoBehaviour:
   anim: {fileID: 4670779937204508753}
   pathFinder: {fileID: 4670779937211997600}
   PV: {fileID: 4670779937211997611}
+--- !u!135 &564974846625728933
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4670779937211864501}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 2.5
+  m_Center: {x: 0, y: 0.38, z: 0}
 --- !u!1 &4670779937211866925
 GameObject:
   m_ObjectHideFlags: 0

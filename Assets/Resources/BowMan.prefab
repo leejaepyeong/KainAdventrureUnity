@@ -451,6 +451,7 @@ GameObject:
   - component: {fileID: 1143198852291127358}
   - component: {fileID: 1143198852291127353}
   - component: {fileID: 1143198852291127354}
+  - component: {fileID: 4498263978118234717}
   m_Layer: 0
   m_Name: BowMan
   m_TagString: Untagged
@@ -501,7 +502,7 @@ Rigidbody:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1143198852291012810}
   serializedVersion: 2
-  m_Mass: 10
+  m_Mass: 100
   m_Drag: 0
   m_AngularDrag: 0
   m_UseGravity: 1
@@ -630,6 +631,19 @@ MonoBehaviour:
   pathFinder: {fileID: 1143198852291127353}
   PV: {fileID: 1143198852291127358}
   bulletPrefab: {fileID: 3156468012108314792, guid: 386e17172980bd54fb316396810a0e72, type: 3}
+--- !u!135 &4498263978118234717
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1143198852291012810}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 2.5
+  m_Center: {x: 0, y: 0.38, z: 0}
 --- !u!1 &1143198852291014654
 GameObject:
   m_ObjectHideFlags: 0
