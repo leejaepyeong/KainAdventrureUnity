@@ -362,6 +362,7 @@ GameObject:
   - component: {fileID: 1905793640795684828}
   - component: {fileID: 1905793640795684829}
   - component: {fileID: 6826556314226951811}
+  - component: {fileID: -3572533110110806221}
   m_Layer: 0
   m_Name: BoxMan
   m_TagString: Untagged
@@ -487,6 +488,7 @@ MonoBehaviour:
   ObservedComponents:
   - {fileID: 1905793640795684827}
   - {fileID: 1905793640795684826}
+  - {fileID: -3572533110110806221}
   sceneViewId: 0
   InstantiationId: 0
   isRuntimeInstantiated: 0
@@ -553,6 +555,51 @@ SphereCollider:
   serializedVersion: 2
   m_Radius: 2.5
   m_Center: {x: 0, y: 0.38, z: 0}
+--- !u!114 &-3572533110110806221
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1905793640795584601}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9b8c4a61274f60b4ea5fb4299cfdbf14, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ShowLayerWeightsInspector: 1
+  ShowParameterInspector: 1
+  m_SynchronizeParameters:
+  - Type: 4
+    SynchronizeType: 0
+    Name: Jump
+  - Type: 4
+    SynchronizeType: 0
+    Name: Run
+  - Type: 9
+    SynchronizeType: 0
+    Name: BowAttack
+  - Type: 9
+    SynchronizeType: 1
+    Name: SwordAttack
+  - Type: 9
+    SynchronizeType: 0
+    Name: Damage
+  - Type: 9
+    SynchronizeType: 0
+    Name: Die
+  - Type: 4
+    SynchronizeType: 1
+    Name: Walk
+  - Type: 9
+    SynchronizeType: 0
+    Name: PickAxe
+  - Type: 9
+    SynchronizeType: 0
+    Name: Axe
+  m_SynchronizeLayers:
+  - SynchronizeType: 0
+    LayerIndex: 0
 --- !u!1 &1905793640795586131
 GameObject:
   m_ObjectHideFlags: 0

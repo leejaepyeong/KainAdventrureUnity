@@ -18,6 +18,7 @@ public class GroundSwitch : MonoBehaviourPun
     PhotonView PV;
     TextMesh PriceTxt;
     GameObject[] Houses;
+    string logTxt;
 
     private void Start()
     {
@@ -52,10 +53,14 @@ public class GroundSwitch : MonoBehaviourPun
                 case 0:
                     playerCastle[curPlayer.myNum].Hp += 20;
                     if (playerCastle[curPlayer.myNum].Hp >= 100) playerCastle[curPlayer.myNum].Hp = 100;
+                    logTxt = NetworkManager.NM.NicknameTxts[curPlayer.myNum].text + "님의 성이 체력을 회복했습니다.";
+                    PV.RPC("LogRPC",RpcTarget.AllViaServer, logTxt);
                     break;
 
                 case 1:
                     playerCastle[otherPlayer.myNum].Hp -= 20;
+                    logTxt = NetworkManager.NM.NicknameTxts[curPlayer.myNum].text + "님이 상대방에게 대미지를 입혔습니다.";
+                    PV.RPC("LogRPC", RpcTarget.AllViaServer, logTxt);
                     break;
             }
 
@@ -70,11 +75,15 @@ public class GroundSwitch : MonoBehaviourPun
             {
                 case 0:
                     playerCastle[curPlayer.myNum].Hp -= 10;
+                    logTxt = NetworkManager.NM.NicknameTxts[curPlayer.myNum].text + "님의 성이 체력을 잃었습니다.";
+                    PV.RPC("LogRPC", RpcTarget.AllViaServer, logTxt);
                     break;
 
                 case 1:
                     playerCastle[otherPlayer.myNum].Hp += 10;
                     if (playerCastle[otherPlayer.myNum].Hp >= 100) playerCastle[otherPlayer.myNum].Hp = 100;
+                    logTxt = NetworkManager.NM.NicknameTxts[curPlayer.myNum].text + "님이 상대방 성의 체력을 회복했습니다.";
+                    PV.RPC("LogRPC", RpcTarget.AllViaServer, logTxt);
                     break;
             }
         }
@@ -87,7 +96,8 @@ public class GroundSwitch : MonoBehaviourPun
 
         if(owner == -1)
         {
-            NetworkManager.NM.LogTxt.text = NetworkManager.NM.NicknameTxts[myNum].text + "가 땅을 구매했습니다";
+            logTxt = NetworkManager.NM.NicknameTxts[myNum].text + "가 땅을 구매했습니다";
+            PV.RPC("LogRPC", RpcTarget.AllViaServer, logTxt);
 
             curPlayer.money -= 10;
 
@@ -96,7 +106,6 @@ public class GroundSwitch : MonoBehaviourPun
             PV.RPC("BuyRPC", RpcTarget.AllViaServer, myNum);
 
             curPlayer.playerHouse++;
-            Debug.Log(curPlayer.playerHouse);
         }
 
         else if(owner != myNum)
@@ -124,4 +133,9 @@ public class GroundSwitch : MonoBehaviourPun
         PriceTxt.text = price.ToString();
     }
 
+    [PunRPC]
+    public void LogRPC(string logTxt)
+    {
+        NetworkManager.NM.LogTxt.text = logTxt;
+    }
 }

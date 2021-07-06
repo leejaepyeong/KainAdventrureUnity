@@ -34,7 +34,7 @@ public class NetworkManager : MonoBehaviourPunCallbacks
     public GameObject InitGameBtn, RollBtn;
     public Text[] NicknameTxts;
     public GameObject[] ArrowImages;
-
+    public bool isRoll;
     /*
      public Text[] ChatTxt;
     public InputField ChatInput;
@@ -213,6 +213,10 @@ public class NetworkManager : MonoBehaviourPunCallbacks
     {
         maxPage = (myList.Count % CellBtn.Length == 0) ? myList.Count / CellBtn.Length : (myList.Count / CellBtn.Length) + 1;
 
+        
+        
+
+
         // 이전 , 다음 버튼
         PreviousBtn.interactable = (currentPage <= 1) ? false : true;
         NextBtn.interactable = (currentPage >= maxPage) ? false : true;
@@ -223,8 +227,13 @@ public class NetworkManager : MonoBehaviourPunCallbacks
             CellBtn[i].interactable = (multiple + i < myList.Count) ? true : false;
             CellBtn[i].transform.GetChild(0).GetComponent<Text>().text = (multiple + i < myList.Count) ? myList[multiple + i].Name : "";
             CellBtn[i].transform.GetChild(1).GetComponent<Text>().text = (multiple + i < myList.Count) ? myList[multiple + i].PlayerCount + " / " + myList[multiple + i].MaxPlayers : "";
-            CellBtn[i].GetComponent<RoomListItem>().SetUp(myList[multiple + i]);
 
+            
+
+            if (myList.Count > multiple + i)
+            CellBtn[i].GetComponent<RoomListItem>().SetUp(myList[multiple + i]);
+            
+            
         }
     }
 
@@ -272,11 +281,12 @@ public class NetworkManager : MonoBehaviourPunCallbacks
 
     public void Roll()
     {
+        if(!isRoll)
         PV.RPC("RollRPC",RpcTarget.MasterClient);
     }
 
     [PunRPC]
-    void LogRPC(string logTxt)
+    public void LogRPC(string logTxt)
     {
         LogTxt.text = logTxt;
     }
@@ -284,12 +294,15 @@ public class NetworkManager : MonoBehaviourPunCallbacks
     [PunRPC]
     void RollRPC()
     {
+        isRoll = true;
         StartCoroutine(RollCo());
     }
 
     [PunRPC]
     void EndRollRPC(int money0, int money1)
     {
+        isRoll = false;
+
         turn = turn == 0 ? 1 : 0;
 
         for (int i = 0; i < 2; i++)
@@ -320,7 +333,8 @@ public class NetworkManager : MonoBehaviourPunCallbacks
         if(turn == 1)
         {
             yield return new WaitForSeconds(1f);
-            yield return StartCoroutine(battleField.BattleStart());
+            if(PhotonNetwork.IsMasterClient)
+                yield return StartCoroutine(battleField.BattleStart());
         }
         
 

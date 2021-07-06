@@ -1,10 +1,18 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Photon.Pun;
+using Photon.Realtime;
 
 public class RangeUnit : DiceUnit
 {
     public GameObject bulletPrefab;
+
+    [PunRPC]
+    protected override void tryAttack()
+    {
+        base.tryAttack();
+    }
 
     protected override IEnumerator Attack()
     {

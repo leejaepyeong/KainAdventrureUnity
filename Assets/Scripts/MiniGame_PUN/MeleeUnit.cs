@@ -1,16 +1,24 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Photon.Pun;
+using Photon.Realtime;
 
 public class MeleeUnit : DiceUnit
 {
+    [PunRPC]
+    protected override void tryAttack()
+    {
+        base.tryAttack();
+    }
 
     protected override IEnumerator Attack()
     {
         anim.SetTrigger("SwordAttack");
 
+        Debug.Log(target);
 
-        if(target.GetComponent<DiceUnit>() != null)
+        if(target != castle.gameObject)
         {
             DiceUnit unit = target.GetComponent<DiceUnit>();
             unit.hp -= unit.deffence - damage;

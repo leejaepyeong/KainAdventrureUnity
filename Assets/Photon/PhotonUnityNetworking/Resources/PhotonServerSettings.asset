@@ -53,6 +53,9 @@ MonoBehaviour:
   - TryAttack
   - currentHP
   - Die
+  - tryDestroy
+  - UpdateTartget
+  - InitUnit
   DisableAutoOpenWizard: 1
   ShowSettings: 0
   DevRegionSetOnce: 1

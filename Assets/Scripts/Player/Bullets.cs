@@ -15,6 +15,8 @@ public class Bullets : MonoBehaviour
             enemyTag = "Player2";
         else
             enemyTag = "Player1";
+
+        gameObject.tag = "Bullet";
     }
 
 
@@ -27,7 +29,7 @@ public class Bullets : MonoBehaviour
             if(other.GetComponent<DiceUnit>() != null)
             {
                 DiceUnit otherUnit = other.GetComponent<DiceUnit>();
-                otherUnit.hp -= otherUnit.deffence - diceUnitData.damage;
+                otherUnit.hp -=  diceUnitData.damage - otherUnit.deffence;
             }
 
             else

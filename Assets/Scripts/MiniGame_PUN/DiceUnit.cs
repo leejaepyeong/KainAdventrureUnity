@@ -16,7 +16,7 @@ public class DiceUnit : MonoBehaviourPun
     bool isMove;
     protected bool isAttack = false;
     bool isDead = false;
-
+    bool isStart = false;
 
     public int hp;
     public int damage;
@@ -50,24 +50,41 @@ public class DiceUnit : MonoBehaviourPun
         castle = GameObject.FindGameObjectWithTag(enemyTag).GetComponent<PlayerCastle>();
     }
 
+    [PunRPC]
+    void InitUnit()
+    {
+
+        Debug.Log(PV);
+
+        
+
+        isStart = true;
+    }
+
     private void Update()
     {
         if (!PhotonNetwork.IsMasterClient)
             return;
 
+        //Debug.Log(PV);
+
+        //if(!isStart)
+            //PV.RPC("InitUnit", RpcTarget.AllViaServer);
+
         AiMove();
 
         if (hp <= 0)
-            Die();
+            PV.RPC("Die", RpcTarget.AllViaServer);
 
-            //PV.RPC("Die", RpcTarget.AllViaServer);
-       
+
+
     }
 
-    void UpdateTartget()
+    void UpdateTartget(GameObject _other)
     {
+        /*
             GameObject[] enemies = GameObject.FindGameObjectsWithTag(enemyTag);
-            float shortestDistance = Mathf.Infinity;
+            float shortestDistance = 8f;
             GameObject nearestEnemy = null;
 
             foreach (GameObject enemy in enemies)
@@ -86,7 +103,11 @@ public class DiceUnit : MonoBehaviourPun
             {
                 target = nearestEnemy;
             }
-        
+        */
+
+        target = _other;
+        Debug.Log(target);
+
     }
 
 
@@ -147,17 +168,17 @@ public class DiceUnit : MonoBehaviourPun
     protected virtual void Die()
     {
         isDead = true;
-        PV.RPC("Die",RpcTarget.AllViaServer);
         PhotonNetwork.Destroy(gameObject);
     }
 
+    
 
-    private void OnCollisionEnter(Collision collision)
+    private void OnTriggerEnter(Collider other)
     {
-        if(collision.gameObject.tag == enemyTag && target == null)
+        if(other.tag == enemyTag && target == null && PhotonNetwork.IsMasterClient)
         {
-            Debug.Log(collision.gameObject);
-            UpdateTartget();
+            Debug.Log(other);
+            UpdateTartget(other.gameObject);
         }
     }
 }

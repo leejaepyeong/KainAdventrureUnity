@@ -703,6 +703,7 @@ MonoBehaviour:
   ArrowImages:
   - {fileID: 1505855373}
   - {fileID: 864841269}
+  isRoll: 0
   diceScript: {fileID: 859786543}
   battleField: {fileID: 1104909333}
   Pos:
@@ -4641,7 +4642,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 1
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: Room1
+  m_Text: Room
 --- !u!222 &349472426
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -7746,7 +7747,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 1
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: Room1
+  m_Text: Room
 --- !u!222 &631514116
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -9794,7 +9795,8 @@ MonoBehaviour:
   Synchronization: 3
   OwnershipTransfer: 0
   observableSearch: 2
-  ObservedComponents: []
+  ObservedComponents:
+  - {fileID: 768779420}
   sceneViewId: 21
   InstantiationId: 0
   isRuntimeInstantiated: 0
@@ -19818,7 +19820,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 1
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: Room1
+  m_Text: Room
 --- !u!222 &1675871457
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -22111,7 +22113,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 1
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: Room1
+  m_Text: Room
 --- !u!222 &1836188570
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -22651,7 +22653,8 @@ MonoBehaviour:
   Synchronization: 3
   OwnershipTransfer: 0
   observableSearch: 2
-  ObservedComponents: []
+  ObservedComponents:
+  - {fileID: 1894140903}
   sceneViewId: 20
   InstantiationId: 0
   isRuntimeInstantiated: 0
