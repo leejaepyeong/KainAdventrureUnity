@@ -16,7 +16,7 @@ public class RangeUnit : DiceUnit
 
     protected override IEnumerator Attack()
     {
-        anim.SetTrigger("SwordAttack");
+        
 
         yield return new WaitForSeconds(0.2f);
 
@@ -25,7 +25,9 @@ public class RangeUnit : DiceUnit
         bullet.tag = tag;
         bulletRigid.velocity = gameObject.transform.forward * 3f;
 
-        Destroy(bullet, 0.8f);
+        anim.SetTrigger("SwordAttack");
+
+        Destroy(bullet, 1.1f);
 
         yield return new WaitForSeconds(delay - 0.2f);
 

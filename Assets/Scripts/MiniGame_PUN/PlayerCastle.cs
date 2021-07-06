@@ -12,7 +12,7 @@ public class PlayerCastle : MonoBehaviourPun, IPunObservable
 
     
     public int Hp = 100;
-    public float range = 9f;
+    public float range = 10f;
     public float delay = 1.2f;
     public string enemyTag;
     bool isAttack = false;
@@ -38,30 +38,22 @@ public class PlayerCastle : MonoBehaviourPun, IPunObservable
 
     }
 
-    [PunRPC]
-    void InitUnit()
-    {
-
-        
-
-        isStart = true;
-    }
 
 
     private void Update()
     {
         if (PhotonNetwork.InRoom)
         {
-            if(!isStart)
-                PV.RPC("InitUnit", RpcTarget.AllViaServer);
 
             if (PhotonNetwork.IsMasterClient && !isDead)
             {
                 if (target == null)
                     PV.RPC("UpdateTartget", RpcTarget.AllBuffered);
 
-                if(target != null)
+                else if(target != null)
                 PV.RPC("TryAttack", RpcTarget.AllBuffered);
+
+                
 
                 if(Hp <= 0)
                 {
@@ -82,14 +74,18 @@ public class PlayerCastle : MonoBehaviourPun, IPunObservable
     void UpdateTartget()
     {
 
-            GameObject[] enemies = GameObject.FindGameObjectsWithTag(enemyTag);
+        GameObject[] enemies = GameObject.FindGameObjectsWithTag(enemyTag);
             float shortestDistance = range;
             GameObject nearestEnemy = null;
 
             foreach (GameObject enemy in enemies)
             {
+
                 float distanceToEnemy = Vector3.Distance(transform.position, enemy.transform.position);
-                if (distanceToEnemy <= shortestDistance)
+
+            Debug.Log(distanceToEnemy);
+            Debug.Log(range);
+            if (distanceToEnemy <= shortestDistance)
                 {
                      shortestDistance = distanceToEnemy;
                      nearestEnemy = enemy;
@@ -104,7 +100,8 @@ public class PlayerCastle : MonoBehaviourPun, IPunObservable
             {
                 target = nearestEnemy;
             }
-     
+
+        Debug.Log(target);
     }
 
     [PunRPC]

@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.5744506, g: 0.66661197, b: 0.6247995, a: 1}
+  m_IndirectSpecularColor: {r: 0.57443905, g: 0.6666228, b: 0.6248043, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -9815,7 +9815,7 @@ MonoBehaviour:
   target: {fileID: 0}
   bullet: {fileID: 1114697699340415333, guid: 57835d6ded5a9e34692a601f47538d3b, type: 3}
   Hp: 100
-  range: 3
+  range: 9
   delay: 1
   enemyTag: 
   isDead: 0
@@ -12180,7 +12180,7 @@ GameObject:
   - component: {fileID: 953998370}
   m_Layer: 0
   m_Name: Player2Spawn
-  m_TagString: Player2
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -17893,7 +17893,7 @@ GameObject:
   - component: {fileID: 1512035909}
   m_Layer: 0
   m_Name: Player1Spawn
-  m_TagString: Player1
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -22673,7 +22673,7 @@ MonoBehaviour:
   target: {fileID: 0}
   bullet: {fileID: 54413498890175135, guid: 8f2e0adb0304fef48aa6f5b8d74b0501, type: 3}
   Hp: 100
-  range: 3
+  range: 9
   delay: 1
   enemyTag: 
   isDead: 0

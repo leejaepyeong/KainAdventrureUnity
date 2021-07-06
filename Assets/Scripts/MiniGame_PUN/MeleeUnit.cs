@@ -16,7 +16,6 @@ public class MeleeUnit : DiceUnit
     {
         anim.SetTrigger("SwordAttack");
 
-        Debug.Log(target);
 
         if(target != castle.gameObject)
         {

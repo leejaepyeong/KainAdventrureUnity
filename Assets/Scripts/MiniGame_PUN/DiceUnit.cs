@@ -16,7 +16,6 @@ public class DiceUnit : MonoBehaviourPun
     bool isMove;
     protected bool isAttack = false;
     bool isDead = false;
-    bool isStart = false;
 
     public int hp;
     public int damage;
@@ -50,26 +49,13 @@ public class DiceUnit : MonoBehaviourPun
         castle = GameObject.FindGameObjectWithTag(enemyTag).GetComponent<PlayerCastle>();
     }
 
-    [PunRPC]
-    void InitUnit()
-    {
-
-        Debug.Log(PV);
-
-        
-
-        isStart = true;
-    }
+ 
 
     private void Update()
     {
-        if (!PhotonNetwork.IsMasterClient)
+        if (!PhotonNetwork.IsMasterClient || isDead)
             return;
 
-        //Debug.Log(PV);
-
-        //if(!isStart)
-            //PV.RPC("InitUnit", RpcTarget.AllViaServer);
 
         AiMove();
 
@@ -106,7 +92,7 @@ public class DiceUnit : MonoBehaviourPun
         */
 
         target = _other;
-        Debug.Log(target);
+
 
     }
 
@@ -168,7 +154,8 @@ public class DiceUnit : MonoBehaviourPun
     protected virtual void Die()
     {
         isDead = true;
-        PhotonNetwork.Destroy(gameObject);
+
+        Destroy(gameObject);
     }
 
     
@@ -177,7 +164,6 @@ public class DiceUnit : MonoBehaviourPun
     {
         if(other.tag == enemyTag && target == null && PhotonNetwork.IsMasterClient)
         {
-            Debug.Log(other);
             UpdateTartget(other.gameObject);
         }
     }
