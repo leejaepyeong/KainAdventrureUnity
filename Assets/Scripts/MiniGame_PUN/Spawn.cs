@@ -9,6 +9,7 @@ public class Spawn : MonoBehaviourPun
     
     public DiceUnit[] diceUnits;
     public PlayerScript player;
+    public string PlayerTag;
 
 
 
@@ -22,7 +23,9 @@ public class Spawn : MonoBehaviourPun
             int num = i % 3;
 
             GameObject spwanUnit = PhotonNetwork.Instantiate(diceUnits[i].name, transform.position, Quaternion.identity);
-            spwanUnit.tag = player.tag;
+            
+            spwanUnit.tag = PlayerTag;
+            Debug.Log(spwanUnit.tag);
         }
     }
 }

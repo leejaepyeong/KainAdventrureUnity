@@ -9,7 +9,7 @@ public class DiceUnit : MonoBehaviourPun
 {
     public List<GameObject> FoundObjects;
     public GameObject target;
-    public PlayerCastle castle;
+    public GameObject castle;
     public string enemyTag;
     public DiceUnitData diceUnitData;
 
@@ -42,11 +42,22 @@ public class DiceUnit : MonoBehaviourPun
         attackRange = diceUnitData.range;
 
         if (tag == "Player1")
+        {
             enemyTag = "Player2";
+            castle = GameObject.FindGameObjectWithTag("PlayerCastle2");
+            Debug.Log(castle);
+        }
+            
         else if (tag == "Player2")
+        {
             enemyTag = "Player1";
+            castle = GameObject.FindGameObjectWithTag("playerCastle1");
+            Debug.Log(castle);
+        }
+            
 
-        castle = GameObject.FindGameObjectWithTag(enemyTag).GetComponent<PlayerCastle>();
+
+        
     }
 
  
@@ -109,6 +120,8 @@ public class DiceUnit : MonoBehaviourPun
 
             if (target == null)
             {
+                Debug.Log(castle);
+                
                 pathFinder.SetDestination(castle.transform.position);
             }
                 

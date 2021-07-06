@@ -23,6 +23,8 @@ TagManager:
   - Bullet
   - Player1
   - Player2
+  - playerCastle1
+  - PlayerCastle2
   layers:
   - Default
   - TransparentFX
