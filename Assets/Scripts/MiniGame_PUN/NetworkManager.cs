@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using Photon.Pun;
 using Photon.Realtime;
-
+using UnityEngine.SceneManagement;
 
 public class NetworkManager : MonoBehaviourPunCallbacks
 {
@@ -93,6 +93,7 @@ public class NetworkManager : MonoBehaviourPunCallbacks
     public void DisConnectBtn()
     {
         PhotonNetwork.Disconnect();
+        SceneManager.LoadScene("Title");
     }
 
     // 접속 끊기

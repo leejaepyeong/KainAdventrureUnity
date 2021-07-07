@@ -12,7 +12,7 @@ public class PlayerCastle : MonoBehaviourPun, IPunObservable
 
     
     public int Hp = 100;
-    public float range = 10f;
+    public float range = 8.2f;
     public float delay = 1.2f;
     public string enemyTag;
     bool isAttack = false;
@@ -101,18 +101,14 @@ public class PlayerCastle : MonoBehaviourPun, IPunObservable
                 target = nearestEnemy;
             }
 
-        Debug.Log(target);
     }
 
     [PunRPC]
     void TryAttack()
     {
-        Debug.Log("castleTry");
-        Debug.Log(target);
 
         if (!isAttack && target != null && !isDead)
         {
-            Debug.Log("castleAttack");
             isAttack = true;
             StartCoroutine(Attack());
         }

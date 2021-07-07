@@ -10,7 +10,7 @@ public class GroundSwitch : MonoBehaviourPun
     public enum GroundType {GROUND, BUFF, DEBUFF, START }
     public GroundType groundType;
 
-    public int price, owner;
+    public int price, owner, rank = 0;
 
     PlayerScript curPlayer, otherPlayer;
     public PlayerCastle[] playerCastle;
@@ -18,6 +18,7 @@ public class GroundSwitch : MonoBehaviourPun
     PhotonView PV;
     TextMesh PriceTxt;
     GameObject[] Houses;
+    GameObject[] RankTile;
     string logTxt;
 
     private void Start()
@@ -29,6 +30,7 @@ public class GroundSwitch : MonoBehaviourPun
             PriceTxt = GetComponentInChildren<TextMesh>();
             PriceTxt.text = price.ToString();
             Houses = new GameObject[2] { transform.GetChild(0).gameObject, transform.GetChild(1).gameObject};
+            RankTile = new GameObject[2] { transform.GetChild(2).gameObject, transform.GetChild(3).gameObject };
         }
     }
 
@@ -41,6 +43,8 @@ public class GroundSwitch : MonoBehaviourPun
         if(groundType == GroundType.GROUND)
         {
             GroundOwner();
+
+            if(owner != otherPlayer.myNum)
             PV.RPC("AddPriceRPC", RpcTarget.AllViaServer);
         }
 
@@ -131,6 +135,11 @@ public class GroundSwitch : MonoBehaviourPun
     {
         price += 10;
         PriceTxt.text = price.ToString();
+
+        if(owner == curPlayer.myNum && rank == 0)
+        {
+            rank++;
+        }
     }
 
     [PunRPC]

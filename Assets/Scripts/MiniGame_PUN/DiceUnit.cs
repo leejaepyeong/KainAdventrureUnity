@@ -25,6 +25,8 @@ public class DiceUnit : MonoBehaviourPun
     public float dist;
     public float attackRange;
 
+    public int myControl;
+
     //필요 컴포넌트
     public Rigidbody RB;
     public CapsuleCollider capCollider;
@@ -44,6 +46,7 @@ public class DiceUnit : MonoBehaviourPun
         if (tag == "Player1")
         {
             enemyTag = "Player2";
+            myControl = 1;
             castle = GameObject.FindGameObjectWithTag("PlayerCastle2");
             Debug.Log(castle);
         }
@@ -51,6 +54,7 @@ public class DiceUnit : MonoBehaviourPun
         else if (tag == "Player2")
         {
             enemyTag = "Player1";
+            myControl = 2;
             castle = GameObject.FindGameObjectWithTag("playerCastle1");
             Debug.Log(castle);
         }
