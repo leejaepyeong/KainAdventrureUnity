@@ -33,6 +33,7 @@ public class DiceUnit : MonoBehaviourPun
     public Animator anim;
     public NavMeshAgent pathFinder;
     public PhotonView PV;
+    PlayerScript[] player;
 
     private void Start()
     {
@@ -43,12 +44,15 @@ public class DiceUnit : MonoBehaviourPun
         delay = diceUnitData.delay;
         attackRange = diceUnitData.range;
 
+        
+
         if (tag == "Player1")
         {
             enemyTag = "Player2";
             myControl = 1;
             castle = GameObject.FindGameObjectWithTag("PlayerCastle2");
-            Debug.Log(castle);
+            
+            
         }
             
         else if (tag == "Player2")
@@ -56,7 +60,6 @@ public class DiceUnit : MonoBehaviourPun
             enemyTag = "Player1";
             myControl = 2;
             castle = GameObject.FindGameObjectWithTag("playerCastle1");
-            Debug.Log(castle);
         }
             
 
@@ -149,6 +152,7 @@ public class DiceUnit : MonoBehaviourPun
         if(dist <= attackRange)
         {
             isMove = false;
+            if(pathFinder.isStopped == false)
             pathFinder.isStopped = true;
             transform.LookAt(target.transform);
 

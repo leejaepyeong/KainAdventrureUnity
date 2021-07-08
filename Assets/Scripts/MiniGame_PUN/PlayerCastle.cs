@@ -12,7 +12,7 @@ public class PlayerCastle : MonoBehaviourPun, IPunObservable
 
     
     public int Hp = 100;
-    public float range = 8.2f;
+    public float range = 7.8f;
     public float delay = 1.2f;
     public string enemyTag;
     bool isAttack = false;
@@ -83,8 +83,6 @@ public class PlayerCastle : MonoBehaviourPun, IPunObservable
 
                 float distanceToEnemy = Vector3.Distance(transform.position, enemy.transform.position);
 
-            Debug.Log(distanceToEnemy);
-            Debug.Log(range);
             if (distanceToEnemy <= shortestDistance)
                 {
                      shortestDistance = distanceToEnemy;

@@ -14,6 +14,7 @@ public class GroundSwitch : MonoBehaviourPun
 
     PlayerScript curPlayer, otherPlayer;
     public PlayerCastle[] playerCastle;
+    public GameObject buffEffect;
 
     PhotonView PV;
     TextMesh PriceTxt;
@@ -39,8 +40,9 @@ public class GroundSwitch : MonoBehaviourPun
     {
         curPlayer = CurPlayer;
         otherPlayer = OtherPlayer;
+        //buffEffect.SetActive(false);
 
-        if(groundType == GroundType.GROUND)
+        if (groundType == GroundType.GROUND)
         {
             GroundOwner();
 
@@ -68,7 +70,9 @@ public class GroundSwitch : MonoBehaviourPun
                     break;
             }
 
-            
+            BuffEffect();
+
+
         }
 
         else if (groundType == GroundType.DEBUFF)
@@ -90,8 +94,16 @@ public class GroundSwitch : MonoBehaviourPun
                     PV.RPC("LogRPC", RpcTarget.AllViaServer, logTxt);
                     break;
             }
+
+            BuffEffect();
         }
 
+    }
+
+
+    void BuffEffect()
+    {
+        buffEffect.SetActive(true);
     }
 
     void GroundOwner()
@@ -112,6 +124,20 @@ public class GroundSwitch : MonoBehaviourPun
             curPlayer.playerHouse++;
         }
 
+        if(owner == myNum)
+        {
+            if (rank == 0)
+            {
+                rank++;
+                curPlayer.playerUpgrde++;
+            }
+
+            logTxt = NetworkManager.NM.NicknameTxts[myNum].text + "가 땅을 업그레이드 했습니다";
+            PV.RPC("LogRPC", RpcTarget.AllViaServer, logTxt);
+            curPlayer.money -= 10;
+            PV.RPC("BuyRPC", RpcTarget.AllViaServer, myNum);
+        }
+
         else if(owner != myNum)
         {
             curPlayer.money -= price;
@@ -127,19 +153,17 @@ public class GroundSwitch : MonoBehaviourPun
     [PunRPC]
     void BuyRPC(int myNum)
     {
+        if(rank == 0)
         Houses[myNum].SetActive(true);
+
+        if (rank == 1)
+            RankTile[myNum + 2].SetActive(true);
     }
 
     [PunRPC]
     void AddPriceRPC()
     {
         price += 10;
-        PriceTxt.text = price.ToString();
-
-        if(owner == curPlayer.myNum && rank == 0)
-        {
-            rank++;
-        }
     }
 
     [PunRPC]

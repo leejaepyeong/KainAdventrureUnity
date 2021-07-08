@@ -7,6 +7,7 @@ public class Dice : MonoBehaviour
     public Rigidbody RB;
     public Transform[] Nums;
     public int num;
+    public GameObject diceEffect;
 
     Transform originPos;
 
@@ -24,6 +25,8 @@ public class Dice : MonoBehaviour
         transform.localEulerAngles = new Vector3(Random.Range(-90f, 90f), Random.Range(-90f, 90f), Random.Range(-90f, 90f));
         RB.angularVelocity = Random.insideUnitSphere * Random.Range(-1000, 1000);
 
+        diceEffect.SetActive(true);
+
         yield return new WaitForSeconds(3f);
 
         while(true)
@@ -40,6 +43,8 @@ public class Dice : MonoBehaviour
                 break;
             }
         }
+
+        diceEffect.SetActive(false);
 
 
     }

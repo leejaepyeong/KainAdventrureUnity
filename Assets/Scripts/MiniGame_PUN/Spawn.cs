@@ -22,7 +22,7 @@ public class Spawn : MonoBehaviourPun
         {
             int num = i % 3;
 
-            GameObject spwanUnit = PhotonNetwork.Instantiate(diceUnits[i].name, transform.position, Quaternion.identity);
+            GameObject spwanUnit = PhotonNetwork.Instantiate(diceUnits[num].name, transform.position, Quaternion.identity);
             
             spwanUnit.tag = PlayerTag;
             Debug.Log(spwanUnit.tag);

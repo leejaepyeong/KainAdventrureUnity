@@ -627,6 +627,7 @@ MonoBehaviour:
   delay: 0
   dist: 0
   attackRange: 0
+  myControl: 0
   RB: {fileID: 1143198852285762552}
   capCollider: {fileID: 1143198852296056328}
   anim: {fileID: 1143198852298339038}

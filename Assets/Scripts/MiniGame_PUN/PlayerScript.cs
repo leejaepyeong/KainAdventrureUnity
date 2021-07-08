@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class PlayerScript : MonoBehaviour
 {
-    public int curPos, myNum, money, playerHouse;
+    public int curPos, myNum, money, playerHouse, playerUpgrde;
 
     public PlayerScript otherPlayer;
 
