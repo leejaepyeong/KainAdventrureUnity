@@ -14,7 +14,7 @@ public class GroundSwitch : MonoBehaviourPun
 
     PlayerScript curPlayer, otherPlayer;
     public PlayerCastle[] playerCastle;
-    public GameObject buffEffect;
+    public GameObject[] buffEffect;
 
     PhotonView PV;
     TextMesh PriceTxt;
@@ -33,6 +33,9 @@ public class GroundSwitch : MonoBehaviourPun
             Houses = new GameObject[2] { transform.GetChild(0).gameObject, transform.GetChild(1).gameObject};
             RankTile = new GameObject[2] { transform.GetChild(2).gameObject, transform.GetChild(3).gameObject };
         }
+
+
+        
     }
 
 
@@ -40,7 +43,6 @@ public class GroundSwitch : MonoBehaviourPun
     {
         curPlayer = CurPlayer;
         otherPlayer = OtherPlayer;
-        //buffEffect.SetActive(false);
 
         if (groundType == GroundType.GROUND)
         {
@@ -52,42 +54,42 @@ public class GroundSwitch : MonoBehaviourPun
 
         else if(groundType == GroundType.BUFF)
         {
-            int random = Random.Range(0, 2);
+            int random = Random.Range(2, 3);
 
             switch(random)
             {
-                case 0:
+                case 1:
                     playerCastle[curPlayer.myNum].Hp += 20;
                     if (playerCastle[curPlayer.myNum].Hp >= 100) playerCastle[curPlayer.myNum].Hp = 100;
                     logTxt = NetworkManager.NM.NicknameTxts[curPlayer.myNum].text + "님의 성이 체력을 회복했습니다.";
                     PV.RPC("LogRPC",RpcTarget.AllViaServer, logTxt);
                     break;
 
-                case 1:
+                case 2:
+                    StartCoroutine(AttackBuff());
                     playerCastle[otherPlayer.myNum].Hp -= 20;
                     logTxt = NetworkManager.NM.NicknameTxts[curPlayer.myNum].text + "님이 상대방에게 대미지를 입혔습니다.";
                     PV.RPC("LogRPC", RpcTarget.AllViaServer, logTxt);
                     break;
             }
 
-            BuffEffect();
 
 
         }
 
         else if (groundType == GroundType.DEBUFF)
         {
-            int random = Random.Range(0, 2);
+            int random = Random.Range(1, 3);
 
             switch (random)
             {
-                case 0:
+                case 1:
                     playerCastle[curPlayer.myNum].Hp -= 10;
                     logTxt = NetworkManager.NM.NicknameTxts[curPlayer.myNum].text + "님의 성이 체력을 잃었습니다.";
                     PV.RPC("LogRPC", RpcTarget.AllViaServer, logTxt);
                     break;
 
-                case 1:
+                case 2:
                     playerCastle[otherPlayer.myNum].Hp += 10;
                     if (playerCastle[otherPlayer.myNum].Hp >= 100) playerCastle[otherPlayer.myNum].Hp = 100;
                     logTxt = NetworkManager.NM.NicknameTxts[curPlayer.myNum].text + "님이 상대방 성의 체력을 회복했습니다.";
@@ -95,16 +97,40 @@ public class GroundSwitch : MonoBehaviourPun
                     break;
             }
 
-            BuffEffect();
         }
 
     }
 
 
-    void BuffEffect()
+    IEnumerator AttackBuff()
     {
-        buffEffect.SetActive(true);
+        GameObject attackBuff = PhotonNetwork.Instantiate(buffEffect[0].name, playerCastle[curPlayer.myNum].transform.position, playerCastle[curPlayer.myNum].transform.rotation);
+        Rigidbody attRB = attackBuff.GetComponent<Rigidbody>();
+        attRB.velocity = playerCastle[curPlayer.myNum].transform.forward * 2.5f;
+
+        yield return new WaitForSeconds(1.5f);
+        PhotonNetwork.Destroy(attackBuff);
+
+        GameObject hitBuff = PhotonNetwork.Instantiate(buffEffect[1].name, playerCastle[otherPlayer.myNum].transform.position, playerCastle[curPlayer.myNum].transform.rotation);
+
+        yield return new WaitForSeconds(0.8f);
+        PhotonNetwork.Destroy(buffEffect[1]);
+
     }
+
+    IEnumerator HealBuff()
+    {
+        GameObject healBuff = PhotonNetwork.Instantiate(buffEffect[2].name, playerCastle[curPlayer.myNum].transform.position, playerCastle[curPlayer.myNum].transform.rotation);
+
+        yield return new WaitForSeconds(1f);
+
+        PhotonNetwork.Destroy(healBuff);
+
+    }
+
+
+
+
 
     void GroundOwner()
     {
@@ -123,14 +149,15 @@ public class GroundSwitch : MonoBehaviourPun
 
             curPlayer.playerHouse++;
         }
-
-        if(owner == myNum)
+        else if(owner == myNum)
         {
             if (rank == 0)
             {
                 rank++;
                 curPlayer.playerUpgrde++;
             }
+            else
+                return;
 
             logTxt = NetworkManager.NM.NicknameTxts[myNum].text + "가 땅을 업그레이드 했습니다";
             PV.RPC("LogRPC", RpcTarget.AllViaServer, logTxt);
@@ -157,7 +184,7 @@ public class GroundSwitch : MonoBehaviourPun
         Houses[myNum].SetActive(true);
 
         if (rank == 1)
-            RankTile[myNum + 2].SetActive(true);
+            RankTile[myNum].SetActive(true);
     }
 
     [PunRPC]

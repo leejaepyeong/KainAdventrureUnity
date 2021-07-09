@@ -127,7 +127,7 @@ public class DiceUnit : MonoBehaviourPun
 
             if (target == null)
             {
-                Debug.Log(castle);
+
                 
                 pathFinder.SetDestination(castle.transform.position);
             }

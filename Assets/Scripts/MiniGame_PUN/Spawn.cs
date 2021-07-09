@@ -25,7 +25,6 @@ public class Spawn : MonoBehaviourPun
             GameObject spwanUnit = PhotonNetwork.Instantiate(diceUnits[num].name, transform.position, Quaternion.identity);
             
             spwanUnit.tag = PlayerTag;
-            Debug.Log(spwanUnit.tag);
         }
     }
 }
