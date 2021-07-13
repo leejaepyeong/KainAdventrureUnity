@@ -537,6 +537,7 @@ MonoBehaviour:
   delay: 0
   dist: 0
   attackRange: 0
+  upgrade: 0000000000000000
   myControl: 0
   RB: {fileID: 1905793640790287479}
   capCollider: {fileID: 1905793640783715961}

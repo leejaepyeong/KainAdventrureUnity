@@ -6,8 +6,13 @@ using Photon.Pun;
 using Photon.Realtime;
 using UnityEngine.SceneManagement;
 
+
+
 public class NetworkManager : MonoBehaviourPunCallbacks
 {
+    public System.Action GameSet;
+    public System.Action GameReset;
+
     public static NetworkManager NM;
     private void Awake()
     {
@@ -49,6 +54,12 @@ public class NetworkManager : MonoBehaviourPunCallbacks
     public Text LogTxt;
     public int myNum, turn;
 
+    [Header("Win")]
+    public GameObject winPanel;
+    public Text winPlayerTxt;
+    public GameObject FireWorkEffect;
+
+
     [Header("ETC")]
     PhotonView PV;
     List<RoomInfo> myList = new List<RoomInfo>();
@@ -57,6 +68,7 @@ public class NetworkManager : MonoBehaviourPunCallbacks
     public PlayerScript MyPlayer;
 
     public bool isGameStart;
+    public bool isGameOver = false;
 
     private void Start()
     {
@@ -66,6 +78,7 @@ public class NetworkManager : MonoBehaviourPunCallbacks
 
         PV = photonView;
 
+        GameSet = WinPlayer;
     }
 
     private void Update()
@@ -161,6 +174,7 @@ public class NetworkManager : MonoBehaviourPunCallbacks
     public void LeaveRoomBtn()
     {
         PhotonNetwork.LeaveRoom();
+        GameReset();
         InitGameBtn.SetActive(false);
     }
 
@@ -194,6 +208,7 @@ public class NetworkManager : MonoBehaviourPunCallbacks
         // 현재 방의 플레이어 수 Check
         if (PhotonNetwork.CurrentRoom.PlayerCount != 2) return;
 
+        isGameOver = false;
         RollBtn.SetActive(true);
         InitGameBtn.SetActive(false);
         PV.RPC("InitGameRPC", RpcTarget.AllViaServer);
@@ -262,6 +277,7 @@ public class NetworkManager : MonoBehaviourPunCallbacks
         DisconnectPanel.SetActive(false);
         LobyPannel.SetActive(false);
         RoomPanel.SetActive(false);
+        winPanel.SetActive(false);
 
         curPanel.SetActive(true);
     }
@@ -282,7 +298,7 @@ public class NetworkManager : MonoBehaviourPunCallbacks
 
     public void Roll()
     {
-        if(!isRoll)
+        if(!isRoll && !isGameOver)
         PV.RPC("RollRPC",RpcTarget.MasterClient);
     }
 
@@ -344,4 +360,17 @@ public class NetworkManager : MonoBehaviourPunCallbacks
 
     }
 
+    //game End
+    void WinPlayer()
+    {
+        SetPanel(winPanel);
+
+    }
+
+    public void ResetBtn()
+    {
+        GameReset();
+        InitGame();
+
+    }
 }

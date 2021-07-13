@@ -8,6 +8,20 @@ public class PlayerScript : MonoBehaviour
 
     public PlayerScript otherPlayer;
 
+    private void Start()
+    {
+        NetworkManager.NM.GameReset = StartReset;
+    }
+
+    private void StartReset()
+    {
+        playerHouse = 0;
+        playerUpgrde = 0;
+
+        transform.position = NetworkManager.NM.Pos[0].position;
+        curPos = 0;
+    }
+
     // 플레이어 이동
     public IEnumerator Move(int diceNum)
     {

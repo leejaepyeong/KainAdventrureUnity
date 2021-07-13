@@ -25,6 +25,7 @@ public class DiceUnit : MonoBehaviourPun
     public float dist;
     public float attackRange;
 
+    public int[] upgrade;
     public int myControl;
 
     //필요 컴포넌트
@@ -33,13 +34,39 @@ public class DiceUnit : MonoBehaviourPun
     public Animator anim;
     public NavMeshAgent pathFinder;
     public PhotonView PV;
-    PlayerScript[] player;
+    GameObject[] player;
+    PlayerScript[] playerScript = new PlayerScript[2];
 
     private void Start()
     {
         PV = photonView;
 
+        player = GameObject.FindGameObjectsWithTag("Player");
+
+       
+
+        for (int i = 0; i < player.Length; i++)
+        {
+            playerScript[i] = player[i].GetComponent<PlayerScript>();
+        }
+
+        Debug.Log(playerScript.Length);
+        Debug.Log(playerScript[0]);
+        Debug.Log(playerScript[1]);
+
+        for (int i = 0; i < player.Length; i++)
+        {
+            if(playerScript[i].myNum == 0)
+                playerScript[i].playerUpgrde = upgrade[0];
+            
+            else
+                playerScript[i].playerUpgrde = upgrade[1];
+
+
+        }
+
         hp = diceUnitData.hp;
+        damage = diceUnitData.damage;
         deffence = diceUnitData.deffence;
         delay = diceUnitData.delay;
         attackRange = diceUnitData.range;
@@ -51,7 +78,9 @@ public class DiceUnit : MonoBehaviourPun
             enemyTag = "Player2";
             myControl = 1;
             castle = GameObject.FindGameObjectWithTag("PlayerCastle2");
-            
+
+            hp += 2 * upgrade[0];
+            damage += upgrade[0];
             
         }
             
@@ -60,13 +89,21 @@ public class DiceUnit : MonoBehaviourPun
             enemyTag = "Player1";
             myControl = 2;
             castle = GameObject.FindGameObjectWithTag("playerCastle1");
-        }
-            
 
+            hp += 2 * upgrade[1];
+            damage += upgrade[1];
+        }
+
+        NetworkManager.NM.GameSet = AllDestroy;
+        NetworkManager.NM.GameReset = AllDestroy;
 
         
     }
 
+    void AllDestroy()
+    {
+        PhotonNetwork.Destroy(gameObject);
+    }
  
 
     private void Update()
@@ -127,8 +164,6 @@ public class DiceUnit : MonoBehaviourPun
 
             if (target == null)
             {
-
-                
                 pathFinder.SetDestination(castle.transform.position);
             }
                 

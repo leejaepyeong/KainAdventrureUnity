@@ -12,7 +12,7 @@ public class PlayerCastle : MonoBehaviourPun, IPunObservable
 
     
     public int Hp = 100;
-    public float range = 7.8f;
+    public float range = 7.5f;
     public float delay = 1.2f;
     public string enemyTag;
     bool isAttack = false;
@@ -36,6 +36,7 @@ public class PlayerCastle : MonoBehaviourPun, IPunObservable
             enemyTag = "Player1";
 
 
+        NetworkManager.NM.GameReset = StartReset;
     }
 
 
@@ -59,7 +60,20 @@ public class PlayerCastle : MonoBehaviourPun, IPunObservable
                 {
                     isDead = true;
                     DestroyEffect.SetActive(true);
+
+                    if (gameObject.tag == "Player1")
+                    {
+                        NetworkManager.NM.MyPlayer = NetworkManager.NM.Players[0];
+                    }
+                    else
+                    {
+                        NetworkManager.NM.MyPlayer = NetworkManager.NM.Players[1];
+                    }
+
                     PV.RPC("tryDestroy", RpcTarget.AllBuffered);
+
+                    
+                     
                 }
 
                 currentHP();
@@ -67,6 +81,11 @@ public class PlayerCastle : MonoBehaviourPun, IPunObservable
         }
 
         
+    }
+
+    void StartReset()
+    {
+        Hp = 100;
     }
 
 
@@ -151,8 +170,11 @@ public class PlayerCastle : MonoBehaviourPun, IPunObservable
         yield return new WaitForSeconds(0.2f);
 
         castleDeath.SetActive(true);
-        
 
+        yield return new WaitForSeconds(0.5f);
+
+
+        NetworkManager.NM.GameSet();
     }
 
     public void OnPhotonSerializeView(PhotonStream stream, PhotonMessageInfo info)

@@ -35,9 +35,22 @@ public class GroundSwitch : MonoBehaviourPun
         }
 
 
-        
+        NetworkManager.NM.GameReset = startReset;
     }
 
+    void startReset()
+    {
+        foreach (GameObject house in Houses)
+            house.SetActive(false);
+
+        foreach (GameObject rankTile in RankTile)
+            rankTile.SetActive(false);
+
+        price = 10;
+        PriceTxt.text = price.ToString();
+        rank = 0;
+        owner = -1;
+    }
 
     public void TypeSwitch(PlayerScript CurPlayer, PlayerScript OtherPlayer)
     {
@@ -59,6 +72,7 @@ public class GroundSwitch : MonoBehaviourPun
             switch(random)
             {
                 case 1:
+                    StartCoroutine(HealBuff(curPlayer));
                     playerCastle[curPlayer.myNum].Hp += 20;
                     if (playerCastle[curPlayer.myNum].Hp >= 100) playerCastle[curPlayer.myNum].Hp = 100;
                     logTxt = NetworkManager.NM.NicknameTxts[curPlayer.myNum].text + "님의 성이 체력을 회복했습니다.";
@@ -84,12 +98,14 @@ public class GroundSwitch : MonoBehaviourPun
             switch (random)
             {
                 case 1:
+                    StartCoroutine(BoomBuff());
                     playerCastle[curPlayer.myNum].Hp -= 10;
                     logTxt = NetworkManager.NM.NicknameTxts[curPlayer.myNum].text + "님의 성이 체력을 잃었습니다.";
                     PV.RPC("LogRPC", RpcTarget.AllViaServer, logTxt);
                     break;
 
                 case 2:
+                    StartCoroutine(HealBuff(otherPlayer));
                     playerCastle[otherPlayer.myNum].Hp += 10;
                     if (playerCastle[otherPlayer.myNum].Hp >= 100) playerCastle[otherPlayer.myNum].Hp = 100;
                     logTxt = NetworkManager.NM.NicknameTxts[curPlayer.myNum].text + "님이 상대방 성의 체력을 회복했습니다.";
@@ -118,9 +134,9 @@ public class GroundSwitch : MonoBehaviourPun
 
     }
 
-    IEnumerator HealBuff()
+    IEnumerator HealBuff(PlayerScript targetPlayer)
     {
-        GameObject healBuff = PhotonNetwork.Instantiate(buffEffect[2].name, playerCastle[curPlayer.myNum].transform.position, playerCastle[curPlayer.myNum].transform.rotation);
+        GameObject healBuff = PhotonNetwork.Instantiate(buffEffect[2].name, playerCastle[targetPlayer.myNum].transform.position, playerCastle[targetPlayer.myNum].transform.rotation);
 
         yield return new WaitForSeconds(1f);
 
@@ -128,7 +144,19 @@ public class GroundSwitch : MonoBehaviourPun
 
     }
 
+    IEnumerator BoomBuff()
+    {
+        yield return new WaitForSeconds(0.2f);
+        GameObject boomBuff = PhotonNetwork.Instantiate(buffEffect[0].name, playerCastle[curPlayer.myNum].transform.position, playerCastle[curPlayer.myNum].transform.rotation);
 
+        yield return new WaitForSeconds(0.5f);
+        GameObject boomBuff2 = PhotonNetwork.Instantiate(buffEffect[1].name, playerCastle[curPlayer.myNum].transform.position, playerCastle[curPlayer.myNum].transform.rotation);
+
+
+        yield return new WaitForSeconds(1f);
+        PhotonNetwork.Destroy(boomBuff);
+        PhotonNetwork.Destroy(boomBuff2);
+    }
 
 
 
@@ -191,6 +219,7 @@ public class GroundSwitch : MonoBehaviourPun
     void AddPriceRPC()
     {
         price += 10;
+        PriceTxt.text = price.ToString();
     }
 
     [PunRPC]
@@ -198,4 +227,7 @@ public class GroundSwitch : MonoBehaviourPun
     {
         NetworkManager.NM.LogTxt.text = logTxt;
     }
+
+
+    
 }
