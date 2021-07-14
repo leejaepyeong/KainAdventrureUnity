@@ -72,8 +72,6 @@ public class PlayerCastle : MonoBehaviourPun, IPunObservable
 
                     PV.RPC("tryDestroy", RpcTarget.AllBuffered);
 
-                    
-                     
                 }
 
                 currentHP();
@@ -85,6 +83,9 @@ public class PlayerCastle : MonoBehaviourPun, IPunObservable
 
     void StartReset()
     {
+        castleLife.SetActive(true);
+        castleDeath.SetActive(false);
+        currentHP();
         Hp = 100;
     }
 

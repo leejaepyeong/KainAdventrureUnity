@@ -6103,7 +6103,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   target: {fileID: 0}
   bullet: {fileID: 1114697699340415333, guid: 57835d6ded5a9e34692a601f47538d3b, type: 3}
-  Hp: 100
+  Hp: 20
   range: 9
   delay: 1
   enemyTag: 
@@ -8600,7 +8600,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 1
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: RESET
+  m_Text: LOBY
 --- !u!222 &995670466
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -15558,7 +15558,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   target: {fileID: 0}
   bullet: {fileID: 54413498890175135, guid: 8f2e0adb0304fef48aa6f5b8d74b0501, type: 3}
-  Hp: 100
+  Hp: 20
   range: 9
   delay: 1
   enemyTag: 

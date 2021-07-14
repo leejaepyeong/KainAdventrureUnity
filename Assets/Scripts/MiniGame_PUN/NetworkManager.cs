@@ -155,6 +155,7 @@ public class NetworkManager : MonoBehaviourPunCallbacks
         return PhotonNetwork.LocalPlayer.IsMasterClient;
     }
 
+    // 각 방의 버튼에 변수 설정  방에 맞는
     public void JoinTheRoom(RoomInfo _info)
     {
         PhotonNetwork.JoinRoom(_info.Name);
@@ -190,6 +191,7 @@ public class NetworkManager : MonoBehaviourPunCallbacks
 
         PV.RPC("LogRPC", RpcTarget.AllViaServer, message);
 
+        GameReset();
         RoomRenewal();
     }
 
@@ -363,14 +365,15 @@ public class NetworkManager : MonoBehaviourPunCallbacks
     //game End
     void WinPlayer()
     {
+        winPlayerTxt.text = NicknameTxts[MyPlayer.myNum].text;
+
         SetPanel(winPanel);
 
     }
 
     public void ResetBtn()
     {
-        GameReset();
-        InitGame();
+        LeaveRoomBtn();
 
     }
 }

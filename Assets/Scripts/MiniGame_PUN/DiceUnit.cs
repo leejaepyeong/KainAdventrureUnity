@@ -50,10 +50,6 @@ public class DiceUnit : MonoBehaviourPun
             playerScript[i] = player[i].GetComponent<PlayerScript>();
         }
 
-        Debug.Log(playerScript.Length);
-        Debug.Log(playerScript[0]);
-        Debug.Log(playerScript[1]);
-
         for (int i = 0; i < player.Length; i++)
         {
             if(playerScript[i].myNum == 0)
@@ -71,7 +67,8 @@ public class DiceUnit : MonoBehaviourPun
         delay = diceUnitData.delay;
         attackRange = diceUnitData.range;
 
-        
+
+
 
         if (tag == "Player1")
         {
