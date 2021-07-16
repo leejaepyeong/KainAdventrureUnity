@@ -24,7 +24,9 @@ MonoBehaviour:
   MaxValue: 1
   QuestDesc: 'Kill the Boss
 
-    GolemKing * 1'
-  expReward: 5000
-  coinReward: 5000
+    GolemKing * 1
+
+    -Wall2 Open-'
+  expReward: 3000
+  coinReward: 3000
   cynematic: 0

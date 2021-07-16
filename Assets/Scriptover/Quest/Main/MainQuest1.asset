@@ -24,7 +24,9 @@ MonoBehaviour:
   MaxValue: 1
   QuestDesc: 'Kill the Boss
 
-    MushKing * 1'
+    MushKing * 1
+
+    -Wall1 Open-'
   expReward: 1000
   coinReward: 1000
   cynematic: 0

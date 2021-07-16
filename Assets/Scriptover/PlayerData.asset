@@ -20,8 +20,8 @@ MonoBehaviour:
   rangeDamage: 10
   resourceDamage: 2
   defence: 0
-  hpRegen: 5
-  mpRegen: 2
+  hpRegen: 10
+  mpRegen: 4
   hpRegenTime: 10
   mpRegenTime: 10
   maxExp: 10

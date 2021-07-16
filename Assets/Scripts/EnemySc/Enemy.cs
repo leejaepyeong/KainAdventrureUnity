@@ -31,6 +31,7 @@ public class Enemy : MonoBehaviour
     public Transform Target;    // 타겟 플레이어
     public BoxCollider meleeArea;   // 근접 공격 범우
     public GameObject[] skillArea;
+    public GameObject hitEffect;    //  피격 이펙
 
     public Image hpBar;
 
@@ -260,6 +261,7 @@ public class Enemy : MonoBehaviour
     {
         
         isHit = true;
+        hitEffect.SetActive(true);
         currentHp -= ( (_damage - enemyData.defense) <= 0 ? 1 : _damage - enemyData.defense);
         hpBar.fillAmount = currentHp / enemyData.hp;
 
@@ -277,6 +279,10 @@ public class Enemy : MonoBehaviour
         yield return new WaitForSeconds(0.4f);
 
         isHit = false;
+
+        yield return new WaitForSeconds(0.3f);
+
+        hitEffect.SetActive(false);
     }
 
     // 코인 드랍
