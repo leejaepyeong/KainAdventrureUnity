@@ -20,7 +20,7 @@ public class MeleeUnit : DiceUnit
         if(target != castle.gameObject)
         {
             DiceUnit unit = target.GetComponent<DiceUnit>();
-            unit.hp -= unit.deffence - damage;
+            unit.hp -= damage - unit.deffence;
         }
         else
         {

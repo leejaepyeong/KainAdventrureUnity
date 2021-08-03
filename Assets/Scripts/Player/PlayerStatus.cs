@@ -21,6 +21,7 @@ public class PlayerStatus : MonoBehaviour
     public Text rAttTxt;
     public Text reAttTxt;
     public Text defTxt;
+    public Text skillTxt;
 
     //필요 컴포넌트
     public PlayerControleer player;
@@ -50,13 +51,15 @@ public class PlayerStatus : MonoBehaviour
         rAttTxt.text = playerData.rangeDamage.ToString();
         reAttTxt.text = playerData.resourceDamage.ToString();
         defTxt.text = playerData.defence.ToString();
+        skillTxt.text = playerData.skillLevel.ToString();
+
     }
     void LevelUp()
     {
         if(playerData.currentExp >= playerData.maxExp)
         {
             playerData.level++;
-            playerData.stateCount += 3;
+            playerData.stateCount += 4;
 
             playerData.currentExp = playerData.currentExp - playerData.maxExp;
             playerData.maxExp *= 2;
@@ -69,8 +72,8 @@ public class PlayerStatus : MonoBehaviour
         {
             playerData.stateCount--;
 
-            playerData.meleeDamage += 2;
-            playerData.rangeDamage += 1;
+            playerData.meleeDamage += 4;
+            playerData.rangeDamage += 2;
             playerData.resourceDamage += 1;
 
         }
@@ -81,7 +84,10 @@ public class PlayerStatus : MonoBehaviour
         if (playerData.stateCount > 0)
         {
             playerData.stateCount--;
-            playerData.defence += 1;
+            playerData.defence += 2;
+
+            playerData.skillLevel++;
+            
         }
     }
 
@@ -91,11 +97,11 @@ public class PlayerStatus : MonoBehaviour
         {
             playerData.stateCount--;
 
-            playerData.maxHp += 10;
-            playerData.currentHp += 10;
+            playerData.maxHp += 20;
+            playerData.currentHp += 20;
 
-            playerData.maxMp += 5;
-            playerData.currentMp += 5;
+            playerData.maxMp += 10;
+            playerData.currentMp += 10;
         }
     }
 

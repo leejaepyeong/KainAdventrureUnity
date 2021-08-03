@@ -20,10 +20,12 @@ MonoBehaviour:
   defense: 0
   delay: 1.5
   moveSpeed: 2.5
-  skillDamage: 0
+  skillDamage1: 0
+  skillDamage2: 0
+  skillDamage3: 0
   hpRegen: 10
   mpRegen: 0
   regenTime: 10
-  Exp: 4
+  Exp: 10
   targetRange: 1.5
   enemyData: "\uBB34\uB97C \uC8FC\uC138\uC694~~"

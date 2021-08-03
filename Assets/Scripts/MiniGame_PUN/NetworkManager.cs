@@ -11,6 +11,7 @@ using UnityEngine.SceneManagement;
 public class NetworkManager : MonoBehaviourPunCallbacks
 {
     public System.Action GameSet;
+
     public System.Action GameReset;
 
     public static NetworkManager NM;
@@ -89,6 +90,12 @@ public class NetworkManager : MonoBehaviourPunCallbacks
         LobbyInfoTxt.text = (PhotonNetwork.CountOfPlayers - PhotonNetwork.CountOfPlayersInRooms) + "로비 / " + PhotonNetwork.CountOfPlayers + "접속";
     }
 
+    public void TitleBtn()
+    {
+        PhotonNetwork.Disconnect();
+        SceneManager.LoadScene("Title");
+    }
+
     // 접속하기
     public void Connect()
     {
@@ -106,7 +113,7 @@ public class NetworkManager : MonoBehaviourPunCallbacks
     public void DisConnectBtn()
     {
         PhotonNetwork.Disconnect();
-        SceneManager.LoadScene("Title");
+        //SceneManager.LoadScene("Title");
     }
 
     // 접속 끊기
@@ -174,25 +181,41 @@ public class NetworkManager : MonoBehaviourPunCallbacks
 
     public void LeaveRoomBtn()
     {
+        
         PhotonNetwork.LeaveRoom();
+
         GameReset();
         InitGameBtn.SetActive(false);
     }
 
     public override void OnLeftRoom()
     {
-        SetPanel(LobyPannel);
+        PhotonNetwork.Disconnect();
+        SceneManager.LoadScene("DiceMap");
+        //SetPanel(LobyPannel);
     }
 
 
     public override void OnPlayerLeftRoom(Player otherPlayer)
     {
+
         string message = otherPlayer.NickName + "이 퇴장했습니다";
 
         PV.RPC("LogRPC", RpcTarget.AllViaServer, message);
 
+        Invoke("ResetScene", 5f);
+        /*
         GameReset();
         RoomRenewal();
+        */
+
+    }
+
+
+    void ResetScene()
+    {
+        PhotonNetwork.Disconnect();
+        SceneManager.LoadScene("DiceMap");
     }
 
     void RoomRenewal()
@@ -374,6 +397,5 @@ public class NetworkManager : MonoBehaviourPunCallbacks
     public void ResetBtn()
     {
         LeaveRoomBtn();
-
     }
 }

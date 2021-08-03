@@ -67,7 +67,7 @@ public class GroundSwitch : MonoBehaviourPun
 
         else if(groundType == GroundType.BUFF)
         {
-            int random = Random.Range(2, 3);
+            int random = Random.Range(1, 3);
 
             switch(random)
             {

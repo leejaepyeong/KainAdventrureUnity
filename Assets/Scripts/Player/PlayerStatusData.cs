@@ -27,6 +27,8 @@ public class PlayerStatusData : ScriptableObject
     public float currentExp;
     public int level = 1;
 
+    public int skillLevel = 0;
+
     public int stateCount;  // ?? ?? ? ?? ???
 
 

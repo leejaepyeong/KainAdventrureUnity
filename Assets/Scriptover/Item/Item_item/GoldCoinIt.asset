@@ -18,7 +18,7 @@ MonoBehaviour:
   itemImage: {fileID: 0}
   itemPrefab: {fileID: 357234695530398502, guid: 78b6615de9e0a564a9e0b6ace09e86a1, type: 3}
   weaponType: 
-  coinValue: 150
+  coinValue: 200
   value: 0
   Upgrade: 0
   equipType: 0

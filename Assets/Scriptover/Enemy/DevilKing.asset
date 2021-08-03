@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enemyName: DevilKing
   enemyType: 2
-  hp: 5000
+  hp: 3333
   mp: 10
   damage: 100
   defense: 35
@@ -22,7 +22,7 @@ MonoBehaviour:
   moveSpeed: 1.9
   skillDamage1: 150
   skillDamage2: 250
-  skillDamage3: 500
+  skillDamage3: 444
   hpRegen: 20
   mpRegen: 4
   regenTime: 10

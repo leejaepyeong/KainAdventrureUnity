@@ -27,6 +27,7 @@ public class SkillEffect : MonoBehaviour
 
     //????????
     public PlayerControleer player;
+    public PlayerStatusData playerData;
 
 
     private void Update()
@@ -144,7 +145,7 @@ public class SkillEffect : MonoBehaviour
         audioSource.clip = healClip[0];
         audioSource.Play();
 
-        playerdata.currentHp += skill[_num].dataValue;
+        playerdata.currentHp += skill[_num].dataValue + playerdata.skillLevel * 5;
         if (playerdata.currentHp >= playerdata.maxHp)
             playerdata.currentHp = playerdata.maxHp;
 
