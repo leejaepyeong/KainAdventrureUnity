@@ -25,6 +25,9 @@ public class PlayerCastle : MonoBehaviourPun, IPunObservable
     public GameObject castleDeath;
     public GameObject DestroyEffect;
     public PhotonView PV;
+    public AudioSource audio;
+
+
 
     private void Start()
     {
@@ -167,6 +170,7 @@ public class PlayerCastle : MonoBehaviourPun, IPunObservable
     IEnumerator DestroyCastle()
     {
         DestroyEffect.SetActive(true);
+        audio.Play();
         castleLife.SetActive(false);
         yield return new WaitForSeconds(0.2f);
 

@@ -1147,7 +1147,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 198348215081131160, guid: adc754b30f9364b52a0909432bbca998, type: 3}
       propertyPath: InitialModule.startSize.scalar
-      value: 0.5
+      value: 0.55
       objectReference: {fileID: 0}
     - target: {fileID: 198348215081131160, guid: adc754b30f9364b52a0909432bbca998, type: 3}
       propertyPath: ColorModule.gradient.maxGradient.ctime0
@@ -1200,6 +1200,26 @@ PrefabInstance:
     - target: {fileID: 198348215081131160, guid: adc754b30f9364b52a0909432bbca998, type: 3}
       propertyPath: ColorModule.gradient.maxGradient.m_NumColorKeys
       value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 198348215081131160, guid: adc754b30f9364b52a0909432bbca998, type: 3}
+      propertyPath: EmissionModule.m_Bursts.Array.data[0].countCurve.scalar
+      value: 25
+      objectReference: {fileID: 0}
+    - target: {fileID: 198350373398895308, guid: adc754b30f9364b52a0909432bbca998, type: 3}
+      propertyPath: InitialModule.startSize.scalar
+      value: 1.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 198350373398895308, guid: adc754b30f9364b52a0909432bbca998, type: 3}
+      propertyPath: InitialModule.startLifetime.scalar
+      value: 0.36
+      objectReference: {fileID: 0}
+    - target: {fileID: 198633431477185036, guid: adc754b30f9364b52a0909432bbca998, type: 3}
+      propertyPath: InitialModule.startSize.scalar
+      value: 1.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 198633431477185036, guid: adc754b30f9364b52a0909432bbca998, type: 3}
+      propertyPath: InitialModule.startLifetime.scalar
+      value: 0.36
       objectReference: {fileID: 0}
     - target: {fileID: 199969756395118576, guid: adc754b30f9364b52a0909432bbca998, type: 3}
       propertyPath: m_Materials.Array.data[0]

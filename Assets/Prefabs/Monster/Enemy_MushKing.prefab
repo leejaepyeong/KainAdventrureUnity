@@ -6119,6 +6119,14 @@ PrefabInstance:
       value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 19800000, guid: b6b68be29fa0c468cb9b1bbd5ae25603, type: 3}
+      propertyPath: SizeModule.y.minMaxState
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 19800000, guid: b6b68be29fa0c468cb9b1bbd5ae25603, type: 3}
+      propertyPath: SizeModule.z.minMaxState
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 19800000, guid: b6b68be29fa0c468cb9b1bbd5ae25603, type: 3}
       propertyPath: InitialModule.maxNumParticles
       value: 20
       objectReference: {fileID: 0}
@@ -6131,6 +6139,14 @@ PrefabInstance:
       value: 15
       objectReference: {fileID: 0}
     - target: {fileID: 19800000, guid: b6b68be29fa0c468cb9b1bbd5ae25603, type: 3}
+      propertyPath: SizeBySpeedModule.y.minMaxState
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 19800000, guid: b6b68be29fa0c468cb9b1bbd5ae25603, type: 3}
+      propertyPath: SizeBySpeedModule.z.minMaxState
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 19800000, guid: b6b68be29fa0c468cb9b1bbd5ae25603, type: 3}
       propertyPath: EmissionModule.rateOverTime.scalar
       value: 400
       objectReference: {fileID: 0}
@@ -6138,13 +6154,25 @@ PrefabInstance:
       propertyPath: InitialModule.startLifetime.scalar
       value: 0.4
       objectReference: {fileID: 0}
+    - target: {fileID: 19800000, guid: b6b68be29fa0c468cb9b1bbd5ae25603, type: 3}
+      propertyPath: SizeModule.curve.maxCurve.m_Curve.Array.data[1].time
+      value: 0.9970093
+      objectReference: {fileID: 0}
+    - target: {fileID: 19800000, guid: b6b68be29fa0c468cb9b1bbd5ae25603, type: 3}
+      propertyPath: SizeModule.curve.maxCurve.m_Curve.Array.data[0].value
+      value: 0.6461544
+      objectReference: {fileID: 0}
+    - target: {fileID: 19800000, guid: b6b68be29fa0c468cb9b1bbd5ae25603, type: 3}
+      propertyPath: SizeModule.curve.maxCurve.m_Curve.Array.data[1].value
+      value: 0.21538544
+      objectReference: {fileID: 0}
     - target: {fileID: 19800010, guid: b6b68be29fa0c468cb9b1bbd5ae25603, type: 3}
       propertyPath: lengthInSec
       value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 19800010, guid: b6b68be29fa0c468cb9b1bbd5ae25603, type: 3}
       propertyPath: InitialModule.startSize.scalar
-      value: 2
+      value: 2.25
       objectReference: {fileID: 0}
     - target: {fileID: 19800010, guid: b6b68be29fa0c468cb9b1bbd5ae25603, type: 3}
       propertyPath: InitialModule.startLifetime.scalar

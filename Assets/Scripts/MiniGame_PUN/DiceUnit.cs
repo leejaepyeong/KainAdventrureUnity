@@ -53,10 +53,10 @@ public class DiceUnit : MonoBehaviourPun
         for (int i = 0; i < player.Length; i++)
         {
             if(playerScript[i].myNum == 0)
-                playerScript[i].playerUpgrde = upgrade[0];
+                upgrade[0] = playerScript[i].playerUpgrde;
             
             else
-                playerScript[i].playerUpgrde = upgrade[1];
+                upgrade[1] = playerScript[i].playerUpgrde;
 
 
         }

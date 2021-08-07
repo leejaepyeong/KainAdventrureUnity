@@ -123651,6 +123651,54 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 19800000, guid: b6b68be29fa0c468cb9b1bbd5ae25603, type: 3}
+      propertyPath: SizeModule.separateAxes
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 19800000, guid: b6b68be29fa0c468cb9b1bbd5ae25603, type: 3}
+      propertyPath: ShapeModule.radius.value
+      value: 0.32
+      objectReference: {fileID: 0}
+    - target: {fileID: 19800000, guid: b6b68be29fa0c468cb9b1bbd5ae25603, type: 3}
+      propertyPath: SizeModule.y.minMaxState
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 19800000, guid: b6b68be29fa0c468cb9b1bbd5ae25603, type: 3}
+      propertyPath: SizeModule.z.minMaxState
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 19800000, guid: b6b68be29fa0c468cb9b1bbd5ae25603, type: 3}
+      propertyPath: EmissionModule.rateOverTime.scalar
+      value: 500
+      objectReference: {fileID: 0}
+    - target: {fileID: 19800000, guid: b6b68be29fa0c468cb9b1bbd5ae25603, type: 3}
+      propertyPath: InitialModule.startColor.maxColor.b
+      value: 0.88284594
+      objectReference: {fileID: 0}
+    - target: {fileID: 19800000, guid: b6b68be29fa0c468cb9b1bbd5ae25603, type: 3}
+      propertyPath: InitialModule.startColor.maxColor.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 19800000, guid: b6b68be29fa0c468cb9b1bbd5ae25603, type: 3}
+      propertyPath: InitialModule.startColor.maxColor.r
+      value: 0.427451
+      objectReference: {fileID: 0}
+    - target: {fileID: 19800000, guid: b6b68be29fa0c468cb9b1bbd5ae25603, type: 3}
+      propertyPath: SizeModule.curve.maxCurve.m_Curve.Array.data[1].time
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 19800000, guid: b6b68be29fa0c468cb9b1bbd5ae25603, type: 3}
+      propertyPath: SizeModule.curve.maxCurve.m_Curve.Array.data[0].value
+      value: 0.8153839
+      objectReference: {fileID: 0}
+    - target: {fileID: 19800000, guid: b6b68be29fa0c468cb9b1bbd5ae25603, type: 3}
+      propertyPath: SizeModule.curve.maxCurve.m_Curve.Array.data[1].value
+      value: 0.2923069
+      objectReference: {fileID: 0}
+    - target: {fileID: 19800010, guid: b6b68be29fa0c468cb9b1bbd5ae25603, type: 3}
+      propertyPath: InitialModule.startSize.scalar
+      value: 4.2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b6b68be29fa0c468cb9b1bbd5ae25603, type: 3}
 --- !u!4 &2360023080448678200 stripped
