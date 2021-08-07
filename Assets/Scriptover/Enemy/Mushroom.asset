@@ -14,9 +14,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enemyName: Mushroom
   enemyType: 0
-  hp: 50
+  hp: 60
   mp: 0
-  damage: 5
+  damage: 10
   defense: 0
   delay: 1.2
   moveSpeed: 3

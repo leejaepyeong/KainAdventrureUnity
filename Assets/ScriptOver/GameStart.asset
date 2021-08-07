@@ -12,4 +12,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 114f3ab9923d29a4994593bc92d3e142, type: 3}
   m_Name: GameStart
   m_EditorClassIdentifier: 
-  isGameStart: 0
+  isGameStart: 1

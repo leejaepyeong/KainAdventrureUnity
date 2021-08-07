@@ -14,9 +14,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enemyName: MushKing
   enemyType: 2
-  hp: 1000
+  hp: 500
   mp: 10
-  damage: 25
+  damage: 30
   defense: 10
   delay: 1.2
   moveSpeed: 3

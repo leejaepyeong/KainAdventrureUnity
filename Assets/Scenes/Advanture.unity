@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.54782486, g: 0.85412395, b: 0.92388105, a: 1}
+  m_IndirectSpecularColor: {r: 0.5478725, g: 0.8540995, b: 0.9238922, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -54939,7 +54939,7 @@ MonoBehaviour:
   rAttTxt: {fileID: 584740953}
   reAttTxt: {fileID: 138250531}
   defTxt: {fileID: 60373210}
-  skillTxt: {fileID: 0}
+  skillTxt: {fileID: 650335239}
   player: {fileID: 1626732667}
 --- !u!4 &1465276877
 Transform:

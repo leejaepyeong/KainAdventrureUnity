@@ -1103,6 +1103,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: HitEffect_C
       objectReference: {fileID: 0}
+    - target: {fileID: 1250507045210962, guid: adc754b30f9364b52a0909432bbca998, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4306116403247044, guid: adc754b30f9364b52a0909432bbca998, type: 3}
       propertyPath: m_RootOrder
       value: 4

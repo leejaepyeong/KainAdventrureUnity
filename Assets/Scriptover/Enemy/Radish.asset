@@ -14,9 +14,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enemyName: Radish
   enemyType: 0
-  hp: 60
+  hp: 70
   mp: 0
-  damage: 5
+  damage: 10
   defense: 0
   delay: 1.5
   moveSpeed: 2.5

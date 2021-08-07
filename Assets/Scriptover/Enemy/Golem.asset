@@ -14,9 +14,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enemyName: Golem
   enemyType: 0
-  hp: 100
+  hp: 120
   mp: 0
-  damage: 10
+  damage: 20
   defense: 5
   delay: 1.4
   moveSpeed: 2

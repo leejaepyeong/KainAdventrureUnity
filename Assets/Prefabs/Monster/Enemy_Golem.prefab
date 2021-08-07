@@ -488,7 +488,7 @@ Animator:
   m_Controller: {fileID: 9100000, guid: d792ef600342842a1a5a8ed7e8cd4b9d, type: 2}
   m_CullingMode: 1
   m_UpdateMode: 0
-  m_ApplyRootMotion: 1
+  m_ApplyRootMotion: 0
   m_LinearVelocityBlending: 0
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
@@ -1100,6 +1100,10 @@ PrefabInstance:
     - target: {fileID: 1250507045210962, guid: adc754b30f9364b52a0909432bbca998, type: 3}
       propertyPath: m_Name
       value: HitEffect_C
+      objectReference: {fileID: 0}
+    - target: {fileID: 1250507045210962, guid: adc754b30f9364b52a0909432bbca998, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4306116403247044, guid: adc754b30f9364b52a0909432bbca998, type: 3}
       propertyPath: m_RootOrder

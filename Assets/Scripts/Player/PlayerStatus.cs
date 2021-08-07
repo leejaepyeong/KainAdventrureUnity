@@ -97,8 +97,8 @@ public class PlayerStatus : MonoBehaviour
         {
             playerData.stateCount--;
 
-            playerData.maxHp += 20;
-            playerData.currentHp += 20;
+            playerData.maxHp += 30;
+            playerData.currentHp += 30;
 
             playerData.maxMp += 10;
             playerData.currentMp += 10;

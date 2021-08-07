@@ -14,14 +14,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enemyName: GolemKing
   enemyType: 2
-  hp: 1500
+  hp: 1050
   mp: 10
-  damage: 60
+  damage: 50
   defense: 30
   delay: 1.4
   moveSpeed: 2.2
-  skillDamage1: 100
-  skillDamage2: 120
+  skillDamage1: 80
+  skillDamage2: 100
   skillDamage3: 0
   hpRegen: 50
   mpRegen: 2
