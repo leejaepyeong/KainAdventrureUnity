@@ -15,7 +15,7 @@ MonoBehaviour:
   maxHp: 400
   currentHp: 400
   maxMp: 50
-  currentMp: 37
+  currentMp: 51
   meleeDamage: 25
   rangeDamage: 15
   resourceDamage: 2

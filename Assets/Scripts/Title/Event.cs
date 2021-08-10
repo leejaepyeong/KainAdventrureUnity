@@ -169,6 +169,7 @@ public class Event : MonoBehaviour
 
     public void EndingCynematic()
     {
+        audio.Stop();
         vitcoryPannel.SetActive(false);
         questData[3].cynematic = true;
 

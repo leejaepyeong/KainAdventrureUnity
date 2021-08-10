@@ -20,12 +20,14 @@ public class RangeUnit : DiceUnit
 
         yield return new WaitForSeconds(0.2f);
 
+        anim.SetTrigger("SwordAttack");
+
         GameObject bullet = Instantiate(bulletPrefab, transform.position + new Vector3(0, 0.3f, 0), Quaternion.identity);
         Rigidbody bulletRigid = bullet.GetComponent<Rigidbody>();
         bullet.tag = tag;
         bulletRigid.velocity = gameObject.transform.forward * 3f;
 
-        anim.SetTrigger("SwordAttack");
+        
 
         Destroy(bullet, 1.1f);
 
