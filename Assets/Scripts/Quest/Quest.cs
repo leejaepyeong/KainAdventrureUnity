@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Quest : MonoBehaviour
 {
-    public EnemyDB enemyDB;   // ÀÏ¹Ý Àû
+    public EnemyDB enemyDB;   // ???? ??
     public QuestData[] questDatas;
     public PlayerStatusData playerData;
     public MoneyData moneyData;
@@ -90,10 +90,10 @@ public class Quest : MonoBehaviour
     }
 
     //??
-    public void GetReward()
+    public void GetReward(QuestData _questData)
     {
-        playerData.currentExp += questDatas[0].expReward;
-        moneyData.Coin += questDatas[0].coinReward;
+        playerData.currentExp += _questData.expReward;
+        moneyData.Coin += _questData.coinReward;
     }
 
 

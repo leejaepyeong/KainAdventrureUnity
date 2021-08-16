@@ -86,7 +86,7 @@ public class QuestControl : MonoBehaviour
         if(questData[QuestId].isClear)
         {
             if(!questData[QuestId].isReward)
-                quest.GetReward();
+                quest.GetReward(questData[QuestId]);
 
             questData[QuestId].isReward = true;
             
