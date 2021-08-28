@@ -38,3 +38,7 @@ https://youtu.be/mIGVet8AaN0
 
 
 https://youtu.be/L3R5bKZnUr8
+
+
+스토어 링크 
+https://play.google.com/store/apps/details?id=com.LJP.kain_adventrue
