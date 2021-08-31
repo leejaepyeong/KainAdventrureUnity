@@ -87,8 +87,6 @@ public class GroundSwitch : MonoBehaviourPun
                     break;
             }
 
-
-
         }
 
         else if (groundType == GroundType.DEBUFF)

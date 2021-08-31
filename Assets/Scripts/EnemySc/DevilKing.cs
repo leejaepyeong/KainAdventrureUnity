@@ -12,8 +12,6 @@ public class DevilKing : MeleeEnemy
 
         isSkill = true;
 
-        
-
         switch (random)
         {
             case 0:

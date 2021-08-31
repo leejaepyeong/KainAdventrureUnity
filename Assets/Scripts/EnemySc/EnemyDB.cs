@@ -5,9 +5,9 @@ using UnityEngine;
 [CreateAssetMenu(fileName = "new db", menuName = "DB/Enemy")]
 public class EnemyDB : ScriptableObject
 {
-    public EnemyData[] enemys;    // 적 목록
+    public EnemyData[] enemys;    // enemy data
 
-    //아이디 맞는 적 뽑아오기
+    //enemy data ID
     public EnemyData GetItemOrNull(int id)
     {
         if (id < enemys.Length)
@@ -16,7 +16,7 @@ public class EnemyDB : ScriptableObject
         return null;
     }
 
-    // 아이디 뽑기
+    // ID Get
     public int GetIDFrom(EnemyData enemy)
     {
         for (int i = 0; i < enemys.Length; ++i)
